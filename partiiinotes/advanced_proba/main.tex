@@ -1,0 +1,55 @@
+\documentclass{article}
+\input{preamble}  % Include the preamble from an external file
+
+
+\title{\Huge Part III Advanced Probability \\ 
+\huge Based on lectures by P. Sousi}
+\author{\Large Notes taken by Pantelis Tassopoulos}
+\date{\Large Michaelmas 2023}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\section{Proof of the Riemann Hypothesis}
+\mymark{Lecture 1}\noindent We start with setting up some notation.\\
+note the margins are narrow.
+
+\begin{equation}
+	\displaystyle \int_{a}^{b} f \diff \mu 
+\end{equation}
+
+\section{Proof of Collatz Conjecture}
+\begin{equation}
+	\displaystyle\sum_{n\in\N}a_n
+\end{equation}
+
+In other words, the following diagram
+    $$ 
+    \adjustbox{scale = 1.5}{\begin{tikzcd}
+    X \arrow{r}{T} \arrow[hookrightarrow]{d}{\iota_X} & Y \arrow[hookrightarrow]{d}{\iota_Y} \\%
+    X^{**} \arrow{r}{T^{**}}& Y^{**}
+    \end{tikzcd}}
+    $$
+    commutes (vertical arrows are canonical embeddings).
+
+
+    \begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includesvg[width=0.65\linewidth]{images/LCS convex top 1.svg}
+  \caption{Illustration of lemma \ref{lemma: LCS topology}.}
+  \label{fig: LCS topology}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includesvg[width=0.65\linewidth]{images/LCS convex top 2.svg}
+  \caption{Illustration of lemma \ref{lemma: LCS topology extreme point}.}
+  \label{fig: LCS topology extreme point}
+\end{subfigure}
+\caption{}
+\label{fig: LCS topology combined}
+\end{figure}
+
+\end{document}
