@@ -1,9 +1,9 @@
-PWD /Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba
+PWD /Users/pantelistassopoulos/Documents/texfiles/partiiinotes/funct_anal
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
-OUTPUT main.log
+INPUT minimal.tex
+OUTPUT minimal.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
@@ -326,6 +326,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/mathdots/mathdots.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/mathdots/mathdots.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
@@ -412,9 +414,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT ./main.w18
-INPUT ./main.w18
-INPUT main.w18
+INPUT ./minimal.w18
+INPUT ./minimal.w18
+INPUT minimal.w18
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
@@ -455,10 +457,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auto-pst-pdf/auto-pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auto-pst-pdf/auto-pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty
-INPUT ./main-autopp.log
-INPUT ./main-autopp.log
-INPUT ./main.tex
-INPUT ./main.tex
+INPUT ./minimal-autopp.log
+INPUT ./minimal-autopp.log
+INPUT ./minimal.tex
+INPUT ./minimal.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pst-pdf/pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pst-pdf/pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -517,7 +519,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libr
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
-OUTPUT main.pdf
+OUTPUT minimal.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
@@ -532,20 +534,20 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/needspace/needspace.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
-INPUT ./main.aux
-INPUT ./main.aux
-INPUT main.aux
-OUTPUT main.aux
+INPUT ./minimal.aux
+INPUT ./minimal.aux
+INPUT minimal.aux
+OUTPUT minimal.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
-INPUT ./main.out
-INPUT ./main.out
-INPUT main.out
-INPUT main.out
-INPUT ./main.out
-INPUT ./main.out
-OUTPUT main.out
+INPUT ./minimal.out
+INPUT ./minimal.out
+INPUT minimal.out
+INPUT minimal.out
+INPUT ./minimal.out
+INPUT ./minimal.out
+OUTPUT minimal.out
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map
@@ -586,8 +588,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
-INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
@@ -605,22 +606,96 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathb5.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
-INPUT ./images/LCS convex top 1.svg
-INPUT ./images/LCS convex top 1.svg
-INPUT ./images/LCS convex top 1.svg
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
+INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./minimal.toc
+INPUT ./minimal.toc
+INPUT minimal.toc
+OUTPUT minimal.toc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./images/Supporting functional.svg
+INPUT ./images/Supporting functional.svg
+INPUT ./images/Supporting functional.svg
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf
+INPUT ./svg-inkscape/Supporting functional_svg-tex.pdf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/matha12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathb12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT ./images/Ball_ell_1.svg
+INPUT ./images/Ball_ell_1.svg
+INPUT ./images/Ball_ell_1.svg
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_1_svg-tex.pdf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/matha9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathb9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT ./images/Ball_ell_2.svg
+INPUT ./images/Ball_ell_2.svg
+INPUT ./images/Ball_ell_2.svg
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf
+INPUT ./svg-inkscape/Ball_ell_2_svg-tex.pdf
+INPUT ./images/LCS convex top 1.svg
+INPUT ./images/LCS convex top 1.svg
+INPUT ./images/LCS convex top 1.svg
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
+INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
 INPUT ./images/LCS convex top 2.svg
 INPUT ./images/LCS convex top 2.svg
 INPUT ./images/LCS convex top 2.svg
@@ -635,19 +710,101 @@ INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
 INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf_tex
 INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
 INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
-INPUT main.aux
-INPUT ./main.out
-INPUT ./main.out
+INPUT ./images/cone Krein Milman.svg
+INPUT ./images/cone Krein Milman.svg
+INPUT ./images/cone Krein Milman.svg
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf
+INPUT ./svg-inkscape/cone Krein Milman_svg-tex.pdf
+INPUT ./images/spectrum topology.svg
+INPUT ./images/spectrum topology.svg
+INPUT ./images/spectrum topology.svg
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology_svg-tex.pdf
+INPUT ./images/spectrum topology larger.svg
+INPUT ./images/spectrum topology larger.svg
+INPUT ./images/spectrum topology larger.svg
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf_tex
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf
+INPUT ./svg-inkscape/spectrum topology larger_svg-tex.pdf
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti7.tfm
+INPUT ./images/Cauchy lemma.svg
+INPUT ./images/Cauchy lemma.svg
+INPUT ./images/Cauchy lemma.svg
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf_tex
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf
+INPUT ./svg-inkscape/Cauchy lemma_svg-tex.pdf
+INPUT minimal.aux
+INPUT ./minimal.out
+INPUT ./minimal.out
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathb8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb

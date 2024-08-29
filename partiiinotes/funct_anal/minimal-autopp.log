@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  29 AUG 2024 03:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  29 AUG 2024 13:32
 entering extended mode
  %&-line parsing enabled.
-**\let \APPmakepictures \empty \input  main.tex
-(./main.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
+**\let \APPmakepictures \empty \input  minimal.tex
+(./minimal.tex (/usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/size10.clo
 File: size10.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
@@ -932,29 +932,36 @@ Package: mhsetup 2021/03/18 v1.4 programming setup (MH)
 \l_MT_below_shortintertext_sep=\dimen320
 \xmathstrut@box=\box96
 \xmathstrut@dim=\dimen321
+) (/usr/local/texlive/2024/texmf-dist/tex/generic/mathdots/mathdots.sty
+Package: mathdots 2014/06/11 v0.9 Improve and add various macros for dots in math.
+\MDo@unit=\dimen322
+\MDo@dotsbox=\box97
+\MDoprekern=\muskip17
+\MDopostkern=\muskip18
+\MDodotkern=\muskip19
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count352
 \float@exts=\toks66
-\float@box=\box97
+\float@box=\box98
 \@float@everytoks=\toks67
-\@floatcapt=\box98
+\@floatcapt=\box99
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/subcaption.sty
 Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2023/08/05 v3.6o Customizing captions (AR)
 (/usr/local/texlive/2024/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen322
-\captionmargin=\dimen323
-\caption@leftmargin=\dimen324
-\caption@rightmargin=\dimen325
-\caption@width=\dimen326
-\caption@indent=\dimen327
-\caption@parindent=\dimen328
-\caption@hangindent=\dimen329
+\caption@tempdima=\dimen323
+\captionmargin=\dimen324
+\caption@leftmargin=\dimen325
+\caption@rightmargin=\dimen326
+\caption@width=\dimen327
+\caption@indent=\dimen328
+\caption@parindent=\dimen329
+\caption@hangindent=\dimen330
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count353
@@ -998,7 +1005,7 @@ Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
 ))
 \c@section@level=\count357
 )
-\@linkdim=\dimen330
+\@linkdim=\dimen331
 \Hy@linkcounter=\count358
 \Hy@pagecounter=\count359
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pd1enc.def
@@ -1023,19 +1030,19 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4446.
 \c@Hy@tempcnt=\count361
 (/usr/local/texlive/2024/texmf-dist/tex/latex/url/url.sty
-\Urlmuskip=\muskip17
+\Urlmuskip=\muskip20
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4784.
-\XeTeXLinkMargin=\dimen331
+\XeTeXLinkMargin=\dimen332
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
 ))
 \Fld@menulength=\count362
-\Field@Width=\dimen332
-\Fld@charsize=\dimen333
+\Field@Width=\dimen333
+\Fld@charsize=\dimen334
 Package hyperref Info: Hyper figures OFF on input line 6063.
 Package hyperref Info: Link nesting OFF on input line 6068.
 Package hyperref Info: Hyper index ON on input line 6071.
@@ -1057,7 +1064,7 @@ File: hdvips.def 2024-01-20 v7.01h Hyperref driver for dvips
 (/usr/local/texlive/2024/texmf-dist/tex/latex/hyperref/pdfmark.def
 File: pdfmark.def 2024-01-20 v7.01h Hyperref definitions for pdfmark specials
 \pdf@docset=\toks68
-\pdf@box=\box99
+\pdf@box=\box100
 \pdf@toks=\toks69
 \pdf@defaulttoks=\toks70
 \HyField@AnnotCount=\count366
@@ -1076,7 +1083,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip73
 ))
 
-Package xcolor Warning: Package option `usenames' is obsolete and ignored on input line 26.
+Package xcolor Warning: Package option `usenames' is obsolete and ignored on input line 27.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/graphics/dvipsnam.def
 File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
@@ -1100,7 +1107,7 @@ Package shellesc Warning: Shell escape disabled on input line 73.
 
 )
 \c@svg@param@lastpage=\count369
-\svg@box=\box100
+\svg@box=\box101
 \c@svg@param@currpage=\count370
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
 Package: transparent 2022-10-27 v1.5 Transparency with color stacks
@@ -1113,9 +1120,9 @@ Package transparent Warning: Loading aborted, because pdfTeX is not running in P
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \enitkv@toks@=\toks71
 \labelindent=\skip74
-\enit@outerparindent=\dimen334
+\enit@outerparindent=\dimen335
 \enit@toks=\toks72
-\enit@inbox=\box101
+\enit@inbox=\box102
 \enit@count@id=\count371
 \enitdp@description=\count372
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/pst-node/pst-node.sty
@@ -1137,19 +1144,19 @@ File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 )
 \psLoopIndex=\count382
 `PSTricks' v3.19c  <2024/02/02> (tvz,hv)
-\pst@dima=\dimen335
-\pst@dimb=\dimen336
-\pst@dimc=\dimen337
-\pst@dimd=\dimen338
-\pst@dimg=\dimen339
-\pst@dimh=\dimen340
-\pst@dimm=\dimen341
-\pst@dimn=\dimen342
-\pst@dimo=\dimen343
-\pst@dimp=\dimen344
-\pst@hbox=\box102
-\pst@ibox=\box103
-\pst@boxg=\box104
+\pst@dima=\dimen336
+\pst@dimb=\dimen337
+\pst@dimc=\dimen338
+\pst@dimd=\dimen339
+\pst@dimg=\dimen340
+\pst@dimh=\dimen341
+\pst@dimm=\dimen342
+\pst@dimn=\dimen343
+\pst@dimo=\dimen344
+\pst@dimp=\dimen345
+\pst@hbox=\box103
+\pst@ibox=\box104
+\pst@boxg=\box105
 \pst@cnta=\count383
 \pst@cntb=\count384
 \pst@cntc=\count385
@@ -1164,29 +1171,29 @@ File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
 \pst@toks=\toks73
 --- We are running latex or xelatex ---
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pstricks/pstricks.con) (/usr/local/texlive/2024/texmf-dist/tex/generic/pstricks/pstricks-color.tex)
-\psunit=\dimen345
-\psxunit=\dimen346
-\psyunit=\dimen347
+\psunit=\dimen346
+\psxunit=\dimen347
+\psyunit=\dimen348
 \pst@C@@rType=\count394
-\pslinewidth=\dimen348
-\psk@startLW=\dimen349
-\psk@endLW=\dimen350
+\pslinewidth=\dimen349
+\psk@startLW=\dimen350
+\psk@endLW=\dimen351
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pstricks/pstricks-arrows.tex
-\pshooklength=\dimen351
-\pshookwidth=\dimen352
+\pshooklength=\dimen352
+\pshookwidth=\dimen353
 )
 \pst@customdefs=\toks74
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pstricks/pstricks-dots.tex)
-\pslinearc=\dimen353
-\pst@symbolStep=\dimen354
-\pst@symbolWidth=\dimen355
-\pst@symbolLinewidth=\dimen356
+\pslinearc=\dimen354
+\pst@symbolStep=\dimen355
+\pst@symbolWidth=\dimen356
+\pst@symbolLinewidth=\dimen357
 \everypsbox=\toks75
-\psframesep=\dimen357
-\pslabelsep=\dimen358
-\sh@wgridXunit=\dimen359
-\sh@wgridYunit=\dimen360
-\pst@shift=\dimen361
+\psframesep=\dimen358
+\pslabelsep=\dimen359
+\sh@wgridXunit=\dimen360
+\sh@wgridYunit=\dimen361
+\pst@shift=\dimen362
 \ps@imagectr=\count395
 (/usr/local/texlive/2024/texmf-dist/tex/generic/pstricks/pstricks.con))
 File: pstricks.tex 2024/02/02 v3.19c `PSTricks' (tvz,hv)
@@ -1238,10 +1245,10 @@ Package: preview 2024/01/17 13.3 (AUCTeX/preview-latex)
 (/usr/local/texlive/2024/texmf-dist/tex/generic/luatex85/luatex85.sty
 Package: luatex85 2016/06/15 v1.4 pdftex aliases for luatex
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/preview/prtightpage.def
-\PreviewBorder=\dimen362
+\PreviewBorder=\dimen363
 )
 \pr@snippet=\count404
-\pr@box=\box105
+\pr@box=\box106
 \pr@output=\toks76
 ))) (/usr/local/texlive/2024/texmf-dist/tex/latex/marginnote/marginnote.sty
 Package: marginnote 2018/08/09 1.4b non floating margin notes for LaTeX
@@ -1256,19 +1263,19 @@ Package: verbatim 2023-11-06 v1.5v LaTeX2e package for verbatim enhancements
 \verbatim@line=\toks78
 \verbatim@in@stream=\read4
 )
-\tcb@titlebox=\box106
-\tcb@upperbox=\box107
-\tcb@lowerbox=\box108
-\tcb@phantombox=\box109
+\tcb@titlebox=\box107
+\tcb@upperbox=\box108
+\tcb@lowerbox=\box109
+\tcb@phantombox=\box110
 \c@tcbbreakpart=\count406
 \c@tcblayer=\count407
 \c@tcolorbox@number=\count408
-\l__tcobox_tmpa_box=\box110
-\l__tcobox_tmpa_dim=\dimen363
-\tcb@temp=\box111
+\l__tcobox_tmpa_box=\box111
+\l__tcobox_tmpa_dim=\dimen364
 \tcb@temp=\box112
 \tcb@temp=\box113
 \tcb@temp=\box114
+\tcb@temp=\box115
 (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbraster.code.tex
 Library (tcolorbox): 'tcbraster.code.tex' version '6.2.0'
 \c@tcbrastercolumn=\count409
@@ -1283,7 +1290,7 @@ Package: tikzfill.image 2023/08/08 v1.0.1 Image filling library for TikZ
 Package: tikzfill-common 2023/08/08 v1.0.1 Auxiliary code for tikzfill
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tikzfill/tikzlibraryfill.image.code.tex
 File: tikzlibraryfill.image.code.tex 2023/08/08 v1.0.1 Image filling library
-\l__tikzfill_img_box=\box115
+\l__tikzfill_img_box=\box116
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbskinsjigsaw.code.tex
 Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.2.0'
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbbreakable.code.tex
@@ -1293,18 +1300,18 @@ Package: pdfcol 2022-09-21 v1.7 Handle new color stacks for pdfTeX (HO)
 Package pdfcol Info: Interface disabled because of missing PDF mode of pdfTeX.
 )
 Package pdfcol Info: pdfTeX's color stacks are not available.
-\tcb@testbox=\box116
-\tcb@totalupperbox=\box117
-\tcb@totallowerbox=\box118
+\tcb@testbox=\box117
+\tcb@totalupperbox=\box118
+\tcb@totallowerbox=\box119
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbhooks.code.tex
 Library (tcolorbox): 'tcbhooks.code.tex' version '6.2.0'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbtheorems.code.tex
 Library (tcolorbox): 'tcbtheorems.code.tex' version '6.2.0'
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbfitting.code.tex
 Library (tcolorbox): 'tcbfitting.code.tex' version '6.2.0'
-\tcbfitdim=\dimen364
-\tcb@lowerfitdim=\dimen365
-\tcb@upperfitdim=\dimen366
+\tcbfitdim=\dimen365
+\tcb@lowerfitdim=\dimen366
+\tcb@upperfitdim=\dimen367
 \tcb@cur@hbadness=\count413
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcblistingsutf8.code.tex
 Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
@@ -1312,24 +1319,24 @@ Library (tcolorbox): 'tcblistingsutf8.code.tex' version '6.2.0'
 Library (tcolorbox): 'tcblistings.code.tex' version '6.2.0'
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count414
-\lst@gtempboxa=\box119
+\lst@gtempboxa=\box120
 \lst@token=\toks79
 \lst@length=\count415
-\lst@currlwidth=\dimen367
+\lst@currlwidth=\dimen368
 \lst@column=\count416
 \lst@pos=\count417
-\lst@lostspace=\dimen368
-\lst@width=\dimen369
+\lst@lostspace=\dimen369
+\lst@width=\dimen370
 \lst@newlines=\count418
 \lst@lineno=\count419
-\lst@maxwidth=\dimen370
+\lst@maxwidth=\dimen371
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstpatch.sty
 File: lstpatch.sty 2024/02/21 1.10 (Carsten Heinz)
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2024/02/21 1.10 (Carsten Heinz)
 \c@lstnumber=\count420
 \lst@skipnumbers=\count421
-\lst@framebox=\box120
+\lst@framebox=\box121
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/listings.cfg
 File: listings.cfg 2024/02/21 1.10 listings configuration
 ))
@@ -1357,10 +1364,10 @@ File: pgflibraryfadings.code.tex 2023-01-15 v3.1.10 (3.1.10)
 ))) (/usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 Library (tcolorbox): 'tcbposter.code.tex' version '6.2.0'
 )) (/usr/local/texlive/2024/texmf-dist/tex/latex/wrapfig/wrapfig.sty
-\wrapoverhang=\dimen371
-\WF@size=\dimen372
+\wrapoverhang=\dimen372
+\WF@size=\dimen373
 \c@WF@wrappedlines=\count423
-\WF@box=\box121
+\WF@box=\box122
 \WF@everypar=\toks80
 Package: wrapfig 2003/01/31  v 3.6
 ) (/usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/mdframed.sty
@@ -1422,11 +1429,11 @@ Package: needspace 2010/09/12 v1.3d reserve vertical space
 (/usr/local/texlive/2024/texmf-dist/tex/latex/mdframed/md-frame-1.mdf
 File: md-frame-1.mdf 2013/07/01\ 1.9b: md-frame-1
 )
-\mdf@frametitlebox=\box122
-\mdf@footnotebox=\box123
-\mdf@splitbox@one=\box124
-\mdf@splitbox@two=\box125
-\mdf@splitbox@save=\box126
+\mdf@frametitlebox=\box123
+\mdf@footnotebox=\box124
+\mdf@splitbox@one=\box125
+\mdf@splitbox@two=\box126
+\mdf@splitbox@save=\box127
 \mdfsplitboxwidth=\skip117
 \mdfsplitboxtotalwidth=\skip118
 \mdfsplitboxheight=\skip119
@@ -1474,27 +1481,27 @@ Package zref Info: New property: mdf@pagevalue on input line 895.
 \c@boxlemma=\count436
 \c@boxprop=\count437
 )
-No file main-autopp.aux.
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 10.
-LaTeX Font Info:    ... okay on input line 10.
-LaTeX Info: Command `\dddot' is already robust on input line 10.
-LaTeX Info: Command `\ddddot' is already robust on input line 10.
+No file minimal-autopp.aux.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Info: Command `\dddot' is already robust on input line 13.
+LaTeX Info: Command `\ddddot' is already robust on input line 13.
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.18} (current compat level: 1.17).
 
 *geometry* driver: auto-detecting
@@ -1537,7 +1544,7 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \providecommand\hyper@newdestlabel[2]{}
-Package hyperref Info: Link coloring OFF on input line 10.
+Package hyperref Info: Link coloring OFF on input line 13.
 
 Package hyperref Warning: Rerun to get /PageLabels entry.
 
@@ -1548,20 +1555,1258 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks81
 \inpenc@posthook=\toks82
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 13.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Package marginnote Info: right page because not two side mode on input line 16.
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 16.
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 24--25
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 26--28
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 29--31
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 32--34
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 35--37
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 38--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 43--46
+
+ []
+
+No file minimal-autopp.toc.
+Package marginnote Info: right page because not two side mode on input line 64.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 64.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 84.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 93.
+
+LaTeX Warning: Reference `thm: Hahn Banach sub-additive real case' on page 3 undefined on input line 97.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 104.
+
+LaTeX Warning: Reference `thm: Hahn Banach sub-additive real case' on page 3 undefined on input line 108.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 110--112
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 113--114
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 128.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 139.
+Package marginnote Info: right page because not two side mode on input line 144.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 144.
+
+LaTeX Warning: Reference `thm: Hahn Banach sub-additive real case' on page 4 undefined on input line 144.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 144--145
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 146--147
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 148--149
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 150--151
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 159.
+
+LaTeX Warning: Reference `thm: Hahn Banach' on page 4 undefined on input line 164.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 167.
+Package mdframed Info: Not enough space on this page on input line 173.
+
+LaTeX Warning: Reference `thm: Hahn Banach' on page 5 undefined on input line 177.
+
+
+LaTeX Warning: Reference `cor: Hahn Banach' on page 5 undefined on input line 178.
+
 
 Package svg Warning: You didn't enable `shell escape' (or `write18')
 (svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/LCS convex top 1.svg' on input line 41.
+(svg)                for `images/Supporting functional.svg' on input line 191.
+
+
+! Package svg Error: File `Supporting functional_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 ...ewidth]{images/Supporting functional.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Supporting functional_svg-tex.eps'
+although `images/Supporting functional.svg' was found.
+
+
+! Package svg Error: File `Supporting functional_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.191 ...ewidth]{images/Supporting functional.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Supporting functional_svg-tex.eps_tex'
+although `images/Supporting functional.svg' was found.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 198.
+
+Underfull \hbox (badness 10000) in paragraph at lines 203--204
+
+ []
+
+
+LaTeX Warning: Reference `thm: canonical embedding' on page 5 undefined on input line 211.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 216.
+Package marginnote Info: right page because not two side mode on input line 239.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 239.
+
+Underfull \hbox (badness 10000) in paragraph at lines 309--312
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 323.
+Package mdframed Info: Not enough space on this page on input line 325.
+
+Underfull \hbox (badness 10000) in paragraph at lines 332--333
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 334--335
+
+ []
+
+
+LaTeX Warning: Reference `thm: Hahn Banach 2' on page 8 undefined on input line 336.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 336--337
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 337--338
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 343.
+
+Underfull \hbox (badness 10000) in paragraph at lines 348--350
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 351--352
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 357.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 357.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 364.
+
+Underfull \hbox (badness 10000) in paragraph at lines 369--370
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 371--373
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 386.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 407.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 428.
+
+Underfull \hbox (badness 10000) in paragraph at lines 433--434
+
+ []
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 436.
+
+Underfull \hbox (badness 10000) in paragraph at lines 439--440
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 441--442
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 447.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 451.
+Package marginnote Info: right page because not two side mode on input line 452.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 452.
+
+Underfull \hbox (badness 10000) in paragraph at lines 457--458
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 459--461
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 465.
+
+LaTeX Warning: Reference `lemma: LCS' on page 11 undefined on input line 480.
+
+
+LaTeX Warning: Reference `thm: Hahn Banach' on page 11 undefined on input line 481.
+
+
+LaTeX Warning: Reference `lemma: LCS' on page 11 undefined on input line 481.
+
+
+LaTeX Warning: Reference `lemma: continuity criterion LCS lin functional' on page 11 undefined on input line 483.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\mu' on input line 488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 488.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 488.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 493--495
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 496--497
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 498--499
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 504.
+
+Underfull \hbox (badness 10000) in paragraph at lines 517--519
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 530.
+
+LaTeX Warning: Reference `thm: Hahn decomposition' on page 12 undefined on input line 543.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 544--545
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 546--547
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 548--549
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 550--551
+
+ []
+
+
+Overfull \hbox (9.0736pt too wide) in paragraph at lines 552--554
+[]\OT1/cmr/m/n/10 To see this, note that $\U/matha/m/n/10 p\OML/cmm/m/it/10 A[]\U/matha/m/n/10 q$ \OT1/cmr/m/n/10 is by con-struc-tion a de-creas-ing se-quence wrt in-clu-sion. By $\OML/cmm/m/it/10 ^^[\U/matha/m/n/10 ^^A$\OT1/cmr/m/n/10 additivity
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 552--554
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 555--556
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 564--566
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 572--574
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 575--576
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 577--579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--582
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 583--584
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 585--587
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--590
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 591--593
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 594--595
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 596--598
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 602.
+Package marginnote Info: right page because not two side mode on input line 603.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 603.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 617.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 621.
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 629--630
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 631--632
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 633--634
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 635--639
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 640--641
+
+ []
+
+
+LaTeX Warning: Reference `thm: Radon-Nikodym' on page 15 undefined on input line 648.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 652.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 652.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 652.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 663.
+
+Underfull \hbox (badness 10000) in paragraph at lines 672--673
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 674--675
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 676--677
+
+ []
+
+
+LaTeX Warning: Reference `thm: Radon-Nikodym' on page 15 undefined on input line 678.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--680
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 681--682
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 684.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 684.
+
+Overfull \hbox (2.13138pt too wide) detected at line 692
+[]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 692--694
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 699--701
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 702--703
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 704--705
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 706--707
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 708--711
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 712--713
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 714--715
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 716--718
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 719--720
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 721--722
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 734--736
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 744.
+
+LaTeX Warning: Reference `thm: Dual of L_p' on page 17 undefined on input line 749.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 752.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 752.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 754--755
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 757--759
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 769--771
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 773--775
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 777--779
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 782.
+
+Underfull \hbox (badness 10000) in paragraph at lines 793--794
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 795--796
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 800.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 800.
+
+Underfull \hbox (badness 10000) in paragraph at lines 800--802
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 803--804
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 809--812
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 829.
+
+Underfull \hbox (badness 10000) in paragraph at lines 839--840
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 841--842
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 858--859
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 872.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 872.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 887.
+
+Underfull \hbox (badness 10000) in paragraph at lines 895--896
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 897--898
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 899--900
+
+ []
+
+
+LaTeX Warning: Reference `lemma: partition of unity' on page 21 undefined on input line 905.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 904--909
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 913--915
+
+ []
+
+
+LaTeX Warning: Reference `lemma: partition of unity' on page 21 undefined on input line 916.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 928--929
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 932.
+
+LaTeX Warning: Reference `lemma: properties of M(K)' on page 22 undefined on input line 937.
+
+
+LaTeX Warning: Reference `thm: Riesz Representation C(K)' on page 22 undefined on input line 937.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 937--938
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 939--940
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 941.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 941.
+
+LaTeX Warning: Reference `thm: Riesz Representation C(K)' on page 22 undefined on input line 941.
+
+
+LaTeX Warning: Reference `lemma: partition of unity' on page 22 undefined on input line 941.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 964.
+Package mdframed Info: Not enough space on this page on input line 967.
+
+Underfull \hbox (badness 10000) in paragraph at lines 972--973
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 995.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1007.
+
+LaTeX Warning: Reference `examples: 6' on page 24 undefined on input line 1012.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1012--1016
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 1027.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1027.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1029--1030
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1031.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1047.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1052--1053
+
+ []
+
+
+LaTeX Warning: Reference `lemma: kernel lemma' on page 26 undefined on input line 1055.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1072.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1080.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1083.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1089.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1101--1102
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1105.
+Package marginnote Info: right page because not two side mode on input line 1118.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1118.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1134--1135
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1142.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1147--1148
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1149--1150
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1151--1152
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1153--1154
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1162.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1168--1169
+
+ []
+
+
+LaTeX Warning: Reference `lemma: gauge functional' on page 28 undefined on input line 1176.
+
+
+LaTeX Warning: Reference `thm: Hahn Banach sub-additive real case' on page 28 undefined on input line 1177.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1180.
+
+LaTeX Warning: Reference `thm: Hahn-Banach separation theorem' on page 28 undefined on input line 1190.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1191--1192
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1200.
+Package mdframed Info: Not enough space on this page on input line 1202.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1205--1206
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1207--1208
+
+ []
+
+
+LaTeX Warning: Reference `thm: Hahn-Banach separation theorem' on page 30 undefined on input line 1209.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1212.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1225.
+Package marginnote Info: right page because not two side mode on input line 1226.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1226.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1230--1231
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1232--1233
+
+ []
+
+
+LaTeX Warning: Reference `thm: Tychonov' on page 30 undefined on input line 1235.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1246.
+
+LaTeX Warning: Reference `prop: metrisability of weak topologies' on page 30 undefined on input line 1259.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1258--1260
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1269--1270
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1271--1272
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1273--1274
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1275--1276
+
+ []
+
+
+LaTeX Warning: Reference `thm: Banach-Alaoglu' on page 31 undefined on input line 1277.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1291.
+
+LaTeX Warning: Reference `prop: BA metrisable iff separable' on page 31 undefined on input line 1296.
+
+
+Overfull \hbox (0.19553pt too wide) in paragraph at lines 1296--1297
+[]$[]$\OT1/cmr/m/n/10 : By propo-si-tion [] (\OT1/cmr/m/it/10 i\OT1/cmr/m/n/10 ), $\U/matha/m/n/10 p\OML/cmm/m/it/10 B[]; w[]\U/matha/m/n/10 q$ \OT1/cmr/m/n/10 is metris-able. Hence, $\U/matha/m/n/10 p\OML/cmm/m/it/10 B[]; w\U/matha/m/n/10 q ^^P p\OML/cmm/m/it/10 B[]; w[]\U/matha/m/n/10 q[][][]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1297
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1298--1299
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1300--1301
+
+ []
+
+
+LaTeX Warning: Reference `lemma: kernel lemma' on page 31 undefined on input line 1302.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1305.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1307.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 1307.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 1307.
+
+
+LaTeX Warning: Reference `thm: Banach-Alaoglu' on page 32 undefined on input line 1310.
+
+
+LaTeX Warning: Reference `thm: LCS separation' on page 32 undefined on input line 1310.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1314--1315
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 1331.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1331.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1331.
+
+LaTeX Warning: Reference `thm: Banach-Alaoglu' on page 32 undefined on input line 1341.
+
+
+Overfull \hbox (13.82283pt too wide) in paragraph at lines 1341--1342
+[]$[]$\OT1/cmr/m/n/10 : us-ing the canon-i-cal em-bed-ding (a $\OML/cmm/m/it/10 w \U/matha/m/n/10 ^^A \OML/cmm/m/it/10 w[]$ \OT1/cmr/m/n/10 home-o-mor-phism), $\U/matha/m/n/10 p\OML/cmm/m/it/10 B[]; w\U/matha/m/n/10 q ^^P p\OML/cmm/m/it/10 B[]; w[]\U/matha/m/n/10 q$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1341--1342
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1343--1344
+
+ []
+
+
+LaTeX Warning: Reference `thm: Banach-Alaoglu' on page 32 undefined on input line 1345.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1345--1346
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1354.
+Package mdframed Info: Not enough space on this page on input line 1356.
+Package mdframed Info: Not enough space on this page on input line 1356.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1359--1360
+
+ []
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1383  \end{forest}
+                    
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+Missing character: There is no ] in font nullfont!
+Missing character: There is no ] in font nullfont!
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1399.
+
+LaTeX Warning: Reference `prop: BA metrisable iff separable' on page 33 undefined on input line 1404.
+
+
+LaTeX Warning: Reference `lemma: compact Hausdorff tree cont surj' on page 33 undefined on input line 1404.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/Ball_ell_1.svg' on input line 1418.
+
+
+! Package svg Error: File `Ball_ell_1_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1418 ...th=0.7\linewidth]{images/Ball_ell_1.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Ball_ell_1_svg-tex.eps'
+although `images/Ball_ell_1.svg' was found.
+
+
+! Package svg Error: File `Ball_ell_1_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1418 ...th=0.7\linewidth]{images/Ball_ell_1.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Ball_ell_1_svg-tex.eps_tex'
+although `images/Ball_ell_1.svg' was found.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/Ball_ell_2.svg' on input line 1424.
+
+
+! Package svg Error: File `Ball_ell_2_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1424 ...th=0.7\linewidth]{images/Ball_ell_2.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Ball_ell_2_svg-tex.eps'
+although `images/Ball_ell_2.svg' was found.
+
+
+! Package svg Error: File `Ball_ell_2_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1424 ...th=0.7\linewidth]{images/Ball_ell_2.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Ball_ell_2_svg-tex.eps_tex'
+although `images/Ball_ell_2.svg' was found.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1432--1433
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1437.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1441.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1445.
+
+LaTeX Warning: Reference `thm: Krein-Milman' on page 34 undefined on input line 1461.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1461--1463
+
+ []
+
+
+LaTeX Warning: Reference `Lemma: Zorn' on page 34 undefined on input line 1464.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1464--1465
+
+ []
+
+
+LaTeX Warning: Reference `thm: Hahn-Banach separation theorem' on page 34 undefined on input line 1466.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1469.
+Package marginnote Info: right page because not two side mode on input line 1470.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1470.
+Package mdframed Info: Not enough space on this page on input line 1471.
+Package mdframed Info: Not enough space on this page on input line 1471.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1478.
+
+LaTeX Warning: Reference `lemma: LCS topology' on page 35 undefined on input line 1483.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1485--1487
+
+ []
+
+
+LaTeX Warning: Reference `thm: Hahn-Banach separation theorem' on page 35 undefined on input line 1492.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/LCS convex top 1.svg' on input line 1498.
 
 
 ! Package svg Error: File `LCS convex top 1_svg-tex.eps' is missing.
@@ -1570,7 +2815,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 ...65\linewidth]{images/LCS convex top 1.svg}
+l.1498 ...\linewidth]{images/LCS convex top 1.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/LCS convex top 1_svg-tex.eps'
@@ -1583,22 +2828,22 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 ...65\linewidth]{images/LCS convex top 1.svg}
+l.1498 ...\linewidth]{images/LCS convex top 1.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/LCS convex top 1_svg-tex.eps_tex'
 although `images/LCS convex top 1.svg' was found.
 
 
-LaTeX Warning: Reference `lemma: LCS topology' on page 2 undefined on input line 42.
+LaTeX Warning: Reference `lemma: LCS topology' on page 35 undefined on input line 1499.
 
 
-LaTeX Warning: Reference `lemma: LCS topology' on page 2 undefined on input line 42.
+LaTeX Warning: Reference `lemma: LCS topology' on page 35 undefined on input line 1499.
 
 
 Package svg Warning: You didn't enable `shell escape' (or `write18')
 (svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/LCS convex top 2.svg' on input line 47.
+(svg)                for `images/LCS convex top 2.svg' on input line 1504.
 
 
 ! Package svg Error: File `LCS convex top 2_svg-tex.eps' is missing.
@@ -1607,7 +2852,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 ...65\linewidth]{images/LCS convex top 2.svg}
+l.1504 ...\linewidth]{images/LCS convex top 2.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/LCS convex top 2_svg-tex.eps'
@@ -1620,17 +2865,1143 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.47 ...65\linewidth]{images/LCS convex top 2.svg}
+l.1504 ...\linewidth]{images/LCS convex top 2.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/LCS convex top 2_svg-tex.eps_tex'
 although `images/LCS convex top 2.svg' was found.
 
 
-LaTeX Warning: Reference `lemma: LCS topology extreme point' on page 2 undefined on input line 48.
+LaTeX Warning: Reference `lemma: LCS topology extreme point' on page 35 undefined on input line 1505.
 
 
-LaTeX Warning: Reference `lemma: LCS topology extreme point' on page 2 undefined on input line 48.
+LaTeX Warning: Reference `lemma: LCS topology extreme point' on page 35 undefined on input line 1505.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1513.
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/cone Krein Milman.svg' on input line 1521.
+
+
+! Package svg Error: File `cone Krein Milman_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1521 ...linewidth]{images/cone Krein Milman.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/cone Krein Milman_svg-tex.eps'
+although `images/cone Krein Milman.svg' was found.
+
+
+! Package svg Error: File `cone Krein Milman_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1521 ...linewidth]{images/cone Krein Milman.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/cone Krein Milman_svg-tex.eps_tex'
+although `images/cone Krein Milman.svg' was found.
+
+
+LaTeX Warning: Reference `thm: Krein-Milman partial converse' on page 35 undefined on input line 1527.
+
+
+LaTeX Warning: Reference `lemma: LCS topology extreme point' on page 35 undefined on input line 1528.
+
+
+LaTeX Warning: Reference `thm: Krein-Milman partial converse' on page 35 undefined on input line 1532.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1535.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1546--1548
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1555--1557
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1558--1559
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1574--1575
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1576--1577
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1578--1579
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1580--1581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1582--1583
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 1584.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1584.
+
+Underfull \hbox (badness 1975) in paragraph at lines 1590--1591
+[]\OT1/cmr/m/n/10 The $[]$ $\OML/cmm/m/it/10 A\U/matha/m/n/10 p\OT1/cmr/m/n/10 ^^A\U/matha/m/n/10 q ^^P t\OML/cmm/m/it/10 f \U/matha/m/n/10 P \OMS/cmsy/m/n/10 C\U/matha/m/n/10 p\OT1/cmr/m/n/10 ^^A\U/matha/m/n/10 q \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 f[]\OT1/cmr/m/n/10 ^^A\U/matha/m/n/10 u$\OT1/cmr/m/n/10 ,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1590--1591
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1594--1595
+
+ []
+
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 1600.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1604--1605
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1611.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1616--1617
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1624.
+
+LaTeX Warning: Reference `lemma: BA inversion' on page 38 undefined on input line 1636.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1639--1641
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1646.
+Package marginnote Info: right page because not two side mode on input line 1647.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1647.
+
+Overfull \hbox (26.68254pt too wide) in paragraph at lines 1647--1649
+[][]\OT1/cmr/bx/n/10 Definition 5.1. []|[] \OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 be an al-ge-bra (al-ways com-plex) and let $\OML/cmm/m/it/10 x \U/matha/m/n/10 P \OML/cmm/m/it/10 A$\OT1/cmr/m/n/10 . The $[]$
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1659.
+
+LaTeX Warning: Reference `lemma: BA inversion' on page 39 undefined on input line 1664.
+
+
+LaTeX Warning: Reference `cor: invertibles conv' on page 39 undefined on input line 1664.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1664--1665
+
+ []
+
+
+LaTeX Warning: Reference `cor: invertibles conv' on page 39 undefined on input line 1666.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1678.
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 39 undefined on input line 1683.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1686.
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 39 undefined on input line 1687.
+
+
+Overfull \hbox (1.77666pt too wide) in paragraph at lines 1687--1688
+[][]\OT1/cmr/bx/n/10 Definition 5.2 (Spec-tral ra-dius). []\OT1/cmr/m/n/10 Let $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 be a Ba-nach al-ge-bra and $\OML/cmm/m/it/10 x \U/matha/m/n/10 P \OML/cmm/m/it/10 A$\OT1/cmr/m/n/10 . The $[]$ 
+ []
+
+Package mdframed Info: Not enough space on this page on input line 1688.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1692.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1704.
+
+LaTeX Warning: Reference `lemma: spectral mapping for polys' on page 40 undefined on input line 1712.
+
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 40 undefined on input line 1712.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1712--1713
+
+ []
+
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 40 undefined on input line 1714.
+
+
+LaTeX Warning: Reference `lemma: BA inversion' on page 40 undefined on input line 1714.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1714--1715
+
+ []
+
+
+LaTeX Warning: Reference `prop: weak convergence' on page 40 undefined on input line 1716.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1720.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1726.
+
+LaTeX Warning: Reference `thm: topological property of spectrum' on page 41 undefined on input line 1734.
+
+
+LaTeX Warning: Reference `cor: invertibles conv' on page 41 undefined on input line 1735.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1735--1736
+
+ []
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/spectrum topology.svg' on input line 1743.
+
+
+! Package svg Error: File `spectrum topology_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1743 ...linewidth]{images/spectrum topology.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/spectrum topology_svg-tex.eps'
+although `images/spectrum topology.svg' was found.
+
+
+! Package svg Error: File `spectrum topology_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1743 ...linewidth]{images/spectrum topology.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/spectrum topology_svg-tex.eps_tex'
+although `images/spectrum topology.svg' was found.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/spectrum topology larger.svg' on input line 1749.
+
+
+! Package svg Error: File `spectrum topology larger_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1749 ...th]{images/spectrum topology larger.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/spectrum topology larger_svg-tex.eps'
+although `images/spectrum topology larger.svg' was found.
+
+
+! Package svg Error: File `spectrum topology larger_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1749 ...th]{images/spectrum topology larger.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/spectrum topology larger_svg-tex.eps_tex'
+although `images/spectrum topology larger.svg' was found.
+
+
+LaTeX Warning: Reference `thm: topological property of spectrum' on page 41 undefined on input line 1753.
+
+
+LaTeX Warning: Reference `thm: topological property of spectrum' on page 41 undefined on input line 1753.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1757.
+Package marginnote Info: right page because not two side mode on input line 1758.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1758.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1766.
+
+Overfull \hbox (14.6925pt too wide) in paragraph at lines 1767--1768
+[][]\OT1/cmr/bx/n/10 Definition 5.3. []\OT1/cmr/m/n/10 A non-zero ho-mo-mor-phism $\OML/cmm/m/it/10 ^^^ \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 A \U/matha/m/n/10 б \U/msb/m/n/10 C$ \OT1/cmr/m/n/10 on an al-ge-bra $\OML/cmm/m/it/10 A$ \OT1/cmr/m/n/10 is called $[]$.
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1770.
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 41 undefined on input line 1775.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1778.
+
+LaTeX Warning: Reference `cor: invertibles conv' on page 41 undefined on input line 1783.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1788.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 1797.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1800--1801
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1802--1803
+
+ []
+
+
+LaTeX Warning: Reference `lemma: proper ideal' on page 42 undefined on input line 1804.
+
+
+LaTeX Warning: Reference `cor: Gelfand-mazur' on page 42 undefined on input line 1804.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1807.
+
+LaTeX Warning: Reference `thm: maximal ideal bijection' on page 42 undefined on input line 1819.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1826.
+
+LaTeX Warning: Reference `prop: maximal comm subalg spectrum' on page 42 undefined on input line 1837.
+
+
+LaTeX Warning: Reference `cor: characters and spectrum' on page 42 undefined on input line 1837.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1851.
+Package marginnote Info: right page because not two side mode on input line 1852.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1852.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1869.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1879--1880
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1881--1882
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1883--1884
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1885--1886
+
+ []
+
+
+LaTeX Warning: Reference `cor: characters and spectrum' on page 43 undefined on input line 1888.
+
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 43 undefined on input line 1888.
+
+
+LaTeX Warning: Reference `cor: characters and spectrum' on page 43 undefined on input line 1889.
+
+
+LaTeX Warning: Reference `thm: Beurling-Gelfand SRF' on page 43 undefined on input line 1894.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1907--1908
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1911.
+
+LaTeX Warning: Reference `lemma: spectral mapping for polys' on page 44 undefined on input line 1916.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1919.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1920--1921
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1926--1927
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1958.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1973.
+
+LaTeX Warning: Reference `fig: proof of winding lemma' on page 45 undefined on input line 1982.
+
+! Undefined control sequence.
+l.1982 ...cal{B} = \mathcal{A}\displaystyle\medcup
+                                                  \{(x\pm1,y\pm1)\in \Z^2: (...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `fig: proof of winding lemma' on page 45 undefined on input line 1986.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1985--1987
+
+ []
+
+
+LaTeX Warning: Reference `fig: proof of winding lemma' on page 46 undefined on input line 1988.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/Cauchy lemma.svg' on input line 1993.
+
+
+! Package svg Error: File `Cauchy lemma_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1993 ...=0.6\linewidth]{images/Cauchy lemma.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Cauchy lemma_svg-tex.eps'
+although `images/Cauchy lemma.svg' was found.
+
+
+! Package svg Error: File `Cauchy lemma_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1993 ...=0.6\linewidth]{images/Cauchy lemma.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Cauchy lemma_svg-tex.eps_tex'
+although `images/Cauchy lemma.svg' was found.
+
+
+LaTeX Warning: Reference `lemma: cycle winding lemma' on page 46 undefined on input line 1994.
+
+
+LaTeX Warning: Reference `lemma: cycle winding lemma' on page 46 undefined on input line 1994.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1998.
+Package marginnote Info: right page because not two side mode on input line 1999.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 1999.
+
+LaTeX Warning: Reference `thm: HFC' on page 46 undefined on input line 1999.
+
+
+LaTeX Warning: Reference `lemma: cycle winding lemma' on page 46 undefined on input line 1999.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   m
+l.2006          \Theta
+                      _x: \mathcal{O}(K)\to A  \\
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   m
+l.2006          \Theta
+                      _x: \mathcal{O}(K)\to A  \\
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! Package calc Error: `m' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2006          \Theta
+                      _x: \mathcal{O}(K)\to A  \\
+I expected to see one of: + - * / )
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2006          \Theta
+                      _x: \mathcal{O}(K)\to A  \\
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (36.14581pt too wide) in paragraph at lines 2006--2007
+[]\OT1/cmr/m/n/10 !$^^B[] :
+ []
+
+
+Overfull \hbox (37.9984pt too wide) in paragraph at lines 2006--2007
+\OMS/cmsy/m/n/10 O\U/matha/m/n/10 p\OML/cmm/m/it/10 K\U/matha/m/n/10 q б
+ []
+
+
+Overfull \hbox (7.50002pt too wide) in paragraph at lines 2006--2007
+\OML/cmm/m/it/10 A|$ 
+ []
+
+! Extra }, or forgotten \endgroup.
+\@endpbox ...trutbox \par \color@endgroup \egroup 
+                                                  \hfil 
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   m
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Illegal unit of measure (pt inserted).
+<to be read again> 
+                   m
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+Dimensions can be in units of em, ex, in, pt, pc,
+cm, mm, dd, cc, nd, nc, bp, or sp; but yours is a new one!
+I'll assume that you meant to say pt, for printer's points.
+To recover gracefully from this error, it's best to
+delete the erroneous units; e.g., type `2' to delete
+two letters. (See Chapter 27 of The TeXbook.)
+
+
+! Package calc Error: `m' invalid at this point.
+
+See the calc package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.2007          f
+                 \mapsto \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+I expected to see one of: + - * / )
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2007          f\mapsto
+                         \Theta_x(f) = \frac{1}{2\pi i}\displaystyle\int_{\G...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.2008     \end{array}
+                      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (30.83092pt too wide) in paragraph at lines 2007--2008
+[]\OT1/cmr/m/n/10 !f$\U/matha/m/n/10 об
+ []
+
+
+Overfull \hbox (37.11426pt too wide) in paragraph at lines 2007--2008
+\OT1/cmr/m/n/10 ^^B[]\U/matha/m/n/10 p\OML/cmm/m/it/10 f\U/matha/m/n/10 q ^^P
+ []
+
+
+Overfull \hbox (69.2619pt too wide) in paragraph at lines 2007--2008
+[] [][] \OML/cmm/m/it/10 f\U/matha/m/n/10 p\OML/cmm/m/it/10 z\U/matha/m/n/10 qp\OML/cmm/m/it/10 z\OT1/cmr/bx/n/10 1 \U/matha/m/n/10 ^^A
+ []
+
+
+Overfull \hbox (37.18762pt too wide) in paragraph at lines 2007--2008
+\OML/cmm/m/it/10 x\U/matha/m/n/10 q[]q\OML/cmm/m/it/10 dz:|$ 
+ []
+
+! Extra }, or forgotten \endgroup.
+\@endpbox ...trutbox \par \color@endgroup \egroup 
+                                                  \hfil 
+l.2008     \end{array}
+                      
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.2008     \end{array}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.2008     \end{array}
+                      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+LaTeX Warning: Reference `lemma: HFC' on page 46 undefined on input line 2019.
+
+
+LaTeX Warning: Reference `thm: HFC' on page 46 undefined on input line 2019.
+
+
+LaTeX Warning: Reference `thm: spectrum non-empty' on page 46 undefined on input line 2025.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2028--2030
+
+ []
+
+
+LaTeX Warning: Reference `lemma: continuity criterion LCS lin functional' on page 46 undefined on input line 2031.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2032--2033
+
+ []
+
+
+LaTeX Warning: Reference `lemma: BA inversion' on page 46 undefined on input line 2034.
+
+
+LaTeX Warning: Reference `lemma: spectral mapping for polys' on page 47 undefined on input line 2044.
+
+
+LaTeX Warning: Reference `cor: characters and spectrum' on page 47 undefined on input line 2054.
+
+
+LaTeX Warning: Reference `thm: Runge approx thm' on page 47 undefined on input line 2060.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2060--2062
+
+ []
+
+
+LaTeX Warning: Reference `lemma: HFC' on page 47 undefined on input line 2063.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2063--2064
+
+ []
+
+
+LaTeX Warning: Reference `thm: Runge approx thm' on page 47 undefined on input line 2065.
+
+
+LaTeX Warning: Reference `thm: topological property of spectrum' on page 47 undefined on input line 2065.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2068.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2073--2074
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2075--2076
+
+ []
+
+
+LaTeX Warning: Reference `thm: Runge approx thm' on page 47 undefined on input line 2077.
+
+
+LaTeX Warning: Reference `thm: HFC' on page 47 undefined on input line 2080.
+
+
+LaTeX Warning: Reference `lemma: HFC' on page 48 undefined on input line 2083.
+
+
+LaTeX Warning: Reference `lemma: HFC' on page 48 undefined on input line 2083.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2083--2084
+
+ []
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2089.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2089.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2089.
+
+Package marginnote Info: right page because not two side mode on input line 2105.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 2105.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2106--2107
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2113.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2114--2116
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2133.
+! Undefined control sequence.
+l.2145 ...eq\R$ and unitary $\iff$ $f(K)\subseteqS
+                                                  ^1$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2160.
+
+LaTeX Warning: Reference `thm: Beurling-Gelfand SRF' on page 50 undefined on input line 2165.
+
+
+LaTeX Warning: Reference `cor: spectral radius sub-add/mult' on page 50 undefined on input line 2168.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2171.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2176--2177
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2190.
+! Undefined control sequence.
+l.2194 ... is unitary, then $\sigma_A(x)\subseteqS
+                                                  ^1$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `lemma: character unital C^*-alg' on page 50 undefined on input line 2201.
+
+
+LaTeX Warning: Reference `lemma: character unital C^*-alg' on page 50 undefined on input line 2202.
+
+! Undefined control sequence.
+l.2202 ...sigma_A(x)\subseteq\sigma_B(x)\subseteqS
+                                                  ^1$.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Reference `thm: topological property of spectrum' on page 50 undefined on input line 2203.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2203--2204
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2222.
+Package marginnote Info: right page because not two side mode on input line 2223.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 2223.
+
+LaTeX Warning: Reference `thm: Gelfand rep thm' on page 51 undefined on input line 2234.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2234--2235
+
+ []
+
+
+LaTeX Warning: Reference `lemma: character unital C^*-alg' on page 51 undefined on input line 2236.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2236--2238
+
+ []
+
+
+LaTeX Warning: Reference `thm: Gelfand rep thm' on page 51 undefined on input line 2239.
+
+
+LaTeX Warning: Reference `lemma: normal spectral radius' on page 51 undefined on input line 2239.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2239--2240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2246--2247
+
+ []
+
+
+LaTeX Warning: Reference `thm: Gelfand map C^* isomorphism' on page 51 undefined on input line 2248.
+
+
+LaTeX Warning: Reference `cor: characters and spectrum' on page 51 undefined on input line 2255.
+
+
+LaTeX Warning: Reference `cor: spectrum hermitian, unitary' on page 51 undefined on input line 2255.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2254--2256
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2257--2259
+
+ []
+
+
+LaTeX Warning: Reference `thm: Gelfand map C^* isomorphism' on page 51 undefined on input line 2260.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2266--2268
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2270--2271
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2272--2273
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2290.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2331.
+Package marginnote Info: right page because not two side mode on input line 2332.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 2332.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2341.
+
+Underfull \hbox (badness 10000) in paragraph at lines 2355--2357
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2358--2359
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2363.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2367.
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 2377.
+
+LaTeX Warning: Reference `thm: Gelfand map C^* isomorphism' on page 55 undefined on input line 2380.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2393--2395
+
+ []
+
+
+LaTeX Warning: Reference `thm: Riesz Representation C(K)' on page 55 undefined on input line 2396.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2396--2397
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2401--2403
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2421--2422
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2425--2426
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2427--2428
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2437--2439
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2440--2441
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2467--2469
+
+ []
+
+
+LaTeX Warning: Reference `lemma: BFC *-HM' on page 56 undefined on input line 2478.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2483--2484
+
+ []
+
+Package marginnote Info: right page because not two side mode on input line 2496.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 2496.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2498.
+Package mdframed Info: Not enough space on this page on input line 2500.
+Package mdframed Info: Not enough space on this page on input line 2500.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2506.
+
+LaTeX Warning: Reference `cor: spectrum hermitian, unitary' on page 57 undefined on input line 2512.
+
+
+LaTeX Warning: Reference `lemma: character unital C^*-alg' on page 57 undefined on input line 2512.
+
+
+LaTeX Warning: Reference `cor: characters and spectrum' on page 57 undefined on input line 2519.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2518--2520
+
+ []
+
+
+LaTeX Warning: Reference `thm: spectral theorem C^*' on page 57 undefined on input line 2521.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2521--2522
+
+ []
+
+
+LaTeX Warning: Reference `lemma: BFC *-HM' on page 57 undefined on input line 2524.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2523--2525
+
+ []
+
+
+LaTeX Warning: Reference `lemma: Fugledo-Putman-Rosenblum' on page 57 undefined on input line 2526.
+
+
+LaTeX Warning: Reference `thm: spectral theorem C^*' on page 57 undefined on input line 2527.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2530.
+
+LaTeX Warning: Reference `thm: Spectral Theorem for normal operators' on page 57 undefined on input line 2531.
+
+
+LaTeX Warning: Reference `lemma: BFC *-HM' on page 57 undefined on input line 2548.
+
+
+LaTeX Warning: Reference `thm: spectral theorem C^*' on page 57 undefined on input line 2548.
+
+
+LaTeX Warning: Reference `thm: BFC' on page 57 undefined on input line 2548.
+
+
+LaTeX Warning: Reference `thm: spectral theorem C^*' on page 57 undefined on input line 2548.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2551.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2567.
+
+LaTeX Warning: Reference `cor: spectrum hermitian, unitary' on page 58 undefined on input line 2572.
+
+! Undefined control sequence.
+l.2572 ...ermitian, unitary}, $\sigma(u)\subseteqS
+                                                  ^1$. Let $f:S^1\to \R$ be ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2582.
+
+LaTeX Warning: Reference `thm: Polar decomposition' on page 58 undefined on input line 2583.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2587--2588
+
+ []
 
 
 Package pst-pdf Warning: Picture container needs cropping..
@@ -1644,12 +4015,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58145 strings out of 474117
- 1406166 string characters out of 5743708
- 2055739 words of memory out of 5000000
- 79609 multiletter control sequences out of 15000+600000
- 572801 words of font info for 87 fonts, out of 8000000 for 9000
+ 59696 strings out of 474117
+ 1436448 string characters out of 5743708
+ 2080436 words of memory out of 5000000
+ 81143 multiletter control sequences out of 15000+600000
+ 580971 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,15n,134p,1716b,1047s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 111i,16n,134p,1673b,1391s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 No pages of output.

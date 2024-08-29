@@ -15,8 +15,9 @@
 \usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\graphicspath{ {~/Documents/texfiles/partiiinotes/advanced_proba/images/} }
+\graphicspath{ {~/Documents/texfiles/partiiinotes/funct_anal/images/} }
 \usepackage{mathtools}
+\usepackage{mathdots}
 \usepackage{ifthen}
 \usepackage{float}
 \usepackage{subcaption}
@@ -35,10 +36,6 @@
 \usepackage{wrapfig}
 \usepackage[framemethod=tikz]{mdframed}
 \usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
-%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}\addtocounter{page}{-1}}
-\fancyhead{}
-\fancyhead[L]{\text{Advanced Probability}}
-\fancyhead[R]{\text{Pantelis Tassopoulos}}
 
 \definecolor{block-gray}{gray}{0.95}
 \newtcolorbox{examplesblock}[2][]{%
@@ -131,17 +128,15 @@
 \newcommand{\allin}[2]{for all $#1\in#2$}
 \newcommand{\isthere}{there exists }
 
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
 \newcommand{\vectsp}[1]{\mathbf{#1}}
 \newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\unitball}[1]{B_{#1}}
 \newcommand{\intunitball}[1]{D_{#1}}
 \newcommand{\unitsphere}[1]{S_{#1}}
-
-\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
-\newcommand{\vectsp}[1]{\mathbf{#1}}
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\bracket}[2]{\langle #1, #2\rangle}
- % Method of Enrico Gregorio ("egreg")
+
+% Method of Enrico Gregorio ("egreg")
  % https://tex.stackexchange.com/a/22255/13492:
  \newcommand\restrict[2]{% make the whole thing an ordinary symbol
    \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
