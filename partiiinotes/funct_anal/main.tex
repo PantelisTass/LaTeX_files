@@ -513,7 +513,7 @@ In all the cases, we identify functions $f,g$ if $f=g$ a.e.
 
 Let $\Omega$ be a set, $\mathcal{F}$ a $\sigma-$field on $\Omega$. A complex measure on $\mathcal{F}$ is a countably additive function $\nu:\mathcal{F}\to\C$. For $A\in\mathcal{F}$, the \noindent\underline{total variation measure} $|\nu|$ of $\nu$ is defined as follows:
 $$
-|\nu{(A)}|=\sup\left\{\displaystyle\sum_{k=1}^n:A = \displaystyle\bigcup_{k=1}^n A_k \text{ is a measurable partition of $A$}\right\}\footnote{$A_k\in\mathcal{F}, A_j\cap A_k =\emptyset \;\forall j\neq k.$}.
+|\nu{(A)}|=\sup\left\{\displaystyle\sum_{k=1}^n A_k:A = \displaystyle\bigcup_{k=1}^n A_k \text{ is a measurable partition of $A$}\right\}\footnote{$A_k\in\mathcal{F}, A_j\cap A_k =\emptyset \;\forall j\neq k.$}.
 $$
 \noindent Then, $|\nu|:\mathcal{F}\to[0,\infty]$ is a positive measure. Later we see that $|\nu|$ is a finite measure. The total \noindent\underline{variation of $\nu$} is $\norm{\nu}_1=|\nu|(\Omega)$.\\
 
@@ -521,7 +521,7 @@ $$
 
 \begin{enumerate}[label=(\roman*)]
     \item if $A_n\subseteq A_{n+1}$, then $\nu(\displaystyle\bigcup_n A_n)=\displaystyle\lim_{n\to\infty}\nu(A_n)$
-    \item if $A_{n+1}\subseteq A_n$, then $\nu(\cap_n)= \displaystyle\lim_{n\to\infty}\nu(A_n)$.
+    \item if $A_{n+1}\subseteq A_n$, then $\nu(\displaystyle\bigcap_n A_n)= \displaystyle\lim_{n\to\infty}\nu(A_n)$.
 \end{enumerate}
 
 \noindent\underline{Signed measure}: $\Omega$ a set, $\mathcal{F}$ a $\sigma-$algebra on $\Omega$.\\
@@ -701,7 +701,7 @@ Let $(\Omega, \mathcal{F}, \mu), p, q, \phi$ be as above.
 
     \noindent\underline{Case 2}: $\mu$ is $\sigma-$finite.\\
 
-    There exists a measurable partition $\Omega= \displaystyle\bigcup_{n\in\N}A_n$, of $\Omega$, s.t. $\mu(A_n)<\infty$ for all $n$. By Case 1, for all $n\in\N$, there exists $g_n\in L_q(\mu_A)$ s.t. $\psi_{A_n}=\psi_{g_n}$, i.e. $\psi(f)=\int_{A_n} f g_n d\mu$, for all $f\in L_p(\mu_{A_n})$. By Claim 2, $\displaystyle\sum^n_{k=1}\norm{g_k}^q_q=\sum^n_{k=1}\norm{\psi_{A_n}}^q=\norm{\psi_{\displaystyle\bigcup_{k=1}^nA_k}}^q\leq \norm{\psi}^q$. If we define $g$ on $\Omega$ by setting $g=g_n$ on $A_n$, then $g$ is in $L_q$. Thus, $\psi(f)=\psi_g(f)$ for all $f\in L_p(\mu_n)$, for all $n$. Hence, $\psi(f)=\phi_g(f)$ on $\overline{\spn\{\displaystyle\bigcup_{n\in\N}L_p(\mu_n)\}}=L_p(\mu)$.\\
+    There exists a measurable partition $\Omega= \displaystyle\bigcup_{n\in\N}A_n$, of $\Omega$, s.t. $\mu(A_n)<\infty$ for all $n$. By Case 1, for all $n\in\N$, there exists $g_n\in L_q(\mu_A)$ s.t. $\psi_{A_n}=\psi_{g_n}$, i.e. $\psi(f)=\int_{A_n} f g_n d\mu$, for all $f\in L_p(\mu_{A_n})$. By Claim 2, $\displaystyle\sum^n_{k=1}\norm{g_k}^q_q=\sum^n_{k=1}\norm{\psi_{A_n}}^q=\norm{\psi_{\cup_{k=1}^nA_k}}^q\leq \norm{\psi}^q$. If we define $g$ on $\Omega$ by setting $g=g_n$ on $A_n$, then $g$ is in $L_q$. Thus, $\psi(f)=\psi_g(f)$ for all $f\in L_p(\mu_n)$, for all $n$. Hence, $\psi(f)=\phi_g(f)$ on $\overline{\spn\{\displaystyle\bigcup_{n\in\N}L_p(\mu_n)\}}=L_p(\mu)$.\\
 
     \noindent\underline{Case 3}: general $\mu$. \\
 
@@ -736,7 +736,7 @@ s.t. $\psi = \phi_g$.\\
     
     To conclude, proceed in an entirely analogous way using a measurable partition of $\Omega = \displaystyle\bigcup_{n\in\N}A_n$, s.t. $\mu_{A_n}$ is a finite measure for all $n\in\N$. By Case 1, for all $n\in\N$, there exists $g_n\in L_\infty (\mu_{A_n})$ s.t. $\psi_{A_n}=\psi_{g_n}$, i.e. $\psi(f)=\int_{A_n} f g_n d\mu$, for all $f\in L_1(\mu_{A_n})$. Now, by the previous claim, 
     $$
-\displaystyle\norm{\sum^n_{k=1}g_k\mathbf{1}_{A_k}}_\infty = \norm{\psi_{\displaystyle\bigcup_{k=1}^nA_k}} = \displaystyle\max_{1\leq k\leq n}\norm{\psi_{A_k}}\leq \norm{\psi}.
+\displaystyle\norm{\sum^n_{k=1}g_k\mathbf{1}_{A_k}}_\infty = \norm{\psi_{\cup_{k=1}^nA_k}} = \displaystyle\max_{1\leq k\leq n}\norm{\psi_{A_k}}\leq \norm{\psi}.
 $$ 
 If we define $g$ on $\Omega$ by setting $g=g_n$ on $A_n$, then $g$ is in $L_\infty$ with $\norm{g}_\infty\leq \norm{\psi}$. Thus, $\psi(f)=\psi_g(f)$ for all $f\in L_1(\mu_{A_n})$, for all $n$. Hence, $\psi(f)=\phi_g(f)$ on $\overline{\spn\{\displaystyle\bigcup_{n\in\N}L_1(\mu_n)\}}=L_1(\mu)$.\\
 \end{proof}
@@ -1990,7 +1990,7 @@ $$
 
 \begin{figure}[H]
         \centering
-        \includesvg[width=0.6\linewidth]{images/Cauchy lemma.svg}
+        \includesvg[width=0.55\linewidth]{images/Cauchy lemma.svg}
         \caption{Illustration of proof of Lemma \ref{lemma: cycle winding lemma}, where $n\in \N, w\in K$ and $K, \mathcal{U}, \Gamma$ (in black) as in in the lemma.}
         \label{fig: proof of winding lemma}
     \end{figure}
