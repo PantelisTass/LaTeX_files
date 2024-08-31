@@ -1,13 +1,14 @@
 % preamble.tex
 \usepackage{titlesec}
 \usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
 \usepackage{mathabx}
 \usepackage{adjustbox}
 \usepackage{graphicx}% Required for inserting images
 \usepackage{tikz-cd} 
 \usepackage{tikz}
 \usepackage{comment}
-\usetikzlibrary{calc, shape, graphs, tkz-graph, positioning, backgrounds, decorations.pathmorphing}
+\usetikzlibrary{calc, shape, graphs, positioning, backgrounds, decorations.pathmorphing}
 \usepackage{forest}
 \usepackage{pgfplots, pgfplotstable}
 \usepackage{indentfirst}
@@ -16,20 +17,18 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \graphicspath{ {~/Documents/texfiles/partiiinotes/advanced_proba/images/} }
-\usepackage{mathtools}
 \usepackage{ifthen}
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{hyperref}
 \usepackage[usenames,dvipsnames]{xcolor}
-%\usepackage[tbtags]{amsmath}
 \usepackage{svg}
 \usepackage{hyperref}
 \usepackage{enumitem}  
 \usepackage{pst-node}
 \usepackage{auto-pst-pdf}
 \usepackage{marginnote}
-\usepackage{adjustbox}
+\usepackage{enumerate}
 \usepackage{centernot}
 \usepackage[most]{tcolorbox}
 \usepackage{wrapfig}
@@ -108,7 +107,7 @@
 \newcommand{\Z}{\ensuremath{\mathbb{Z}}}
 \newcommand{\Q}{\ensuremath{\mathbb{Q}}}
 \newcommand{\C}{\ensuremath{\mathbb{C}}}
-\newcommand{\PP}{\ensuremath{\mathbf{P}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
 \newcommand{\F}{\mathcal{F}}
 
 \newcommand{\Real}{\operatorname{Re}}
@@ -138,8 +137,6 @@
 \newcommand{\unitsphere}[1]{S_{#1}}
 
 \newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
-\newcommand{\vectsp}[1]{\mathbf{#1}}
-\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
 \newcommand{\bracket}[2]{\langle #1, #2\rangle}
  % Method of Enrico Gregorio ("egreg")
  % https://tex.stackexchange.com/a/22255/13492:

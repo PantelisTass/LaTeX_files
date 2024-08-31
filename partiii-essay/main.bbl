@@ -1,0 +1,121 @@
+\begin{thebibliography}{10}
+
+\bibitem{billingsley2013convergence}
+Patrick Billingsley.
+\newblock {\em Convergence of probability measures}.
+\newblock John Wiley \& Sons, 2013.
+
+\bibitem{calvert2019brownian}
+Jacob Calvert, Alan Hammond, and Milind Hegde.
+\newblock Brownian structure in the kpz fixed point.
+\newblock {\em arXiv preprint arXiv:1912.00992}, 2019.
+
+\bibitem{corwin2011kardarparisizhangreview}
+Ivan Corwin.
+\newblock The kardar-parisi-zhang equation and universality class, 2011.
+
+\bibitem{corwin2016kardar}
+Ivan Corwin.
+\newblock Kardar-parisi-zhang universality.
+\newblock {\em Notices of the AMS}, 63(3):230--239, 2016.
+
+\bibitem{corwin2014brownian}
+Ivan Corwin and Alan Hammond.
+\newblock Brownian gibbs property for airy line ensembles.
+\newblock {\em Inventiones mathematicae}, 195:441--508, 2014.
+
+\bibitem{DOV}
+Duncan Dauvergne, Janosch Ortmann, and B{\'a}lint Vir{\'a}g.
+\newblock The directed landscape.
+\newblock {\em arXiv preprint arXiv:1812.00309}, 2018.
+
+\bibitem{dauvergne2022three}
+Duncan Dauvergne, Sourav Sarkar, and B{\'a}lint Vir{\'a}g.
+\newblock Three-halves variation of geodesics in the directed landscape.
+\newblock {\em The Annals of Probability}, 50(5):1947--1985, 2022.
+
+\bibitem{hairer2014theory}
+Martin Hairer.
+\newblock A theory of regularity structures.
+\newblock {\em Inventiones mathematicae}, 198(2):269--504, 2014.
+
+\bibitem{hammond2019patchwork}
+Alan Hammond.
+\newblock A patchwork quilt sewn from brownian fabric: regularity of polymer weight profiles in brownian last passage percolation.
+\newblock In {\em Forum of Mathematics, Pi}, volume~7, page~e2. Cambridge University Press, 2019.
+
+\bibitem{hammond2021brownian}
+Alan Hammond.
+\newblock Brownian regularity for the airy line ensemble, and multi-polymer watermelons in brownian last passage percolation, 2021.
+
+\bibitem{johansson2000shape}
+Kurt Johansson.
+\newblock Shape fluctuations and random matrices.
+\newblock {\em Communications in mathematical physics}, 209:437--476, 2000.
+
+\bibitem{kallenberg1997foundations}
+Olav Kallenberg and Olav Kallenberg.
+\newblock {\em Foundations of modern probability}, volume~2.
+\newblock Springer, 1997.
+
+\bibitem{kardar1986dynamic}
+Mehran Kardar, Giorgio Parisi, and Yi-Cheng Zhang.
+\newblock Dynamic scaling of growing interfaces.
+\newblock {\em Physical Review Letters}, 56(9):889, 1986.
+
+\bibitem{matetski2021kpz}
+Konstantin Matetski, Jeremy Quastel, and Daniel Remenik.
+\newblock The kpz fixed point.
+\newblock {\em Acta Mathematica}, 227(1):115--203, 2021.
+
+\bibitem{mitov2014renewal}
+Kosto~V Mitov, Edward Omey, Kosto~V Mitov, and Edward Omey.
+\newblock {\em Renewal processes}.
+\newblock Springer, 2014.
+
+\bibitem{morters2010brownian}
+Peter M{\"o}rters and Yuval Peres.
+\newblock {\em Brownian motion}, volume~30.
+\newblock Cambridge University Press, 2010.
+
+\bibitem{nica2020one}
+Mihai Nica, Jeremy Quastel, and Daniel Remenik.
+\newblock One-sided reflected brownian motions and the kpz fixed point.
+\newblock In {\em Forum of Mathematics, Sigma}, volume~8, page e63. Cambridge University Press, 2020.
+
+\bibitem{o2002representation}
+Neil O'Connell and Marc Yor.
+\newblock A representation for non-colliding random walks.
+\newblock 2002.
+
+\bibitem{pr2018local}
+Leandro PR~Pimentel.
+\newblock Local behaviour of airy processes.
+\newblock {\em Journal of Statistical Physics}, 173(6):1614--1638, 2018.
+
+\bibitem{quastel2011introduction}
+Jeremy Quastel.
+\newblock Introduction to kpz.
+\newblock {\em Current developments in mathematics}, 2011(1), 2011.
+
+\bibitem{rost1981non}
+Hermann Rost.
+\newblock Non-equilibrium behaviour of a many particle process: Density profile and local equilibria.
+\newblock {\em Zeitschrift f{\"u}r Wahrscheinlichkeitstheorie und Verwandte Gebiete}, 58(1):41--53, 1981.
+
+\bibitem{sarkar2021brownian}
+Sourav Sarkar and B{\'a}lint Vir{\'a}g.
+\newblock Brownian absolute continuity of the kpz fixed point with arbitrary initial condition.
+\newblock 2021.
+
+\bibitem{schilling2021brownian}
+Ren{\'e}~L Schilling.
+\newblock {\em Brownian motion: a guide to random processes and stochastic calculus}.
+\newblock Walter de Gruyter GmbH \& Co KG, 2021.
+
+\bibitem{streit1994introduction}
+Ludwig Streit.
+\newblock An introduction to white noise analysis.
+\newblock In {\em Stochastic analysis and applications in physics}, pages 415--439. Springer, 1994.
+
+\end{thebibliography}

@@ -1,0 +1,114 @@
+\documentclass{article}
+\input{preamble}  % Include the preamble from an external file
+
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}\addtocounter{page}{-1}}
+\fancyhead{}
+\fancyhead[L]{\text{Advanced Probability}}
+\fancyhead[R]{\text{Pantelis Tassopoulos}}
+
+\title{\Huge Part III Advanced Probability \\ 
+\huge Based on lectures by P. Sousi}
+\author{\Large Notes taken by Pantelis Tassopoulos}
+\date{\Large Michaelmas 2023}
+
+\begin{document}
+
+\maketitle
+\newpage
+
+\tableofcontents
+\newpage 
+
+\section{Conditional Expectation}
+\mymark{Lecture 1}\subsection{Basic definitions}
+Let $ (\Omega, \F, \PP) $ be a probability space. Remember the following definitions 
+\begin{boxdef}[Sigma algebra]\label{def: sigma algebra}
+	$ \F $ is a sigma algebra if and only if: ($ \F\in \mathcal{P}{\Omega} $)
+	\begin{enumerate}
+		\item $ \Omega \in \F $
+		\item $ A\in \F \implies A^c\in \F$
+		\item $ (A_n)_{n\in \N}\subseteq \F \implies \displaystyle\bigcup_{n\in\N}A_n\in\F $
+	\end{enumerate}
+\end{boxdef}
+\begin{boxdef}[Probability measure]\label{def: prob measure}
+	$ \PP $ is a probability measure if
+	\begin{enumerate}
+		\item $ \PP:\F\to [0,1] $ (i.e. a set function)
+		\item $ \PP(\Omega) = 1 $, and $ \PP(\emptyset) = 0 $
+		\item $ (A_n)_{n\in \N} $ pairwise disjoint $ \implies \PP\left(\displaystyle\bigcup_{n\in\N}A_n\right) =\displaystyle\sum^{\infty}_{n=1}\PP(A_n)$.
+	\end{enumerate}
+	
+\end{boxdef} 
+\begin{boxdef}[Random Variable]\label{def: rv}
+	$ X:\Omega\to \R $ is a \underline{random variable} if for all $ B $ open in $ \R $, $ X^{-1}(B)\in \F $.
+\end{boxdef}
+\begin{remark}
+	Observe that the sigma algebra $ \mathcal{G}=\{B\subseteq\R: X(B)\in\F\}\supseteq \mathcal{O} \implies \mathcal{G}\supseteq \mathcal{B}(\R) $, the former being the collection of open sets in $ \R $ and the latter the Borel sigma algebra on $ \R $ with the usual topology, namely, $ \sigma(\mathcal{O})$ (see below for the notation).
+\end{remark}
+
+Let $ \mathcal{A} $ be a collection of subsets of $ \Omega $. We define 
+\[\begin{array}{ll}
+	\sigma(\mathcal{A}) &= \text{smallest sigma algebra containing $ \mathcal{A} $} \\
+     &=\displaystyle \bigcap \{\mathcal{T}:\mathcal{T} \text{ sigma algebra containing }\mathcal{A}\}.
+\end{array}
+\]
+
+\begin{boxdef}[Borel sigma algebra on $ \R $]\label{def: borel sigma alg}
+	Let $ \mathcal{O} = \{\text{open sets} \R\} $. Then, the Borel sigma algebra $ \mathcal{B}(\R)( \coloneq \mathcal{B} ) $ is defined as above, namely, 
+	\[\mathcal{B}(\R)\coloneq \sigma(\mathcal{O}).\]
+\end{boxdef}
+
+Let $ (X_i)_{i\in I} $ be a family of random variables, then $ \sigma(X_{i}:i\in I) =$ the smallest sigma algebra that makes them all measurable. We also have the characterisation 
+$ \sigma(X_{i}: i\in I) = \sigma(\{\underbrace{\{\omega\in \Omega: X_{i}(\omega)\in B\}}_{X^{-1}_{i}(B)}, i\in I, B\in \mathcal{B}(\R)\})$.
+
+\subsection{Expectation}
+
+Note we use the following for the indicator function on some event $ A $
+\[\begin{array}{ll}
+	\mathbf{1}(A)(x) &= \quad \mathbf{1}(x\in A)\\ 
+     &\coloneqq \left. \begin{array}{cc}
+    &1, \quad x\in A \\
+    &0, \quad x\notin A
+\end{array}\right\}, \quad A\in \F.
+\end{array}
+\]
+
+
+We now begin the construction of the expectation of generic random variables.\\
+
+\underline{Positive simple random variables:} $X = \displaystyle\sum^{
+n}_{i=1}\mathbf{1}(A_{i}), c_{i}\geq 0, A_{i}\in\F.  $.
+\[
+	\mathbb{E}[X]\coloneqq\displaystyle\sum^{n}_{i=1}c_{i}\PP(A_{i}). 
+\]
+
+
+\underline{Non-negative random variables:} $ (X\geq 0). $
+We proceed by approximation. Namely, let $ X_{n}(\omega)\coloneqq 2^{-n}\lfloor 2^{-n}\cdot X(\omega)\rfloor \land n \uparrow X(\omega) , n\to \infty$. Now, by monotone convergence, 
+\[
+	\mathbb{E}[X]\coloneqq \uparrow \displaystyle\lim_{n\to\infty}\mathbb{E}[X_{n}]=\displaystyle\sup\mathbb{E}[X].
+\]
+
+\underline{General random variables:} Have the decomposition $ X = X^{+}-X^{-} $, where $ X^{+} = X\lor 0, X^{-}=-X\land 0 $. If one of $ \mathbb{E}[X^{+}], \mathbb{E}[X^{-}]  <\infty $ then set 
+\[
+	\mathbb{E}[X]\coloneqq \mathbb{E}[X^{+}]-\mathbb{E}[X^{-}].  
+\]
+
+\begin{boxdef}\label{def: integrable rv}
+	$ X $ is called \underline{integrable} if $ \mathbb{E}[|X|]<\infty $.
+\end{boxdef}
+
+\begin{boxdef}\label{def: cond prob event}
+Let $ B\in \F $ with $ \PP(B)>0 $. Then for all $ A\in \F $, set 
+\[
+\PP(A|B)\coloneqq \frac{\PP(A\cap B)}{\PP(B)}
+\]
+
+Now for an integer-valued random variable $ X $, we set:
+\[
+	\mathbb{E}[X|B]\coloneqq \frac{\mathbb{E}[X\cdot \mathbf{1}_{B}]}{\PP(B)}
+\]
+
+\end{boxdef}
+
+end{document}

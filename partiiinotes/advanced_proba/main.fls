@@ -2,7 +2,7 @@ PWD /Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba
 INPUT /usr/local/texlive/2024/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
 INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT main.tex
+INPUT /Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main.tex
 OUTPUT main.log
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/article.cls
@@ -32,6 +32,14 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amssymb.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/mathabx/mathabx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/mathabx/mathabx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/mathabx/mathabx.dcl
@@ -41,14 +49,12 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/xkeyval/keyval.tex
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/adjcalc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/adjustbox/trimclip.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
@@ -320,12 +326,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mathtools.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/calc.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/mathtools/mhsetup.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/float/float.sty
@@ -404,17 +404,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/koma-script/scrlogo.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/koma-script/scrlogo.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/shellesc.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
-INPUT ./main.w18
-INPUT ./main.w18
-INPUT main.w18
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/transparent/transparent-nometadata.sty
@@ -455,10 +444,14 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auto-pst-pdf/auto-pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/auto-pst-pdf/auto-pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifpdf.sty
-INPUT ./main-autopp.log
-INPUT ./main-autopp.log
-INPUT ./main.tex
-INPUT ./main.tex
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/ifplatform/ifplatform.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/catchfile/catchfile.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifluatex.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pst-pdf/pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/pst-pdf/pst-pdf.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/generic/iftex/ifxetex.sty
@@ -469,6 +462,8 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/preview/preview.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/preview/preview.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/marginnote/marginnote.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/marginnote/marginnote.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/enumerate.sty
+INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tools/enumerate.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/oberdiek/centernot.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/oberdiek/centernot.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
@@ -588,6 +583,10 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
@@ -605,49 +604,35 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathb5.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
-INPUT ./images/LCS convex top 1.svg
-INPUT ./images/LCS convex top 1.svg
-INPUT ./images/LCS convex top 1.svg
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 1_svg-tex.pdf
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
-INPUT ./images/LCS convex top 2.svg
-INPUT ./images/LCS convex top 2.svg
-INPUT ./images/LCS convex top 2.svg
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf_tex
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
-INPUT ./svg-inkscape/LCS convex top 2_svg-tex.pdf
+OUTPUT main.toc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmti10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx8.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb

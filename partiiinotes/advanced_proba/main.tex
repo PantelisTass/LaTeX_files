@@ -16,44 +16,376 @@
 \maketitle
 \newpage
 
-\section{Proof of the Riemann Hypothesis}
-\mymark{Lecture 1}\noindent We start with setting up some notation.\\
-note the margins are narrow.
+\tableofcontents
+\newpage 
 
-\begin{equation}
-	\displaystyle \int_{a}^{b} f \diff \mu 
-\end{equation}
+\section{Conditional Expectation}
+\mymark{Lecture 1}\subsection{Basic definitions}
+Let $ (\Omega, \F, \PP) $ be a probability space. Remember the following definitions 
+\begin{boxdef}[Sigma algebra]\label{def: sigma algebra}
+	$ \F $ is a sigma algebra if and only if: ($ \F\in \mathcal{P}{\Omega} $)
+	\begin{enumerate}
+		\item $ \Omega \in \F $
+		\item $ A\in \F \implies A^c\in \F$
+		\item $ (A_n)_{n\in \N}\subseteq \F \implies \displaystyle\bigcup_{n\in\N}A_n\in\F $
+	\end{enumerate}
+\end{boxdef}
+\begin{boxdef}[Probability measure]\label{def: prob measure}
+	$ \PP $ is a probability measure if
+	\begin{enumerate}
+		\item $ \PP:\F\to [0,1] $ (i.e. a set function)
+		\item $ \PP(\Omega) = 1 $, and $ \PP(\emptyset) = 0 $
+		\item $ (A_n)_{n\in \N} $ pairwise disjoint $ \implies \PP\left(\displaystyle\bigcup_{n\in\N}A_n\right) =\displaystyle\sum^{\infty}_{n=1}\PP(A_n)$.
+	\end{enumerate}
+	
+\end{boxdef} 
+\begin{boxdef}[Random Variable]\label{def: rv}
+	$ X:\Omega\to \R $ is a \underline{random variable} if for all $ B $ open in $ \R $, $ X^{-1}(B)\in \F $.
+\end{boxdef}
+\begin{remark}
+	Observe that the sigma algebra $ \mathcal{G}=\{B\subseteq\R: X(B)\in\F\}\supseteq \mathcal{O} \implies \mathcal{G}\supseteq \mathcal{B}(\R) $, the former being the collection of open sets in $ \R $ and the latter the Borel sigma algebra on $ \R $ with the usual topology, namely, $ \sigma(\mathcal{O})$ (see below for the notation).
+\end{remark}
 
-\section{Proof of Collatz Conjecture}
-\begin{equation}
-	\displaystyle\sum_{n\in\N}a_n
-\end{equation}
+Let $ \mathcal{A} $ be a collection of subsets of $ \Omega $. We define 
+\[\begin{array}{ll}
+	\sigma(\mathcal{A}) &= \text{smallest sigma algebra containing $ \mathcal{A} $} \\
+     &=\displaystyle \bigcap \{\mathcal{T}:\mathcal{T} \text{ sigma algebra containing }\mathcal{A}\}.
+\end{array}
+\]
 
-In other words, the following diagram
-    $$ 
-    \adjustbox{scale = 1.5}{\begin{tikzcd}
-    X \arrow{r}{T} \arrow[hookrightarrow]{d}{\iota_X} & Y \arrow[hookrightarrow]{d}{\iota_Y} \\%
-    X^{**} \arrow{r}{T^{**}}& Y^{**}
-    \end{tikzcd}}
-    $$
-    commutes (vertical arrows are canonical embeddings).
+\begin{boxdef}[Borel sigma algebra on $ \R $]\label{def: borel sigma alg}
+	Let $ \mathcal{O} = \{\text{open sets} \R\} $. Then, the Borel sigma algebra $ \mathcal{B}(\R)( \coloneq \mathcal{B} ) $ is defined as above, namely, 
+	\[\mathcal{B}(\R)\coloneq \sigma(\mathcal{O}).\]
+\end{boxdef}
+
+Let $ (X_i)_{i\in I} $ be a family of random variables, then $ \sigma(X_{i}:i\in I) =$ the smallest sigma algebra that makes them all measurable. We also have the characterisation 
+$ \sigma(X_{i}: i\in I) = \sigma(\{\underbrace{\{\omega\in \Omega: X_{i}(\omega)\in B\}}_{X^{-1}_{i}(B)}, i\in I, B\in \mathcal{B}(\R)\})$.
+
+\subsection{Expectation}
+
+Note we use the following for the indicator function on some event $ A $
+\[
+    \mathbf{1}(A)(x) = \mathbf{1}(x\in A) 
+     \coloneqq \left. \begin{array}{@{}l@{}}
+    1, \quad x\in A \\
+    0, \quad x\notin A
+     \end{array}\right\rbrace, \quad A\in \F.
+\]
 
 
-    \begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
-  \centering
-  \includesvg[width=0.65\linewidth]{images/LCS convex top 1.svg}
-  \caption{Illustration of lemma \ref{lemma: LCS topology}.}
-  \label{fig: LCS topology}
-\end{subfigure}%
-\begin{subfigure}{0.5\textwidth}
-  \centering
-  \includesvg[width=0.65\linewidth]{images/LCS convex top 2.svg}
-  \caption{Illustration of lemma \ref{lemma: LCS topology extreme point}.}
-  \label{fig: LCS topology extreme point}
-\end{subfigure}
-\caption{}
-\label{fig: LCS topology combined}
-\end{figure}
+We now begin the construction of the expectation of generic random variables.\\
+
+\underline{Positive simple random variables:} $X = \displaystyle\sum^{
+n}_{i=1}\mathbf{1}(A_{i}), c_{i}\geq 0, A_{i}\in\F.  $.
+\[
+	\mathbb{E}[X]\coloneqq\displaystyle\sum^{n}_{i=1}c_{i}\PP(A_{i}). 
+\]
+
+
+\underline{Non-negative random variables:} $ (X\geq 0). $
+We proceed by approximation. Namely, let $ X_{n}(\omega)\coloneqq 2^{-n}\lfloor 2^{-n}\cdot X(\omega)\rfloor \land n \uparrow X(\omega) , n\to \infty$. Now, by monotone convergence, 
+\[
+	\mathbb{E}[X]\coloneqq \uparrow \displaystyle\lim_{n\to\infty}\mathbb{E}[X_{n}]=\displaystyle\sup\mathbb{E}[X].
+\]
+
+\underline{General random variables:} Have the decomposition $ X = X^{+}-X^{-} $, where $ X^{+} = X\lor 0$, $X^{-}=-X\land 0 $. If one of $ \mathbb{E}[X^{+}], \mathbb{E}[X^{-}]  <\infty $ then set 
+\[
+	\mathbb{E}[X]\coloneqq \mathbb{E}[X^{+}]-\mathbb{E}[X^{-}].  
+\]
+
+\begin{boxdef}\label{def: integrable rv}
+	$ X $ is called \underline{integrable} if $ \mathbb{E}[|X|]<\infty $.
+\end{boxdef}
+
+\begin{boxdef}\label{def: cond prob event}
+Let $ B\in \F $ with $ \PP(B)>0 $. Then for all $ A\in \F $, set 
+\[
+\PP(A|B)\coloneqq \frac{\PP(A\cap B)}{\PP(B)}
+\] 
+
+\end{boxdef}
+
+
+Now for an integer-valued random variable $ X $, we set:
+\[
+	\mathbb{E}[X|B]\coloneqq \frac{\mathbb{E}[X\cdot \mathbf{1}_{B}]}{\PP(B)}
+\]
+
+
+\subsection{Countably generated sigma algebra}
+
+\mymark{Lecture 2}We now extend the definition of the conditional expectation for a \underline{countably generated sigma algebra}. Let $ (\Omega, \F, \PP) $ be a probability space. We call the sigma algebra $\mathcal{G} $ coutnably generated if there exists a colection $ (B_{n})_{n\in \N} $ of pairwise disjoint events such that $\displaystyle\bigcup_{n\in I}B_{n} = \Omega$ with ($ I $ countable) and $\mathcal{ G} = \sigma(B_{i}:i\in I)$.\\ 
+
+Let $X$ be an integrable random variable. We want to define $\mathbb{E}[X|\mathcal{G}]$.\\ 
+
+Define $X'(\omega) = \mathbb{E}[X|B_{i}]$, whenever $w\in B_{i}$, i.e. 
+\[
+	X' =\displaystyle\sum_{i\in I}\mathbf{1}(B_{i})\cdot\mathbb{E}[X|B_{i}]. 
+\]
+
+We make the convention that $\mathbb{E}[X|B_{i}] = 0$ if $\PP(B_{i}) = 0$. It is easy to check that $X'$ is $\mathcal{G}-$measurable. We also have that 
+\[
+\mathcal{G}  = \left\{\displaystyle\bigcup_{j\in } B_{j}: J\subseteq I \right\}
+\]
+and $X'$ satisfies for all $ G\in\mathcal{G}$:$\mathbb{E}[X\cdot\mathbf{1}_{G}]=\mathbb{E}[X'\cdot\mathbf{1}_{G}] $ and 
+\[\begin{array}{ll}
+	\mathbb{E}[|X'|] &\leq\mathbb{E} \left[\displaystyle\sum_{i\in I}|\mathbb{E}[X|B_{i}]\mathbf{1}(B_{i})  \right] \\
+			 &=\displaystyle\sum_{i \in I}\PP(B_{i})\cdot \left|\mathbb{E}[X|B_{i}] \right|\\ 
+			 &\leq\displaystyle\sum_{i\in I}\PP(B_{i})\cdot \underbrace{\mathbb{E}[X\cdot\mathbf{1}(B_{i})]}_{\PP(B_{i})}\\ 
+			 &=\mathbb{E}[|X|]<\infty.
+\end{array}
+\]
+
+We say $ A\in \F$ happens \underline{a.s.} if $ \PP(A) = 1$. \underline{Recall} (from measure theory and basic functional analysis): 
+\begin{theorem}[Monotone Convergence Theorem (MCT)]\label{thm: MCT}
+	Let $(X_{n})_{n\in \N}$ be such that $ X_{n}\geq 0, X$ be random variables such that $ X_{n}\uparrow X$ as $ n\to \infty$. Then, $\mathbb{E}[X_{n}]\uparrow\mathbb{E}[X]$ as $ n\to \infty$.
+\end{theorem}
+ 
+\begin{theorem}[Dominanted Convergenec Theorem (DCT)]\label{thm: DCT}
+	Let $ (X_{n})_{n\in \N}$ be random variables such that $ X_{n}\to X$ a.s. as $ n\to \infty$ and $ |X_{n}|\leq Y$ a.s. for all $ n\in \N$, where $ Y$ is integrable, then $\mathbb{E}[X_{n}]\to\mathbb{E}[X]$, as $ n\to \infty$.
+\end{theorem}
+
+Let $ 1\leq p <\infty$ and $ f $ a measurable function, then set $ \norm{f}_{p}\coloneqq \left(\mathbb{E}[\norm{f}^{p}]\right)^{\frac{1}{p}}$. If $ p =\infty$, then set $ \norm{f}_{\infty}\coloneqq \displaystyle \inf \{\lambda: |f|\leq \lambda \text{ a.s.}\}$. Recall for all $ p$, the Lebesgue spaces, $\mathcal{L}^{p}(\Omega, \F, \PP)=\{f: \norm{f}_{p}<\infty\}$.
+
+\begin{theorem}\label{thm: orthog proj hilbert}
+	$ \mathcal{L}^{2}(\Omega, \F, \PP) $ is a Hilbert space, with inner product $  \bracket{u}{v}_{2}=\mathbb{E}[u\cdot v]$. Furthermore, for any closed subspace $\mathcal{H}$, if $ f\in\mathcal{L}^{2}$, there exists a unique $ g\in\mathcal{H}$ s.t. $ \norm{f-g}_{\mathcal{L}^{2}}=\displaystyle\inf_{h\in\mathcal{H}}\norm{f-h}_{\mathcal{L}^{2}}$ and $ \bracket{f-g}{h}=0$, for all $ h\in\mathcal{H}$. We say that $ g$ is the \underline{orthogonal projection} of $ f$ in $\mathcal{H}$.
+\end{theorem}
+
+\subsection{General case}
+
+We now construct the conditional expectation in the general case, for any integrably random variable with respect to an arbitrary sigma algebras.
+
+\begin{theorem}[Conditional Expectation]\label{thm: cond exp}
+Let $ (\Omega, \F, \PP)$ be a probability space, $\mathcal{G}\subseteq \F$ a sub-sigma algebra, $ X\in\mathcal{L}^{1}(\Omega, \F, \PP)$. Then there exists an integrable random variable $ Y$ satisfying:
+\begin{enumerate}
+	\item $ Y$ is $\mathcal{G}-$measurable
+	\item for all $ G\in\mathcal{G},\mathbb{E}[X\cdot\mathbf{1}(G)]= \mathbb{E}[Y\cdot\mathbf{1}(G)]$.
+\end{enumerate}
+Moreover, $ Y$ unique in the sense that if $ Y'$ also satisfies the above $ 1),2)$, then $ Y = Y'$ a.s.. We call $ Y$ a version of the conditional expectation of $ X$ given $ G$. We write $ Y =\mathbb{E}[X\mathcal{G}]$ a.s. If $\mathcal{G} = \sigma(Z)$, where $ Z$ is a random variable, then we write $\mathbb{E}[Z] =\mathbb{E}[X|\mathcal{G}]$.
+
+\end{theorem}
+
+\begin{remark}
+	$ 2)$ could be replaced by $\mathbb{E}[X\cdot Z] =\mathbb{E}[Y\cdot Z]$ for all $ Z$ bounded $\mathcal{G}-$measurable random variables. 
+\end{remark}
+
+We now state and prove the main theorem of this section:
+
+\begin{proof}{(Theorem \ref{thm: cond exp})}
+	\underline{Uniqueness:} Let $ Y, Y'$ satisfy $ 1), 2)$. Let $ A = \{Y > Y'\}\in\mathcal{G}$. Then $ 2) $  
+	\[\begin{array}{ll}
+	&\implies \mathbb{E}[Y\cdot\mathbf{1}(A)] =\mathbb{E}[Y'\cdot\mathbf{1}(A)]=\mathbb{E}[X\cdot\mathbf{1}(A)] \\
+	&\implies\mathbb{E}[(Y-Y')\cdot\mathbf{1}(A)] = 0\\ 
+	&\implies \PP(A) = \PP(Y>Y') = 0\\ 
+	&\implies Y\leq Y' \text{ a.s.}.
+	\end{array}
+	\]
+	We similarly obtain $ Y\geq Y'$ a.s., hence we deduce that $ Y = Y'$ a.s.
+
+	\underline{Existence:} three steps. 
+	\begin{enumerate}
+		\item Assume that $ X \in\mathcal{L}^{2}(\Omega, \F, \PP)$. Observe that $\mathcal{L}^{2}(\Omega,\mathcal{G},\PP)$ is a closed subspace of $\mathcal{L}^{2}(\Omega, \F, \PP)$. Hence, Theorem \ref{thm: orthog proj hilbert}, we have the decomposition  $\mathcal{L}^{2}(\Omega, \F, \PP) =\mathcal{L}^{2}(\Omega,\mathcal{G}, \PP)\oplus\mathcal{L}^{2}(\Omega,\mathcal{G}, \PP)^{\perp}$.
+Then, we have the corresponding decomposition $ X = Y+Z$, where $ Y\in \mathcal{L}^{2}(\Omega,\mathcal{G}, \PP)$ and $ Z\in \mathcal{L}^{2}(\Omega,\mathcal{G}, \PP) $ respectively. Define $\mathbb{E}[X\mathcal{G}]\coloneqq Y$, $ Y$ is $\mathcal{G}-$measurable and for all $ A\in\mathcal{G}$, $\mathbb{E}[X\cdot\mathbf{1}(A)]\mathbb{E}[Y\cdot\mathbf{1}(A)]=\mathbb{E}[Z\cdot\mathbf{1}(A)]$ since $ Z\in  \mathcal{L}^{2}(\Omega,\mathcal{G}, \PP)^{\perp}$.
+
+\underline{Claim:} If $ X \geq 0$, a.s. then $ Y \geq 0$ a.s.
+Indeed, let $ A = \{Y< 0\}\in\mathcal{G}$. Then observe that $ 0\leq\mathbb{E}[X\cdot\mathbf{1}(A)]=\mathbb{E}[Y\cdot\mathbf{1}(A)]\leq 0$. Hence $\mathbb{E}[Y\cdot\mathbf{1}(A)]=0$ and so $ \PP(A) = 0$, gibing $ Y = 0$ a.s.
+
+\item Assume $ X\geq 0 $.\\ 
+	Define $ X_{n} = X\land n\leq n $, meaning $ X_{n}$ is bounded for all $ n\in \N$. So $ X_{n}\in\mathcal{L}^{2}(\Omega, \F, \PP)$. Let $ Y_{n} =\mathbb{E}[X_{n}]$ a.s.. $ (X_{n})_{n\in \N}$ is an increasing sequence. By the claim abose, so is $ (Y_{n})_{n\in \N}$ a.s.\\
+	Define $ Y = \displaystyle \limsup_{n}Y_{n}$ meaning $ Y$ is $\mathcal{G}-$measurable and $ Y = \uparrow \displaystyle \lim_{n\to \infty}Y_{n} $ a.s. Now, we have that for all $ A\in\mathcal{G}$, $\mathbb{E}[X_{n}\cdot\mathbf{1}(A)] =\mathbb{E}[Y_{n}\cdot\mathbf{1}(A)]$. Thus, by theorem \ref{thm: MCT} (MCT), $\mathbb{E}[X\cdot\mathbf{1}(A)]= \displaystyle \lim_{n\to \infty} \mathbb{E}[X_{n}\cdot\mathbf{1}(A)] = \displaystyle \lim_{n\to \infty} \mathbb{E}[Y_{n}\cdot\mathbf{1}(A)] =\mathbb{E}[Y\cdot\mathbf{1}(A)]$.
+
+\item $ X$ general in $\mathcal{L}^{1}$.\\ 
+	Decompose as before $ X = X^{+}-X^{-}$. Define, $\mathbb{E}[X\mathcal{G}] =\mathbb{E}[X^{+}|\mathcal{G}]-\mathbb{E}[X^{-}|\mathcal{G}]$.
+\end{enumerate}
+
+\end{proof}
+
+\mymark{Lecture 3}
+\begin{remark}
+From the second step of the proof of Theorem \ref{thm: cond exp} we see that we can define $\mathbb{E}[X|\mathcal{G}]$ for all $ X\geq 0$, not necessarily integrable. It satisfies all conditions $ 1) , 2)$ except for the integrability one.
+\end{remark}
+
+\begin{boxdef}\label{def: independence of sigma algebras}
+$\underbrace{\mathcal{G}_{1},\mathcal{G}_{2}, \dots}_{\text{sigma algebras}} \subset \F$. We call them \underline{independent} if whenever $ G_{i}\in \mathcal{G}_{i}$ and $ i_{1}<\dots i_{k}$ for some $ k \in \N$, then $ \PP(G_{i_{1}}\cap \dots\cap G_{i_{k}}) = \displaystyle \prod^{k}_{j=1}\PP(G_{i_{j}})$.\\ 
+
+Moreover, let $ X$ be a random variable and $\mathcal{G}$ a sigma algebra, then they are said to be int if $ \sigma(X)$ is independent of $\mathcal{G}$.
+\end{boxdef}
+
+\underline{Properties of conditional expectations:}
+Fix $ X,y \in\mathcal{L}^{1}$, $ G\in \F$.
+\begin{enumerate}
+	\item $\mathbb{E}[\mathbb{E}[X\mathcal{G}]]=\mathbb{E}[X]$ (take $ A  = \Omega$)
+	\item If $ X$ is $\mathcal{G}-$measurable, then $\mathbb{E}[X\mathcal{G}]=X$ a.s.
+	\item If $ X$ is independent of $\mathcal{G}$, then $\mathbb{E}[X\mathcal{G}]=\mathbb{E}[X]$
+	\item If $ X\geq 0$ a.s., then $\mathbb{E}[X\mathcal{G}]\geq 0 $ a.s. 
+	\item For $ \alpha, \beta \in \R$ $\mathbb{E}[\alpha X + \beta Y |\mathcal{G}] = \alpha\mathbb{E}[X]+\beta\mathbb{E}[Y]$
+	\item $\mathbb{E}[X|\mathcal{G}]|\leq\mathbb{E}[|X| |\mathcal{G}]$ a.s. 
+\end{enumerate}
+
+Below we provide expensions of useful measure theoretic results for the expectation to their corresponding conditional counetparts. First recall:
+\begin{boxlemma}[Fatou's Lemma]\label{lemma: Fatou}
+Let $  X_{n}\geq 0$ for all $ n\in \N$. Then 
+\[
+	\mathbb{E}[\displaystyle\liminf_{n}X_{n}]\leq \liminf_{n}\mathbb{E}[X_{n}] \quad \text{a.s}
+\]
+
+
+\end{boxlemma}
+
+
+\begin{theorem}[Jensen's Inequality]\label{thm: jensen}
+If $ X$ is integrable and $ \phi: \R \to \R$ is a convex function, then 
+\[
+	\phi(\mathbb{E}[X])\leq\mathbb{E}[\phi(X)]\quad   \text{ a.s.}
+\]
+\end{theorem}
+Now the results themselves:
+
+\begin{theorem}[Conditional Monotone Convergence theorem (MCT)]\label{thm: cond MCT}
+Let $\mathcal{G}\subset \F$ be sigma algebras, $ X_{n}\geq 0$ a.a. and $ X_{n}\uparrow X$, as $ n\to \infty$ a.s. Then 
+\[
+	\mathbb{E}[X_{n}|\mathcal{G}]\uparrow\mathbb{E}[X|\mathcal{G}] \quad \text{ a.s.}
+\]
+
+\end{theorem}
+
+\begin{proof}{Theorem \ref{thm: cond MCT}}
+	Set $ Y_{n} =\mathbb{E}[X_{n}\mathcal{G}]$ a.s. Observe that $ Y_{n}$ is a.s. increasing. Set $ Y = \displaystyle\limsup_{n}Y_{n}$. $ Y_{n}$ is $\mathcal{G}-$measurable, hence, so is $ Y$ (as a $ \displaystyle \limsup $ of $\mathcal{G}-$measurable random variables) is also $\mathcal{G}-$measurable. Also, $ Y = \displaystyle \lim_{n\to \infty}Y_{n} $ a.s.\\ 
+
+	\underline{Need to show:} $\mathbb{E}[Y\cdot\mathbf{1}(A)]\mathbb{E}[X\cdot\mathbf{1}(A)]$ for all $ A\in\mathcal{G}$.	Indeed,
+	\[\begin{array}{ll}
+	    \\
+	    \mathbb{E}[Y\cdot\mathbf{1}(A)] &=\mathbb{E}[ \displaystyle \lim_{n\to \infty }Y_{n}\cdot\mathbf{1}(A) ] \stackrel{\text{MCT}}{=} \displaystyle \lim_{n\to \infty} \mathbb{E}[Y_{n}\cdot\mathbf{1}(A)]\\
+																	      &=\displaystyle \lim_{n\to \infty }\mathbb{E}[X_{n}\cdot\mathbf{1}(A)]  =\mathbb{E}[X\cdot\mathbf{1}(A)].
+	\end{array}
+	\]
+	
+\end{proof}
+
+\begin{proof}{Theorem \ref{lemma: Fatou}}
+$ \displaystyle \liminf_{n}X_{n} = \displaystyle \lim_{n\to \infty }\left( \displaystyle\inf_{k\geq n}X_{k} \right) $, the limit of an increasing sequence. By Theorem \ref{thm: MCT}, we have 
+\[
+	\displaystyle \lim_{n\to \infty}\mathbb{E}[\displaystyle\inf_{k\geq n}X_{n}|\mathcal{G}] =\mathbb{E}[\displaystyle \liminf_{n}X_{n}|\mathcal{G}]
+\]
+and 
+\[
+	\mathbb{E}[\displaystyle \inf_{k\geq n}X_{k}|\mathcal{G}]\stackrel{\text{a.s.}}{\leq } \displaystyle\inf_{k\geq n}\mathbb{E}[X_{k}|\mathcal{G}]\footnote{\text{can take the infinum due to countability that preserves a.s.}}
+\]
+which gives the result 
+\[
+	\mathbb{E}[\displaystyle\liminf_{n}X_{n}]\leq \liminf_{n}\mathbb{E}[X_{n}] \quad \text{a.s.}
+\]
+
+		
+\end{proof}
+
+\begin{theorem}[Conditional Dominated Convergence Theorem]\label{thm: cond DCT}
+	SUppose $ X_{n}\to X$ a.s. $ n\to \infty $ and $ |X_{n}|\leq Y$ a.s. for all $ n\in \N$ with $ Y$ in tegrable. Then $\mathbb{E}[X_{n}\mathcal{G}]\to\mathbb{E}[X\mathcal{G}]$ a.s. as $n\to \infty.$
+\end{theorem}
+
+\begin{proof}
+	From $ -Y\leq X_{n}\leq Y$, we have $ X_{n}+Y\geq 0$ for all $ n\in \N$ and $ Y-X_{n}\geq 0 $a.s. By Theorem \ref{lemma: Fatou},
+\[
+		\begin{array}{ll}
+		\mathbb{E}[X+Y\mathcal{G}] &=\mathbb{E}[\displaystyle\liminf_{n}(X_{n}+Y)|\mathcal{G}] \\
+					   &\leq \displaystyle\liminf_{n}\mathbb{E}[X_{n}+Y|\mathcal{G}] = \displaystyle\liminf_{n}\mathbb{E}[X_{n}\mathcal{G}]+\mathbb{E}[X]
+	\end{array}
+\]
+Thus, 
+\[\begin{array}{ll}
+	\mathbb{E}[|X-Y| |\mathcal{G}]&=\mathbb{E}[Y-\displaystyle\liminf_{n}X_{n}|\mathcal{G}]  \\
+				     &\leq\mathbb{E}[Y]+\displaystyle\liminf_{n}  \mathbb{E}[X_{n}|\mathcal{G}] 
+\end{array}
+\]
+Hence, 
+\[
+	\displaystyle\limsup_{n} \mathbb{E}[X_{n}|\mathcal{G}] \leq\mathbb{E}[X|\mathcal{G}]
+\]
+and 
+\[
+	\displaystyle\liminf_{n} \mathbb{E}[X_{n}|\mathcal{G}] \geq\mathbb{E}[X|\mathcal{G}]
+\]
+a.s., concluding the proof.
+
+\end{proof}
+
+\begin{theorem}[Conditional Jensen]\label{thm: cond jensen}
+Let $ X\in\mathcal{L}^{1}(\Omega, \F, \PP)$, $ \phi:\R\to \R$ be a convex function s.t. $ \phi(X)$ is integrable or $ \phi(X)\geq 0 $
+\[
+	\phi(\mathbb{E}[X|\mathcal{G}])\leq\mathbb{E}[\phi(X)|\mathcal{G}] \quad \text{a.s.}
+\]
+\end{theorem}
+
+\begin{proof}
+	\underline{Claim:} (true for any convex function, no proof given) $ \phi(x)=\displaystyle\sup_{i\in\N}(a_{i}x+b_{i})$, $ a_{i}b_{i}\in\R$. 
+Thus, 
+\[
+	\mathbb{E}[\phi(X)|\mathcal{G}]\geq a_{i}\mathbb{E}[X|\mathcal{G}]+b_{i} \quad \text{ for all } i\in \N.
+\]
+Taking the supremum gives \footnote{can take the supremum due to countability which again preserves a.s.}
+\[
+\begin{array}{ll}
+      
+	\mathbb{E}[\phi(X)|\mathcal{G}]&\geq \displaystyle\sup_{i\in \N} \left(  a_{i}\mathbb{E}[X|\mathcal{G}]+b_{i}  \right)\\ 
+				       &= \phi(\mathbb{E}[X|\mathcal{G}]) \quad \text{ a.s.}
+\end{array}
+\]
+
+\end{proof}
+
+\begin{boxcor}\label{cor: norm contraction cond exp}
+	For all $ 1\leq p <\infty \norm{\mathbb{E}[X|\mathcal{G}]}_{p}\leq \norm{X}_{p}$.
+\end{boxcor}
+
+\begin{proof}
+    Apply conditional Jensen.
+\end{proof}
+
+\begin{boxprop}[Tower Property]\label{prop: tower ppty}
+Let $ X$ be integrable and $\mathcal{H}\subseteq\mathcal{G}$ sigma algebras. Then 
+\[
+	\mathbb{E}[\mathbb{E}[X|\mathcal{G}]|\mathcal{H}]=\mathbb{E}[X|\mathcal{H}] \quad \text{ a.s.}
+\]
+
+\end{boxprop}
+
+\begin{proof}
+	\begin{enumerate}[(a)]
+		\item $\mathbb{E}[X|\mathcal{H}] $ is $\mathcal{H}-$measurable.
+		\item For all $ A\in\mathcal{H}$ NTS: 
+			\[
+				\mathbb{E}[\mathbb{E}[X|\mathcal{G}]\cdot\mathbf{1}(A)] =\mathbb{E}[\mathbb{E}[X|\mathcal{H}]\cdot\mathbf{1}(A)]
+			\]
+			Indeed, both terms above are equal to $\mathbb{E}[X\cdot\mathbf{1}(A)]$ since $ A\in\mathcal{G}\subseteq\mathcal{H}$.
+			
+    \end{enumerate}
+    
+\end{proof}
+
+\begin{boxprop}\label{prop: meas factorisation cond exp}
+Let $ X\in\mathcal{L}^{1}$, $\mathcal{G}\subseteq \F$, $ Y$ bounded $\mathcal{G}-$measurable. Then 
+\[
+	\mathbb{E}[X\cdot Y|\mathcal{G}] =  Y\cdot\mathbb{E}[X|\mathcal{G}].
+\]
+
+\end{boxprop}
+
+
+\begin{proof}
+	\begin{enumerate}[(a)]
+		\item RHS is clearly $\mathcal{G}-$measurable.
+		\item For all $ A\in\mathcal{G}$: 
+			\[
+			\begin{array}{ll}
+				\mathbb{E}[X\cdot Y\cdot \mathbf{1}(A)] &=\mathbb{E}[Y\cdot\mathbb{E}[X\mathcal{G}]\cdot\mathbf{1}(A)] \\
+				\mathbb{E}[X\cdot (\smash{\underbrace{Y\cdot\mathbf{1}(A)}_{\makebox[0pt]{$\mathcal{G}$-\text{meas. and bounded}}}})]&=\mathbb{E}[\mathbb{E}[X|\mathcal{G}]\cdot Y\cdot\mathbf{1}(A)]=RHS.
+			\end{array}
+			\]
+			
+    \end{enumerate}
+    \vspace{1em} 
+(Also observe that by a monotone class argument, we have for any integrable function $ f:\Omega \to \R$, $\mathbb{E}[X\cdot f] =\mathbb{E}[\mathbb{E}[X|\mathcal{ G}]\cdot f] $ ) 
+\end{proof}
+
 
 \end{document}

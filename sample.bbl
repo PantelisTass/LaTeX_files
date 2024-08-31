@@ -1,9 +1,22 @@
 \begin{thebibliography}{1}
 
-\bibitem{sarkar2021brownian}
-Sourav Sarkar and B{\'a}lint Vir{\'a}g.
-\newblock Brownian absolute continuity of the kpz fixed point with arbitrary
-  initial condition.
-\newblock 2021.
+\bibitem{hammond2019patchwork}
+Alan Hammond.
+\newblock A patchwork quilt sewn from brownian fabric: regularity of polymer weight profiles in brownian last passage percolation.
+\newblock In {\em Forum of Mathematics, Pi}, volume~7, page~e2. Cambridge University Press, 2019.
+
+\bibitem{hammond2021brownian}
+Alan Hammond.
+\newblock Brownian regularity for the airy line ensemble, and multi-polymer watermelons in brownian last passage percolation, 2021.
+
+\bibitem{kallenberg1997foundations}
+Olav Kallenberg and Olav Kallenberg.
+\newblock {\em Foundations of modern probability}, volume~2.
+\newblock Springer, 1997.
+
+\bibitem{schilling2021brownian}
+Ren{\'e}~L Schilling.
+\newblock {\em Brownian motion: a guide to random processes and stochastic calculus}.
+\newblock Walter de Gruyter GmbH \& Co KG, 2021.
 
 \end{thebibliography}

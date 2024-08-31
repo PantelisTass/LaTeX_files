@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  30 AUG 2024 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  31 AUG 2024 13:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -5373,6 +5373,29 @@ Missing character: There is no r in font nullfont!
 Missing character: There is no e in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no s in font nullfont!
+
+Overfull \hbox (20.0pt too wide) in paragraph at lines 231--238
+[]
+ []
+
+
+Overfull \hbox (5.00002pt too wide) in paragraph at lines 231--238
+\/cmr/m/n/10 ^^?o
+ []
+
+
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.239 	:
+        
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+Missing character: There is no : in font nullfont!
 )
 ! Emergency stop.
 <*> ...ssopoulos/Documents/texfiles/references.bib
