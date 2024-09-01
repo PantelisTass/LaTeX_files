@@ -1,0 +1,48 @@
+\contentsline {section}{\numberline {1}Introduction}{1}{section.1}%
+\contentsline {subsection}{\numberline {1.1}An informal overview}{3}{subsection.1.1}%
+\contentsline {section}{\numberline {2}Examples}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Centered isotropic Gaussians}{5}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Centered anisotropic Gaussians}{8}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}A better activation function}{8}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Predicting failure}{9}{subsection.2.4}%
+\contentsline {section}{\numberline {3}General results}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Convergence: noisy SGD}{12}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Convergence: noiseless SGD}{13}{subsection.3.2}%
+\contentsline {section}{\numberline {4}Discussion and future directions}{14}{section.4}%
+\contentsline {section}{\numberline {5}Notations}{18}{section.5}%
+\contentsline {section}{\numberline {6}General results: Statics}{19}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Proof of Proposition \ref {thm:NtoInfty}}{19}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Some additional results}{21}{subsection.6.2}%
+\contentsline {section}{\numberline {7}General results: Dynamics}{22}{section.7}%
+\contentsline {subsection}{\numberline {7.1}Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{23}{subsection.7.1}%
+\contentsline {subsection}{\numberline {7.2}Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{27}{subsection.7.2}%
+\contentsline {subsection}{\numberline {7.3}Proof of Proposition \ref {thm:FixedPoints}: Monotonicity of the risk}{31}{subsection.7.3}%
+\contentsline {subsection}{\numberline {7.4}A general continuity result}{32}{subsection.7.4}%
+\contentsline {subsection}{\numberline {7.5}Some properties of the solution of the PDE (\ref {eq:GeneralPDE_App})}{33}{subsection.7.5}%
+\contentsline {subsection}{\numberline {7.6}Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{35}{subsection.7.6}%
+\contentsline {subsection}{\numberline {7.7}Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{39}{subsection.7.7}%
+\contentsline {section}{\numberline {8}Centered isotropic Gaussians}{46}{section.8}%
+\contentsline {subsection}{\numberline {8.1}Statics}{47}{subsection.8.1}%
+\contentsline {subsection}{\numberline {8.2}Dynamics: Fixed points}{51}{subsection.8.2}%
+\contentsline {subsection}{\numberline {8.3}Dynamics: Convergence to global minimum for $d=\infty $}{52}{subsection.8.3}%
+\contentsline {subsection}{\numberline {8.4}Proof of Theorem \ref {thm:ConvergenceIsotropic}}{56}{subsection.8.4}%
+\contentsline {subsection}{\numberline {8.5}Checking conditions ${\sf S0}$--${\sf S4}$ for the running example}{61}{subsection.8.5}%
+\contentsline {section}{\numberline {9}Centered anisotropic Gaussians}{63}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Statics}{64}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Dynamics: Fixed points}{66}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Dynamics: Convergence to global minimum for $d=\infty $}{67}{subsection.9.3}%
+\contentsline {subsection}{\numberline {9.4}Dynamics: Proof of Theorem \ref {thm:ConvergenceAnisotropic}}{72}{subsection.9.4}%
+\contentsline {section}{\numberline {10}Finite temperature}{75}{section.10}%
+\contentsline {subsection}{\numberline {10.1}Statics}{76}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}Dynamics}{79}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}Proof of Proposition \ref {thm:FixedPoints_Temp_finite}, Theorem \ref {thm:GeneralPDE_Noisy_fixed_point}, and Theorem \ref {thm:GeneralPDE_Noisy}}{88}{subsection.10.3}%
+\contentsline {subsection}{\numberline {10.4}Dependence of convergence time on $D$ and $\eta $}{89}{subsection.10.4}%
+\contentsline {section}{\numberline {11}Numerical Experiments}{89}{section.11}%
+\contentsline {subsection}{\numberline {11.1}Isotropic Gaussians}{89}{subsection.11.1}%
+\contentsline {subsubsection}{\numberline {11.1.1}Empirical validation of distributional dynamics}{90}{subsubsection.11.1.1}%
+\contentsline {subsubsection}{\numberline {11.1.2}Empirical validation of the statics}{92}{subsubsection.11.1.2}%
+\contentsline {subsubsection}{\numberline {11.1.3}Checking the condition of Lemma \ref {lemma:OneDeltaCondition} in the main text}{95}{subsubsection.11.1.3}%
+\contentsline {subsection}{\numberline {11.2}Centered anisotropic Gaussians with ReLU Activation}{97}{subsection.11.2}%
+\contentsline {subsection}{\numberline {11.3}Isotropic Gaussians: Predictable Failure of SGD}{98}{subsection.11.3}%
+\contentsline {section}{\numberline {A}Concentration inequalities}{101}{appendix.A}%
+\contentsline {section}{\numberline {B}On the generalization to other loss functions}{102}{appendix.B}%

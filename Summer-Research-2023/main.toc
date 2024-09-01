@@ -1,0 +1,17 @@
+\contentsline {section}{\numberline {1}Overview}{3}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Objectives}{3}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Outcomes}{3}{subsection.1.2}%
+\contentsline {section}{\numberline {2}Mean Field Limits of Neural Networks}{5}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Background theory}{5}{subsection.2.1}%
+\contentsline {section}{\numberline {3}Non-convex landscape}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Approaches}{7}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Potential regularisation}{7}{subsubsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.2}Applications}{7}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Muller Brown Potential}{7}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}$ 3-$d spin model analysis}{7}{subsubsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.3}Week 1}{7}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Week 2}{8}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Weeks 3-4}{8}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Weeks 5-6}{9}{subsection.3.6}%
+\contentsline {subsection}{\numberline {3.7}Week 7}{10}{subsection.3.7}%
+\contentsline {subsection}{\numberline {3.8}Week 8-10}{10}{subsection.3.8}%

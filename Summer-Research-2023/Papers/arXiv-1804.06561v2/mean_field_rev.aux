@@ -1,0 +1,435 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{rosenblatt1962principles}
+\citation{krizhevsky2012imagenet}
+\citation{goodfellow2016deep}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{1}{section.1}\protected@file@percent }
+\citation{robbins1951stochastic}
+\citation{bottou2010large}
+\citation{shalev2014understanding}
+\citation{wang2017scaling}
+\citation{soltanolkotabi2017theoretical}
+\citation{ge2017learning}
+\citation{brutzkus2017globally}
+\citation{arora2014provable}
+\citation{sedghi2015provable}
+\citation{janzamin2015beating}
+\citation{zhang2016l1}
+\citation{tian2017symmetry}
+\citation{zhong2017recovery}
+\newlabel{eq:OutputShift}{{2}{2}{Introduction}{equation.1.2}{}}
+\newlabel{eq:First_SGD}{{3}{2}{Introduction}{equation.1.3}{}}
+\citation{lee1996efficient}
+\citation{bengio2006convex}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1}An informal overview}{3}{subsection.1.1}\protected@file@percent }
+\newlabel{sec:Overview}{{1.1}{3}{An informal overview}{subsection.1.1}{}}
+\newlabel{eq:R0N}{{4}{3}{An informal overview}{equation.1.4}{}}
+\newlabel{eq:DensityRisk}{{5}{3}{An informal overview}{equation.1.5}{}}
+\newlabel{eq:GeneralPDE}{{7}{3}{An informal overview}{equation.1.7}{}}
+\citation{jordan1998variational}
+\citation{ambrosio2008gradient}
+\citation{carrillo2003kinetic}
+\citation{ambrosio2008gradient}
+\citation{bartlett1998sample}
+\newlabel{eq:Wasserstein_dual}{{9}{4}{An informal overview}{equation.1.9}{}}
+\newlabel{eq:Noisy_SGD}{{11}{4}{An informal overview}{equation.1.11}{}}
+\newlabel{eq:GeneralPDE_Temp}{{12}{5}{An informal overview}{equation.1.12}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Examples}{5}{section.2}\protected@file@percent }
+\newlabel{sec:Examples}{{2}{5}{Examples}{section.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Evolution of the radial distribution $\overline  {\rho }_t$ for the isotropic Gaussian model, with $\Delta =0.8$. Histograms are obtained from SGD experiments with $d=40$, $N=800$, initial weights distribution $\rho _0 = {\sf  N}({\mathbf  0},0.8^2/d\cdot {\bm  {I}}_d)$, step size $\epsilon =10^{-6}$ and $\xi (t) = 1$. Continuous lines correspond to a numerical solution of the DD (\ref {eq:ReducedPDE}). }}{5}{figure.1}\protected@file@percent }
+\newlabel{fig:SGD_Spherically}{{1}{5}{Evolution of the radial distribution $\rad _t$ for the isotropic Gaussian model, with $\Delta =0.8$. Histograms are obtained from SGD experiments with $d=40$, $N=800$, initial weights distribution $\rho _0 = \normal (\bzero ,0.8^2/d\cdot \id _d)$, step size $\epsilon =10^{-6}$ and $\xi (t) = 1$. Continuous lines correspond to a numerical solution of the DD \eqref {eq:ReducedPDE}}{figure.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Centered isotropic Gaussians}{5}{subsection.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Population risk in the problem of separating two isotropic Gaussians, as a function of the separation parameter $\Delta $. We use a a two-layers network with piecewise linear activation, no offset, and output weights equal to one. Empirical results obtained by SGD (a single run per data point) are marked "$+$". Continuous lines are theoretical predictions obtained by numerically minimizing $R(\rho )$ (see SI for details). Dashed lines are theoretical predictions from the single-delta ansatz of (\ref {eq:Isotropic}). Notice that this ansatz is incorrect for $\Delta >\Delta _d^{\rm  h}$, which is marked as a solid round dot. Here $N=800$.}}{6}{figure.2}\protected@file@percent }
+\newlabel{fig:R_r_isotropic}{{2}{6}{Population risk in the problem of separating two isotropic Gaussians, as a function of the separation parameter $\Delta $. We use a a two-layers network with piecewise linear activation, no offset, and output weights equal to one. Empirical results obtained by SGD (a single run per data point) are marked "$+$". Continuous lines are theoretical predictions obtained by numerically minimizing $R(\rho )$ (see SI for details). Dashed lines are theoretical predictions from the single-delta ansatz of \eqref {eq:Isotropic}. Notice that this ansatz is incorrect for $\Delta >\Delta _d^{\rm h}$, which is marked as a solid round dot. Here $N=800$}{figure.2}{}}
+\newlabel{eq:ReducedPDE}{{13}{7}{Centered isotropic Gaussians}{equation.2.13}{}}
+\newlabel{eq:Isotropic}{{14}{7}{Centered isotropic Gaussians}{equation.2.14}{}}
+\newlabel{lemma:OneDeltaCondition}{{1}{7}{}{lemma.1}{}}
+\newlabel{thm:ConvergenceIsotropic}{{1}{7}{}{theorem.2.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Centered anisotropic Gaussians}{8}{subsection.2.2}\protected@file@percent }
+\newlabel{thm:ConvergenceAnisotropic}{{2}{8}{}{theorem.2.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}A better activation function}{8}{subsection.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Evolution of the population risk for the variable selection problem using a two-layers neural network with ReLU activations. Here $d=320$, $s_0 =60$, $N=800$, and we used $\xi (t) = t^{-1/4}$ and ${\varepsilon }=2\times 10^{-4}$ to set the step size. Numerical simulations using SGD (one run per data point) are marked "$+$", and curves are solutions of the reduced PDE with $d=\infty $. Inset: evolution of three parameters of the reduced distribution $\overline  {\rho }_t$ (average output weights $a$, average offsets $b$ and average $\ell _2$ norm in the relevant subspace $r_1$) for the same setting.}}{9}{figure.3}\protected@file@percent }
+\newlabel{fig:RiskAnisotropic}{{3}{9}{Evolution of the population risk for the variable selection problem using a two-layers neural network with ReLU activations. Here $d=320$, $s_0 =60$, $N=800$, and we used $\xi (t) = t^{-1/4}$ and $\eps =2\times 10^{-4}$ to set the step size. Numerical simulations using SGD (one run per data point) are marked "$+$", and curves are solutions of the reduced PDE with $d=\infty $. Inset: evolution of three parameters of the reduced distribution $\rad _t$ (average output weights $a$, average offsets $b$ and average $\ell _2$ norm in the relevant subspace $r_1$) for the same setting}{figure.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Predicting failure}{9}{subsection.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {3}General results}{9}{section.3}\protected@file@percent }
+\newlabel{sec:General}{{3}{9}{General results}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Separating two isotropic Gaussians, with a non-monotone activation function (see text for details). Here $N=800$, $d=320$, $\Delta =0.5$. The main frame presents the evolution of the population risk along the SGD trajectory, starting from two different initializations of $({\bm  {w}}_i^0)_{i \le N} \sim _{iid}\mathsf  {N}({\mathbf  0},\kappa ^2/d\cdot \mathbf  {I}_d)$ for either $\kappa =0.1$ or $\kappa =0.4$. In the inset, we plot the evolution of the average of $\|{\bm  {w}}\|_2$ for the same conditions. Symbols are empirical results. Continuous lines are prediction obtained with the reduced PDE (\ref {eq:ReducedPDE}). }}{10}{figure.4}\protected@file@percent }
+\newlabel{fig:Failure}{{4}{10}{Separating two isotropic Gaussians, with a non-monotone activation function (see text for details). Here $N=800$, $d=320$, $\Delta =0.5$. The main frame presents the evolution of the population risk along the SGD trajectory, starting from two different initializations of $(\bw _i^0)_{i \le N} \sim _{iid}\mathsf {N}(\bzero ,\kappa ^2/d\cdot \mathbf {I}_d)$ for either $\kappa =0.1$ or $\kappa =0.4$. In the inset, we plot the evolution of the average of $\|\bw \|_2$ for the same conditions. Symbols are empirical results. Continuous lines are prediction obtained with the reduced PDE \eqref {eq:ReducedPDE}}{figure.4}{}}
+\newlabel{thm:NtoInfty}{{1}{10}{}{proposition.1}{}}
+\newlabel{eq:SimpleBound}{{16}{10}{}{equation.3.16}{}}
+\newlabel{eq:GeneralMinCondition}{{17}{10}{}{equation.3.17}{}}
+\citation{sznitman1991topics}
+\citation{carrillo2003kinetic}
+\newlabel{thm:GeneralPDE}{{3}{11}{}{theorem.3.3}{}}
+\newlabel{thm:FixedPoints}{{2}{11}{}{proposition.2}{}}
+\newlabel{eq:FP_Condition}{{20}{11}{}{equation.3.20}{}}
+\newlabel{thm:FixedPoints_Temp_finite}{{3}{12}{}{proposition.3}{}}
+\newlabel{eq:FP_Condition_Temp}{{21}{12}{}{equation.3.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Convergence: noisy SGD}{12}{subsection.3.1}\protected@file@percent }
+\newlabel{thm:GeneralPDE_Noisy_fixed_point}{{4}{12}{}{theorem.3.4}{}}
+\newlabel{eqn:F_non_increasing_bis}{{24}{12}{Convergence: noisy SGD}{equation.3.24}{}}
+\citation{bartlett1998sample}
+\newlabel{thm:GeneralPDE_Noisy}{{5}{13}{}{theorem.3.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Convergence: noiseless SGD}{13}{subsection.3.2}\protected@file@percent }
+\newlabel{eq:H0Def}{{26}{13}{Convergence: noiseless SGD}{equation.3.26}{}}
+\newlabel{thm:StabilityDelta}{{6}{13}{}{theorem.3.6}{}}
+\newlabel{thm:InstabilityDelta}{{7}{13}{}{theorem.3.7}{}}
+\citation{ambrosio2008gradient}
+\citation{mezard1999thermodynamics}
+\citation{rotskoff2018neural}
+\citation{sirignano2018mean}
+\citation{chizat2018global}
+\bibstyle{alpha}
+\bibdata{mean_field_rev.bbl}
+\bibcite{arora2014provable}{ABGM14}
+\bibcite{ambrosio2008gradient}{AGS08}
+\bibcite{bartlett1998sample}{Bar98}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Discussion and future directions}{14}{section.4}\protected@file@percent }
+\newlabel{sec:Ext}{{4}{14}{Discussion and future directions}{section.4}{}}
+\bibcite{brutzkus2017globally}{BG17}
+\bibcite{bottou2010large}{Bot10}
+\bibcite{bengio2006convex}{BRV{$^{+}$}06}
+\bibcite{chizat2018global}{CB18}
+\bibcite{carrillo2011global}{CDF{$^{+}$}11}
+\bibcite{carrillo2003kinetic}{CMV{$^{+}$}03}
+\bibcite{carrillo2006contractions}{CMV06}
+\bibcite{evans2009partial}{Eva09}
+\bibcite{goodfellow2016deep}{GBCB16}
+\bibcite{ge2017learning}{GLM17}
+\bibcite{guillemin2010differential}{GP10}
+\bibcite{jordan1998variational}{JKO98}
+\bibcite{janzamin2015beating}{JSA15}
+\bibcite{krizhevsky2012imagenet}{KSH12}
+\bibcite{lang2013complex}{Lan13}
+\bibcite{lee1996efficient}{LBW96}
+\bibcite{ladyzhenskaia1988linear}{LSU88}
+\bibcite{mei2016landscape}{MBM16}
+\bibcite{mityagin2015zero}{Mit15}
+\bibcite{mezard1999thermodynamics}{MP99}
+\bibcite{markowich2000trend}{MV00}
+\bibcite{robbins1951stochastic}{RM51}
+\bibcite{rosenblatt1962principles}{Ros62}
+\bibcite{rotskoff2018neural}{RVE18}
+\bibcite{sedghi2015provable}{SA15}
+\bibcite{santambrogio2015optimal}{San15}
+\bibcite{soltanolkotabi2017theoretical}{SJL17}
+\bibcite{sirignano2018mean}{SS18}
+\bibcite{shalev2014understanding}{SSBD14}
+\bibcite{sznitman1991topics}{Szn91}
+\bibcite{tian2017symmetry}{Tia17}
+\bibcite{wang2017scaling}{WML17}
+\bibcite{zhang2016l1}{ZLJ16}
+\bibcite{zhong2017recovery}{ZSJ{$^{+}$}17}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Notations}{18}{section.5}\protected@file@percent }
+\newlabel{sec:Notation}{{5}{18}{Notations}{section.5}{}}
+\newlabel{eq:BL_primal}{{5.1}{18}{Notations}{equation.5.1}{}}
+\newlabel{eq:BL_dual}{{5.2}{18}{Notations}{equation.5.2}{}}
+\newlabel{eq:Wasserstein_dual}{{5.3}{18}{Notations}{equation.5.3}{}}
+\newlabel{eq:Wasserstein_primal}{{5.4}{18}{Notations}{equation.5.4}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {6}General results: Statics}{19}{section.6}\protected@file@percent }
+\newlabel{eq:R-Rho-def}{{6.2}{19}{General results: Statics}{equation.6.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Proof of Proposition \ref {thm:NtoInfty}}{19}{subsection.6.1}\protected@file@percent }
+\newlabel{sec:Proof NtoInfty}{{6.1}{19}{Proof of Proposition \ref {thm:NtoInfty}}{subsection.6.1}{}}
+\newlabel{eq:SimpleBoundApp}{{6.6}{19}{Proof of Proposition \ref {thm:NtoInfty}}{equation.6.6}{}}
+\newlabel{eq:GeneralMinConditionApp}{{6.7}{19}{Proof of Proposition \ref {thm:NtoInfty}}{equation.6.7}{}}
+\newlabel{eq:RhoVariation}{{6.12}{20}{Proof of Proposition \ref {thm:NtoInfty}}{equation.6.12}{}}
+\citation{mityagin2015zero}
+\citation{lang2013complex}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Some additional results}{21}{subsection.6.2}\protected@file@percent }
+\citation{markowich2000trend}
+\citation{carrillo2003kinetic}
+\citation{carrillo2006contractions}
+\citation{ambrosio2008gradient}
+\citation{carrillo2011global}
+\citation{sznitman1991topics}
+\citation{sznitman1991topics}
+\@writefile{toc}{\contentsline {section}{\numberline {7}General results: Dynamics}{22}{section.7}\protected@file@percent }
+\newlabel{eq:GeneralPDE_App}{{7.1}{22}{General results: Dynamics}{equation.7.1}{}}
+\newlabel{eq:WeakSolution}{{7.3}{22}{General results: Dynamics}{equation.7.3}{}}
+\newlabel{rmk:ExistenceUniqueness}{{7.1}{22}{}{remark.7.1}{}}
+\newlabel{eq:NonLinearEvolution}{{7.4}{22}{General results: Dynamics}{equation.7.4}{}}
+\newlabel{lemma:Lipschitz_continuity_of_rho_and_theta}{{7.1}{22}{}{lemma.7.1}{}}
+\citation{sznitman1991topics}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.1}Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{23}{subsection.7.1}\protected@file@percent }
+\newlabel{sec:ProofPDE}{{7.1}{23}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{subsection.7.1}{}}
+\newlabel{eq:LipschitzG}{{7.10}{23}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.10}{}}
+\newlabel{eq:SGDCont}{{7.12}{23}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.12}{}}
+\newlabel{eq:NonLinearEvolution2}{{7.13}{23}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.13}{}}
+\newlabel{lemma:NonlinearDynamics}{{7.2}{23}{}{lemma.7.2}{}}
+\citation{mei2016landscape}
+\newlabel{eq:ErrorsDynamics}{{7.15}{24}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.15}{}}
+\newlabel{eq:E1Bound}{{7.16}{24}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.16}{}}
+\newlabel{eq:E2Bound}{{7.17}{24}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.17}{}}
+\newlabel{eq:E3Bound_First}{{7.20}{24}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.20}{}}
+\newlabel{eq:BoundW10}{{7.21}{25}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.21}{}}
+\newlabel{eq:BoundW1}{{7.22}{25}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.22}{}}
+\newlabel{eq:BoundW2}{{7.25}{25}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.25}{}}
+\newlabel{eq:E3Bound}{{7.26}{25}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.26}{}}
+\newlabel{eqn:BoundW0}{{7.27}{25}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.27}{}}
+\newlabel{lem:bound_risk_SGD_ODE}{{7.3}{26}{}{lemma.7.3}{}}
+\newlabel{eqn:bound_risk_SGD_ODE}{{7.31}{26}{}{equation.7.31}{}}
+\newlabel{eqn:risk_coordinate_bound}{{7.32}{26}{Proof of Theorem \ref {thm:GeneralPDE}: Convergence to the PDE}{equation.7.32}{}}
+\newlabel{lemma:RiskDynamics}{{7.4}{26}{}{lemma.7.4}{}}
+\citation{sznitman1991topics}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.2}Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{27}{subsection.7.2}\protected@file@percent }
+\newlabel{eqn:diffusion_PDE_SGD_to_PDE}{{7.37}{27}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.37}{}}
+\newlabel{rmk:ExistenceUniqueness_Noisy}{{7.2}{27}{}{remark.7.2}{}}
+\newlabel{eq:NonLinearEvolutionNoisy}{{7.38}{27}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.38}{}}
+\newlabel{eq:SGD_Noisy}{{7.40}{27}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.40}{}}
+\newlabel{lem:SDE_norm_bound}{{7.5}{27}{}{lemma.7.5}{}}
+\newlabel{eq:BoundNormSDE_probability}{{7.42}{28}{}{equation.7.42}{}}
+\newlabel{eqn:SDE_difference_bound}{{7.43}{28}{}{equation.7.43}{}}
+\newlabel{eq:BoundDist_FiniteT}{{7.44}{28}{}{equation.7.44}{}}
+\newlabel{eqn:moment_of_exp_sub_gaussian_square}{{7.45}{28}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.45}{}}
+\newlabel{eqn:bound_for_Theta_in_finite_beta}{{7.46}{28}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.46}{}}
+\newlabel{eqn:bound_for_W_in_finite_beta}{{7.47}{28}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.47}{}}
+\newlabel{eqn:bound_SDE_each_segment1}{{7.48}{29}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.48}{}}
+\newlabel{eqn:bound_BM_each_segment}{{7.49}{29}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.49}{}}
+\newlabel{lemma:NonlinearDynamicsNoisy}{{7.6}{29}{}{lemma.7.6}{}}
+\newlabel{eq:ErrorsDynamicsNoisy}{{7.51}{30}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.51}{}}
+\newlabel{eq:E4Bound}{{7.52}{30}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.52}{}}
+\newlabel{eqn:bound_E_1_A}{{7.54}{30}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.54}{}}
+\newlabel{eqn:bound_E_1_B}{{7.55}{31}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.55}{}}
+\newlabel{eqn:bound_E_1_C}{{7.56}{31}{Proof of Theorem \ref {thm:GeneralPDE}: Generalization to $\beta <\infty $}{equation.7.56}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.3}Proof of Proposition \ref {thm:FixedPoints}: Monotonicity of the risk}{31}{subsection.7.3}\protected@file@percent }
+\citation{sznitman1991topics}
+\citation{sznitman1991topics}
+\citation{sznitman1991topics}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.4}A general continuity result}{32}{subsection.7.4}\protected@file@percent }
+\newlabel{eq:OriginalPDE}{{7.64}{32}{A general continuity result}{equation.7.64}{}}
+\newlabel{eq:PerturbedPDE}{{7.65}{32}{A general continuity result}{equation.7.65}{}}
+\newlabel{lem:perturbation_convergence}{{7.7}{32}{}{lemma.7.7}{}}
+\newlabel{eqn:perturbation_error_in_perturbation_lemma}{{7.69}{32}{}{equation.7.69}{}}
+\newlabel{eq:BoundedLipschitzInequality}{{7.70}{32}{A general continuity result}{equation.7.70}{}}
+\newlabel{eqn:non_linear_in_perturbation_proof_1}{{7.71}{32}{A general continuity result}{equation.7.71}{}}
+\newlabel{eqn:non_linear_in_perturbation_proof_2}{{7.72}{32}{A general continuity result}{equation.7.72}{}}
+\newlabel{eqn:BLBoundByDistance}{{7.73}{33}{A general continuity result}{equation.7.73}{}}
+\newlabel{eqn:Bound_difference_theta_in_perturbation_proof}{{7.74}{33}{A general continuity result}{equation.7.74}{}}
+\newlabel{eq:Bound_E1_in_perturbation_proof}{{7.75}{33}{A general continuity result}{equation.7.75}{}}
+\newlabel{eq:Bound_E2_in_perturbation_proof}{{7.76}{33}{A general continuity result}{equation.7.76}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.5}Some properties of the solution of the PDE (\ref {eq:GeneralPDE_App})}{33}{subsection.7.5}\protected@file@percent }
+\newlabel{eq:ODE_Density_generalized}{{7.79}{34}{Some properties of the solution of the PDE (\ref {eq:GeneralPDE_App})}{equation.7.79}{}}
+\newlabel{lem:MassIncreasing}{{7.8}{34}{}{lemma.7.8}{}}
+\newlabel{lemma:Density_generalized}{{7.9}{34}{}{lemma.7.9}{}}
+\newlabel{eqn:CoordinatewiseLipschitzPsi}{{7.80}{34}{}{equation.7.80}{}}
+\newlabel{eqn:bounded_evolution_inequality}{{7.81}{34}{Some properties of the solution of the PDE (\ref {eq:GeneralPDE_App})}{equation.7.81}{}}
+\newlabel{lem:ConnectedLimitingSet}{{7.10}{34}{}{lemma.7.10}{}}
+\newlabel{lemma:Density}{{7.11}{35}{}{lemma.7.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.6}Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{35}{subsection.7.6}\protected@file@percent }
+\newlabel{sec:StabDelta}{{7.6}{35}{Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{subsection.7.6}{}}
+\newlabel{lemma:Stability}{{7.12}{36}{}{lemma.7.12}{}}
+\newlabel{eq:2normContraction}{{7.91}{36}{}{Item.3}{}}
+\newlabel{eq:NoEscape}{{7.92}{36}{}{Item.4}{}}
+\newlabel{eq:H1plus}{{7.99}{36}{Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{equation.7.99}{}}
+\newlabel{eq:BasicLB_Stability}{{7.103}{37}{Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{equation.7.103}{}}
+\newlabel{eq:vbxi}{{7.107}{37}{Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{equation.7.107}{}}
+\newlabel{eq:Bounded}{{7.122}{38}{Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{equation.7.122}{}}
+\newlabel{eq:Contraction}{{7.126}{38}{Proof of Theorems \ref {thm:StabilityDelta}: Stability conditions}{equation.7.126}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {7.7}Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{39}{subsection.7.7}\protected@file@percent }
+\newlabel{sec:InstDelta}{{7.7}{39}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{subsection.7.7}{}}
+\newlabel{eq:ODE}{{7.127}{39}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.127}{}}
+\newlabel{lemma:Coupling}{{7.13}{39}{}{lemma.7.13}{}}
+\newlabel{eq:Coupling}{{7.128}{39}{}{equation.7.128}{}}
+\citation{guillemin2010differential}
+\newlabel{eqn:LevelSet_tilde}{{7.136}{40}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.136}{}}
+\newlabel{lemma:LevelSets}{{7.14}{40}{}{lemma.7.14}{}}
+\newlabel{eqn:ApproxDistance}{{7.142}{40}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.142}{}}
+\newlabel{eq:ApproxHessian}{{7.144}{41}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.144}{}}
+\newlabel{eq:ApproxValue}{{7.145}{41}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.145}{}}
+\newlabel{lem:Instability_lemma_first}{{7.15}{41}{}{lemma.7.15}{}}
+\newlabel{eq:ExitClaim}{{7.148}{41}{}{equation.7.148}{}}
+\newlabel{eqn:condition_of_claim_in_unstable_proof}{{7.149}{41}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.149}{}}
+\newlabel{eqn:Unstable_manifold_escape}{{7.150}{42}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.150}{}}
+\newlabel{eq:x_xp_1}{{7.154}{43}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.154}{}}
+\newlabel{eq:x_xp_2}{{7.155}{43}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.155}{}}
+\newlabel{lemma:NoReturn}{{7.16}{43}{}{lemma.7.16}{}}
+\newlabel{eq:ExitClaim}{{7.161}{43}{}{equation.7.161}{}}
+\newlabel{lemma:Enter}{{7.17}{45}{}{lemma.7.17}{}}
+\newlabel{eq:ExitClaim2}{{7.178}{45}{}{equation.7.178}{}}
+\newlabel{eq:ExitClaim2}{{7.181}{46}{Proof of Theorem \ref {thm:InstabilityDelta}: Instability conditions}{equation.7.181}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {8}Centered isotropic Gaussians}{46}{section.8}\protected@file@percent }
+\newlabel{sec:IsotropicGaussian}{{8}{46}{Centered isotropic Gaussians}{section.8}{}}
+\newlabel{eq:SimpleSigma}{{8.1}{47}{Centered isotropic Gaussians}{equation.8.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.1}Statics}{47}{subsection.8.1}\protected@file@percent }
+\newlabel{eqn:u_d_isotropic}{{8.8}{48}{Statics}{equation.8.8}{}}
+\newlabel{eqn:u_infty_isotropic}{{8.9}{48}{Statics}{equation.8.9}{}}
+\newlabel{eqn:Risk_infinite_isotropic}{{8.10}{48}{Statics}{equation.8.10}{}}
+\newlabel{eq:psi_infty_isotropic_description}{{8.12}{48}{Statics}{equation.8.12}{}}
+\newlabel{eq:LambdaPlus}{{8.13}{48}{Statics}{equation.8.13}{}}
+\newlabel{eq:LambdaMinus}{{8.14}{48}{Statics}{equation.8.14}{}}
+\newlabel{propo:MinGeneralD}{{4}{48}{Lemma \ref {lemma:OneDeltaCondition} in the main text}{proposition.4}{}}
+\newlabel{eq:DefDelta_D}{{8.16}{49}{Statics}{equation.8.16}{}}
+\newlabel{thm:global_minimizer_infinite_d_isotropic}{{8}{49}{}{theorem.8.8}{}}
+\newlabel{eqn:Gamma_set_in_isotropic_proof}{{8.17}{49}{Statics}{equation.8.17}{}}
+\newlabel{eqn:Delta_infty_in_isotropic_proof}{{8.18}{49}{Statics}{equation.8.18}{}}
+\newlabel{eqn:f_star_in_isotropic_proof}{{8.19}{49}{Statics}{equation.8.19}{}}
+\newlabel{eqn:stationary_equation_for_minimizer_in_isotropic_proof}{{8.21}{50}{Statics}{equation.8.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.2}Dynamics: Fixed points}{51}{subsection.8.2}\protected@file@percent }
+\newlabel{eq:PDERadial}{{8.22}{51}{Dynamics: Fixed points}{equation.8.22}{}}
+\newlabel{propo:FixedPointdRadial}{{5}{51}{}{proposition.5}{}}
+\newlabel{eq:FixedPointRadial}{{8.23}{51}{}{equation.8.23}{}}
+\newlabel{thm:local_minimizer_infinite_d_isotropic}{{9}{51}{}{theorem.8.9}{}}
+\newlabel{eqn:stationary_in_isotropic_proof}{{8.24}{51}{Dynamics: Fixed points}{equation.8.24}{}}
+\newlabel{eqn:delta_stationary_in_isotropic_proof}{{8.25}{52}{Dynamics: Fixed points}{equation.8.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.3}Dynamics: Convergence to global minimum for $d=\infty $}{52}{subsection.8.3}\protected@file@percent }
+\newlabel{eqn:goodset_isotropic_infty}{{8.26}{52}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.8.26}{}}
+\newlabel{thm:PDE_converge_to_global_minimizer}{{10}{52}{}{theorem.8.10}{}}
+\newlabel{eqn:psi_in_convergence_proof_isotropic}{{8.28}{54}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.8.28}{}}
+\newlabel{eqn:ODE_in_isotropic_proof}{{8.29}{55}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.8.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.4}Proof of Theorem \ref {thm:ConvergenceIsotropic}}{56}{subsection.8.4}\protected@file@percent }
+\newlabel{lem:perturbation_bound_isotropic_dynamics}{{8.1}{56}{}{lemma.8.1}{}}
+\newlabel{eqn:Gaussian_inequality_in_perturbation_proof}{{8.37}{57}{Proof of Theorem \ref {thm:ConvergenceIsotropic}}{equation.8.37}{}}
+\newlabel{lem:CheckAssumptions}{{8.2}{58}{}{lemma.8.2}{}}
+\newlabel{eqn:Defintion_of_V_U_in_isotropic_proof}{{8.39}{58}{}{equation.8.39}{}}
+\newlabel{eq:GeneralPDE_App_isotropic}{{8.53}{60}{Proof of Theorem \ref {thm:ConvergenceIsotropic}}{equation.8.53}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {8.5}Checking conditions ${\sf  S0}$--${\sf  S4}$ for the running example}{61}{subsection.8.5}\protected@file@percent }
+\newlabel{sec:AssumptionsExample}{{8.5}{61}{Checking conditions ${\sf S0}$--${\sf S4}$ for the running example}{subsection.8.5}{}}
+\newlabel{lem:unique_solution_condition}{{8.3}{61}{}{lemma.8.3}{}}
+\newlabel{eqn:derivative_of_q}{{8.56}{62}{Checking conditions ${\sf S0}$--${\sf S4}$ for the running example}{equation.8.56}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {9}Centered anisotropic Gaussians}{63}{section.9}\protected@file@percent }
+\newlabel{sec:AnisotropicGaussian}{{9}{63}{Centered anisotropic Gaussians}{section.9}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.1}Statics}{64}{subsection.9.1}\protected@file@percent }
+\newlabel{eqn:u_d_anisotropic}{{9.9}{65}{Statics}{equation.9.9}{}}
+\newlabel{eqn:u_infty_anisotropic}{{9.10}{65}{Statics}{equation.9.10}{}}
+\newlabel{eqn:Risk_infinite_anisotropic}{{9.11}{65}{Statics}{equation.9.11}{}}
+\newlabel{eqn:psi_in_anisotropic_proof}{{9.13}{65}{Statics}{equation.9.13}{}}
+\newlabel{eq:LambdaPlusAnisotropic}{{9.14}{65}{Statics}{equation.9.14}{}}
+\newlabel{eq:LambdaMinusAnisotropic}{{9.15}{65}{Statics}{equation.9.15}{}}
+\newlabel{thm:global_minimizer_infinite_d_anisotropic}{{11}{65}{}{theorem.9.11}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.2}Dynamics: Fixed points}{66}{subsection.9.2}\protected@file@percent }
+\newlabel{eq:PDERadialAnisotropic}{{9.16}{66}{Dynamics: Fixed points}{equation.9.16}{}}
+\newlabel{propo:FixedPointdRadialAnisotropic}{{6}{66}{}{proposition.6}{}}
+\newlabel{eq:FixedPointRadialAnisotropic}{{9.17}{66}{}{equation.9.17}{}}
+\newlabel{thm:local_minimizer_infinite_d_anisotropic}{{12}{66}{}{theorem.9.12}{}}
+\newlabel{eqn:stationary_in_anisotropic_proof}{{9.18}{67}{Dynamics: Fixed points}{equation.9.18}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.3}Dynamics: Convergence to global minimum for $d=\infty $}{67}{subsection.9.3}\protected@file@percent }
+\newlabel{eqn:goodset_anisotropic_infty_2d}{{9.19}{67}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.19}{}}
+\newlabel{thm:PDE_converge_to_global_minimizer_anisotropic}{{13}{67}{}{theorem.9.13}{}}
+\newlabel{eqn:Z_in_anisotropic_proof}{{9.21}{69}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.21}{}}
+\newlabel{eqn:NormalGradient_in_anisotropic_proof}{{9.24}{69}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.24}{}}
+\newlabel{eqn:TangentGradient_in_anisotropic_proof}{{9.25}{69}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.25}{}}
+\newlabel{eqn:Gamma_area_in_anisotropic_proof_case1}{{9.26}{69}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.26}{}}
+\newlabel{eqn:ODE_in_anisotropic_proof}{{9.27}{69}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.27}{}}
+\newlabel{eqn:Boundary1_in_anisotropic_proof_case1}{{9.31}{70}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.31}{}}
+\newlabel{eqn:Ok_in_anisotropic_proof_case1}{{9.32}{70}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.32}{}}
+\newlabel{eqn:Boundary2_in_anisotropic_proof_case1}{{9.33}{70}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.33}{}}
+\newlabel{eqn:GradientFieldInequality_anisotropic_proof_case1}{{9.35}{70}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.35}{}}
+\newlabel{eqn:Boundary4_in_anisotropic_proof_case1}{{9.38}{71}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.38}{}}
+\newlabel{eqn:Boundary3_in_anisotropic_proof_case1}{{9.39}{71}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.39}{}}
+\newlabel{eqn:Gamma_area_in_anisotropic_proof_case2}{{9.42}{71}{Dynamics: Convergence to global minimum for $d=\infty $}{equation.9.42}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {9.4}Dynamics: Proof of Theorem \ref {thm:ConvergenceAnisotropic}}{72}{subsection.9.4}\protected@file@percent }
+\newlabel{lem:perturbation_bound_anisotropic_dynamics}{{9.1}{72}{}{lemma.9.1}{}}
+\newlabel{eqn:Theta3_in_anisotropic_proof}{{9.51}{73}{Dynamics: Proof of Theorem \ref {thm:ConvergenceAnisotropic}}{equation.9.51}{}}
+\newlabel{eqn:Gaussian_inequality_in_perturbation_proof_anisotropic}{{9.52}{73}{Dynamics: Proof of Theorem \ref {thm:ConvergenceAnisotropic}}{equation.9.52}{}}
+\newlabel{eq:GeneralPDE_App_anisotropic}{{9.60}{74}{Dynamics: Proof of Theorem \ref {thm:ConvergenceAnisotropic}}{equation.9.60}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {10}Finite temperature}{75}{section.10}\protected@file@percent }
+\newlabel{sec:FiniteT}{{10}{75}{Finite temperature}{section.10}{}}
+\citation{jordan1998variational}
+\citation{jordan1998variational}
+\citation{jordan1998variational}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.1}Statics}{76}{subsection.10.1}\protected@file@percent }
+\newlabel{sec:Statics_finite_T}{{10.1}{76}{Statics}{subsection.10.1}{}}
+\newlabel{lem:Bound_H_by_M}{{10.1}{76}{}{lemma.10.1}{}}
+\newlabel{eqn:Bound_H_by_M}{{10.11}{76}{}{equation.10.11}{}}
+\newlabel{lem:Free_Energy_Unique_Minimum}{{10.2}{76}{}{lemma.10.2}{}}
+\newlabel{eqn:F_lower_bound_by_M}{{10.12}{76}{}{equation.10.12}{}}
+\newlabel{eqn:BoltzmannEquation_in_proof}{{10.13}{77}{Statics}{equation.10.13}{}}
+\newlabel{eqn:log_BoltzmannEquation}{{10.14}{77}{Statics}{equation.10.14}{}}
+\newlabel{eqn:Variation_of_F}{{10.15}{78}{Statics}{equation.10.15}{}}
+\newlabel{lem:Unique_Boltzmann_solution}{{10.4}{78}{}{lemma.10.4}{}}
+\newlabel{lem:Bound_global_minimizer_free_energy}{{10.5}{78}{}{lemma.10.5}{}}
+\citation{santambrogio2015optimal}
+\citation{jordan1998variational}
+\citation{jordan1998variational}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.2}Dynamics}{79}{subsection.10.2}\protected@file@percent }
+\newlabel{sec:Dynamics_finite_T}{{10.2}{79}{Dynamics}{subsection.10.2}{}}
+\newlabel{eqn:Chaos_PDE_diffusion}{{10.22}{79}{Dynamics}{equation.10.22}{}}
+\newlabel{eqn:Solution_of_PDE_in_weak_form}{{10.23}{79}{Dynamics}{equation.10.23}{}}
+\newlabel{lemma:AbsolutelyContinuous}{{10.6}{79}{}{lemma.10.6}{}}
+\citation{jordan1998variational}
+\newlabel{eqn:Discrete_scheme_Diffusion_PDE}{{10.24}{80}{Dynamics}{equation.10.24}{}}
+\newlabel{eqn:absolute_continuity_eq_begin}{{10.28}{80}{Dynamics}{equation.10.28}{}}
+\citation{jordan1998variational}
+\citation{jordan1998variational}
+\citation{jordan1998variational}
+\newlabel{eqn:absolute_continuity_eq_end}{{10.33}{81}{Dynamics}{equation.10.33}{}}
+\newlabel{eqn:Discrete_weak_PDE}{{10.34}{81}{Dynamics}{equation.10.34}{}}
+\newlabel{eqn:Bounded_M_H_E}{{10.35}{81}{Dynamics}{equation.10.35}{}}
+\newlabel{lem:smoothness_of_DD_diffusion_PDE}{{10.7}{81}{}{lemma.10.7}{}}
+\citation{jordan1998variational}
+\newlabel{eqn:Duhamel_regularity}{{10.43}{83}{Dynamics}{equation.10.43}{}}
+\newlabel{eqn:Extremely_powerful_inequalies3}{{10.44}{83}{Dynamics}{equation.10.44}{}}
+\newlabel{eqn:Extremely_powerful_inequalies4}{{10.45}{83}{Dynamics}{equation.10.45}{}}
+\citation{ladyzhenskaia1988linear}
+\newlabel{eqn:Condition_for_in_out}{{10.46}{84}{Dynamics}{equation.10.46}{}}
+\newlabel{eqn:Compact_Duhamel}{{10.47}{84}{Dynamics}{equation.10.47}{}}
+\newlabel{eqn:In_out_iteration}{{10.49}{84}{Dynamics}{equation.10.49}{}}
+\newlabel{eqn:Iterative_bootstrap}{{10.50}{84}{Dynamics}{equation.10.50}{}}
+\newlabel{eqn:Extremely_powerful_inequalies1}{{10.51}{84}{Dynamics}{equation.10.51}{}}
+\citation{evans2009partial}
+\citation{markowich2000trend}
+\newlabel{lem:Fixed_point_PDE_Boltzman}{{10.9}{85}{}{lemma.10.9}{}}
+\newlabel{eqn:Fokker_Planck_PDE}{{10.54}{85}{Dynamics}{equation.10.54}{}}
+\newlabel{lem:F_non_increasing}{{10.10}{86}{}{lemma.10.10}{}}
+\newlabel{eqn:F_non_increasing}{{10.55}{86}{}{equation.10.55}{}}
+\newlabel{eq:PartialFreeEnergy}{{10.2}{86}{Dynamics}{equation.10.55}{}}
+\newlabel{lem:generalized_Poincare_inequality}{{10.11}{86}{}{lemma.10.11}{}}
+\newlabel{eqn:Poincare_for_mu_star}{{10.58}{86}{Dynamics}{equation.10.58}{}}
+\newlabel{lem:limiting_point_Boltzmann_equation}{{10.12}{87}{}{lemma.10.12}{}}
+\newlabel{eqn:partial_F_converges_to_0}{{10.61}{87}{Dynamics}{equation.10.61}{}}
+\newlabel{eqn:partial_F_intepolation}{{10.63}{87}{Dynamics}{equation.10.63}{}}
+\newlabel{eqn:partial_F_converges_to_0_intepolation}{{10.64}{88}{Dynamics}{equation.10.64}{}}
+\newlabel{eqn:reformulation_fisher_information}{{10.65}{88}{Dynamics}{equation.10.65}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.3}Proof of Proposition \ref {thm:FixedPoints_Temp_finite}, Theorem \ref {thm:GeneralPDE_Noisy_fixed_point}, and Theorem \ref {thm:GeneralPDE_Noisy}}{88}{subsection.10.3}\protected@file@percent }
+\newlabel{sec:Proof_finite_T}{{10.3}{88}{Proof of Proposition \ref {thm:FixedPoints_Temp_finite}, Theorem \ref {thm:GeneralPDE_Noisy_fixed_point}, and Theorem \ref {thm:GeneralPDE_Noisy}}{subsection.10.3}{}}
+\newlabel{eqn:GeneralSGD_Noisy_Risk_bound1}{{10.67}{88}{Proof of Proposition \ref {thm:FixedPoints_Temp_finite}, Theorem \ref {thm:GeneralPDE_Noisy_fixed_point}, and Theorem \ref {thm:GeneralPDE_Noisy}}{equation.10.67}{}}
+\newlabel{eqn:GeneralSGD_Noisy_Risk_bound2}{{10.68}{88}{Proof of Proposition \ref {thm:FixedPoints_Temp_finite}, Theorem \ref {thm:GeneralPDE_Noisy_fixed_point}, and Theorem \ref {thm:GeneralPDE_Noisy}}{equation.10.68}{}}
+\citation{markowich2000trend}
+\newlabel{eqn:GeneralSGD_Noisy_Risk_bound3}{{10.69}{89}{Proof of Proposition \ref {thm:FixedPoints_Temp_finite}, Theorem \ref {thm:GeneralPDE_Noisy_fixed_point}, and Theorem \ref {thm:GeneralPDE_Noisy}}{equation.10.69}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {10.4}Dependence of convergence time on $D$ and $\eta $}{89}{subsection.10.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {11}Numerical Experiments}{89}{section.11}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.1}Isotropic Gaussians}{89}{subsection.11.1}\protected@file@percent }
+\newlabel{subsec:num_iso}{{11.1}{89}{Isotropic Gaussians}{subsection.11.1}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.1}{\ignorespaces The activation functions $\sigma (t)$ used in Section \ref {subsec:num_iso} (left plot) and Section \ref {subsec:num_fail} (right plot).}}{90}{figure.11.1}\protected@file@percent }
+\newlabel{fig:num_sigmoid}{{11.1}{90}{The activation functions $\sigma (t)$ used in Section \ref {subsec:num_iso} (left plot) and Section \ref {subsec:num_fail} (right plot)}{figure.11.1}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.1.1}Empirical validation of distributional dynamics}{90}{subsubsection.11.1.1}\protected@file@percent }
+\newlabel{subsubsec:num_isotropic_dyna}{{11.1.1}{90}{Empirical validation of distributional dynamics}{subsubsection.11.1.1}{}}
+\newlabel{eq:num_PDE_iso_discretize}{{11.8}{91}{Empirical validation of distributional dynamics}{equation.11.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.2}{\ignorespaces Evolution of the reduced distribution $\overline  {\rho }_t$ for $\Delta =0.2$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}.}}{92}{figure.11.2}\protected@file@percent }
+\newlabel{fig:num_iso_rhist_Delta2}{{11.2}{92}{Evolution of the reduced distribution $\rad _t$ for $\Delta =0.2$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}}{figure.11.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.1.2}Empirical validation of the statics}{92}{subsubsection.11.1.2}\protected@file@percent }
+\newlabel{subsubsec:num_isotropic_stat}{{11.1.2}{92}{Empirical validation of the statics}{subsubsection.11.1.2}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.3}{\ignorespaces The evolution of the population risk and the parameter $r$ of the reduced distribution $\overline  {\rho }_t$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}.}}{93}{figure.11.3}\protected@file@percent }
+\newlabel{fig:num_iso_risk}{{11.3}{93}{The evolution of the population risk and the parameter $r$ of the reduced distribution $\rad _t$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}}{figure.11.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.4}{\ignorespaces The function $\overline  R_d^{(1)}(r)$ vs $r$, as well as the evolution of the SGD and the PDE on this landscape, for $\Delta =0.2$ and $d=40$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}. Here the SGD and the PDE evolve from the leftmost point to the rightmost point.}}{93}{figure.11.4}\protected@file@percent }
+\newlabel{fig:num_iso_riskSingleDelta_Delta2}{{11.4}{93}{The function $\barR _d^{(1)}(r)$ vs $r$, as well as the evolution of the SGD and the PDE on this landscape, for $\Delta =0.2$ and $d=40$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}. Here the SGD and the PDE evolve from the leftmost point to the rightmost point}{figure.11.4}{}}
+\newlabel{eq:num_iso_v}{{11.10}{94}{Empirical validation of the statics}{equation.11.10}{}}
+\newlabel{eq:num_iso_u}{{11.11}{94}{Empirical validation of the statics}{equation.11.11}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.5}{\ignorespaces The population risk as a function of $\Delta $ for different values of $d$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}. Here ``Prediction - single'' refers to $\min _{r\geq 0}\overline  R_d^{(1)}(r)$, ``Prediction - full'' refers to the optimized $R(\rho )$ as described in Section \ref {subsubsec:num_isotropic_stat}, and ``SGD'' refers to the risk attained by the SGD.}}{95}{figure.11.5}\protected@file@percent }
+\newlabel{fig:num_iso_risk_all}{{11.5}{95}{The population risk as a function of $\Delta $ for different values of $d$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}. Here ``Prediction - single'' refers to $\min _{r\geq 0}\barR _d^{(1)}(r)$, ``Prediction - full'' refers to the optimized $R(\rho )$ as described in Section \ref {subsubsec:num_isotropic_stat}, and ``SGD'' refers to the risk attained by the SGD}{figure.11.5}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {11.1.3}Checking the condition of Lemma \ref {lemma:OneDeltaCondition} in the main text}{95}{subsubsection.11.1.3}\protected@file@percent }
+\newlabel{subsubsec:num_iso_Lemma1}{{11.1.3}{95}{Checking the condition of Lemma \ref {lemma:OneDeltaCondition} in the main text}{subsubsection.11.1.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.6}{\ignorespaces The function $\overline  R_d^{(1)}(r)$ for different values of $d$ and $\Delta $, in the isotropic Gaussians example of Section \ref {subsec:num_iso}.}}{96}{figure.11.6}\protected@file@percent }
+\newlabel{fig:num_iso_riskSingleDelta}{{11.6}{96}{The function $\barR _d^{(1)}(r)$ for different values of $d$ and $\Delta $, in the isotropic Gaussians example of Section \ref {subsec:num_iso}}{figure.11.6}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces $\Delta _d^{\rm  l}$ and $\Delta _d^{\rm  h}$ for different values of $d$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}. Here ``N/A'' refers to that no values of $\Delta $ are found to satisfy the condition of Lemma \ref {lemma:OneDeltaCondition} in the main text. Note that for $d=\infty $, the value $\Delta _\infty ^{\rm  l}=0$ is exact, according to Theorem \ref {thm:global_minimizer_infinite_d_isotropic}.}}{96}{table.1}\protected@file@percent }
+\newlabel{tab:num_iso_Deltad}{{1}{96}{$\Delta _d^{\rm l}$ and $\Delta _d^{\rm h}$ for different values of $d$, in the isotropic Gaussians example of Section \ref {subsec:num_iso}. Here ``N/A'' refers to that no values of $\Delta $ are found to satisfy the condition of Lemma \ref {lemma:OneDeltaCondition} in the main text. Note that for $d=\infty $, the value $\Delta _\infty ^{\rm l}=0$ is exact, according to Theorem \ref {thm:global_minimizer_infinite_d_isotropic}}{table.1}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.2}Centered anisotropic Gaussians with ReLU Activation}{97}{subsection.11.2}\protected@file@percent }
+\newlabel{subsec:num_ani}{{11.2}{97}{Centered anisotropic Gaussians with ReLU Activation}{subsection.11.2}{}}
+\newlabel{eq:num_PDE_ani_discretize}{{11.27}{98}{Centered anisotropic Gaussians with ReLU Activation}{equation.11.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {11.3}Isotropic Gaussians: Predictable Failure of SGD}{98}{subsection.11.3}\protected@file@percent }
+\newlabel{subsec:num_fail}{{11.3}{98}{Isotropic Gaussians: Predictable Failure of SGD}{subsection.11.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.7}{\ignorespaces The evolution of the four parameters in the anisotropic Gaussians example of Section \ref {subsec:num_ani}.}}{99}{figure.11.7}\protected@file@percent }
+\newlabel{fig:num_ani_parameters}{{11.7}{99}{The evolution of the four parameters in the anisotropic Gaussians example of Section \ref {subsec:num_ani}}{figure.11.7}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.8}{\ignorespaces The evolution of the population risk for $\Delta =0.6$, $d=320$, $N=800$ in the anisotropic Gaussians example of Section \ref {subsec:num_ani}.}}{100}{figure.11.8}\protected@file@percent }
+\newlabel{fig:num_ani_risk_Delta6}{{11.8}{100}{The evolution of the population risk for $\Delta =0.6$, $d=320$, $N=800$ in the anisotropic Gaussians example of Section \ref {subsec:num_ani}}{figure.11.8}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11.9}{\ignorespaces The error rate attained by the SGD in the example of Figure \ref {fig:Failure} of the main text.}}{101}{figure.11.9}\protected@file@percent }
+\newlabel{fig:num_fail_error}{{11.9}{101}{The error rate attained by the SGD in the example of Figure \ref {fig:Failure} of the main text}{figure.11.9}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A}Concentration inequalities}{101}{appendix.A}\protected@file@percent }
+\newlabel{sec:Tools}{{A}{101}{Concentration inequalities}{appendix.A}{}}
+\newlabel{lemma:AH}{{A.1}{101}{Azuma-H\"oeffding bound}{lemma.A.1}{}}
+\newlabel{eq:MG_diff}{{A.1}{101}{Azuma-H\"oeffding bound}{equation.A.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {B}On the generalization to other loss functions}{102}{appendix.B}\protected@file@percent }
+\newlabel{eq:GeneralPDE_GenLoss}{{B.3}{102}{On the generalization to other loss functions}{equation.B.3}{}}
+\gdef \@abspage@last{102}

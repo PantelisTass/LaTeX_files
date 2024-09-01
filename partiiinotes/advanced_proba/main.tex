@@ -112,7 +112,7 @@ Now for an integer-valued random variable $ X $, we set:
 \]
 
 
-\subsection{Countably generated sigma algebra}
+\subsection{Conditional expectation with respect to countably generated sigma algebras}
 
 \mymark{Lecture 2}We now extend the definition of the conditional expectation for a \underline{countably generated sigma algebra}. Let $ (\Omega, \F, \PP) $ be a probability space. We call the sigma algebra $\mathcal{G} $ coutnably generated if there exists a colection $ (B_{n})_{n\in \N} $ of pairwise disjoint events such that $\displaystyle\bigcup_{n\in I}B_{n} = \Omega$ with ($ I $ countable) and $\mathcal{ G} = \sigma(B_{i}:i\in I)$.\\ 
 
@@ -136,6 +136,8 @@ and $X'$ satisfies for all $ G\in\mathcal{G}$:$\mathbb{E}[X\cdot\mathbf{1}_{G}]=
 \end{array}
 \]
 
+\subsection{General case}
+
 We say $ A\in \F$ happens \underline{a.s.} if $ \PP(A) = 1$. \underline{Recall} (from measure theory and basic functional analysis): 
 \begin{theorem}[Monotone Convergence Theorem (MCT)]\label{thm: MCT}
 	Let $(X_{n})_{n\in \N}$ be such that $ X_{n}\geq 0, X$ be random variables such that $ X_{n}\uparrow X$ as $ n\to \infty$. Then, $\mathbb{E}[X_{n}]\uparrow\mathbb{E}[X]$ as $ n\to \infty$.
@@ -151,7 +153,6 @@ Let $ 1\leq p <\infty$ and $ f $ a measurable function, then set $ \norm{f}_{p}\
 	$ \mathcal{L}^{2}(\Omega, \F, \PP) $ is a Hilbert space, with inner product $  \bracket{u}{v}_{2}=\mathbb{E}[u\cdot v]$. Furthermore, for any closed subspace $\mathcal{H}$, if $ f\in\mathcal{L}^{2}$, there exists a unique $ g\in\mathcal{H}$ s.t. $ \norm{f-g}_{\mathcal{L}^{2}}=\displaystyle\inf_{h\in\mathcal{H}}\norm{f-h}_{\mathcal{L}^{2}}$ and $ \bracket{f-g}{h}=0$, for all $ h\in\mathcal{H}$. We say that $ g$ is the \underline{orthogonal projection} of $ f$ in $\mathcal{H}$.
 \end{theorem}
 
-\subsection{General case}
 
 We now construct the conditional expectation in the general case, for any integrably random variable with respect to an arbitrary sigma algebras.
 
