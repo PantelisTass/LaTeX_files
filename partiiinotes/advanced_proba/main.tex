@@ -1,6 +1,5 @@
 \documentclass{article}
 \input{preamble}  % Include the preamble from an external file
-
 %\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}\addtocounter{page}{-1}}
 \fancyhead{}
 \fancyhead[L]{\text{Advanced Probability}}
@@ -281,7 +280,7 @@ which gives the result
 \end{proof}
 
 \begin{theorem}[Conditional Dominated Convergence Theorem]\label{thm: cond DCT}
-	SUppose $ X_{n}\to X$ a.s. $ n\to \infty $ and $ |X_{n}|\leq Y$ a.s. for all $ n\in \N$ with $ Y$ in tegrable. Then $\mathbb{E}[X_{n}\mathcal{G}]\to\mathbb{E}[X\mathcal{G}]$ a.s. as $n\to \infty.$
+	SUppose $ X_{n}\to X$ a.s. $ n\to \infty $ and $ |X_{n}|\leq Y$ a.s. for all $ n\in \N$ with $ Y$ integrable. Then $\mathbb{E}[X_{n}\mathcal{G}]\to\mathbb{E}[X\mathcal{G}]$ a.s. as $n\to \infty.$
 \end{theorem}
 
 \begin{proof}
@@ -387,6 +386,302 @@ Let $ X\in\mathcal{L}^{1}$, $\mathcal{G}\subseteq \F$, $ Y$ bounded $\mathcal{G}
     \vspace{1em} 
 (Also observe that by a monotone class argument, we have for any integrable function $ f:\Omega \to \R$, $\mathbb{E}[X\cdot f] =\mathbb{E}[\mathbb{E}[X|\mathcal{ G}]\cdot f] $ ) 
 \end{proof}
+
+
+\mymark{Lecture 4}
+
+We are building towards the Theorem
+\begin{theorem}\label{thm: cond expectation sigma indep}
+$ X\in \mathcal{L}^1, \mathcal{G}, \mathcal{H} \subseteq \F$. Assume $ \sigma( \mathcal{G}, \mathcal{H})\perp \mathcal{H}$, Then
+\[
+	\mathbb{E}[X|\sigma( \mathcal{G}, \mathcal{H})] =\mathbb{E}[X| \mathcal{G}] \quad \text{a.s.}
+\]
+
+\end{theorem}
+
+
+We begin with a definition
+\begin{boxdef}\label{def: pi system}
+	Let $ \mathcal{A} $ be a collection of sts. It is called a \underline{$ \pi-$system} if for all $ A,B\in \mathcal{A}$, we also have $ A\cap B\in \mathcal{A}$.
+\end{boxdef}
+
+
+\begin{theorem}[Uniquenes of extension]\label{thm: uniqueness meas extension}
+Let $ (E, \xi)$be a measurable space and let $ \mathcal{A}$ be a $ \pi-$system generating the sigma algebra $ \xi$. Let $ \mu, \nu$ be two measures on $ (E, \xi)$ with $ \mu(E)=\nu(E)<\infty$. If $ \mu = \nu$ on $ \mathcal{A}$, then $ \mu = \nu$ on $ \xi$.
+\end{theorem}
+
+\begin{proof}{(Theorem \ref{thm: cond expectation sigma indep})}
+    NTS: for all $ F\in \sigma( \mathcal{G}, \mathcal{H})$
+    \[
+	    \mathbb{E}[X\cdot \mathbf{1}_{F}] =\mathbb{E}[\mathbb{E}[X| \mathcal{G}]\cdot \mathbf{1}_{F}]
+    \]
+    Now, set $  \mathcal{ A} = \{A\cap B : A\in \mathcal{ G}, B\in \mathcal{ H}\}$. It is easy to check that $  \mathcal{A}$ is a $ \pi-$system generating $ \sigma( \mathcal{G}, \mathcal{H})$. If $ F = A\cap B$ for some $ A\in \mathcal{G}$ and $ B \in \mathcal{H}$, Then 
+    \[
+    \begin{array}{ll}
+	    \mathbb{E}[X\cdot \mathbf{1}(A\cap B)] &=\mathbb{E}[X\cdot \mathbf{1}(A)\cdot \mathbf{1}(B)] \\
+						  & =\mathbb{E}[X\cdot \mathbf{1}(A)]\cdot\mathbb{E}[ \mathbf{1}(B)] \stackrel{H\perp \sigma( \mathcal{G}, \mathcal{H})}{=}\mathbb{E}[\mathbb{E}[X| \mathcal{G}]\cdot \mathbf{1}(A\cap B)].
+    \end{array}
+    \]
+
+    Now assume $ X\geq 0$; in the general case, decompose $ X = X^{+}- X^{-}$ and apply same argument to both $ X^{\pm}$. Define the measures $ \mu(F) =\mathbb{E}[X\cdot \mathbf{1}(F)]$ and $ \nu(F) =\mathbb{E}[X\cdot \mathbf{1}(F)]$ for all $ F\in \sigma( \mathcal{G}, \mathcal{H})$. Observe that $ \mu(\Omega) = \nu(\Omega) =\mathbb{E}[X]<\infty$ and we have shown that $ \mu = \nu$ on $ \mathcal{A}$. Thus, $ \mu=\nu$ on $ \sigma( \mathcal{G}, \mathcal{H})$ which finally implies the result 
+\[
+	\mathbb{E}[X|\sigma( \mathcal{G}, \mathcal{H})] =\mathbb{E}[X| \mathcal{G}] \quad \text{a.s.}
+\]
+
+
+\end{proof}
+
+
+\begin{examplesblock}{Examples: }\label{examples: 1}
+
+\begin{enumerate}
+	\item 
+\begin{boxdef}[Gaussian]\label{def: gaussian dist}
+$ (X_{1}, X_{2}, \cdots, X_{n})\in \R^{n}$ has the Gaussian distribution if and only if for all scalars $ a_{1}, a_{2}, \cdots, a_{n}\in \R$, $ a_{1}X_{1}+\cdots a_{n}X_{n}$ has the Gaussian distrubition in $ \R$.
+\end{boxdef}
+
+A stochastic process (more on that later) $ (X_{t})_{t\geq 0}$ is a \underline{Gaussian process} if for all $ t_{1}<t_{2}<\cdots t_{n}$ the vector $ (X_{t_{1}}, X_{t_{2}}, \cdots, X_{t_{n}})$ is Gaussian.
+
+Let $ (X,Y)$ be a Gaussian vector in $ \R^{2}$. We compute $\mathbb{E}[X|Y]$.\\ 
+Let $ X' =\mathbb{E}[X|Y]$. Looking for $ f$ a Borel measurable function s.t. $ \mathbb{E}[X|Y] = f(Y)$ a.s. Let $ f(y) = ay+b$ for some $ a,b\in \R$ to be determined. Now, $ X' = aY+b$, $\mathbb{E}[X'] =\mathbb{E}[X] = a\mathbb{E}[Y]+b$ and $\mathbb{E}[X'\cdot Y] =\mathbb{E}[X\cdot Y]\implies\mathbb{E}[(X-X')\cdot Y]=0$. Thus $ \text{Cov}(X-X', Y)=0\implies \text{Cov}(X,Y) = a^{2}\text{Var}(Y)$.\\ 
+
+\underline{Need to check:} that for all $ Z$ bounded $ \sigma(Y)-$measurable, $ \mathbb{E}[(X-X')\cdot Z] = 0$.\\ 
+Indeed, observe that $ (X-X', Y)$ is a Gaussian vector and since $ \text{Cov}(X-X', Y) = 0\implies X-X'\perp Y\implies (X-X')\perp Z$.
+
+\item Let $ (X,Y)$ be a random vector with density in $ \R^{2}$ with joint density function $ f_{X,Y}:\R^{2}\to \R$. Let $ h:\R\to \R$ be a Borel function such that  $ h(X)$ is integrable. We now compute $\mathbb{E}[h(X)| Y]$.\\ 
+We have for all $ g$ bounded $ \sigma{Y}-$measurable functions.
+	
+\[
+\begin{array}{ll}
+	\displaystyle\int_{\R^{2}}h(x)g(y)f_{X,Y}(x,y) \diff x \diff y &=  \mathbb{E}[h(X)g(Y)]\\ 
+								       &=\mathbb{E}[\mathbb{E}[h(X)|Y]g(Y)] =\mathbb{E}[\phi(Y)g(Y)]\\ 
+								       &= \displaystyle\int_{\R^{2}}\phi(y)g(y)f_{Y(y)} \diff y  
+\end{array}
+\]
+where $ f_{Y}(y) = \int_{\R}f_{X,Y}(x,y) \diff x  $ and $ \phi:\R\to \R$ is some Borel measurable function. Hence, 
+
+\[
+\phi(y) = \left\lbrace
+\begin{array}{@{}l@{}}
+    \displaystyle\int_{\R} h(x)\frac{f_{X,Y}(x,y)}{f_{Y}(y)} \diff dx, \quad f_{Y}(y)>0   \\
+    0, \quad \text{otherwise}
+\end{array}\right.
+\]
+can be seen to work. Thus, we obtain 
+\[
+	\mathbb{E}[h(X)|Y] = \phi(Y) \quad \text{a.s.}
+\]
+	
+\end{enumerate}
+\end{examplesblock}
+
+
+\section{Discrete Time Martingales}
+
+\begin{boxdef}[Filtration]\label{def: filtration}
+	Let $ (\Omega, \F, \PP)$ be a pobability space. A \underline{filtration} is a sequences of increasing sigma sub-algebras of $ \F$, $ (\F_{n})_{n\in \N}$, $ \F_{n}\subseteq \F_{n+1}$ for all $ n\in \N$. We call $ (\Omega, \F, (\F_{n})_{n\in\N})$ a \underline{filtered probability space}.\\ 
+
+	Let $X =  (X_{n})_{n\in \N}$ be a sequence of random variables/a stochastic process. Then it induces $ (\F^{X}_{n})_{n\in N}$, where $ \F^{X}_{n}\coloneqq \sigma(X_{:k\leq n})$ for all $ n\in \N$: the canonical filtration associated to $ X$. We call $ X$ \underline{adapted} to a filtration $ (\F_{n})_{n\in \N}$ if $ X$is $ \F_{n}-$measurable for all $ n\in \N$.$ X$ is called \underline{integrable} if $ X_{n}$ is integrable for all $ n\in \N$.
+\end{boxdef}
+
+\begin{boxdef}[Martingale discrete time]\label{def: martingale}
+Let $ (\Omega, \F, (\F_{n})_{n\in\N}, \PP)$ be a filtered probability space. Let $ X = (X_{n})_{n\in \N}$be an integrabl and adapted process. 
+\begin{itemize}
+	\item $ X$ is called a \underline{martingale} if $ \mathbb{E}[X_{n}| \F_{m}]=X_{m}$ a.s. for all $ n\geq m$.
+	\item $ X$ is called a \underline{super-martingale} if $ \mathbb{E}[X_{n}| \F_{m}]\leq X_{m}$ a.s. for all $ n\geq m$.
+        \item $ X$ is called a \underline{sub-martingale} if $ \mathbb{E}[X_{n}| \F_{m}]\geq X_{m}$ a.s. for all $ n\geq m$.
+\end{itemize}
+
+\end{boxdef}
+
+\begin{remark}
+	If $  X$ is a (super/sub)martingale with respect to $ (\F_{n})_{n\in\N}$, then it is also a martingale with respect to $ (\F^{X}_{n})_{n\in \N}$. To see this, one has to use the tower property \ref{prop: tower ppty}: $ \F^{X}_{n}\subseteq \F_{n}$ for all $ n\in\N$ implies $ \mathbb{E}[X_{n}|\F^{X}_{m}]= \mathbb{E}[ \mathbb{E}[X_{n}|\F_{m}]|\F^{X}_{m}]$ (since $ \mathbb{E}[X_{n}|\F_{m}]$ a.s.).
+\end{remark}
+
+\begin{examplesblock}{Examples: }\label{examples: 2}
+\begin{enumerate}
+	\item Let  $ (\xi_{i})_{i\in \N}$ be iid. s.t. $ \mathbb{E}[\xi_{i}]=0$ for all $ i\in\N$ and define $ X = (X_{n})_{n\in\N}$ by $ X_{n} = \xi_{1}+\cdots +\xi_{n}$ for all $ n\in\N$, $ X_{0} = 0$. $ X$ is a martingales with respect to $ (\F^{\xi}_{n})_{n\in\N}$.
+	\item Let  $ (\xi_{i})_{i\in \N}$ be iid. s.t. $ \mathbb{E}[\xi_{i}]=1$ for all $ i\in\N$ and define $ X = (X_{n})_{n\in\N}$ by $ X_{n} = \displaystyle\prod^{n}_{i=1}\xi_{i}$ for all $ n\in\N$, $ X_{0} = 1$. $ X$ is again a martingales with respect to $ (\F^{\xi}_{n})_{n\in\N}$.
+
+\end{enumerate}
+
+\end{examplesblock}
+
+\mymark{Lecture 5}Let $ (\Omega, \F, (\F_{n})_{n\in \N}, \PP)$ be a filtered probability space.
+
+\begin{boxdef}[Stopping time discrete time]\label{def: stopping time discrete}
+	A \underline{stopping time} $ T$ is a random variable $ T:\Omega\to \Z_{+}\cup \{\infty\}$ s.t. $ \{T\leq n\}\in \F_{n}$ for all $ n\in \N$. Equivalently, if $ \{f=n\}\in \F_{n}$ for all $ n\in \N$ since 
+	\[
+		\{T=n\}=\underbrace{\{T\leq n\}}_{\F_{n}}\setminus \underbrace{\{T\leq n-1\}}_{\F_{n-1}\subset \F_{n}}\in \F_{n}.
+	\]
+and 
+\[
+	\{T\leq n\} =\displaystyle\bigcup^{n}_{k=1}\{T=k\}\in \F_{k}\subset \F_{n}.
+\]
+
+\end{boxdef}
+
+\begin{examplesblock}{Examples: }\label{examples: 3}
+\begin{enumerate}
+	\item Constant time are trivially stopping times.
+	\item Let $ X = (X_{n})_{n\in\N}$ be a stochastic process taking values in $ \R$ and $ A\in  \mathcal{B}(\R)$ ($ X$ adapted). Define 
+		\[
+			T_{A} = \{n\geq 0: X_{n\in A}\}.
+		\]
+		Then $ \{T_{A}\leq n \} =\displaystyle\bigcup^{n}_{k=0}\{X_{k\in A}\}\in \F_{n} $ for all $ n\in\N$ (with convention $ \inf \emptyset = \infty$).
+	\item $ L_{A} = \sup\{n\geq 0: X_{n\in A}\}$ is \underline{NOT} a stopping time.	
+\end{enumerate}
+\end{examplesblock}
+
+\underline{Properties:} $ S,T, (T_{n})_{n\in\N}$ stopping times. Then $ S\land T, S\lor T$, $ \displaystyle\inf_{n}T_{n}, \displaystyle\sup_{n}T_{n}$, $ \displaystyle\liminf_{n}T_{n}$, $ \displaystyle\limsup_{n}T_{n}$ are also stopping times.
+
+\begin{boxdef}[Stopping time sigma algerbra]\label{def: stopping time sigma algebra}
+It $ T$is a stopping time, define 
+\[
+	\F_{T}=\{A\in \F: A\cap \{T\leq t \}\in \F_{t}\}
+\]
+Let $ (X_{n})_{n\geq 0}$ be a process. Write $ X_{T}(\omega) = X_{T(\omega)}(\omega)$ for $ \omega \in \Omega$ whenever $ T(\omega)<\infty$. Define the \underline{stopped process:} $ X^{T}_{t}\coloneqq X_{T\land t}$.
+\end{boxdef}
+
+
+\begin{boxprop}\label{prop: stopping time discrete}
+	Let $ S$ and $ T$ be stopping times, and let $ X$ be an adapted process, then:
+	\begin{enumerate}
+		\item If $ S\leq T$, then $ \F_{S}\subseteq\F_{T}$.
+		\item $ X_{T}\cdot$ is $ \F_{T}-$measurable.
+		\item $ X^{T}$ is adapted. 
+		\item If $ X$ is integrable, then the stopped process iss integrable.
+	\end{enumerate}
+	
+\end{boxprop}
+\begin{proof}
+    \begin{enumerate}
+	    \item Immediate from definition.
+	    \item Let $ A\in \mathcal{B}(\R)$. Need to show: 
+		    \[
+			    \{X_{T} \mathbf{1}(T<\infty)\}\cap \{T\leq t\} \in A, \quad \text{ for all }t\geq 0.
+		    \]
+Indeed, we have that 
+\[
+	\{X_{T} \mathbf{1}(T<\infty)\} =\displaystyle\bigcup^{t}_{s=0}\underbrace{\{X_{s}\in A\}}_{\F_{s}\subseteq \F_{t}}\cap \underbrace{\{T = s\}}_{\F_{s}}\in \F_{t}.
+\]
+
+\item $ X^{T}_{t} = X_{T\land t}$, this being $ \F_{T\land t}-$measurable $ \subseteq\F_{t}-$measurable by $ 1)$, so we conclude it is $ \F_{t}-$measurable.
+
+\item 
+	\[
+	\begin{array}{ll}
+		\mathbb{E}[|X_{t}^{T}|] &=\mathbb{E}[|X_{T\land t}|] \\
+					&=\displaystyle\sum^{t-1}_{s=0}\mathbb{E}[|X_{s}|\cdot \mathbf{1}(T = s)]+\mathbb{E}[|X_{t}|\cdot \mathbf{1}(T\geq t)]\\ 
+					&\leq\displaystyle\sum^{ t}_{s=0}\mathbb{E}[|X_{s}|]\underbrace{<\infty}_{X_{t} \text{ is integrable}}.
+	\end{array}
+	\]
+	
+    \end{enumerate}
+    
+\end{proof}
+
+We now state and prove a fundamental theorem in Martingale theory: 
+
+\begin{theorem}[Optional Stopping Theorem discrete time]\label{thm: optional stopping discrete time}
+Let $ (X_{n}$ be a martingale. 
+\begin{enumerate}
+	\item If $ T$ is a stopping time, then the stopped process $ X^{T}$ is also a martingale. In particular for all $ t\geq 0$:
+		\[
+			\mathbb{E}[X_{T\land t}] =\mathbb{E}[X_{0}].
+		\]
+	\item It $ S\leq T$ are bounded stopping times, then 
+		\[
+			\mathbb{E}[X_{T}|\F_{S}] = X_{T}, \quad \text{a.s.}
+		\]
+		and hence $ \mathbb{E}[X_{T}] \mathbb{E}[X_{S}]$.
+	\item It there exists an integrable random variable $ Y$ such that $ |X_{n}\leq Y|$ for all $ n \geq 0 $ and $ T$ is finite, then $ \mathbb{E}[X_{T}]= \mathbb{E}[X_{0}]$.
+	\item If there exists $ M\geq 0$ such that $ |X_{n+1}-X_{n}|\leq M$ for all $ n\in \N$ and $ T$ is a stopping time with $ \mathbb{E}[T]<\infty$, then $ \mathbb{E}[X_{T}]= \mathbb{E}[X_{0}]$.
+\end{enumerate}
+
+\end{theorem}
+
+\begin{proof}
+    \begin{enumerate}
+	    \item NTS: for all $ t\geq 0$, $ \mathbb{E}[X_{T\land t}|\F_{t-1}]=X_{T\land t}$ a.s.
+		    Indeed, 
+\[
+\begin{array}{ll}
+	\mathbb{E}[X_{T\land t}|\F_{t-1}] &=\displaystyle\sum^{t-1}_{s =0}\mathbb{E}[X_{s}\cdot \mathbf{ 1}(T=s)|\F_{t-1}] \mathbb{E}[X--t]\cdot \mathbf{1}(T\geq t)|\F_{t-1}] \\
+					  &=\displaystyle\sum^{ t-1}_{s =0} \mathbf{1}(T=s)\cdot X_{s}+X_{t-1}\cdot \mathbf{1}(T\geq t) \quad \text{ a.s.}\\ 
+&=\displaystyle\sum^{ t-2}_{s =0} \mathbf{1}(T=s)\cdot X_{s}+X_{t-1}\cdot \mathbf{1}(T\geq t-1) \quad \text{ a.s.}\\ 
+&= X_{T\land t-1} \quad \text{a.s.}
+\end{array}
+\]
+\item $S\leq T\leq n, n\in \N$ fixed. Let $ A\in \F_{S}$. \underline{NTS:} $ \mathbb{E}[X_{T}\cdot \mathbf{1}(A)] = \mathbb{e}[X_{s}\cdot \mathbf{1}(A)]$. We compute
+	\[
+	\begin{array}{ll}
+	    X_{T}-X_{S} &= (X_{T}-X_{T-1})+\cdots + (X_{S+1}-X_{S}) \\
+			&=\displaystyle\sum^{ n-1}_{k=0}(X_{k+1}-X_{k})\cdot \mathbf{1}(S\leq k <T). 
+	\end{array}
+	\]
+	Thus, 
+	\[
+		\mathbb{E}[X_{T}\cdot \mathbf{1}(A)] \stackrel{ (A\in \F_{S}) }{=}\mathbb{E}[X_{S}\cdot \mathbf{1}(A)]+ \displaystyle\sum^{ n-1}_{k=0}\mathbb{E}[(X_{k+1}-X_{k})\cdot \mathbf{1}(S\leq k <T)\cdot \mathbf{1}(A)]
+	\]
+	Have, $ A\cap \{S\leq k\}\in \F_{k}$ and $ A\cap \{T>k\}\in F_{k}$. Thus, $ \mathbf{1}(S\leq k <T)\cdot \mathbf{1}(A)$ is $ \F_{k}-$measurable. Using $ \mathbb{E}[X_{k+1}|\F_{k}]=X_{k}$ a.s. we deduce that 
+	\[
+	\begin{array}{ll}
+		\mathbb{E}[(X_{k+1}-X_{k})\cdot \mathbf{ 1}(S\leq k <T]\cdot \mathbf{1}(A)]
+		&= \mathbb{E}[\smash{\cancelto{0}{\mathbb{E}[(X_{k+1}-X_{k})|\F_{k}]}}\cdot \mathbf{ 1}(S\leq k <T]\cdot \mathbf{1}(A)] \\
+		&= 0
+	\end{array}
+\]
+Thus, $ \mathbb{E}[X_{T}|\F_{S}]=X_{S}$ a.s. 
+
+\item By the Optional Stopping Theorem applied to $ (X_{T\land n})_{n\geq 0}$, we have 
+	\[
+		\mathbb{E}[X_{T\land n}] =\mathbb{E}[X_{0}] \quad \text{for all } n\geq 0.
+	\]
+Now, $ T$ being finite a.s. implies that $ X_{T} = \displaystyle \lim_{n\to \infty} X_{T\land n} $ a.s. By assumption, have $ |X_{T\land n}|\leq Y$ a.s. for all $ n\in \N$ and so can apply DCT to conclude.	
+
+\item Observe that for all $ n\geq 1$
+	\[
+	X_{T\land n}-X_{0} =\displaystyle\sum^{n-1}_{k=0}(X_{k}-X_{0})\cdot \mathbf{1}(T=k)+(X_{n} -X_{0})\mathbf{1}(T\geq n) 
+	\]
+Hence, we have the bound (using that $ |X_{k+1}-X_{k}|\leq M$ a.s. for all $ k\geq 0$)
+\[
+\begin{array}{ll}
+    \\
+|X_{T\land n}-X_{0}|&\leq M\displaystyle\sum^{n-1}_{k=0} k\mathbf{1}(T=k) + n\mathbf{1}(T\geq n)\\
+			&\leq\mathbb{E}[T]<\infty \quad \text{a.s.}
+\end{array}
+\]
+Now, $\mathbb{E}[T]<\infty$ gives $ T<\infty$ a.s. and so can deduce as before that $ X_{T} = \displaystyle \lim_{n\to \infty} X_{T\land n} $ and use the DCT to conclude the argument. 
+
+
+ \end{enumerate}
+    
+\end{proof}
+
+
+\begin{boxcor}\label{cor: pos supermg bound}
+Let $ X$ be a positive superartingale, $ T$ a stopping time such that $ T<\infty$ a.s., then 
+\[
+	\mathbb{E}[X_{T}]\leq\mathbb{E}[X_{0}].
+\]
+
+\end{boxcor}
+
+\begin{proof}
+	Use Fatou \ref{lemma: Fatou}: $\mathbb{E}[\displaystyle\liminf_{t\uparrow \infty}X_{T\land t}]\leq \displaystyle\liminf_{t\uparrow \infty}\mathbb{E}[X_{T\land t}]\leq\mathbb{E}[X_{0}]$.
+\end{proof}
+
+
+\begin{examplesblock}{Simple random walk on $ \Z$}\label{def: SRW on ints}
+	Let $ (\xi_{i})_{i\geq 0}$ be iid Bernoulli random variables with success probability $ 1/2$. Define the process $(X_{n})_{n\geq 0}$ by setting $ X_{n} = \xi_{1}+\dots+\xi_{n}$ for all $ n\geq 1$ and $ X_{0}=0$. Furthermore, let $ T = \inf\{n\geq 0: X_{n}= 1\}$. Using the analysis below, we will see that $ \PP(T<\infty)=1$. The Optional Stopping Theorem gives $\mathbb{E}[X_{T\land t}]=0$ for all $ t\geq 0$. Yet, $1 = \mathbb{E}[X)_{T}]\neq 0$. We thus see that the condition $\mathbb{E}[T]<\infty$ in $ 4)$ is necessary, since $\mathbb{E}[T] = \infty$. 
+	\begin{figure}[H]
+	    \centering
+	    \includesvg[width=0.6\linewidth]{images/SRW-on-Z.svg}
+	    \caption{Illustration of simple random walk (first step) on $ \Z$.}
+	    \label{fig: SRW on Z}
+	\end{figure}
+\end{examplesblock}
 
 
 \end{document}

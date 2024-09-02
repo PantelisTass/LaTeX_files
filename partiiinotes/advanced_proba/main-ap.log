@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  1 SEP 2024 12:55
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  2 SEP 2024 17:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1960,8 +1960,10 @@ Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 Package hyperref Info: Link coloring OFF on input line 14.
+(./main-ap.out) (./main-ap.out)
 \@outlinefile=\write6
 \openout6 = `main-ap.out'.
+
 
 Preview: Fontsize 10pt
 Preview: PDFoutput 1
@@ -2003,14 +2005,16 @@ Non-PDF special ignored!
 Non-PDF special ignored!
 <special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
-No file main-ap.toc.
+(./main-ap.toc)
 \tf@toc=\write7
 \openout7 = `main-ap.toc'.
 
-[2]
+ [2]
+Package marginnote Info: Margin note 3.1 is on absolute page 3 on input line 23
+.
 Package marginnote Info: right page because not two side mode on input line 23.
 
-Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 23.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 23.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 25.
@@ -2190,10 +2194,10 @@ Package mdframed Info: mdframed detected package amsthm
 
  
 Here is how much of TeX's memory you used:
- 58483 strings out of 474116
- 1410892 string characters out of 5743682
- 2018319 words of memory out of 5000000
- 79924 multiletter control sequences out of 15000+600000
+ 58508 strings out of 474116
+ 1411297 string characters out of 5743682
+ 2018710 words of memory out of 5000000
+ 79943 multiletter control sequences out of 15000+600000
  573428 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,13n,134p,1756b,1023s stack positions out of 10000i,1000n,20000p,200000b,200000s

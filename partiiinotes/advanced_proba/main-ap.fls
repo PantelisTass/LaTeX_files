@@ -534,6 +534,12 @@ OUTPUT main-ap.aux
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT ./main-ap.out
+INPUT ./main-ap.out
+INPUT main-ap.out
+INPUT main-ap.out
+INPUT ./main-ap.out
+INPUT ./main-ap.out
 OUTPUT main-ap.out
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/inputenc.sty
@@ -577,6 +583,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr12.tfm
 INPUT /usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT ./main-ap.toc
+INPUT ./main-ap.toc
+INPUT main-ap.toc
 OUTPUT main-ap.toc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm

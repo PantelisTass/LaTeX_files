@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1725184551.64157 "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main-ap.tex" "main-ap.pdf" "main-ap" 1725184554.77428 2
-  "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main-ap.tex" 1725184550.94299 4528 b77670f51b199a0a7ca6c053ec2ec797 ""
+["pdflatex"] 1725287703.11612 "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main-ap.tex" "main-ap.pdf" "main-ap" 1725287706.74713 2
+  "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main-ap.tex" 1725287702.87455 4527 f7f10db9a5a2853e2126b615aed4a0fb ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm" 1246382020 988 bdf658c3bfc2d96d3c8b02cfc1c94c20 ""
@@ -330,9 +330,10 @@
   "/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1724866274.25125 5467645 128b85b7cde5f5edc5cb7f1dd7ff8736 ""
   "/usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt" 1724866266 8221414 4ccf71f7568e12763705a188cb6713a2 ""
   "/usr/local/texlive/2024/texmf.cnf" 1710266656 577 e590dabc9e28c5b61546e15f63eebcdf ""
-  "main-ap.aux" 1725184554.47366 1114 535bf9bd3530c2e914beb6ea2131c508 "pdflatex"
-  "main-ap.tex" 1725184550.94299 4528 b77670f51b199a0a7ca6c053ec2ec797 ""
-  "main-ap.toc" 1725184554.34792 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
+  "main-ap.aux" 1725287706.41183 1114 535bf9bd3530c2e914beb6ea2131c508 "pdflatex"
+  "main-ap.out" 1725287706.41211 418 4a14bb39d4764a2f559f2153d4f0f8e1 "pdflatex"
+  "main-ap.tex" 1725287702.87455 4527 f7f10db9a5a2853e2126b615aed4a0fb ""
+  "main-ap.toc" 1725287706.02179 0 d41d8cd98f00b204e9800998ecf8427e "pdflatex"
   "preamble.tex" 1725145324.45224 7168 a1103fe118bef2daafe5ba31bd5d1c0c ""
   (generated)
   "main-ap.aux"
