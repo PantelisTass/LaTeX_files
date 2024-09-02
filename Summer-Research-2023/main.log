@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  1 SEP 2024 20:00
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  2 SEP 2024 16:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1901,10 +1901,29 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip146
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-) (./main.aux
+)
+! Undefined control sequence.
+l.7 \difffinecolor
+                  {}{gray}{0.95}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Label `fig: label of figure' multiply defined.
 
+! LaTeX Error: Missing \begin{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.7 \difffinecolor{}{g
+                      ray}{0.95}
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+(./main.aux
 
 LaTeX Warning: Label `fig: description' multiply defined.
 
@@ -1927,6 +1946,9 @@ LaTeX Warning: Label `sub@fig: description' multiply defined.
 LaTeX Warning: Label `fig: label' multiply defined.
 
 
+LaTeX Warning: Label `fig: label of figure' multiply defined.
+
+
 LaTeX Warning: Label `fig: description' multiply defined.
 
 
@@ -1940,12 +1962,6 @@ LaTeX Warning: Label `sub@fig: description' multiply defined.
 
 
 LaTeX Warning: Label `fig: label' multiply defined.
-
-
-LaTeX Warning: Label `fig: label of figure' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
 
 
 LaTeX Warning: Label `fig: description' multiply defined.
@@ -1987,6 +2003,9 @@ LaTeX Warning: Label `fig' multiply defined.
 LaTeX Warning: Label `fig: description' multiply defined.
 
 
+LaTeX Warning: Label `fig: description' multiply defined.
+
+
 LaTeX Warning: Label `sub@fig: description' multiply defined.
 
 
@@ -2001,26 +2020,26 @@ LaTeX Warning: Label `fig: label' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 36.
-LaTeX Font Info:    ... okay on input line 36.
-LaTeX Info: Command `\dddot' is already robust on input line 36.
-LaTeX Info: Command `\ddddot' is already robust on input line 36.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
+LaTeX Font Info:    ... okay on input line 35.
+LaTeX Info: Command `\dddot' is already robust on input line 35.
+LaTeX Info: Command `\ddddot' is already robust on input line 35.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count441
@@ -2077,7 +2096,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 36.
+Package hyperref Info: Link coloring OFF on input line 35.
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -2091,6 +2110,9 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks83
 \inpenc@posthook=\toks84
 )
+LaTeX Info: Completed page discarded.
+Package marginnote Info: Using workaround for absolute page number on input lin
+e 39.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
 
 
@@ -2113,15 +2135,6 @@ Non-PDF special ignored!
 <special> header=pst-dots.pro
 Non-PDF special ignored!
 <special> header=pst-node.pro
-
-Non-PDF special ignored!
-<special> ps: /pssetRGBcolor /setrgbcolor load def /pssetCMYKcolor /setcmyk...
-Non-PDF special ignored!
-<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
-Non-PDF special ignored!
-<special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
-Non-PDF special ignored!
-<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./main.toc)
 \tf@toc=\write7
@@ -2203,848 +2216,98 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--92
 
  []
 
-<images/Two-layer-NN.png, id=181, 453.695pt x 338.26375pt>
+<images/Two-layer-NN.png, id=160, 453.695pt x 338.26375pt>
 File: images/Two-layer-NN.png Graphic file (type png)
 <use images/Two-layer-NN.png>
 Package pdftex.def Info: images/Two-layer-NN.png  used on input line 110.
 (pdftex.def)             Requested size: 256.0774pt x 190.92323pt.
+! Undefined control sequence.
+l.129 \State $\mathbf{\theta}_{i}\geqts
+                                       \mathbf{\theta}_{i}+2s\cdot (y-\hat{y...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
 [5 <./images/Two-layer-NN.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 140--142
 
  []
+
+! Undefined control sequence.
+l.146 ...{1}{N}\displaystyle\sum^{N}_{i=1}\difflta
+                                                  _{ \mathbf{\theta}_{i}}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Double subscript.
+l.146 ...1}{N}\displaystyle\sum^{N}_{i=1}\difflta_
+                                                  { \mathbf{\theta}_{i}}
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+! Undefined control sequence.
+l.156 ... say (with step size $ s_k = \epsilonilon
+                                                  \cdot \xi(k \epsilonilon)$...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.156 ..._k = \epsilonilon\cdot \xi(k \epsilonilon
+                                                  )$ for some $ \epsilonilon...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.156 ...(k \epsilonilon)$ for some $ \epsilonilon
+                                                   >0$ and $ \xi: \R_{\geqq ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.156 ... 0$, as $ N\to \infty$ and $ \epsilonilon
+                                                   \to 0$ in an appropriate ...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.156 ...asures $ \hat{\rho}^{(N)}_{t/\epsilonilon
+                                                  }$ converge in the weak se...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 164--165
 
  []
 
-! Undefined control sequence.
-l.178 ...schitz: $\|\xi\|_{\infty}, \|\xi\|_{\sLip
-                                                  }\le K_1$, with $\int_0^{\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.178 ...\le K_1$, with $\int_0^{\infty}\xi(t) \de
-                                                   t=\infty$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.180 ...[{\sf A2.}] The activation function $(\bx
-                                                  ,\btheta)\mapsto \sigma_*(...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.180 ....}] The activation function $(\bx,\btheta
-                                                  )\mapsto \sigma_*(\bx;\bth...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.180 ...nction $(\bx,\btheta)\mapsto \sigma_*(\bx
-                                                  ;\btheta)$ is bounded, wit...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.180 ...(\bx,\btheta)\mapsto \sigma_*(\bx;\btheta
-                                                  )$ is bounded, with sub-Ga...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.180 ..._*\|_{\infty}\le K_2$, $\|\nabla_{\btheta
-                                                  }
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.181 \sigma_*(\bX
-                  ;\btheta)\|_{\psi_2}\le K_2$. Labels are bounded $|y_k|\le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.181 \sigma_*(\bX;\btheta
-                          )\|_{\psi_2}\le K_2$. Labels are bounded $|y_k|\le...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \btheta 
-                        
-l.183 \item[{\sf A3.}] The gradients $\btheta
-                                             \mapsto \nabla V(\btheta)$, $(\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.183 ...radients $\btheta\mapsto \nabla V(\btheta
-                                                  )$, $(\btheta_1,\btheta_2)...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.183 ...heta\mapsto \nabla V(\btheta)$, $(\btheta
-                                                  _1,\btheta_2)\mapsto \nabl...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.183 ...o \nabla V(\btheta)$, $(\btheta_1,\btheta
-                                                  _2)\mapsto \nabla_{\btheta...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.183 ...theta_1,\btheta_2)\mapsto \nabla_{\btheta
-                                                  _1}U(\btheta_1,\btheta_2)$...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.183 ...eta_2)\mapsto \nabla_{\btheta_1}U(\btheta
-                                                  _1,\btheta_2)$  are bounde...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.183 ...sto \nabla_{\btheta_1}U(\btheta_1,\btheta
-                                                  _2)$  are bounded, Lipschi...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 (namely $\| \nabla_{\btheta
-                                 }V(\btheta) \|_2$, $\|\nabla_{\btheta_1}U(\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 (namely $\| \nabla_{\btheta}V(\btheta
-                                           ) \|_2$, $\|\nabla_{\btheta_1}U(\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...heta}V(\btheta) \|_2$, $\|\nabla_{\btheta
-                                                  _1}U(\btheta_1,\btheta_2)\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...ta) \|_2$, $\|\nabla_{\btheta_1}U(\btheta
-                                                  _1,\btheta_2)\|_2\le K_3$,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ... $\|\nabla_{\btheta_1}U(\btheta_1,\btheta
-                                                  _2)\|_2\le K_3$, $\|\nabla...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...btheta_2)\|_2\le K_3$, $\|\nabla_{\btheta
-                                                  }V(\btheta)-\nabla_{\bthet...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...|_2\le K_3$, $\|\nabla_{\btheta}V(\btheta
-                                                  )-\nabla_{\btheta}V(\bthet...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...nabla_{\btheta}V(\btheta)-\nabla_{\btheta
-                                                  }V(\btheta')\|_2\le K_3 \|...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...heta}V(\btheta)-\nabla_{\btheta}V(\btheta
-                                                  ')\|_2\le K_3 \|\btheta-\b...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...{\btheta}V(\btheta')\|_2\le K_3 \|\btheta
-                                                  -\btheta'\|_2$, $\|\nabla_...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...}V(\btheta')\|_2\le K_3 \|\btheta-\btheta
-                                                  '\|_2$, $\|\nabla_{\btheta...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...\btheta-\btheta'\|_2$, $\|\nabla_{\btheta
-                                                  _1}U(\btheta_1,\btheta_2)-...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...eta'\|_2$, $\|\nabla_{\btheta_1}U(\btheta
-                                                  _1,\btheta_2)-\nabla_{\bth...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ... $\|\nabla_{\btheta_1}U(\btheta_1,\btheta
-                                                  _2)-\nabla_{\btheta_1}U(\b...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ..._1}U(\btheta_1,\btheta_2)-\nabla_{\btheta
-                                                  _1}U(\btheta'_1,\btheta_2'...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ..._1,\btheta_2)-\nabla_{\btheta_1}U(\btheta
-                                                  '_1,\btheta_2')\|_2\le K_3...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...2)-\nabla_{\btheta_1}U(\btheta'_1,\btheta
-                                                  _2')\|_2\le K_3 \|(\btheta...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...heta'_1,\btheta_2')\|_2\le K_3 \|(\btheta
-                                                  _1,\btheta_2)-
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.184 ...theta_2')\|_2\le K_3 \|(\btheta_1,\btheta
-                                                  _2)-
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.185 (\btheta
-              _1',\btheta_2')\|_2$).
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.185 (\btheta_1',\btheta
-                         _2')\|_2$).
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 189.
-! Undefined control sequence.
-l.191 For $\rho_0\in\cuP
-                        (\reals^D)$, consider SGD with initialization $(\bth...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.191 For $\rho_0\in\cuP(\reals
-                               ^D)$, consider SGD with initialization $(\bth...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.191 ...onsider SGD with initialization $(\btheta
-                                                  ^0_i)_{i\le N}\sim_{iid}\r...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.191 ...im_{iid}\rho_0$ and step size $s_k = \eps
-                                                   \xi(k \eps)$. For $t\ge 0...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.191 ...o_0$ and step size $s_k = \eps \xi(k \eps
-                                                  )$. For $t\ge 0$, let $\rh...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \hrho 
-                      
-l.192 Then, for any fixed $t \ge 0$,  $\hrho
-                                            ^{(N)}_{\lfloor t / \eps \rfloor...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.192 ...t \ge 0$,  $\hrho^{(N)}_{\lfloor t / \eps
-                                                   \rfloor} \Rightarrow \rho...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.192 ...almost surely along any sequence $(N,\eps
-                                                   = \eps_N)$ such that $N \...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.192 ...surely along any sequence $(N,\eps = \eps
-                                                  _N)$ such that $N \to \inf...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \eps 
-                     
-l.192 ... \eps_N)$ such that $N \to \infty$, $\eps
-                                                  _N \to 0$, $N/\log (N/\eps...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.192 ... \infty$, $\eps_N \to 0$, $N/\log (N/\eps
-                                                  _N) \to\infty$ and $\eps_N...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \eps 
-                     
-l.192 ..., $N/\log (N/\eps_N) \to\infty$ and $\eps
-                                                  _N \log(N / \eps_N)\to 0$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.192 ...s_N) \to\infty$ and $\eps_N \log(N / \eps
-                                                  _N)\to 0$.
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.194 for any $f:\reals
-                       ^D\times \reals\to\reals$, with $\|f\|_{\infty}, \|f\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.194 for any $f:\reals^D\times \reals
-                                      \to\reals$, with $\|f\|_{\infty}, \|f\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.194 for any $f:\reals^D\times \reals\to\reals
-                                               $, with $\|f\|_{\infty}, \|f\...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.194 ...eals$, with $\|f\|_{\infty}, \|f\|_{\sLip
-                                                  }\le 1$, $\eps\le 1$,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<recently read> \eps 
-                     
-l.194 ...|f\|_{\infty}, \|f\|_{\sLip}\le 1$, $\eps
-                                                  \le 1$,
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  &\sup _{k \in [0, T/\eps 
-                                     ] \cap \naturals }\Big |\frac {1}{N}\su...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{k \in [0, T/\eps ] \cap \naturals 
-                                                  }\Big |\frac {1}{N}\sum _{...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...|\frac {1}{N}\sum _{i=1}^Nf(\btheta 
-                                                  ^{k}_i)- \int \! f(\btheta...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...(\btheta ^{k}_i)- \int \! f(\btheta 
-                                                  ) \rho _{k\eps }(\de \bthe...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...)- \int \! f(\btheta ) \rho _{k\eps 
-                                                  }(\de \btheta ) \Big | \le...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...t \! f(\btheta ) \rho _{k\eps }(\de 
-                                                  \btheta ) \Big | \le Ce^{C...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...btheta ) \rho _{k\eps }(\de \btheta 
-                                                  ) \Big | \le Ce^{CT}\,\err...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \btheta ) \Big | \le Ce^{CT}\,\err 
-                                                  _{N,D}(z)\, ,\nonumber \\ ...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...onumber \\ &\sup _{k \in [0, T/\eps 
-                                                  ] \cap \naturals }\big |R_...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{k \in [0, T/\eps ] \cap \naturals 
-                                                  }\big |R_{N}(\btheta ^{k})...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\cap \naturals }\big |R_{N}(\btheta 
-                                                  ^{k})-R(\rho _{k\eps })\bi...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...|R_{N}(\btheta ^{k})-R(\rho _{k\eps 
-                                                  })\big | \le Ce^{CT}\,\err...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... _{k\eps })\big | \le Ce^{CT}\,\err 
-                                                  _{N,D}(z)\, , 
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument>  &\sup _{k \in [0, T/\eps 
-                                     ] \cap \naturals }\Big |\frac {1}{N}\su...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{k \in [0, T/\eps ] \cap \naturals 
-                                                  }\Big |\frac {1}{N}\sum _{...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...|\frac {1}{N}\sum _{i=1}^Nf(\btheta 
-                                                  ^{k}_i)- \int \! f(\btheta...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...(\btheta ^{k}_i)- \int \! f(\btheta 
-                                                  ) \rho _{k\eps }(\de \bthe...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...)- \int \! f(\btheta ) \rho _{k\eps 
-                                                  }(\de \btheta ) \Big | \le...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...t \! f(\btheta ) \rho _{k\eps }(\de 
-                                                  \btheta ) \Big | \le Ce^{C...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...btheta ) \rho _{k\eps }(\de \btheta 
-                                                  ) \Big | \le Ce^{CT}\,\err...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... \btheta ) \Big | \le Ce^{CT}\,\err 
-                                                  _{N,D}(z)\, ,\nonumber \\ ...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...onumber \\ &\sup _{k \in [0, T/\eps 
-                                                  ] \cap \naturals }\big |R_...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ..._{k \in [0, T/\eps ] \cap \naturals 
-                                                  }\big |R_{N}(\btheta ^{k})...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...\cap \naturals }\big |R_{N}(\btheta 
-                                                  ^{k})-R(\rho _{k\eps })\bi...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...|R_{N}(\btheta ^{k})-R(\rho _{k\eps 
-                                                  })\big | \le Ce^{CT}\,\err...
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ... _{k\eps })\big | \le Ce^{CT}\,\err 
-                                                  _{N,D}(z)\, , 
-l.202 \end{align}
-                 
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Package mdframed Info: Not enough space on this page on input line 205.
-[6]
-Package mdframed Info: Not enough space on this page on input line 205.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 208.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 212.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 227.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 227.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 231--232
+Underfull \hbox (badness 10000) in paragraph at lines 166--170
 
  []
 
-<images/Nguyen2018-SGD-1.png, id=220, 306.14375pt x 204.765pt>
-File: images/Nguyen2018-SGD-1.png Graphic file (type png)
-<use images/Nguyen2018-SGD-1.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-1.png  used on input line 237.
-(pdftex.def)             Requested size: 256.0774pt x 171.2859pt.
-[7 <./images/Nguyen2018-SGD-1.png>]
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3055,7 +2318,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3066,7 +2329,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -3075,7 +2338,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3086,7 +2349,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3097,7 +2360,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -3106,7 +2369,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3117,7 +2380,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3128,7 +2391,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -3137,7 +2400,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3148,7 +2411,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -3159,176 +2422,287 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.247 \end{enumerate}
+l.177 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
-<images/Nguyen2018-SGD-2.png, id=233, 246.9225pt x 174.6525pt>
+[6]
+Overfull \hbox (9.19272pt too wide) in paragraph at lines 196--200
+\OT1/cmr/m/n/10 (namely $\U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]\OML/cmm/m/it/10 
+V\U/matha/m/n/10 p\OML/cmm/m/it/10 ^^R\U/matha/m/n/10 q}[]$\OT1/cmr/m/n/10 , $\
+U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]\OML/cmm/m/it/10 U\U/matha/m/n/10 p\OML/cmm
+/m/it/10 ^^R[]; ^^R[]\U/matha/m/n/10 q}[] ¤ \OML/cmm/m/it/10 K[]$\OT1/cmr/m/n/1
+0 , $\U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]\OML/cmm/m/it/10 V\U/matha/m/n/10 p\O
+ML/cmm/m/it/10 ^^R\U/matha/m/n/10 q ^^A \OMS/cmsy/m/n/10 r[]\OML/cmm/m/it/10 V\
+U/matha/m/n/10 p\OML/cmm/m/it/10 ^^R[]\U/matha/m/n/10 q}[] ¤ \OML/cmm/m/it/10 K
+[]\U/matha/m/n/10 }\OML/cmm/m/it/10 ^^R \U/matha/m/n/10 ^^A \OML/cmm/m/it/10 ^^
+R[]\U/matha/m/n/10 }[]$\OT1/cmr/m/n/10 , $\U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]
+\OML/cmm/m/it/10 U\U/matha/m/n/10 p\OML/cmm/m/it/10 ^^R[]; ^^R[]\U/matha/m/n/10
+ q ^^A
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 202.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 225.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 233.
+[7]
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.259 ...{with probability} $ 1/2: y = +1, \mathbf
+                                                  {x}\sim N(0, (1+\Delta)^{2...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.259 ...robability} $ 1/2: y = +1, \mathbf{x}\sim
+                                                   N(0, (1+\Delta)^{2}\cdot\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.260 &
+        \text{with probability} $ 1/2: y = -1, \mathbf{x}\sim N(0, (1-\Delta...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: \mathbf allowed only in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.260 ...{with probability} $ 1/2: y = -1, \mathbf
+                                                  {x}\sim N(0, (1-\Delta)^{2...
+
+You're in trouble here.  Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.260 ...robability} $ 1/2: y = -1, \mathbf{x}\sim
+                                                   N(0, (1-\Delta)^{2}\cdot\...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.261 \end{array}
+                 
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 264--265
+
+ []
+
+<images/Nguyen2018-SGD-1.png, id=222, 306.14375pt x 204.765pt>
+File: images/Nguyen2018-SGD-1.png Graphic file (type png)
+<use images/Nguyen2018-SGD-1.png>
+Package pdftex.def Info: images/Nguyen2018-SGD-1.png  used on input line 271.
+(pdftex.def)             Requested size: 170.71718pt x 114.1833pt.
+<images/Nguyen2018-paper-numerical-validation-iso-gauss.png, id=223, 453.695pt 
+x 298.11375pt>
+File: images/Nguyen2018-paper-numerical-validation-iso-gauss.png Graphic file (
+type png)
+<use images/Nguyen2018-paper-numerical-validation-iso-gauss.png>
+Package pdftex.def Info: images/Nguyen2018-paper-numerical-validation-iso-gauss
+.png  used on input line 277.
+(pdftex.def)             Requested size: 170.71718pt x 112.17448pt.
+<images/Nguyen2018-SGD-2.png, id=224, 246.9225pt x 174.6525pt>
 File: images/Nguyen2018-SGD-2.png Graphic file (type png)
 <use images/Nguyen2018-SGD-2.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-2.png  used on input line 258.
+Package pdftex.def Info: images/Nguyen2018-SGD-2.png  used on input line 292.
 (pdftex.def)             Requested size: 256.0774pt x 181.13863pt.
-<images/Eijnden2018-heatmap-3dspin.png, id=234, 206.6265pt x 157.3515pt>
-File: images/Eijnden2018-heatmap-3dspin.png Graphic file (type png)
-<use images/Eijnden2018-heatmap-3dspin.png>
-Package pdftex.def Info: images/Eijnden2018-heatmap-3dspin.png  used on input l
-ine 271.
-(pdftex.def)             Requested size: 170.71718pt x 130.00385pt.
-<images/Eijnden2018-loss.png, id=235, 225.6795pt x 166.5495pt>
-File: images/Eijnden2018-loss.png Graphic file (type png)
-<use images/Eijnden2018-loss.png>
-Package pdftex.def Info: images/Eijnden2018-loss.png  used on input line 277.
-(pdftex.def)             Requested size: 170.71718pt x 125.98933pt.
-[8 <./images/Nguyen2018-SGD-2.png>]
-<images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png, id=245, 256.887pt x 209.
+[8 <./images/Nguyen2018-SGD-1.png> <./images/Nguyen2018-paper-numerical-validat
+ion-iso-gauss.png>]
+<images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png, id=235, 256.887pt x 209.
 583pt>
 File: images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png Graphic file (type p
 ng)
 <use images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png  
-used on input line 292.
+used on input line 303.
 (pdftex.def)             Requested size: 170.71718pt x 139.28459pt.
-<images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png, id=246, 287.766pt x 207.612pt
+<images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png, id=236, 287.766pt x 207.612pt
 >
 File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
-on input line 298.
+on input line 309.
 (pdftex.def)             Requested size: 170.71718pt x 123.1711pt.
-<images/NGuyen2018-pde-sgd-gauss-anisotropic.png, id=247, 265.7565pt x 198.7425
+<images/NGuyen2018-pde-sgd-gauss-anisotropic.png, id=237, 265.7565pt x 198.7425
 pt>
 File: images/NGuyen2018-pde-sgd-gauss-anisotropic.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-gauss-anisotropic.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-gauss-anisotropic.png  used 
-on input line 311.
+on input line 322.
 (pdftex.def)             Requested size: 170.71718pt x 127.67087pt.
-<images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png, id=248, 271.0125pt x 196
+<images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png, id=238, 271.0125pt x 196
 .443pt>
 File: images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png Graphic file (type p
 ng)
 <use images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png  
-used on input line 317.
+used on input line 328.
 (pdftex.def)             Requested size: 170.71718pt x 123.74774pt.
- [9 <./images/Eijnden2018-heatmap-3dspin.png> <./images/Eijnden2018-loss.png> <
-./images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png> <./images/NGuyen2018-pd
-e-sgd-iso-gauss-non-mon.png> <./images/NGuyen2018-pde-sgd-gauss-anisotropic.png
-> <./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>]
-<images/Spiliopoulos2019-LLN-singleNN-mnist.png, id=265, 412.2675pt x 226.665pt
+ [9 <./images/Nguyen2018-SGD-2.png> <./images/NGuyen2018-pde-sgd-risk-iso-gauss
+-non-mon.png> <./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png> <./images/NGu
+yen2018-pde-sgd-gauss-anisotropic.png> <./images/NGuyen2018-pde-sgd-risk-gauss-
+anisotropic.png>]
+<images/Spiliopoulos2019-LLN-singleNN-mnist.png, id=253, 412.2675pt x 226.665pt
 >
 File: images/Spiliopoulos2019-LLN-singleNN-mnist.png Graphic file (type png)
 <use images/Spiliopoulos2019-LLN-singleNN-mnist.png>
 Package pdftex.def Info: images/Spiliopoulos2019-LLN-singleNN-mnist.png  used o
-n input line 337.
+n input line 345.
 (pdftex.def)             Requested size: 341.43436pt x 187.72722pt.
-<images/Nguyen2018-SGD-algos-risk-aniso-gauss.png, id=266, 236.8485pt x 179.361
-pt>
-File: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png Graphic file (type png)
-<use images/Nguyen2018-SGD-algos-risk-aniso-gauss.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png  used
- on input line 358.
-(pdftex.def)             Requested size: 192.0548pt x 145.44032pt.
-<images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png, id=267, 304.848pt x 21
-5.496pt>
-File: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png Graphic file (type
- png)
-<use images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-  used on input line 359.
-(pdftex.def)             Requested size: 192.0548pt x 135.76318pt.
-File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
-<use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
-Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
-on input line 360.
-(pdftex.def)             Requested size: 192.0548pt x 138.5671pt.
  [10 <./images/Spiliopoulos2019-LLN-singleNN-mnist.png>]
-<images/Eijnden2018-SGD-algos-risk-3dspin.png, id=274, 254.916pt x 189.5445pt>
-File: images/Eijnden2018-SGD-algos-risk-3dspin.png Graphic file (type png)
-<use images/Eijnden2018-SGD-algos-risk-3dspin.png>
-Package pdftex.def Info: images/Eijnden2018-SGD-algos-risk-3dspin.png  used on 
-input line 378.
-(pdftex.def)             Requested size: 341.43436pt x 253.88417pt.
-
-[11 <./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png> <./images/Nguyen2018-S
-GD-algos-risk-iso-gauss-non-mon.png>]
-<images/Spiliopoulos2019-SGD-algos-single-digit classification.png, id=282, 250
-.6455pt x 184.617pt>
-File: images/Spiliopoulos2019-SGD-algos-single-digit classification.png Graphic
- file (type png)
-<use images/Spiliopoulos2019-SGD-algos-single-digit classification.png>
-Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit classif
-ication.png  used on input line 388.
-(pdftex.def)             Requested size: 170.71718pt x 125.74634pt.
-<images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png, id=283, 232.578p
-t x 178.3755pt>
-File: images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png Graphic file
- (type png)
-<use images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>
-Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit-late-ti
-me.png  used on input line 394.
-(pdftex.def)             Requested size: 170.71718pt x 130.93974pt.
- [12 <./images/Eijnden2018-SGD-algos-risk-3dspin.png> <./images/Spiliopoulos201
-9-SGD-algos-single-digit classification.png> <./images/Spiliopoulos2019-SGD-alg
-os-single-digit-late-time.png>]
-<images/MullerBrown-SGD.png, id=293, 511.9125pt x 441.65pt>
+<images/MullerBrown-SGD.png, id=260, 511.9125pt x 441.65pt>
 File: images/MullerBrown-SGD.png Graphic file (type png)
 <use images/MullerBrown-SGD.png>
-Package pdftex.def Info: images/MullerBrown-SGD.png  used on input line 425.
+Package pdftex.def Info: images/MullerBrown-SGD.png  used on input line 377.
 (pdftex.def)             Requested size: 192.0548pt x 165.69246pt.
-<images/MullerB-NesterovSGD.png, id=294, 511.9125pt x 418.56375pt>
+<images/MullerB-NesterovSGD.png, id=261, 511.9125pt x 418.56375pt>
 File: images/MullerB-NesterovSGD.png Graphic file (type png)
 <use images/MullerB-NesterovSGD.png>
-Package pdftex.def Info: images/MullerB-NesterovSGD.png  used on input line 426
+Package pdftex.def Info: images/MullerB-NesterovSGD.png  used on input line 378
 .
 (pdftex.def)             Requested size: 192.0548pt x 157.03127pt.
-<images/MullerBrown-HomSGLD.png, id=295, 511.9125pt x 407.5225pt>
+<images/MullerBrown-HomSGLD.png, id=262, 511.9125pt x 407.5225pt>
 File: images/MullerBrown-HomSGLD.png Graphic file (type png)
 <use images/MullerBrown-HomSGLD.png>
-Package pdftex.def Info: images/MullerBrown-HomSGLD.png  used on input line 427
+Package pdftex.def Info: images/MullerBrown-HomSGLD.png  used on input line 379
 .
 (pdftex.def)             Requested size: 192.0548pt x 152.88896pt.
-<images/MullerB-potential-plot-3d.png, id=296, 395.4775pt x 339.2675pt>
+<images/MullerB-potential-plot-3d.png, id=263, 395.4775pt x 339.2675pt>
 File: images/MullerB-potential-plot-3d.png Graphic file (type png)
 <use images/MullerB-potential-plot-3d.png>
 Package pdftex.def Info: images/MullerB-potential-plot-3d.png  used on input li
-ne 436.
+ne 388.
 (pdftex.def)             Requested size: 170.71718pt x 146.45161pt.
-<images/MullerB-contour-with-grad-field.png, id=297, 574.145pt x 428.60126pt>
+<images/MullerB-contour-with-grad-field.png, id=264, 574.145pt x 428.60126pt>
 File: images/MullerB-contour-with-grad-field.png Graphic file (type png)
 <use images/MullerB-contour-with-grad-field.png>
 Package pdftex.def Info: images/MullerB-contour-with-grad-field.png  used on in
-put line 442.
+put line 394.
 (pdftex.def)             Requested size: 170.71718pt x 127.43687pt.
- [13 <./images/MullerBrown-SGD.png> <./images/MullerB-NesterovSGD.png> <./image
-s/MullerBrown-HomSGLD.png>]
+
 (/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2024/02/21 1.10 listings language file
 )
 LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-69.
+21.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
 File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 469.
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 421.
 LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-74.
+26.
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 474.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 426.
 
-Overfull \hbox (63.9756pt too wide) in paragraph at lines 474--475
+Overfull \hbox (63.9756pt too wide) in paragraph at lines 426--427
 [][][][][][][][][][][][][][][][][][][][][][][][][][][]
  []
 
-[14 <./images/MullerB-potential-plot-3d.png> <./images/MullerB-contour-with-gra
-d-field.png>] (./main.bbl) [15] (./main.aux)
+[11 <./images/MullerBrown-SGD.png> <./images/MullerB-NesterovSGD.png> <./images
+/MullerBrown-HomSGLD.png> <./images/MullerB-potential-plot-3d.png> <./images/Mu
+llerB-contour-with-grad-field.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 443.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 443.
+
+<images/Eijnden2018-heatmap-3dspin.png, id=276, 206.6265pt x 157.3515pt>
+File: images/Eijnden2018-heatmap-3dspin.png Graphic file (type png)
+<use images/Eijnden2018-heatmap-3dspin.png>
+Package pdftex.def Info: images/Eijnden2018-heatmap-3dspin.png  used on input l
+ine 452.
+(pdftex.def)             Requested size: 170.71718pt x 130.00385pt.
+<images/Eijnden2018-loss.png, id=277, 225.6795pt x 166.5495pt>
+File: images/Eijnden2018-loss.png Graphic file (type png)
+<use images/Eijnden2018-loss.png>
+Package pdftex.def Info: images/Eijnden2018-loss.png  used on input line 458.
+(pdftex.def)             Requested size: 170.71718pt x 125.98933pt.
+[12]
+<images/Nguyen2018-SGD-algos-risk-aniso-gauss.png, id=316, 236.8485pt x 179.361
+pt>
+File: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png Graphic file (type png)
+<use images/Nguyen2018-SGD-algos-risk-aniso-gauss.png>
+Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png  used
+ on input line 481.
+(pdftex.def)             Requested size: 192.0548pt x 145.44032pt.
+<images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png, id=317, 304.848pt x 21
+5.496pt>
+File: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png Graphic file (type
+ png)
+<use images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png>
+Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+  used on input line 482.
+(pdftex.def)             Requested size: 192.0548pt x 135.76318pt.
+File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
+<use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
+Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
+on input line 483.
+(pdftex.def)             Requested size: 192.0548pt x 138.5671pt.
+<images/Eijnden2018-SGD-algos-risk-3dspin.png, id=318, 254.916pt x 189.5445pt>
+File: images/Eijnden2018-SGD-algos-risk-3dspin.png Graphic file (type png)
+<use images/Eijnden2018-SGD-algos-risk-3dspin.png>
+Package pdftex.def Info: images/Eijnden2018-SGD-algos-risk-3dspin.png  used on 
+input line 501.
+(pdftex.def)             Requested size: 341.43436pt x 253.88417pt.
+ [13 <./images/Eijnden2018-heatmap-3dspin.png> <./images/Eijnden2018-loss.png>]
+<images/Spiliopoulos2019-SGD-algos-single-digit classification.png, id=327, 250
+.6455pt x 184.617pt>
+File: images/Spiliopoulos2019-SGD-algos-single-digit classification.png Graphic
+ file (type png)
+<use images/Spiliopoulos2019-SGD-algos-single-digit classification.png>
+Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit classif
+ication.png  used on input line 511.
+(pdftex.def)             Requested size: 170.71718pt x 125.74634pt.
+<images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png, id=328, 232.578p
+t x 178.3755pt>
+File: images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png Graphic file
+ (type png)
+<use images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>
+Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit-late-ti
+me.png  used on input line 517.
+(pdftex.def)             Requested size: 170.71718pt x 130.93974pt.
+ [14 <./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png> <./images/Nguyen2018-
+SGD-algos-risk-iso-gauss-non-mon.png> <./images/Eijnden2018-SGD-algos-risk-3dsp
+in.png>] [15 <./images/Spiliopoulos2019-SGD-algos-single-digit classification.p
+ng> <./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>]
+(./main.bbl) [16] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -3338,14 +2712,14 @@ L3 programming layer <2024-02-20>
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: AA52193C118BE0826D4AC2F109BA12D1;2205.
+(rerunfilecheck)             Checksum: E1F7D338463E082EAEE7414747B4782B;1919.
  ) 
 Here is how much of TeX's memory you used:
- 59957 strings out of 474116
- 1436158 string characters out of 5743682
- 2229953 words of memory out of 5000000
- 81276 multiletter control sequences out of 15000+600000
- 574713 words of font info for 93 fonts, out of 8000000 for 9000
+ 59986 strings out of 474116
+ 1437194 string characters out of 5743682
+ 2233203 words of memory out of 5000000
+ 81298 multiletter control sequences out of 15000+600000
+ 577626 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,13n,134p,1746b,1799s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
@@ -3357,23 +2731,24 @@ sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
 ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
 al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
 /texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2
-024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
-24/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/20
-24/texmf-dist/fonts/type1/public/mathabx-type1/mathb7.pfb></usr/local/texlive/2
-024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive
-/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/
-texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (15 pages, 3350317 bytes).
+xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/tex
+mf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2024/t
+exmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/2024/
+texmf-dist/fonts/type1/public/mathabx-type1/mathb7.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/20
+24/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (16 pages, 3594741 bytes).
 PDF statistics:
- 470 PDF objects out of 1000 (max. 8388607)
- 341 compressed objects within 4 object streams
+ 471 PDF objects out of 1000 (max. 8388607)
+ 337 compressed objects within 4 object streams
  103 named destinations out of 1000 (max. 500000)
- 393 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 366 words of extra memory for PDF output out of 10000 (max. 10000000)
 

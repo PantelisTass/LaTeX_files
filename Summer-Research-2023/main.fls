@@ -634,31 +634,33 @@ INPUT ./images/Nguyen2018-SGD-1.png
 INPUT ./images/Nguyen2018-SGD-1.png
 INPUT ./images/Nguyen2018-SGD-1.png
 INPUT ./images/Nguyen2018-SGD-1.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Nguyen2018-SGD-2.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmmi9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx6.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/matha9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathb9.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-paper-numerical-validation-iso-gauss.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
+INPUT ./images/Nguyen2018-SGD-2.png
 INPUT ./images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png
@@ -699,53 +701,6 @@ INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
 INPUT ./images/MullerBrown-SGD.png
 INPUT ./images/MullerBrown-SGD.png
 INPUT ./images/MullerBrown-SGD.png
@@ -795,6 +750,69 @@ INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
 INPUT /usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-heatmap-3dspin.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Eijnden2018-loss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
 INPUT ./main.bbl
 INPUT ./main.bbl
 INPUT main.bbl
@@ -810,6 +828,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pf
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
