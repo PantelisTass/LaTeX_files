@@ -23,6 +23,7 @@
 \usepackage{hyperref}
 \usepackage[usenames,dvipsnames]{xcolor}
 \usepackage{svg}
+\svgpath{{~/Documents/texfiles/Summer-Research-2023/images/}}
 \usepackage{hyperref}
 \usepackage{enumitem}  
 \usepackage{pst-node}
@@ -55,6 +56,23 @@
     fonttitle={\bfseries},
     attach title to upper={},
     #1,
+}
+
+\definecolor{}{gray}{0.95}
+\newtcolorbox{codeblock}[2][]{%
+    grow to right by=-0mm,
+    grow to left by=-0mm, 
+    opacityback=0,
+    frame hidden, boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{black},
+    title={#2\par},
+    colbacktitle={black},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
 }
 
 \titleformat{\chapter}[display]   

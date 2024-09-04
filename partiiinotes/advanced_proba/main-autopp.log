@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  2 SEP 2024 19:25
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  4 SEP 2024 22:58
 entering extended mode
  %&-line parsing enabled.
 **\let \APPmakepictures \empty \input  main.tex
@@ -2888,7 +2888,7 @@ Missing character: There is no e in font msbm10!
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2899,7 +2899,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2910,7 +2910,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2919,7 +2919,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2930,7 +2930,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2941,7 +2941,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2950,7 +2950,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.641  \end{enumerate}
+l.658  \end{enumerate}
                       
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2960,14 +2960,14 @@ and I'll forget about whatever was undefined.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 646.
+(mdframed)              on input line 663.
 
-LaTeX Warning: Reference `lemma: Fatou' on page 12 undefined on input line 655.
+LaTeX Warning: Reference `lemma: Fatou' on page 12 undefined on input line 672.
 
 
 Package svg Warning: You didn't enable `shell escape' (or `write18')
 (svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/SRW-on-Z.svg' on input line 663.
+(svg)                for `images/SRW-on-Z.svg' on input line 680.
 
 
 ! Package svg Error: File `SRW-on-Z_svg-tex.eps' is missing.
@@ -2976,7 +2976,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.663 ...width=0.6\linewidth]{images/SRW-on-Z.svg}
+l.680 ...width=0.6\linewidth]{images/SRW-on-Z.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/SRW-on-Z_svg-tex.eps'
@@ -2989,12 +2989,620 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.663 ...width=0.6\linewidth]{images/SRW-on-Z.svg}
+l.680 ...width=0.6\linewidth]{images/SRW-on-Z.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/SRW-on-Z_svg-tex.eps_tex'
 although `images/SRW-on-Z.svg' was found.
 
+Package marginnote Info: right page because not two side mode on input line 687.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 687.
+
+LaTeX Warning: Reference `def: SRW on ints' on page 12 undefined on input line 687.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 690--692
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 693--694
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 695--697
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 701--703
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 706.
+! Double subscript.
+l.710 ...e set up some notation. Let $ x - (x_{n}_
+                                                  {n\in \N})$ be a real sequ...
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+LaTeX Warning: Reference `fig: doob upcrossing' on page 13 undefined on input line 724.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 726.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 737.
+
+LaTeX Warning: Reference `eq: stopping times doob upcrossing' on page 13 undefined on input line 746.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/Doob-crossing.svg' on input line 768.
+
+
+! Package svg Error: File `Doob-crossing_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.768 ...=0.8\linewidth]{images/Doob-crossing.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Doob-crossing_svg-tex.eps'
+although `images/Doob-crossing.svg' was found.
+
+
+! Package svg Error: File `Doob-crossing_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.768 ...=0.8\linewidth]{images/Doob-crossing.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/Doob-crossing_svg-tex.eps_tex'
+although `images/Doob-crossing.svg' was found.
+
+
+LaTeX Warning: Reference `thm: a.s. mg conv thm disc' on page 14 undefined on input line 775.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 803.
+Package marginnote Info: right page because not two side mode on input line 811.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 811.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 814.
+Package mdframed Info: Not enough space on this page on input line 824.
+Package mdframed Info: Not enough space on this page on input line 824.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 843.
+
+LaTeX Warning: Reference `eq: doob L1 disc' on page 15 undefined on input line 853.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.859 			       &
+                 =\mathbb{E}[ \displaystyle\int_{0}^{k}[x^{p-1} \mathbf{1}(X...
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 871.
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.878 	\end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.878 	\end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.878 	\end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.878 	\end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.878 	\end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.878 	\end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.878 	\end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.884 	\underline{1)\implies 2):}
+                                  $ X$ bounded in $ \mathcal{L}^{p}$ implies...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.884 	\underline{1)\implies 2):}
+                                  $ X$ bounded in $ \mathcal{L}^{p}$ implies...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.884 	\underline{1)\implies 2):}
+                                  $ X$ bounded in $ \mathcal{L}^{p}$ implies...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Misplaced alignment tab character &.
+l.887 	$\norm{X^{*}_{n}}_{p} &
+                              = \frac{p}{p-1}\cdot \displaystyle\sup_{n\in \...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.892 \underline{2)\implies 3):}
+                                 $ X_{n}\stackrel{n\to \infty}{\longrightarr...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.892 \underline{2)\implies 3):}
+                                 $ X_{n}\stackrel{n\to \infty}{\longrightarr...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.892 \underline{2)\implies 3):}
+                                 $ X_{n}\stackrel{n\to \infty}{\longrightarr...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.894 \begin{array}{ll}
+                       
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.897 \end{array}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.898 \]
+        
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.899 \underline{3)\implies  1):}
+                                  By conditional Jensen, we can conclude.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Extra }, or forgotten $.
+\underline  ...{#1}\else $\@@underline {\hbox {#1}
+                                                  }\m@th $\relax \fi 
+l.899 \underline{3)\implies  1):}
+                                  By conditional Jensen, we can conclude.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten $.
+\underline  ...#1}\else $\@@underline {\hbox {#1}}
+                                                  \m@th $\relax \fi 
+l.899 \underline{3)\implies  1):}
+                                  By conditional Jensen, we can conclude.
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.900 \end{proof}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.900 \end{proof}
+                 
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.900 \end{proof}
+                 
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (2533.7584pt too wide) in paragraph at lines 884--901
+[]$[]$ 
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 902.
+Package mdframed Info: Not enough space on this page on input line 904.
+Package mdframed Info: Not enough space on this page on input line 904.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 906.
+
+LaTeX Warning: Reference `thm: Lp convergence theorem discrete' on page 16 undefined on input line 911.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 921.
+! Missing number, treated as zero.
+<to be read again> 
+                   \c@* 
+l.933 \begin{enumerate}[label = (\roman*)]
+                                          
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \c@* 
+l.934 	\item A
+               UI family is bounded in $ \mathcal{L}^{1} $.
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Missing number, treated as zero.
+<to be read again> 
+                   \c@* 
+l.935 	\item I
+              f a family $ (X_{i})$ is bounded in $ \mathcal{L}^{p} $, $ p>1...
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.936 \end{enumerate}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.936 \end{enumerate}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.936 \end{enumerate}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.936 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.936 \end{enumerate}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 938.
 
 Package pst-pdf Warning: Picture container needs cropping..
 
@@ -3007,10 +3615,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58306 strings out of 474117
- 1409795 string characters out of 5743708
+ 58323 strings out of 474117
+ 1410279 string characters out of 5743708
  2079138 words of memory out of 5000000
- 79761 multiletter control sequences out of 15000+600000
+ 79778 multiletter control sequences out of 15000+600000
  574730 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,20n,134p,1716b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s

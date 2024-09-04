@@ -222,7 +222,7 @@ Fix $ X,y \in\mathcal{L}^{1}$, $ G\in \F$.
 	\item $\mathbb{E}[X|\mathcal{G}]|\leq\mathbb{E}[|X| |\mathcal{G}]$ a.s. 
 \end{enumerate}
 
-Below we provide expensions of useful measure theoretic results for the expectation to their corresponding conditional counetparts. First recall:
+Below we provid:we expensions of useful measure theoretic results for the expectation to their corresponding conditional counetparts. First recall:
 \begin{boxlemma}[Fatou's Lemma]\label{lemma: Fatou}
 Let $  X_{n}\geq 0$ for all $ n\in \N$. Then 
 \[
@@ -683,5 +683,265 @@ Let $ X$ be a positive superartingale, $ T$ a stopping time such that $ T<\infty
 	\end{figure}
 \end{examplesblock}
 
+
+\mymark{Lecture 6} We consider again the example of the simple random walk \ref{def: SRW on ints} $ (X_{n})_{n\in \N}$ and define the stopping times 
+\[
+	T_{c} = \displaystyle\inf {n\geq 0: X_{n = c}}, \quad c\in \Z
+\]
+Set $ T = T_{-a}\land T_{b}$ for $ a b \in \Z$. We now ask what is $ \PP(T_{-a}\land T_{b})$?\\ 
+
+To answer this, note first that $ X^{T}_{n} = X_{T\land n}$ is a martingale by the Optional Stopping Theorem and we also have the bounded differences $ |X_{n+1}-X_{n}|\leq 1$ for all $ n\geq 1$.\\ 
+
+\underline{Claim:} $\mathbb{E}[T]<\infty$.\\ 
+To show this, we will \textit{stochastically dominate} $ T$ be a geometric random variable, which automatically has a finite expectation and then conclude using the non-negativity of $ T$. Now we have that for the sequence $ \xi_{1}, \xi_{2}, \cdots, \xi_{a+b}$ the probability that they all are either $ +1$ or $ -1$ is $ 2\cdot 2^{-(a+b)}$ by independence, call this event $ A_1$. The same is true for the shifted sequence $ \xi_{k(a+b)+1}\cdots \xi_{(k+1)(a+b)}$ for all $ k\in \N$, where we call the corresponding event $ A_{k}$.  \\ 
+
+Thus, we can bound $ T$ by the the random variable
+\[
+	Z(\omega) =\displaystyle\inf\{n\geq 0: \omega \in A_{n}\}  
+\]
+which has the distribution $ Z\sim Geom(2\cdot2^{-(a+b)})$. Thus, $\mathbb{E}[T]<\mathbb{E}[Z]\leq (a+b)\cdot 2^{a+b-1}<\infty$. Thus, we conclude by the OST that $\mathbb{E}[X_{T}]=\mathbb{E}[X_{0}]=0$. Hence, $ -a\PP(T_{a}<T_{b})+b\PP(T_{b}<T_{-a}) = 0$ and so a quick computation yields that $ \PP(T_{-a}<T_{b}) = \frac{b}{a+b}$.\\ 
+
+\section{Martingale Convergence Theorem}\label{sec: mg conv thm discrete case}
+
+\begin{theorem}[Almost sure martingale convergence theorem]\label{thm: a.s. mg conv thm disc}
+	Let $ X$ be a supermartingale bounded in $ \mathcal{L}^{1}$, i.e. satisfying $\displaystyle \sup_{n}\mathbb{E}[|X_{n}|]<\infty$. Then, there exists $ X_{\infty}\in \mathcal{ L}^{1}(\F_{\infty}), \F_{\infty} = \sigma(\F_{n}: n\geq 0)$ such that $ X_{n}\stackrel{n\to \infty}{\longrightarrow} X_{\infty}$, a.s.
+\end{theorem}
+
+Before we embark on the proof of this theorem, we need so me supporting results. First we have a result from analysis and we set up some notation. Let $ x - (x_{n}_{n\in \N})$ be a real sequence and let $ a<b$ be reals. We proceed to define the \textit{number of upcrossings of the sequence } before time $ n\in \N$. Wec constructrecursively the sequence of times:
+\[
+	\begin{array}{ll}\label{eq: stopping times doob upcrossing}
+    T_{0}(x) &= 0 \\
+    S_{k+1}(x) &= \displaystyle\inf\{n\geq T_{k}(x): x_{n}\leq a\}\\
+    T_{k+1}(x) &= \displaystyle\inf\{n\geq S_{k+1}(x): x_{n}\geq b\}\\
+\end{array}
+\]
+
+and 
+\[
+	N_{n}([a,b], X) = \sup\{k\geq 0: T_{k}(x) \leq n\}
+\]
+Observe that as $ n\to \infty$, $ N_{n}([a,b], x)\uparrow N([a,b], x) = \sup\{k
+geq 0: T_{k}(x)<\infty\}$ (see figure \ref{fig: doob upcrossing} for an illustration).
+
+\begin{boxlemma}\label{lemma: upcrossing lemma}
+	Let $ X = (X_{n})$ be a real sequence. Then $ X$ converges in $ \overline{\R} = \R \cup \{\pm \infty\}$ if and on ly if for all $ a<b$, $ a, b\in \Q$, $ N([a,b], X)<\infty$.
+\end{boxlemma}
+
+\begin{proof}
+	\underline{$ \implies:$} Suppose $ x$ converges, if $ a<b$ such that $ N([a,b], x)=\infty$, then $ \displaystyle\liminf_{n}x_{n}\leq a < b \leq \displaystyle \limsup_{n}x_{n}$, a contradiction.\\ 
+	\underline{$ \impliedby:$} if not, then $ \displaystyle\liminf_{n}x_{n}< \displaystyle \limsup_{n}x_{n}$ which implies that there exists $ a<b$ in $ \Q$ with $  \displaystyle\liminf_{n}x_{n}< a< b< \displaystyle \limsup_{n}x_{n}$, and hence $ N([a,n], x) = \infty$, a contradiction. 
+\end{proof}
+
+Now we state \text{it} Doob's upcrossing Inequality
+
+\begin{boxlemma}[Doob's upcrossing inequality]\label{lemma: doob upcrossing}
+Let $ X$ be a supermartingale, then for all $ n \in \N$: 
+\[
+	(b-a)\cdot\mathbb{E}[N_{n}([a,b], X)]\leq\mathbb{E}[(X_{n}-a)^{-}]
+\]
+\end{boxlemma}
+
+
+\begin{proof}
+	It is not hard to check that the sequences of times in \ref{eq: stopping times doob upcrossing} are stopping times. Now we have:
+
+\[
+\begin{array}{ll}
+   &\displaystyle\sum^{n}_{k=1}(X_{T_{k}\land n}-X_{S_{k}\land n})\\
+   &=\underbrace{\displaystyle\sum^{N_{n}}_{k=1} (X_{T_{k}}-X_{S_{k}})}_{\geq N_{n}\cdot (b-a)} + (X_{n}-X_{S_{N_{n}+1}}) \mathbf{1}(S_{N_{n}+1}\leq n)
+\end{array}
+\]
+Since $ T_{k\land n}\geq S_{k\land n}$, the OST gives $\mathbb{E}[X_{T_{k}\land n}]\leq\mathbb{E}[X_{S_{k}\land n}]$. Note: 
+\[
+\underbrace{X_{n}-X_{S_{N_{n}}+1}}_{\geq (X_{n}-a) \land 0 = -(X_{n}-a)^{-}} \mathbf{1}(S_{N_{n}+1}\leq n).\]
+
+Thus, taking expectations on both sides gives:	
+	\[
+		0 \geq (b-a)\cdot\mathbb{E}[N_{n}]-\mathbb{E}[(X_{n}-a)^{-}].
+	\]
+	thus concluding the proof.
+\end{proof}
+
+
+\begin{figure}[H]
+    \centering
+    \includesvg[width=0.8\linewidth]{images/Doob-crossing.svg}
+    \caption{Illustration of upcrossings for the process $ (X_{n})_{n\in\N}$.}
+    \label{fig: doob upcrossing}
+\end{figure}
+
+Now we proceed to the proof of the martingale convergence theorem:
+
+\begin{proof}{(Theorem \ref{thm: a.s. mg conv thm disc})}
+Fix $ a<b$, in $ \Q$. Have 
+\[
+\begin{array}{ll}
+	\mathbb{E}[N_{n([a,b], X)}] &\leq(b-a)^{-}\underbrace{\mathbb{E}[(X_{n}-a)^{-}]}_{\leq\mathbb{E}[|X_{n}|+a]} \\
+				    &\leq  (b-a)^{-} \left( \displaystyle\sup_{n\geq 0}\underbrace{\mathbb{E}[|X_{n}|]}_{<\infty}+a \right)
+\end{array}
+\]
+Also have $ N_{n}([a,b], X)\uparrow N([a,b], X)$
+as $ n\to \infty$. By monotone convergence: $ \mathbb{E}[N([a,b], X)]<\infty$. Set 
+\[
+	\Omega_{0} =\displaystyle\bigcap_{a<b \\ a,b, \in \Q}\{N([a,b], X)<\infty\}\in \F_{\infty} 
+\]
+and $ \PP(\Omega_{0})=1$. On $ \Omega_{0}$, $ X$ converges. set
+\[
+X_{\infty} = \left\lbrace
+\begin{array}{@{}l@{}}
+	\displaystyle \lim_{n\to \infty}X_{n} \quad \text{ on } \Omega_{0}  \\
+	0, \quad \text{ on } \Omega\setminus \Omega_{0}.
+    
+\end{array}\right.
+\]
+So, $ X_{\infty}$ is $ \F_{\infty}-$measurable, $X_{n}\stackrel{n\to \infty}{\longrightarrow}X_{\infty} $ a.s. and 
+\[
+	\mathbb{E}[|X_{\infty}|] =\mathbb{E}[\displaystyle\liminf_{n}|X_{n}| ]\leq \displaystyle\liminf_{\mathbb{E}[X_{n}]}<\infty.  
+\]
+\end{proof}
+
+\begin{boxcor}\label{cor: a.s. disc conv pos sup mg}
+Let $ B$ be a upermaartingale. Then, $ X$ converges a.s.
+\end{boxcor}
+
+\begin{proof}
+	$\mathbb{E}[|X_{n}|] =\mathbb{E}[X_{n}]\leq\mathbb{E}[X_{0}]$. Apply the martingale convergence theorem to conclude.
+\end{proof}
+
+\mymark{Lecture 7} \section{Doob's inequalities}
+
+
+\begin{theorem}[Doob's maximal inequality]\label{thm: doob maximal ineq discrete}
+Let $ X$ be a non-negative submartingale and set $ X^{*}_{n} = \displaystyle\sup_{ 0\leq k \leq n}X_{k}$ . Then for all $ \lambda \geq 0$, 
+\[
+\begin{array}{ll}
+	\lambda \cdot \PP(X^{*}_{n}\geq \lambda ) &\leq\mathbb{E}[X_{n}\cdot \mathbf{1}(X^{*}_{n}\geq \lambda)] \\
+						  &\leq\mathbb{E}[X_{n}].
+\end{array}
+\]
+
+
+\end{theorem}
+
+
+\begin{proof}
+	Let $ T = \displaystyle\inf\{k\geq 0 : X_{k}\geq \lambda\}$ (it is a stopping time). Then $ \{X^{*}_{n}\geq \lambda\} = \{T\leq n\}$. Also have that $ X_{T\land n}$ is a submartingale by the OST. Then $\mathbb{E}[X_{T\land n}]\leq\mathbb{E}[X_{n}]$. Now, 
+
+	\[
+	\begin{array}{ll}
+		\mathbb{E}[X_{T\land n}] &= \mathbb{E}[X_{T}\cdot \mathbf{1}(T\leq n)] \\
+					 &+\mathbb{E}[X_{n}\cdot \mathbf{1}(T>n)]\\ 
+					 &\geq \lambda \cdot \PP(T\leq n)+\mathbb{E}[X_{n}\cdot \mathbf{1}(T>n)]\\ 
+					 &\implies \lambda\cdot \PP(T\leq n) \leq \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(\underbrace{T\leq n}_{=\{X^{*}_{n}\geq \lambda\}}) \right]\\ 
+					 &\leq \mathbb{E}\left[ X_{n} \right] 
+	\end{array}
+	\]
+	
+\end{proof}
+
+
+\begin{theorem}[Doob's $  \mathcal{L}^{1}$ inequality]\label{thm: doob L1 ineq disc}
+Lte $ p>1$ and let $ X$ be a martingale or a non-negative submartingale. Set $ X^{*}_{n} = \displaystyle\sup_{0\leq k \leq n }|X_{k}|$. Then 
+
+\[
+	\norm{X^{8}_{n}}_{p}\leq \frac{p}{p-1}\norm{X_{n}}_{p}.\label{eq: doob L1 disc}
+\]
+
+\end{theorem}
+
+\begin{proof}
+	By Jensen, it is enough to prove  \ref{eq: doob L1 disc} for a non-negative submartingale. Now, observe that 
+
+	\[
+	\begin{array}{ll}
+	     &= b \\
+		(y\land k)^{p} &= \displaystyle\int_{k}^{0} px^{p-1} \mathbf{1(y\geq x)}\diff x  
+			       =\mathbb{E}[ \displaystyle\int_{0}^{k}[x^{p-1} \mathbf{1}(X^{8}_{n}) \diff x  ]\\ 
+			       &\stackrel{\text{Fubini}}{=} \displaystyle\int_{0}^{k} px^{p-1}\underline{\PP(X^{*}_{n}\geq x)}_{\leq \frac{1}{x}  \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(X^{*}_{n}\geq x) \right] }\diff x \\ 
+			       &\leq \mathbb{E}\left[ \displaystyle\int_{0}^{k} px^{p-2}\cdot \mathbf{ 1}(X^{*}_{n}\geq x) \diff  x \cdot X_{n} \right] \\ 
+			       &= \mathbb{E}\left[ \frac{p}{p-1}(X^{*}_{n}\land k)^{p-1}\cdot X_{n} \right]\\ 
+			       &\stackrel{\text{H\"{o}lder}}{\leq} \frac{p}{p-1}\cdot \norm{X_{n}}_{p}\cdot \norm{X^{*}_{n}\land k}^{p-1}_{p}. 
+	\end{array}
+	\]
+	So we proved $ \norm{X^{*}_{n}\land k}^{p}_{p}\leq \frac{p}{p-1}\norm{X_{n}}_{p}\cdot\norm{X^{*}_{n}\land k}^{p-1}_{p}$, which implies $ \norm{X^{*}_{n}\land k}_{p}\leq \frac{p}{p-1}\cdot \norm{X_{n}}_{p}$. Now take $ k\to \infty$ and use monotone convergence to conclude the argument.
+\end{proof}
+
+
+
+\begin{theorem}[$  \mathcal{L}^{p}$-convergence theorem]\label{thm: Lp convergence theorem discrete}
+	Let $ X$ be a martingale and $ 1<p<\infty$, then the following are equivalent: 
+
+	\begin{enumerate}
+		\item $ X$ is bounded in $ \mathcal{L^{p}}$, i.e. $ \displaystyle\sup_{n\geq 0}\norm{X_{n}}_{p}<\infty $.
+		\item $ X$ converges 'underline{almost surely} and in $ \mathcal{L}^{p}$ to a limit $ X_{\infty}\in \mathcal{L}^{p}$.
+		\item There exists $ Z\in \mathcal{L}^{p} $ s.t. $ X_{n} = \mathbb{E}\left[Z | \F_{n}  \right]$ a.s.
+	\end{enumerate}
+	
+\end{theorem}
+
+
+\begin{proof}
+\underline{$1) \implies 2)$:} $ X$ bounded in $ \mathcal{L}^{p}$ implies $ X$ is bounded in $ \mathcal{L}^{1} $. So there exists $ X_{\infty}$ such that $ X_{n}\stackrel{n\to \infty}{\longrightarrow}X_{\infty}$ \underline{a.s.} \\ 
+	Also, $ \mathbb{E}\left[ |X_{\infty}|^{p} \right] = \mathbb{E}\left[  \displaystyle\liminf_{n}|X_{n}|^{p} \right]\stackrel{\text{Fatou}}{\leq} \displaystyle\liminf_{ \mathbb{E}\left[ |X_{n}|^{p} \right]}<\infty$. Thus, $ X_{\infty}\in \mathcal{L}^{p} $.\\ 
+
+	Now, let $ X^{*}_{n} = \displaystyle\sup_{0\leq k \leq n}|X_{k}|$, $ X^{*}_{\infty} = \displaystyle\sup_{k\in \N}|X_{k}|$. Thus, 
+	\[
+		|X_{n}-X_{\infty}|\leq 2X^{*}_{\infty}
+	\]
+for all $ n\in \N$. Thus, it is enough to show by DCT that $ X^{*}_{\infty}\in \mathcal{L}^{p} $. By Doob's $ \mathcal{L}^{p}- $inequality,
+	$\norm{X^{*}_{n}}_{p} &= \frac{p}{p-1}\cdot \displaystyle\sup_{n\in \N}\norm{X_{n}}_{p}<\infty $
+By MCT ($ X^{*}_{n}\uparrow X^{*}_{\infty}$):
+$\norm{X^{*}_{\infty}}_{p}\leq \frac{p}{p-1}\displaystyle\sup_{n\in \N}\norm{X_{n}}_{p}<\infty$
+Thus, $ X^{*}_{\infty}\in \mathcal{L}^{p} $.
+
+\underline{$2)\implies 3)$:} $ X_{n}\stackrel{n\to \infty}{\longrightarrow}X_{\infty}$ a.s. and in $ \mathcal{L}^{p} $. Set $ Z = X_{\infty}$. Need to show: $ X_{n} = \mathbb{E}\left[ X_{\infty} | \F_{n}\right]$ for all $ n\in \N$. 
+\[
+\begin{array}{ll}
+	\norm{X_{n}- \mathbb{E}\left[ X_{oo}|\F_{n} \right]}_{p} &\stackrel{m\geq n}{=} \norm{\mathbb{E}\left[ X_{m}-X_{\infty} |\F_{n}\right]}_{p} \\ 
+								 &\stackrel{\text{contraction (Jensen)}}{\leq} \norm{X_{m}-X_{\infty}}_{p}\to 0, \quad m\to \infty.
+\end{array}
+\]
+\underline{3)\implies  1):} By conditional Jensen, we can conclude.
+\end{proof}
+
+\begin{boxdef}\label{def: lp closed mg disc}
+	A martingale of the form $ X_{n} = \mathbb{E}\left[ Z|\F_{n} \right]$, $ Z\in \mathcal{L}^{p} $ is called a martingale \underline{closed in $ \mathcal{L}^{p} $}.
+\end{boxdef}
+
+\begin{boxcor}\label{cor: lp closed a.s. conv}
+	Let $ Z\in \mathcal{L}^{p} $, $ X_{n} = \mathbb{E}\left[ Z|\F_{n} \right]$ a.s. Then $ X_{n}\stackrel{n\to \infty}{\longrightarrow} \mathbb{E}\left[ Z|\F_{\infty} \right]$ a.s. and in $ \mathcal{L}^{p} $ where $ F_{\infty} = \sigma(X_{n}, n\geq 0)$.
+\end{boxcor}
+
+\begin{proof}
+	By theorem \ref{thm: Lp convergence theorem discrete}, we have $ X_{n}\stackrel{n\to \infty\longrightarrow}X_{\infty}$ a.s. and in $ \mathcal{L}^{p} $. Now, we need to show:
+	\[
+	X_{\infty} = \mathbb{E}\left[ Z|\F_{\infty} \right]\quad \text{a.s.}
+	\]
+Now, we have that $ X_{\infty}$ is $ \F_{\infty}-$measurable (being the pointwise limit of $ X_{n}, n\geq 0$) and for all $ A\in \F_{\infty}$, $ \mathbb{E}\left[ Z\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right]$. Fix $ A\in\displaystyle\bigcup_{n\geq 0}\F_{n} $, a $ \pi-$system generating $ \F_{\infty}$. There exists $ N\in \N$ such that $ A\in \F_{N}$. Let $ n\geq N$, now 
+\[
+	\mathbb{E}\left[ Z\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(A) \right]\stackrel{n\to \infty}{\longrightarrow} \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right].
+\]
+\end{proof}
+
+\begin{boxdef}[Uniform integrability]\label{def: UI}
+A collection of variables $ (X_{i})_{i\in I}$ is called uniformly integrable (UI) if 
+
+\[
+	\displaystyle\sup_{i\in I} \mathbb{E}\left[ |X_{i}|\cdot \mathbf{1}(|X_{i}|> M) \right]\stackrel{M\to \infty}{\longrightarrow}0.
+\]
+\end{boxdef}
+
+Equivalently, $ (X_{i})_{i\in I}$ is UI if $ (X_{i})$ is bounded in $ \mathcal{L}^{1} $ and for all $ \epsilon>0$, there exists $ \delta >0$ such that for all $ A\in \F$ with $ \PP(A)<\delta$, 
+\[
+	\displaystyle\sup_{i\in I} \mathbb{E}\left[ |X_{i}|\cdot \mathbf{1}(A_{i}) \right]<\epsilon.
+\]
+\begin{enumerate}[label = (\roman*)]
+	\item A UI family is bounded in $ \mathcal{L}^{1} $. 
+	\item If a family $ (X_{i})$ is bounded in $ \mathcal{L}^{p} $, $ p>1$, then it is also UI.
+\end{enumerate}
+
+\begin{boxlemma}\label{lemma: UI a.s. conv}
+	Let $ (X_{n})_{n\in \N}$, $ X$ be in $ \mathcal{L}^{1} $ and $ X_{n}\stackrel{n\to \infty}{\longrightarrow}X$ a.s. Then $ X_{n}\stackrel{n\to \infty}{\longrightarrow}$ in $ \mathcal{L}^{1} $ if and only if $ (X_{n})_{n\in \N}$ is UI.
+\end{boxlemma}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  2 SEP 2024 16:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  4 SEP 2024 16:06
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1901,82 +1901,12 @@ Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
 \ALG@tmplength=\skip146
 )
 Document Style - pseudocode environments for use with the `algorithmicx' style
-)
-! Undefined control sequence.
-l.7 \difffinecolor
-                  {}{gray}{0.95}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-! LaTeX Error: Missing \begin{document}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.7 \difffinecolor{}{g
-                      ray}{0.95}
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-(./main.aux
+) (./main.aux
 
 LaTeX Warning: Label `fig: description' multiply defined.
 
 
 LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: label' multiply defined.
-
-
-LaTeX Warning: Label `fig: label of figure' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: label' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: label' multiply defined.
 
 
 LaTeX Warning: Label `a' multiply defined.
@@ -2020,26 +1950,26 @@ LaTeX Warning: Label `fig: label' multiply defined.
 )
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 35.
-LaTeX Font Info:    ... okay on input line 35.
-LaTeX Info: Command `\dddot' is already robust on input line 35.
-LaTeX Info: Command `\ddddot' is already robust on input line 35.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/mathx/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Info: Command `\dddot' is already robust on input line 17.
+LaTeX Info: Command `\ddddot' is already robust on input line 17.
  (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count441
@@ -2096,7 +2026,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: listings package is loaded.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
-Package hyperref Info: Link coloring OFF on input line 35.
+Package hyperref Info: Link coloring OFF on input line 17.
 (./main.out) (./main.out)
 \@outlinefile=\write6
 \openout6 = `main.out'.
@@ -2110,16 +2040,13 @@ Package: inputenc 2021/02/14 v1.3d Input encoding file
 \inpenc@prehook=\toks83
 \inpenc@posthook=\toks84
 )
-LaTeX Info: Completed page discarded.
-Package marginnote Info: Using workaround for absolute page number on input lin
-e 39.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 39.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
 
 
 (/usr/local/texlive/2024/texmf-dist/tex/latex/amsfonts/umsb.fd
@@ -2135,15 +2062,113 @@ Non-PDF special ignored!
 <special> header=pst-dots.pro
 Non-PDF special ignored!
 <special> header=pst-node.pro
+
+Non-PDF special ignored!
+<special> ps: /pssetRGBcolor /setrgbcolor load def /pssetCMYKcolor /setcmyk...
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@refangle 0.  def grestore  e...
+Non-PDF special ignored!
+<special> ps:tx@Dict begin  gsave STV CP T /ps@rot 0 def grestore  end
 {/usr/local/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 (./main.toc)
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
  [2]
+Underfull \hbox (badness 10000) in paragraph at lines 40--41
+
+ []
+
+
+LaTeX Warning: Citation `bremaud2020probability' on page 3 undefined on input l
+ine 42.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 42--43
+
+ []
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 3 undefined
+ on input line 44.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 3 undefined
+ on input line 44.
+
+
+LaTeX Warning: Citation `ethier2009markov' on page 3 undefined on input line 44
+.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 44--45
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 50--51
+
+ []
+
+
+LaTeX Warning: Citation `Tassopoulos_Imperial_Summer_Research_2023' on page 3 u
+ndefined on input line 52.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 3 undefined on input line 52.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 52--53
+
+ []
+
+[3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
+}]
+Underfull \hbox (badness 10000) in paragraph at lines 54--55
+
+ []
+
+
+LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 4 undefined on input line
+ 56.
+
+
+LaTeX Warning: Citation `odonoghue2012adaptiverestartacceleratedgradient' on pa
+ge 4 undefined on input line 56.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 56--57
+
+ []
+
+
+LaTeX Warning: Citation `chen2023gradientflowssamplingmeanfield' on page 4 unde
+fined on input line 58.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 4 undefined 
+on input line 60.
+
+
+LaTeX Warning: Citation `weinan2005multiscalesde' on page 4 undefined on input 
+line 60.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 60--61
@@ -2161,153 +2186,58 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
  []
 
 
+LaTeX Warning: Citation `Tassopoulos_Imperial_Summer_Research_2023' on page 4 u
+ndefined on input line 66.
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 68--69
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 70--71
-
- []
-
-[3{/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
-}]
-Underfull \hbox (badness 10000) in paragraph at lines 72--73
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 74--75
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 78--79
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 80--81
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 82--83
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
-
- []
-
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 91--92
+
+LaTeX Warning: Citation `Mei_2018' on page 5 undefined on input line 73.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 73--74
 
  []
 
-<images/Two-layer-NN.png, id=160, 453.695pt x 338.26375pt>
-File: images/Two-layer-NN.png Graphic file (type png)
-<use images/Two-layer-NN.png>
-Package pdftex.def Info: images/Two-layer-NN.png  used on input line 110.
-(pdftex.def)             Requested size: 256.0774pt x 190.92323pt.
-! Undefined control sequence.
-l.129 \State $\mathbf{\theta}_{i}\geqts
-                                       \mathbf{\theta}_{i}+2s\cdot (y-\hat{y...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[5 <./images/Two-layer-NN.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 140--142
-
- []
-
-! Undefined control sequence.
-l.146 ...{1}{N}\displaystyle\sum^{N}_{i=1}\difflta
-                                                  _{ \mathbf{\theta}_{i}}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Double subscript.
-l.146 ...1}{N}\displaystyle\sum^{N}_{i=1}\difflta_
-                                                  { \mathbf{\theta}_{i}}
-I treat `x_1_2' essentially like `x_1{}_2'.
-
-! Undefined control sequence.
-l.156 ... say (with step size $ s_k = \epsilonilon
-                                                  \cdot \xi(k \epsilonilon)$...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.156 ..._k = \epsilonilon\cdot \xi(k \epsilonilon
-                                                  )$ for some $ \epsilonilon...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.156 ...(k \epsilonilon)$ for some $ \epsilonilon
-                                                   >0$ and $ \xi: \R_{\geqq ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.156 ... 0$, as $ N\to \infty$ and $ \epsilonilon
-                                                   \to 0$ in an appropriate ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.156 ...asures $ \hat{\rho}^{(N)}_{t/\epsilonilon
-                                                  }$ converge in the weak se...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 164--165
+[5]
+Underfull \hbox (badness 10000) in paragraph at lines 158--160
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 166--170
+LaTeX Warning: Citation `Mei_2018' on page 6 undefined on input line 174.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 6 undefined on input line 174.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 182--183
 
  []
+
+
+LaTeX Warning: Citation `Mei_2018' on page 6 undefined on input line 185.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 6 undefined on input line 185.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 184--188
+
+ []
+
+
+LaTeX Warning: Citation `chen2023gradientflowssamplingmeanfield' on page 6 unde
+fined on input line 190.
 
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2318,7 +2248,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2329,7 +2259,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2338,7 +2268,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2349,7 +2279,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2360,7 +2290,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2369,7 +2299,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 <argument> enit@resume@series@\enit@series 
                                            
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2380,7 +2310,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2391,7 +2321,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2400,7 +2330,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2411,7 +2341,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@setresumekeys ...it@toks }\ifnum \enit@type 
                                                   =\z@ #3\def \enit@noexcs {...
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2422,14 +2352,14 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.177 \end{enumerate}
+l.195 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
 look up `weird error' in the index to The TeXbook.)
 
 [6]
-Overfull \hbox (9.19272pt too wide) in paragraph at lines 196--200
+Overfull \hbox (9.19272pt too wide) in paragraph at lines 214--218
 \OT1/cmr/m/n/10 (namely $\U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]\OML/cmm/m/it/10 
 V\U/matha/m/n/10 p\OML/cmm/m/it/10 ^^R\U/matha/m/n/10 q}[]$\OT1/cmr/m/n/10 , $\
 U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]\OML/cmm/m/it/10 U\U/matha/m/n/10 p\OML/cmm
@@ -2445,310 +2375,855 @@ R[]\U/matha/m/n/10 }[]$\OT1/cmr/m/n/10 , $\U/matha/m/n/10 }\OMS/cmsy/m/n/10 r[]
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 202.
+(mdframed)              on input line 220.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 225.
+(mdframed)              on input line 243.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 233.
+(mdframed)              on input line 251.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 262.
+
+Package mdframed Info: Box was splittet wrong
+ starting loop to iterate the splitting point
+(mdframed)              on input line 262.
 [7]
-
-! LaTeX Error: \mathbf allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.259 ...{with probability} $ 1/2: y = +1, \mathbf
-                                                  {x}\sim N(0, (1+\Delta)^{2...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.259 ...robability} $ 1/2: y = +1, \mathbf{x}\sim
-                                                   N(0, (1+\Delta)^{2}\cdot\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.260 &
-        \text{with probability} $ 1/2: y = -1, \mathbf{x}\sim N(0, (1-\Delta...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-! LaTeX Error: \mathbf allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.260 ...{with probability} $ 1/2: y = -1, \mathbf
-                                                  {x}\sim N(0, (1-\Delta)^{2...
-
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.260 ...robability} $ 1/2: y = -1, \mathbf{x}\sim
-                                                   N(0, (1-\Delta)^{2}\cdot\...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.261 \end{array}
-                 
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 264--265
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
 
  []
 
-<images/Nguyen2018-SGD-1.png, id=222, 306.14375pt x 204.765pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 282--284
+
+ []
+
+
+LaTeX Warning: Citation `Mei_2018' on page 8 undefined on input line 293.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 301--302
+
+ []
+
+
+LaTeX Warning: Citation `Mei_2018' on page 8 undefined on input line 303.
+
+<images/Nguyen2018-SGD-1.png, id=228, 306.14375pt x 204.765pt>
 File: images/Nguyen2018-SGD-1.png Graphic file (type png)
 <use images/Nguyen2018-SGD-1.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-1.png  used on input line 271.
+Package pdftex.def Info: images/Nguyen2018-SGD-1.png  used on input line 308.
 (pdftex.def)             Requested size: 170.71718pt x 114.1833pt.
-<images/Nguyen2018-paper-numerical-validation-iso-gauss.png, id=223, 453.695pt 
+<images/Nguyen2018-paper-numerical-validation-iso-gauss.png, id=230, 453.695pt 
 x 298.11375pt>
 File: images/Nguyen2018-paper-numerical-validation-iso-gauss.png Graphic file (
 type png)
 <use images/Nguyen2018-paper-numerical-validation-iso-gauss.png>
 Package pdftex.def Info: images/Nguyen2018-paper-numerical-validation-iso-gauss
-.png  used on input line 277.
+.png  used on input line 314.
 (pdftex.def)             Requested size: 170.71718pt x 112.17448pt.
-<images/Nguyen2018-SGD-2.png, id=224, 246.9225pt x 174.6525pt>
-File: images/Nguyen2018-SGD-2.png Graphic file (type png)
-<use images/Nguyen2018-SGD-2.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-2.png  used on input line 292.
-(pdftex.def)             Requested size: 256.0774pt x 181.13863pt.
-[8 <./images/Nguyen2018-SGD-1.png> <./images/Nguyen2018-paper-numerical-validat
-ion-iso-gauss.png>]
-<images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png, id=235, 256.887pt x 209.
+[8]
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.327 where $\sigma(t) = −
+                            2.5 for t \leq 0, σ(t) = 7.5$ for $t \geq 1.5$,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character σ (U+03C3)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.327 where $\sigma(t) = −2.5 for t \leq 0, σ
+                                                (t) = 7.5$ for $t \geq 1.5$,...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 interpolates from $(0, −
+                                2.5)$ to $(0.5, −4)$, and from $(0.5, −4...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 ...rpolates from $(0, −2.5)$ to $(0.5, −
+                                                  4)$, and from $(0.5, −4)...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.328 ...5)$ to $(0.5, −4)$, and from $(0.5, −
+                                                  4)$ to $(1.5, 7.5)$, see f...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+Package svg Info: Last page of `./svg-inkscape/non-monotone-activation_svg-tex.
+pdf' is 2 on input line 332.
+(./svg-inkscape/non-monotone-activation_svg-tex.pdf_tex
+<./svg-inkscape/non-monotone-activation_svg-tex.pdf, id=242, page=1, 318.70921p
+t x 299.00107pt>
+File: ./svg-inkscape/non-monotone-activation_svg-tex.pdf Graphic file (type pdf
+)
+<use ./svg-inkscape/non-monotone-activation_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/non-monotone-activation_svg-tex.pdf , p
+age1 used on input line 56.
+(pdftex.def)             Requested size: 256.0774pt x 240.25507pt.
+<./svg-inkscape/non-monotone-activation_svg-tex.pdf, id=243, page=2, 318.70921p
+t x 299.00107pt>
+File: ./svg-inkscape/non-monotone-activation_svg-tex.pdf Graphic file (type pdf
+)
+<use ./svg-inkscape/non-monotone-activation_svg-tex.pdf, page 2>
+Package pdftex.def Info: ./svg-inkscape/non-monotone-activation_svg-tex.pdf , p
+age2 used on input line 63.
+(pdftex.def)             Requested size: 256.0774pt x 240.25507pt.
+)
+! Undefined control sequence.
+l.341 with $ \kappas
+                     = 0.4, 0.1$, the SGD converges to two different limits,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 9 undefined on input line 342.
+
+<images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png, id=245, 256.887pt x 209.
 583pt>
 File: images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png Graphic file (type p
 ng)
 <use images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png  
-used on input line 303.
+used on input line 347.
 (pdftex.def)             Requested size: 170.71718pt x 139.28459pt.
-<images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png, id=236, 287.766pt x 207.612pt
+<images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png, id=246, 287.766pt x 207.612pt
 >
 File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
-on input line 309.
+on input line 353.
 (pdftex.def)             Requested size: 170.71718pt x 123.1711pt.
-<images/NGuyen2018-pde-sgd-gauss-anisotropic.png, id=237, 265.7565pt x 198.7425
+
+Underfull \hbox (badness 1102) in paragraph at lines 354--354
+[]\OT1/cmr/m/n/9 (b) |Plot com-par-ing the av-er-age dis-tance of the
+ []
+
+[9 <./images/Nguyen2018-SGD-1.png> <./images/Nguyen2018-paper-numerical-validat
+ion-iso-gauss.png> <./svg-inkscape/non-monotone-activation_svg-tex.pdf> <./svg-
+inkscape/non-monotone-activation_svg-tex.pdf
+
+pdfTeX warning: pdflatex (file ./svg-inkscape/non-monotone-activation_svg-tex.p
+df): PDF inclusion: multiple pdfs with page group included in a single page
+>]
+
+LaTeX Warning: Citation `Mei_2018' on page 10 undefined on input line 366.
+
+<images/NGuyen2018-pde-sgd-gauss-anisotropic.png, id=261, 265.7565pt x 198.7425
 pt>
 File: images/NGuyen2018-pde-sgd-gauss-anisotropic.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-gauss-anisotropic.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-gauss-anisotropic.png  used 
-on input line 322.
+on input line 385.
 (pdftex.def)             Requested size: 170.71718pt x 127.67087pt.
-<images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png, id=238, 271.0125pt x 196
-.443pt>
+<images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png, id=262, 583.17876pt x 45
+2.69125pt>
 File: images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png Graphic file (type p
 ng)
 <use images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png  
-used on input line 328.
-(pdftex.def)             Requested size: 170.71718pt x 123.74774pt.
- [9 <./images/Nguyen2018-SGD-2.png> <./images/NGuyen2018-pde-sgd-risk-iso-gauss
--non-mon.png> <./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png> <./images/NGu
-yen2018-pde-sgd-gauss-anisotropic.png> <./images/NGuyen2018-pde-sgd-risk-gauss-
-anisotropic.png>]
-<images/Spiliopoulos2019-LLN-singleNN-mnist.png, id=253, 412.2675pt x 226.665pt
+used on input line 391.
+(pdftex.def)             Requested size: 170.71718pt x 132.51353pt.
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 10 undefine
+d on input line 401.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefine
+d on input line 401.
+
+
+LaTeX Warning: Citation `ethier2009markov' on page 10 undefined on input line 4
+01.
+
+[10 <./images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png> <./images/NGuyen20
+18-pde-sgd-iso-gauss-non-mon.png> <./images/NGuyen2018-pde-sgd-gauss-anisotropi
+c.png> <./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 403.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 11 undefine
+d on input line 411.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 11 undefine
+d on input line 411.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 11 undefined on input line 411.
+
+Package svg Info: Last page of `./svg-inkscape/piecewise-constant_svg-tex.pdf' 
+is 1 on input line 414.
+(./svg-inkscape/piecewise-constant_svg-tex.pdf_tex
+<./svg-inkscape/piecewise-constant_svg-tex.pdf, id=278, page=1, 392.91856pt x 2
+89.74008pt>
+File: ./svg-inkscape/piecewise-constant_svg-tex.pdf Graphic file (type pdf)
+<use ./svg-inkscape/piecewise-constant_svg-tex.pdf, page 1>
+Package pdftex.def Info: ./svg-inkscape/piecewise-constant_svg-tex.pdf , page1 
+used on input line 56.
+(pdftex.def)             Requested size: 256.0774pt x 188.83723pt.
+)
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 426.
+
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.432 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.432 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.432 \end{enumerate}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.432 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.432 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.432 \end{enumerate}
+                     
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.432 \end{enumerate}
+                     
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 11 undefine
+d on input line 436.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 11 undefine
+d on input line 436.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 436--437
+
+ []
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 11 undefine
+d on input line 438.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 440.
+Package mdframed Info: Not enough space on this page on input line 443.
+[11 <./svg-inkscape/piecewise-constant_svg-tex.pdf>]
+Package mdframed Info: Not enough space on this page on input line 443.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 12 undefine
+d on input line 454.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 12 undefine
+d on input line 454.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 12 undefine
+d on input line 458.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 461.
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 12 undefine
+d on input line 462.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 12 undefine
+d on input line 470.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 12 undefine
+d on input line 474.
+
+<images/Spiliopoulos2019-LLN-singleNN-mnist.png, id=295, 412.2675pt x 226.665pt
 >
 File: images/Spiliopoulos2019-LLN-singleNN-mnist.png Graphic file (type png)
 <use images/Spiliopoulos2019-LLN-singleNN-mnist.png>
 Package pdftex.def Info: images/Spiliopoulos2019-LLN-singleNN-mnist.png  used o
-n input line 345.
+n input line 478.
 (pdftex.def)             Requested size: 341.43436pt x 187.72722pt.
- [10 <./images/Spiliopoulos2019-LLN-singleNN-mnist.png>]
-<images/MullerBrown-SGD.png, id=260, 511.9125pt x 441.65pt>
-File: images/MullerBrown-SGD.png Graphic file (type png)
-<use images/MullerBrown-SGD.png>
-Package pdftex.def Info: images/MullerBrown-SGD.png  used on input line 377.
-(pdftex.def)             Requested size: 192.0548pt x 165.69246pt.
-<images/MullerB-NesterovSGD.png, id=261, 511.9125pt x 418.56375pt>
-File: images/MullerB-NesterovSGD.png Graphic file (type png)
-<use images/MullerB-NesterovSGD.png>
-Package pdftex.def Info: images/MullerB-NesterovSGD.png  used on input line 378
-.
-(pdftex.def)             Requested size: 192.0548pt x 157.03127pt.
-<images/MullerBrown-HomSGLD.png, id=262, 511.9125pt x 407.5225pt>
-File: images/MullerBrown-HomSGLD.png Graphic file (type png)
-<use images/MullerBrown-HomSGLD.png>
-Package pdftex.def Info: images/MullerBrown-HomSGLD.png  used on input line 379
-.
-(pdftex.def)             Requested size: 192.0548pt x 152.88896pt.
-<images/MullerB-potential-plot-3d.png, id=263, 395.4775pt x 339.2675pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 487--488
+
+ []
+
+[12 <./images/Spiliopoulos2019-LLN-singleNN-mnist.png>]
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakl' on page 13 undefined 
+on input line 489.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 489--491
+
+ []
+
+! Undefined control sequence.
+l.494 ...bla \Phi(X_{t})\diff t + \sqrt{2}\betadfB
+                                                  _{t}, \quad X_{0}\sim \eta...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined
+ on input line 520.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 531--536
+
+ []
+
+[13]
+
+LaTeX Warning: Citation `pavliotis2014stochastic' on page 14 undefined on input
+ line 560.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 14 undefined on input line 564.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 14 undefined on input line 570.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 14 undefined
+ on input line 570.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 14 undefined on input line 575.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweaklSy' on page 14 undefine
+d on input line 589.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 588--590
+
+ []
+
+
+LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 14 undefined on input lin
+e 618.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 14 undefined
+ on input line 634.
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 642--648
+
+ []
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 15 undefined
+ on input line 649.
+
+
+LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 15 undefined on input lin
+e 649.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 15 undefined
+ on input line 670.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 15 undefined
+ on input line 671.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 668--672
+
+ []
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 15 undefined
+ on input line 675.
+
+
+LaTeX Warning: Citation `weinan2005analysis' on page 15 undefined on input line
+ 675.
+
+[15]
+
+LaTeX Warning: Citation `muller1979location' on page 16 undefined on input line
+ 710.
+
+
+LaTeX Warning: Citation `muller1979location' on page 16 undefined on input line
+ 714.
+
+<images/MullerB-potential-plot-3d.png, id=358, 395.4775pt x 339.2675pt>
 File: images/MullerB-potential-plot-3d.png Graphic file (type png)
 <use images/MullerB-potential-plot-3d.png>
 Package pdftex.def Info: images/MullerB-potential-plot-3d.png  used on input li
-ne 388.
+ne 719.
 (pdftex.def)             Requested size: 170.71718pt x 146.45161pt.
-<images/MullerB-contour-with-grad-field.png, id=264, 574.145pt x 428.60126pt>
+<images/MullerB-contour-with-grad-field.png, id=359, 574.145pt x 428.60126pt>
 File: images/MullerB-contour-with-grad-field.png Graphic file (type png)
 <use images/MullerB-contour-with-grad-field.png>
 Package pdftex.def Info: images/MullerB-contour-with-grad-field.png  used on in
-put line 394.
+put line 725.
 (pdftex.def)             Requested size: 170.71718pt x 127.43687pt.
+<images/MullerBrown-SGD.png, id=360, 511.9125pt x 441.65pt>
+File: images/MullerBrown-SGD.png Graphic file (type png)
+<use images/MullerBrown-SGD.png>
+Package pdftex.def Info: images/MullerBrown-SGD.png  used on input line 744.
+(pdftex.def)             Requested size: 192.0548pt x 165.69246pt.
+<images/MullerB-NesterovSGD.png, id=361, 511.9125pt x 418.56375pt>
+File: images/MullerB-NesterovSGD.png Graphic file (type png)
+<use images/MullerB-NesterovSGD.png>
+Package pdftex.def Info: images/MullerB-NesterovSGD.png  used on input line 745
+.
+(pdftex.def)             Requested size: 192.0548pt x 157.03127pt.
+<images/MullerBrown-HomSGLD.png, id=362, 511.9125pt x 407.5225pt>
+File: images/MullerBrown-HomSGLD.png Graphic file (type png)
+<use images/MullerBrown-HomSGLD.png>
+Package pdftex.def Info: images/MullerBrown-HomSGLD.png  used on input line 746
+.
+(pdftex.def)             Requested size: 192.0548pt x 152.88896pt.
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/listings/lstlang1.sty
-File: lstlang1.sty 2024/02/21 1.10 listings language file
-)
-LaTeX Font Info:    Trying to load font information for OML+cmr on input line 4
-21.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 753.
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/omlcmr.fd
-File: omlcmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
-(Font)              Font shape `OML/cmm/m/it' tried instead on input line 421.
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 4
-26.
 
-(/usr/local/texlive/2024/texmf-dist/tex/latex/base/omscmr.fd
-File: omscmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 426.
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 753.
 
-Overfull \hbox (63.9756pt too wide) in paragraph at lines 426--427
-[][][][][][][][][][][][][][][][][][][][][][][][][][][]
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.764 tion error that universally scales as O(n−
+                                                  1). These properties are e...
+
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 754--770
+
  []
 
-[11 <./images/MullerBrown-SGD.png> <./images/MullerB-NesterovSGD.png> <./images
-/MullerBrown-HomSGLD.png> <./images/MullerB-potential-plot-3d.png> <./images/Mu
-llerB-contour-with-grad-field.png>]
+[16 <./images/MullerB-potential-plot-3d.png> <./images/MullerB-contour-with-gra
+d-field.png>] [17 <./images/MullerBrown-SGD.png> <./images/MullerB-NesterovSGD.
+png> <./images/MullerBrown-HomSGLD.png>]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 443.
+LaTeX Warning: Citation `Mei_2018' on page 18 undefined on input line 771.
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 443.
+LaTeX Warning: Citation `Auffinger:2013kq' on page 18 undefined on input line 7
+86.
 
-<images/Eijnden2018-heatmap-3dspin.png, id=276, 206.6265pt x 157.3515pt>
+
+LaTeX Warning: Citation `Sagun:2014tg' on page 18 undefined on input line 786.
+
+
+LaTeX Warning: Citation `Auffinger:2012gh' on page 18 undefined on input line 7
+86.
+
+
+LaTeX Warning: Citation `Choromanska:2014ui' on page 18 undefined on input line
+ 789.
+
+! Argument of \math@egroup has an extra }.
+<inserted text> 
+                \par 
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've run across a `}' that doesn't seem to match anything.
+For example, `\def\a#1{...}' and `\a}' would produce
+this error. If you simply proceed now, the `\par' that
+I've just inserted will cause me to report a runaway
+argument that might be the root of the problem. But if
+your `}' was spurious, just type `2' and it will go away.
+
+Runaway argument?
+! Paragraph ended before \math@egroup was complete.
+<to be read again> 
+                   \par 
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing } inserted.
+<inserted text> 
+                }
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I'm guessing that you meant to end an alignment here.
+
+! Missing { inserted.
+<inserted text> 
+                {
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.844       \dot\mathbf
+                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.844       \dot\mathbf{z}_i &
+                              = c_i \nabla f(\mathbf{z}_i) +
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.847       \dot c_i &
+                      = f(\mathbf{z}_i) - \frac1n\sum_{j=1}^n c_j e^{-\alpha
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced \crcr.
+\endaligned ->\crcr 
+                    \egroup \restorecolumn@ \egroup 
+l.849     \end{aligned}
+                       
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Extra }, or forgotten \endgroup.
+\endaligned ->\crcr \egroup 
+                            \restorecolumn@ \egroup 
+l.849     \end{aligned}
+                       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+! Extra }, or forgotten \endgroup.
+\endaligned ...cr \egroup \restorecolumn@ \egroup 
+                                                  
+l.849     \end{aligned}
+                       
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+[18]
+
+LaTeX Warning: Reference `sec:stochgrad' on page 19 undefined on input line 871
+.
+
+
+LaTeX Warning: Reference `fig:5DRBF' on page 19 undefined on input line 884.
+
+
+LaTeX Warning: Reference `fig:5DRBF' on page 19 undefined on input line 914.
+
+<images/Eijnden2018-heatmap-3dspin.png, id=405, 206.6265pt x 157.3515pt>
 File: images/Eijnden2018-heatmap-3dspin.png Graphic file (type png)
 <use images/Eijnden2018-heatmap-3dspin.png>
 Package pdftex.def Info: images/Eijnden2018-heatmap-3dspin.png  used on input l
-ine 452.
+ine 926.
 (pdftex.def)             Requested size: 170.71718pt x 130.00385pt.
-<images/Eijnden2018-loss.png, id=277, 225.6795pt x 166.5495pt>
+<images/Eijnden2018-loss.png, id=406, 225.6795pt x 166.5495pt>
 File: images/Eijnden2018-loss.png Graphic file (type png)
 <use images/Eijnden2018-loss.png>
-Package pdftex.def Info: images/Eijnden2018-loss.png  used on input line 458.
+Package pdftex.def Info: images/Eijnden2018-loss.png  used on input line 932.
 (pdftex.def)             Requested size: 170.71718pt x 125.98933pt.
-[12]
-<images/Nguyen2018-SGD-algos-risk-aniso-gauss.png, id=316, 236.8485pt x 179.361
+[19]
+
+LaTeX Warning: Citation `Mei_2018' on page 20 undefined on input line 953.
+
+
+LaTeX Warning: Citation `Rotskoff_2022' on page 20 undefined on input line 953.
+
+
+<images/Nguyen2018-SGD-algos-risk-aniso-gauss.png, id=427, 236.8485pt x 179.361
 pt>
 File: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png Graphic file (type png)
 <use images/Nguyen2018-SGD-algos-risk-aniso-gauss.png>
 Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png  used
- on input line 481.
+ on input line 971.
 (pdftex.def)             Requested size: 192.0548pt x 145.44032pt.
-<images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png, id=317, 304.848pt x 21
+<images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png, id=428, 304.848pt x 21
 5.496pt>
 File: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png Graphic file (type
  png)
 <use images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-  used on input line 482.
+  used on input line 972.
 (pdftex.def)             Requested size: 192.0548pt x 135.76318pt.
 File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
-on input line 483.
+on input line 973.
 (pdftex.def)             Requested size: 192.0548pt x 138.5671pt.
-<images/Eijnden2018-SGD-algos-risk-3dspin.png, id=318, 254.916pt x 189.5445pt>
+<images/Eijnden2018-SGD-algos-risk-3dspin.png, id=429, 254.916pt x 189.5445pt>
 File: images/Eijnden2018-SGD-algos-risk-3dspin.png Graphic file (type png)
 <use images/Eijnden2018-SGD-algos-risk-3dspin.png>
 Package pdftex.def Info: images/Eijnden2018-SGD-algos-risk-3dspin.png  used on 
-input line 501.
+input line 991.
 (pdftex.def)             Requested size: 341.43436pt x 253.88417pt.
- [13 <./images/Eijnden2018-heatmap-3dspin.png> <./images/Eijnden2018-loss.png>]
-<images/Spiliopoulos2019-SGD-algos-single-digit classification.png, id=327, 250
+[20 <./images/Eijnden2018-heatmap-3dspin.png> <./images/Eijnden2018-loss.png>]
+<images/Spiliopoulos2019-SGD-algos-single-digit classification.png, id=437, 250
 .6455pt x 184.617pt>
 File: images/Spiliopoulos2019-SGD-algos-single-digit classification.png Graphic
  file (type png)
 <use images/Spiliopoulos2019-SGD-algos-single-digit classification.png>
 Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit classif
-ication.png  used on input line 511.
+ication.png  used on input line 1001.
 (pdftex.def)             Requested size: 170.71718pt x 125.74634pt.
-<images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png, id=328, 232.578p
+<images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png, id=438, 232.578p
 t x 178.3755pt>
 File: images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png Graphic file
  (type png)
 <use images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>
 Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit-late-ti
-me.png  used on input line 517.
+me.png  used on input line 1007.
 (pdftex.def)             Requested size: 170.71718pt x 130.93974pt.
- [14 <./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png> <./images/Nguyen2018-
-SGD-algos-risk-iso-gauss-non-mon.png> <./images/Eijnden2018-SGD-algos-risk-3dsp
-in.png>] [15 <./images/Spiliopoulos2019-SGD-algos-single-digit classification.p
-ng> <./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>]
-(./main.bbl) [16] (./main.aux)
+
+[21 <./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png> <./images/Nguyen2018-S
+GD-algos-risk-iso-gauss-non-mon.png> <./images/Eijnden2018-SGD-algos-risk-3dspi
+n.png>] [22 <./images/Spiliopoulos2019-SGD-algos-single-digit classification.pn
+g> <./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>]
+(./main.bbl) (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: E1F7D338463E082EAEE7414747B4782B;1919.
+(rerunfilecheck)             Checksum: 44C03171E45CBF67EA277BEF3B8E3A3E;3809.
  ) 
 Here is how much of TeX's memory you used:
- 59986 strings out of 474116
- 1437194 string characters out of 5743682
- 2233203 words of memory out of 5000000
- 81298 multiletter control sequences out of 15000+600000
- 577626 words of font info for 103 fonts, out of 8000000 for 9000
+ 59664 strings out of 474116
+ 1436503 string characters out of 5743682
+ 2038755 words of memory out of 5000000
+ 80961 multiletter control sequences out of 15000+600000
+ 578226 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,13n,134p,1746b,1799s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,14n,134p,1746b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 ></usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb><
-/usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></u
-sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr
-/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/l
-ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/loc
-al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local
-/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/te
-xlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texli
-ve/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/
-2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/202
-4/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/te
-xmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/tex
-mf-dist/fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2024/t
-exmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/2024/
-texmf-dist/fonts/type1/public/mathabx-type1/mathb7.pfb></usr/local/texlive/2024
-/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/20
-24/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texliv
-e/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/tex
-live/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (16 pages, 3594741 bytes).
+</usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></
+usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></u
+sr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr
+/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/l
+ocal/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/loc
+al/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local
+/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/t
+exlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/tex
+live/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/texlive/2
+024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2024
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2024/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2024/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2024/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2024/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2024/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/local/texlive/2024/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2024/texmf-dist/
+fonts/type1/public/mathabx-type1/matha10.pfb></usr/local/texlive/2024/texmf-dis
+t/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texlive/2024/texmf-di
+st/fonts/type1/public/mathabx-type1/matha7.pfb></usr/local/texlive/2024/texmf-d
+ist/fonts/type1/public/mathabx-type1/mathb10.pfb></usr/local/texlive/2024/texmf
+-dist/fonts/type1/public/mathabx-type1/mathb7.pfb></usr/local/texlive/2024/texm
+f-dist/fonts/type1/public/mathabx-type1/mathx10.pfb></usr/local/texlive/2024/te
+xmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/202
+4/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/
+2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texli
+ve/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
+Output written on main.pdf (22 pages, 3682278 bytes).
 PDF statistics:
- 471 PDF objects out of 1000 (max. 8388607)
- 337 compressed objects within 4 object streams
- 103 named destinations out of 1000 (max. 500000)
- 366 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 608 PDF objects out of 1000 (max. 8388607)
+ 447 compressed objects within 5 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 442 words of extra memory for PDF output out of 10000 (max. 10000000)
 
