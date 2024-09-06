@@ -793,6 +793,13 @@ throughout this section, we train networks to learn $f$ with a
 particular realization of $a_{p,q,r}$ and study the accuracy of that
 representation as a function of the number of particles $n$.
 
+ \begin{figure}[H]\centering
+\subfloat[legend]{\label{a}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_3.png}}
+\subfloat[legend]{\label{b}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_4.png}}
+\subfloat[legend]{\label{c}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_5.png}}
+\caption{my fig}
+\label{fig}
+\end{figure}
 
 We first consider the case when $D = S^{d-1}(\sqrt{d})$ and we use
 %
@@ -820,58 +827,19 @@ This setting allow us to simplify the problem. Using
   f^{(n)}(\mathbf{x}) = \frac1n \sum_{i=1}^n c_i \varphi(\mathbf{x},\mathbf{z}_i)
   = \frac1n \sum_{i=1}^n c_i e^{-\alpha \mathbf{x}\cdot \mathbf{z}_i},
 \end{equation}
-%
-we can use as alternative loss
-%
-\begin{equation}
-\label{eq:otherloss}
-    \mathcal{L}[f^{(n)}] = -\frac1n \sum_{i=1}^n c_i f(\mathbf{z}_i) + \frac1{2n^2} \sum_{i,j=1}^n c_i c_j \varphi(\mathbf{z}_i,\mathbf{z}_j)
-\end{equation}
-i.e. eliminate the need for data beside the set $\{\mathbf{z}_i\}_{i=1}^n$. In terms of the empirical distribution, the loss can be represented as
-\begin{equation}
-    \begin{aligned}
-    \mathcal{L}[f^{(n)}] &= -\int_{\hat D} f(\mathbf{z}) \gamma^{(n)}(d\mathbf{z}) + \frac1{2} \int_{\hat D\times\hat D}
-    \varphi(\mathbf{z},\mathbf{z}')\gamma^{(n)}(d\mathbf{z})\gamma^{(n)}(d\mathbf{z}')
-    \end{aligned}
-\end{equation}
-where $\gamma^{(n)}=\int_\mathbb{R} c \mu^{(n)}(dc,\cdot)$. Viewed as an integral kernel, $\varphi$ is positive definite, as a result the loss is a convex functional of $\gamma^{(n)}$ (or $\mu^{(n)}$). Hence, the results established above apply to this special case, as well. 
-The GD flow on the loss~\eqref{eq:otherloss} can now be written explicitly as
-%
-\begin{equation}
-  \label{eq:34RBFpspin}
-  \left\{
-    \begin{aligned}
-      \dot\mathbf{z}_i &= c_i \nabla f(\mathbf{z}_i) +
-      \frac{\alpha}n\sum_{j=1}^n
-      c_i c_j \mathbf{z}_j e^{-\alpha \mathbf{z}_i\cdot \mathbf{z}_j} -\lambda_i \mathbf{z}_i \\
-      \dot c_i &= f(\mathbf{z}_i) - \frac1n\sum_{j=1}^n c_j e^{-\alpha
-        \mathbf{z}_i\cdot \mathbf{z}_j}
-    \end{aligned}
-  \right.
-\end{equation}
-%
-where $ -\lambda_i \mathbf{z}_i $ is a Lagrange multiplier term added to
-enforce $|\mathbf{z}_i|= \sqrt{d}$ for all $i=1,\ldots, n$, $f(\mathbf{x})$ is
-given by~\eqref{eq:psin}, and $\nabla f(\mathbf{z})$ is given componentwise by
-%
-\begin{equation}
-  \label{eq:132}
-  \frac{\partial f}{\partial z_p} = \frac1d\sum_{q,r=1}^d
-  \left(a_{p,q,r} + a_{r,p,q}+ a_{q,r,p}\right) z_q z_r,
-\end{equation}
-%
-As is apparent from~\eqref{eq:34RBFpspin} the advantage of using radial
-basis function networks (or, in fact, any unit $\hat \phi$ which is (i) such that $\hat D = \Omega$ and (ii) positive definite) is that we can use $f(\mathbf{x})$ and the unit
-$\varphi(\mathbf{x},\mathbf{z})$ directly, and do not need to evaluate $\hat F(\mathbf{z})$ and
-$\hat K(\mathbf{z},\mathbf{z}')$ (that is, we need no batch). In other words, the cost of
-running~\eqref{eq:34RBFpspin} scales like $(dn)^2$, instead of $P(Nn)^2$ in
-the case of a general network optimized by SGD with a batch of size
-$P$ and $\mathbf{z}\in \hat D \subset \mathbb{R}^N$. If we make $P$ scale with $n$, like
-$P=C n^{2\alpha}$ for some $C>0$, as we need to do to obtain the
-scalings discussed in Sec.~\ref{sec:stochgrad}, the cost of SGD
-becomes $N^2n^{2+2\alpha}$, which is quickly becomes much worse than
-$(dn)^2$ as $n$ grows.
 
+ To test the accuracy of the
+representation, we used the following Monte Carlo estimate of the loss
+function
+%
+ \begin{equation}
+   \label{eq:lossempirical}
+   \mathcal{L}_P[f^{(n)}_t] = \frac{1}{2P} \sum_{p=1}^P \left|f(\mathbf{x}_p) - f^{(n)}_t(\mathbf{x}_p)\right|^2.
+ \end{equation}
+
+ which is in close analogy to the risk \ref{eq: risk}
+ This empirical loss function was computed with a batch of $10^6$
+ points $\mathbf{x}_p$ uniformly distributed on the sphere.
 
 We tested the representation~\eqref{eq:119} in $d=5$ using $n=16$, 32,
 64, 128, and 256 and setting $\alpha = 5/d= 1$. The training was done
@@ -897,28 +865,9 @@ The level sets of both functions are in good agreement. Also shown on
 this figure is the projection on the slice of the position of the 64
 particles on the sphere. In this result, the parameters $c_i$ take
 values that are initially uniformly distributed by about
-$-40 d^2 = -10^3$ and $40 d^2 = 10^3$. To test the accuracy of the
-representation, we used the following Monte Carlo estimate of the loss
-function
-%
- \begin{equation}
-   \label{eq:lossempirical}
-   \mathcal{L}_P[f^{(n)}_t] = \frac{1}{2P} \sum_{p=1}^P \left|f(\mathbf{x}_p) - f^{(n)}_t(\mathbf{x}_p)\right|^2.
- \end{equation}
+$-40 d^2 = -10^3$ and $40 d^2 = 10^3$.
 
- which is in close analogy to the risk \ref{eq: risk}
- This empirical loss function was computed with a batch of $10^6$
- points $\mathbf{x}_p$ uniformly distributed on the sphere. The value
- \eqref{eq:lossempirical} calculated at the end of the calculation is
- shown as a function of $n$ in the right panel of
- Fig.~\ref{fig:5DRBF}: the empty circles show~\eqref{eq:lossempirical}
- for 4 individual realizations of the coefficient $a_{p,q,r}$
- in~\eqref{eq:psin}, the full circle shows the average
- of~\eqref{eq:lossempirical} over these 4 realizations. The blue line
- scale as $n^{-1}$, the red one as $n^{-2}$: as can be seen, the
- empirical loss decays with $n$ faster than $n^{-1}$, which is as
- expected.
-
+ [MAKE a comparison between dimensionss]
 
 \begin{figure}[H]
 \begin{subfigure}{0.5\textwidth}
@@ -1011,7 +960,24 @@ o	Nesterov acceleration beat plain SGD, but was beaten by MF-HomSGLD, which plat
  \caption{ caption}
  \label{fig:  label}
  \end{figure} 
- 
+
+
+ \begin{figure}[H]\centering
+\subfloat[legend]{\label{a}\includegraphics[width=.45\linewidth]{images/3d-spin-model-neural-net-loss-d=3.png}}\hfill
+\subfloat[legend]{\label{b}\includegraphics[width=.45\linewidth]{images/3d-spin-model-neural-net-loss-d=4.png}}\par 
+\subfloat[legend]{\label{c}\includegraphics[width=.45\linewidth]{images/3d-spin-model-neural-net-loss-d=5.png}}
+\caption{my fig}
+\label{fig}
+\end{figure}
+
+\begin{figure}[H]\centering
+\subfloat[legend]{\label{a}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-plot-d=3.png}}\hfill
+\subfloat[legend]{\label{b}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-plot-d=4.png}}\par 
+\subfloat[legend]{\label{c}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-plot-d=5.png}}
+\caption{my fig}
+\label{fig}
+\end{figure}
+
 Some general observations: 
 •	For Nesterov accelerated descent:
 o	In the deterministic case, as showcased by the 3d-spin model, Nesterov clearly beats plain GD;  this is to be expected.
@@ -1022,6 +988,8 @@ o	I chose to implement this algorithm because it corresponds to a discretisation
 o	MF-HomSGLD matches the performance of plain SGD, but it seems to get stuck for larger iterations and plateaus. However in the MNIST one-digit classification, the algorithm attains a substantially smaller loss, about two orders of magnitude less than the other algorithms, but it suffers from plateauing early again.
 •	The MaSS algorithm: 
 o	In most cases, despite claims in the paper by Liu and Belkin of exponential convergence (assuming certain regularity restraints on the loss which may be optimistic in my case), the performance at least matches Nesterov SGD, since it is a perturbation thereof. However, in the non-monotone activation function case, it beats all algorithms in later iterations and descends the fastest in loss.
+
+
 
 \newpage
 \bibliographystyle{plain}
