@@ -647,6 +647,20 @@ INPUT ./svg-inkscape/Doob-crossing_svg-tex.pdf
 INPUT ./svg-inkscape/Doob-crossing_svg-tex.pdf
 INPUT ./svg-inkscape/Doob-crossing_svg-tex.pdf
 INPUT ./svg-inkscape/Doob-crossing_svg-tex.pdf
+INPUT ./images/stopping time counterexample.svg
+INPUT ./images/stopping time counterexample.svg
+INPUT ./images/stopping time counterexample.svg
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
+INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out
@@ -665,6 +679,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
@@ -672,6 +687,7 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha1
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/matha7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathb10.pfb
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathb7.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/mathabx-type1/mathx10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb

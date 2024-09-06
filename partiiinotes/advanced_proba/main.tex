@@ -1,5 +1,6 @@
 \documentclass{article}
 \input{preamble}  % Include the preamble from an external file
+
 %\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}\addtocounter{page}{-1}}
 \fancyhead{}
 \fancyhead[L]{\text{Advanced Probability}}
@@ -113,7 +114,7 @@ Now for an integer-valued random variable $ X $, we set:
 
 \subsection{Conditional expectation with respect to countably generated sigma algebras}
 
-\mymark{Lecture 2}We now extend the definition of the conditional expectation for a \underline{countably generated sigma algebra}. Let $ (\Omega, \F, \PP) $ be a probability space. We call the sigma algebra $\mathcal{G} $ coutnably generated if there exists a colection $ (B_{n})_{n\in \N} $ of pairwise disjoint events such that $\displaystyle\bigcup_{n\in I}B_{n} = \Omega$ with ($ I $ countable) and $\mathcal{ G} = \sigma(B_{i}:i\in I)$.\\ 
+\mymark{Lecture 2}We now extend the definition of the conditional expectation for a \underline{countably generated sigma algebra}. Let $ (\Omega, \F, \PP) $ be a probability space. We call the sigma algebra $\mathcal{G} $ countably generated if there exists a collection $ (B_{n})_{n\in \N} $ of pairwise disjoint events such that $\displaystyle\bigcup_{n\in I}B_{n} = \Omega$ with ($ I $ countable) and $\mathcal{ G} = \sigma(B_{i}:i\in I)$.\\ 
 
 Let $X$ be an integrable random variable. We want to define $\mathbb{E}[X|\mathcal{G}]$.\\ 
 
@@ -191,7 +192,7 @@ Then, we have the corresponding decomposition $ X = Y+Z$, where $ Y\in \mathcal{
 Indeed, let $ A = \{Y< 0\}\in\mathcal{G}$. Then observe that $ 0\leq\mathbb{E}[X\cdot\mathbf{1}(A)]=\mathbb{E}[Y\cdot\mathbf{1}(A)]\leq 0$. Hence $\mathbb{E}[Y\cdot\mathbf{1}(A)]=0$ and so $ \PP(A) = 0$, gibing $ Y = 0$ a.s.
 
 \item Assume $ X\geq 0 $.\\ 
-	Define $ X_{n} = X\land n\leq n $, meaning $ X_{n}$ is bounded for all $ n\in \N$. So $ X_{n}\in\mathcal{L}^{2}(\Omega, \F, \PP)$. Let $ Y_{n} =\mathbb{E}[X_{n}]$ a.s.. $ (X_{n})_{n\in \N}$ is an increasing sequence. By the claim abose, so is $ (Y_{n})_{n\in \N}$ a.s.\\
+	Define $ X_{n} = X\land n\leq n $, meaning $ X_{n}$ is bounded for all $ n\in \N$. So $ X_{n}\in\mathcal{L}^{2}(\Omega, \F, \PP)$. Let $ Y_{n} =\mathbb{E}[X_{n}]$ a.s.. $ (X_{n})_{n\in \N}$ is an increasing sequence. By the claim above, so is $ (Y_{n})_{n\in \N}$ a.s.\\
 	Define $ Y = \displaystyle \limsup_{n}Y_{n}$ meaning $ Y$ is $\mathcal{G}-$measurable and $ Y = \uparrow \displaystyle \lim_{n\to \infty}Y_{n} $ a.s. Now, we have that for all $ A\in\mathcal{G}$, $\mathbb{E}[X_{n}\cdot\mathbf{1}(A)] =\mathbb{E}[Y_{n}\cdot\mathbf{1}(A)]$. Thus, by theorem \ref{thm: MCT} (MCT), $\mathbb{E}[X\cdot\mathbf{1}(A)]= \displaystyle \lim_{n\to \infty} \mathbb{E}[X_{n}\cdot\mathbf{1}(A)] = \displaystyle \lim_{n\to \infty} \mathbb{E}[Y_{n}\cdot\mathbf{1}(A)] =\mathbb{E}[Y\cdot\mathbf{1}(A)]$.
 
 \item $ X$ general in $\mathcal{L}^{1}$.\\ 
@@ -222,7 +223,7 @@ Fix $ X,y \in\mathcal{L}^{1}$, $ G\in \F$.
 	\item $\mathbb{E}[X|\mathcal{G}]|\leq\mathbb{E}[|X| |\mathcal{G}]$ a.s. 
 \end{enumerate}
 
-Below we provid:we expensions of useful measure theoretic results for the expectation to their corresponding conditional counetparts. First recall:
+Below we proved:we expansions of useful measure theoretic results for the expectation to their corresponding conditional counterparts. First recall:
 \begin{boxlemma}[Fatou's Lemma]\label{lemma: Fatou}
 Let $  X_{n}\geq 0$ for all $ n\in \N$. Then 
 \[
@@ -479,13 +480,13 @@ can be seen to work. Thus, we obtain
 \section{Discrete Time Martingales}
 
 \begin{boxdef}[Filtration]\label{def: filtration}
-	Let $ (\Omega, \F, \PP)$ be a pobability space. A \underline{filtration} is a sequences of increasing sigma sub-algebras of $ \F$, $ (\F_{n})_{n\in \N}$, $ \F_{n}\subseteq \F_{n+1}$ for all $ n\in \N$. We call $ (\Omega, \F, (\F_{n})_{n\in\N})$ a \underline{filtered probability space}.\\ 
+	Let $ (\Omega, \F, \PP)$ be a probability space. A \underline{filtration} is a sequences of increasing sigma sub-algebras of $ \F$, $ (\F_{n})_{n\in \N}$, $ \F_{n}\subseteq \F_{n+1}$ for all $ n\in \N$. We call $ (\Omega, \F, (\F_{n})_{n\in\N})$ a \underline{filtered probability space}.\\ 
 
 	Let $X =  (X_{n})_{n\in \N}$ be a sequence of random variables/a stochastic process. Then it induces $ (\F^{X}_{n})_{n\in N}$, where $ \F^{X}_{n}\coloneqq \sigma(X_{:k\leq n})$ for all $ n\in \N$: the canonical filtration associated to $ X$. We call $ X$ \underline{adapted} to a filtration $ (\F_{n})_{n\in \N}$ if $ X$is $ \F_{n}-$measurable for all $ n\in \N$.$ X$ is called \underline{integrable} if $ X_{n}$ is integrable for all $ n\in \N$.
 \end{boxdef}
 
 \begin{boxdef}[Martingale discrete time]\label{def: martingale}
-Let $ (\Omega, \F, (\F_{n})_{n\in\N}, \PP)$ be a filtered probability space. Let $ X = (X_{n})_{n\in \N}$be an integrabl and adapted process. 
+Let $ (\Omega, \F, (\F_{n})_{n\in\N}, \PP)$ be a filtered probability space. Let $ X = (X_{n})_{n\in \N}$be an integrable and adapted process. 
 \begin{itemize}
 	\item $ X$ is called a \underline{martingale} if $ \mathbb{E}[X_{n}| \F_{m}]=X_{m}$ a.s. for all $ n\geq m$.
 	\item $ X$ is called a \underline{super-martingale} if $ \mathbb{E}[X_{n}| \F_{m}]\leq X_{m}$ a.s. for all $ n\geq m$.
@@ -695,7 +696,7 @@ To answer this, note first that $ X^{T}_{n} = X_{T\land n}$ is a martingale by t
 \underline{Claim:} $\mathbb{E}[T]<\infty$.\\ 
 To show this, we will \textit{stochastically dominate} $ T$ be a geometric random variable, which automatically has a finite expectation and then conclude using the non-negativity of $ T$. Now we have that for the sequence $ \xi_{1}, \xi_{2}, \cdots, \xi_{a+b}$ the probability that they all are either $ +1$ or $ -1$ is $ 2\cdot 2^{-(a+b)}$ by independence, call this event $ A_1$. The same is true for the shifted sequence $ \xi_{k(a+b)+1}\cdots \xi_{(k+1)(a+b)}$ for all $ k\in \N$, where we call the corresponding event $ A_{k}$.  \\ 
 
-Thus, we can bound $ T$ by the the random variable
+Thus, we can bound $ T$ by the random variable
 \[
 	Z(\omega) =\displaystyle\inf\{n\geq 0: \omega \in A_{n}\}  
 \]
@@ -901,7 +902,7 @@ Thus, $ X^{*}_{\infty}\in \mathcal{L}^{p} $.
 								 &\stackrel{\text{contraction (Jensen)}}{\leq} \norm{X_{m}-X_{\infty}}_{p}\to 0, \quad m\to \infty.
 \end{array}
 \]
-\underline{3)\implies  1):} By conditional Jensen, we can conclude.
+\underline{$3)\implies  1)$:} By conditional Jensen, we can conclude.
 \end{proof}
 
 \begin{boxdef}\label{def: lp closed mg disc}
@@ -913,11 +914,11 @@ Thus, $ X^{*}_{\infty}\in \mathcal{L}^{p} $.
 \end{boxcor}
 
 \begin{proof}
-	By theorem \ref{thm: Lp convergence theorem discrete}, we have $ X_{n}\stackrel{n\to \infty\longrightarrow}X_{\infty}$ a.s. and in $ \mathcal{L}^{p} $. Now, we need to show:
+By theorem \ref{thm: Lp convergence theorem discrete}, we have $ X_{n}\stackrel{n\to \infty}{\longrightarrow}X_{\infty}$ a.s. And in $ \mathcal{L}^{p} $. Now, we need to show:
 	\[
 	X_{\infty} = \mathbb{E}\left[ Z|\F_{\infty} \right]\quad \text{a.s.}
 	\]
-Now, we have that $ X_{\infty}$ is $ \F_{\infty}-$measurable (being the pointwise limit of $ X_{n}, n\geq 0$) and for all $ A\in \F_{\infty}$, $ \mathbb{E}\left[ Z\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right]$. Fix $ A\in\displaystyle\bigcup_{n\geq 0}\F_{n} $, a $ \pi-$system generating $ \F_{\infty}$. There exists $ N\in \N$ such that $ A\in \F_{N}$. Let $ n\geq N$, now 
+Now, we have that $ X_{\infty}$ is $ \F_{\infty}-$measurable (being the point wise limit of $ X_{n}, n\geq 0$) and for all $ A\in \F_{\infty}$, $ \mathbb{E}\left[ Z\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right]$. Fix $ A\in\displaystyle\bigcup_{n\geq 0}\F_{n} $, a $ \pi-$system generating $ \F_{\infty}$. There exists $ N\in \N$ such that $ A\in \F_{N}$. Let $ n\geq N$, now 
 \[
 	\mathbb{E}\left[ Z\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(A) \right]\stackrel{n\to \infty}{\longrightarrow} \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right].
 \]
@@ -935,13 +936,748 @@ Equivalently, $ (X_{i})_{i\in I}$ is UI if $ (X_{i})$ is bounded in $ \mathcal{L
 \[
 	\displaystyle\sup_{i\in I} \mathbb{E}\left[ |X_{i}|\cdot \mathbf{1}(A_{i}) \right]<\epsilon.
 \]
-\begin{enumerate}[label = (\roman*)]
+\begin{itemize}
 	\item A UI family is bounded in $ \mathcal{L}^{1} $. 
 	\item If a family $ (X_{i})$ is bounded in $ \mathcal{L}^{p} $, $ p>1$, then it is also UI.
-\end{enumerate}
+\end{itemize}
 
 \begin{boxlemma}\label{lemma: UI a.s. conv}
 	Let $ (X_{n})_{n\in \N}$, $ X$ be in $ \mathcal{L}^{1} $ and $ X_{n}\stackrel{n\to \infty}{\longrightarrow}X$ a.s. Then $ X_{n}\stackrel{n\to \infty}{\longrightarrow}$ in $ \mathcal{L}^{1} $ if and only if $ (X_{n})_{n\in \N}$ is UI.
 \end{boxlemma}
+
+\begin{theorem}\label{thm: cond exp UI family}
+	Let $ X\in \mathcal{L}^{1}$. The family $ \{ \mathbb{E}\left[ X| \mathcal{G} : \mathcal{G} \subset \F  \right]\}$ is uniformly integrable (UI).
+
+\end{theorem}
+\begin{proof}
+    Need to show for all $ \epsilon>0$, there exists $ 
+    \lambda$ large enough such that for all $ \mathcal{G}\subset \F$
+    \[
+    \begin{array}{ll}
+	    &\mathbb{E}\left[ || \mathbb{E}\left[ X \mathcal{G} \right] \cdot \mathbf{1}(|\mathbb{E}\left[ X \mathcal{ G} \right] |>\lambda)\right] <\epsilon\\
+	    &\leq \mathbb{E}\left[  \mathbb{E}\left[ |X| | \mathcal{G} \right]\cdot \mathbf{1}(|\smash{\underbrace{\mathbb{E}\left[ X| \mathcal{G}|\right]}_{ \mathcal{G}-\text{measurable}}}|>\lambda) \right].
+    \end{array}
+    \]
+
+    Since $ X\in \mathcal{L}^{1} $, for all $ \epsilon>0$, there exists $ m\delta >0$ such that if $ A\in \F$, $ \PP(A)<\delta$, then $ \mathbb{E}\left[ |X| \cdot \mathbf{1}(A)\right]<\epsilon$. Now, 
+    \[
+    \begin{array}{ll}
+        \PP(|\mathbb{E}\left[ X \mathcal{G} \right]|>
+	\lambda) &\stackrel{\text{Markov}}{\leq} \frac{\mathbb{E}\left[ |\mathbb{E}\left[ X  \mathcal{G} \right]| \right]}{\lambda}\\ 
+		 &\leq \frac{\mathbb{E}\left[  \mathbb{E}\left[ |X|  \mathcal{G}\right] \right]
+}{\lambda} = \frac{\mathbb{E}\left[ |X| \right]}{\lambda}.
+    \end{array}
+    \]
+    Take $\lambda =  \frac{\mathbb{E}\left[ |X| \right]}{\lambda}$, then we are done.
+\end{proof}
+
+\begin{boxdef}\label{def: UI mg}
+$ X = (X_{n})_{n\in \N}$ is called UI (super/sub) martingale if it is a (super/sub) martingale and $ (X_{n})_{n\geq 0}$ is UI.
+\end{boxdef}
+
+
+\begin{examplesblock}{Examples:}\label{examples: 4}
+	Let $ X_{1}, X_{2}, \cdots$ be an iid sequence with $ \PP(X_{1}=0) = \PP(X_{1}=2)=1/2$. Set $ Y_{n} = X_{1}\cdotX_{2}\cdot \cdots \cdot X_{n}$, which can be seen to be a martingale. Also have $ \mathbb{E}\left[ Y_{n} \right]=1$ for all $ n\in \N$ and $ Y_{n}\stackrel{n\in \N}{\longrightarrow}Y_{\infty}=0$ a.s. by the martingale convergence theorem, not \underline{not} in $ \mathcal{L}^{1} $ (because it is not UI).
+\end{examplesblock}
+
+
+\begin{theorem}\label{thm: UI mg L1 conv them}
+Let $ X$ be a martingale. Then the following are equivalent: 
+\begin{enumerate}
+	\item $ X$ is UI.
+	\item $ X$ converges a.s. and in $ \mathcal{L}^{1} $ to $ X_{\infty}$ as $ n\to \infty$.
+	\item There exists $ Z\in \mathcal{L}^{1} $ such that $ X_{n} = \mathbb{E}\left[ Z|\F_{n} \right]$ for all $ n\geq 0$.
+\end{enumerate}
+
+
+\end{theorem}
+
+\begin{proof}
+	\underline{$ 1)\implies 2)$:} $ X$ is bounded in $ \mathcal{L}^{1} $ implies (by the martingale convergence theorem), $ X_{n}\to $ a.s. Since $ X_{n}$ is UI, then $ X_{n}\to X_{\infty}$ in $ \mathcal{L}^{1} $.\\ 
+
+	\underline{$ 2)\implies 3)$:} Set $ Z= X_{\infty}$. Need to show: $ X_{n} = \mathbb{E}\left[ X_{\infty}|\F_{n} \right]$ a.s. Indeed, 
+	\[
+	\begin{array}{ll}
+		\norm{X_{n}-\mathbb{E}\left[ X_{\infty}|\F_{n} \right]}_{1} &\stackrel{m\geq n}{=} \norm{ \mathbb{E}\left[ X_{m}-X_{\infty} |\F_{n}\right]}_{1} \\ 
+									    &\leq \norm{X_{m}-X_{\infty}}_{1}\stackrel{m\to \infty}{\longrightarrow} 0. 
+	\end{array}
+	\]
+
+	\underline{$ 3)\implies 1)$:} The tower property implies $ (X_{n})_{n\in \N}$ is a martingale and the previous theorem implies that $ (X_{n}_{n\in \N})$ is UI.
+\end{proof}
+
+
+\begin{remark}
+    \begin{enumerate}
+	    \item We get as before, $ X_{\infty} = \mathbb{E}\left[ Z|\F_{\inft} \right]$ a.s., where $ \F_{\infty} = \sigma(X_{n}:n\geq 0)$. 
+	    \item It $ X$ were a UI super/sub martingale, then we would get $ \mathbb{E}\left[ X_{\infty}|\F_{n} \right]\stackrel{\geq \text{sub}}{\leq} X_{n}$ (check!).
+    \end{enumerate}
+    
+\end{remark}
+
+
+$ X$ is UI implies $ X_{n}\to X_{\infty}$ in $ \mathcal{L}^{1} $ and a.s. Now let $ T$ be a stopping time. We can then define 
+\[
+X_{T} =\displaystyle\sum^{\infty}_{n=0}X_{n}\cdot \mathbf{1}(T=n) + X_{\infty}\cdot \mathbf{1}(T=\infty).
+\]
+
+\begin{theorem}[Optional stopping theorem for UI martingales]\label{thm: OST for UI mg}
+Let $ X$ be a UI martingale and let $ S, T$ be stopping times with $ S\leq T$. Then 
+\[\mathbb{E}\left[ X_{T}|\F_{S} \right] = X_{S} \quad \text{a.s.}
+\]
+
+\end{theorem}
+
+\begin{proof}
+    We know that $ X_{n} = \mathbb{E}\left[ X_{\infty}\F_{n} \right]$ a.s. since $ X$ is UI. It suffices to prove that for any stopping times $ T$, $ \mathbb{E}\left[ X_{\infty}|\F_{T} \right] = X_{T}$ a.s. Indeed, $ \mathbb{E}\left[ X_{T}|\F_{S} \right] = \mathbb{E}\left[ \mathbb{E}\left[ X_{\infty}|\F_{T} \right]|\F_{S} \right]$ and since $ S\leq T$we have $ \F_{S}\subseteq \F_{T}$ and hence the tower property would give: 
+    \[
+    \mathbb{E}\left[ X_{T}|\F_{S} \right] = \mathbb{E}\left[ X_{\infty}|\F_{S} \right] = X_{S}
+    \]
+    a.s. 
+    Thus, we need to show: for all $ T$ stopping times, $ \mathbb{E}\left[ X_{\infty}|\F_{T} \right] = X_{T}$ a.s. 
+
+    \begin{enumerate}
+	    \item \underline{NTS:} $ X_{T}\in \mathcal{L}^{1} $:
+		    \[
+		    \begin{array}{ll}
+		        \mathbb{E}\left[ |X_{T}| \right] &=\displaystyle\sum^{\infty}_{n=0}\mathbb{E}\left[ |X_{n}\cdot \mathbf{1}(T=n)| \right]+ \mathbb{E}\left[ |X_{\infty}|\cdot \mathbf{1}(T=\infty) \right]  \\
+							 &\stackrel{\text{have $ X_{n}=\mathbb{E}\left[ X_{\infty}|\F_{n} \right]$}}{\leq}\displaystyle\sum^{\infty}_{n=0} \mathbb{E}\left[  \mathbb{E}\left[ |X_{\infty}\F_{n}| \right]\cdot \overbrace{\in \F_{n}}^{\mathbf{1}(T=n)} \right]\\ 
+							 &+ \mathbb{E}\left[ |X_{\infty}\cdot \mathbf{1}(T=\infty)| \right]\\ 
+							 &=\displaystyle\sum^{\infty}_{n=0} \mathbb{E}\left[ |X_{\infty}|\cdot \mathbf{1}(T=n) \right] + \mathbb{E}\left[ |X_{\infty}\cdot \mathbf{1}(T = \infty)| \right]\\ 
+							 &= \mathbb{E}\left[ |X_{\infty}| \right]<\infty
+		    \end{array}
+		    \]
+		    as $ X_{\infty}\in \mathcal{L}^{1} $. It is also not hard to check that $ X_{T}$ is $ \F_{T}-$measurable.
+\item \underline{NTS:} for all $ B\in \F_{T}$: $ \mathbb{E}\left[  X_{\infty}\cdot \mathbf{1}(B) \right] = \mathbb{E}\left[ X_{T}\cdot \mathbf{1}(B) \right]$
+	\[
+	\begin{array}{ll}
+		\mathbb{E}\left[ X_{T}\cdot \mathbf{1}(B) \right] &=\displaystyle\sum^{\infty}_{n=0} \mathbb{E}\left[ X_{n}\cdot \underbrace{\mathbf{1}(T=n)\cdot \mathbf{1}(B)}_{\in \F_{n}} \right]  \\
+								  &+ \mathbb{E}\left[ X_{\infty} \\\cdot \mathbf{1}(T=\infty)\cdot \mathbf{1}(B)\right]\\ 
+								  &=\displaystyle\sum^{\infty}_{n=0}\mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(T=n) \cdot \mathbf{1}(B)\right]\\ 
+								  &= \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(B) \right]
+	\end{array}
+	\]
+	
+    \end{enumerate}
+
+\end{proof}
+
+
+\begin{boxdef}[Backwards martinagles]\label{def: backwards mg}
+Let $ \cdots \subseteq \mathcal{G}_{-2}\subseteq \mathcal{G}_{-1}\subseteq \mathcal{G}_{0} $ be a decreasing family of sub sigma algebras of $ \F$. We call $ X = (X_{n})_{n\leq 0}$ a \underline{backwards martingale} if $ X_{o}\in \mathcal{L}^{1} $ and for all $ n\leq -1$ $ \mathbb{E}\left[ X_{n+1}| \mathcal{G}_{n} \right] = X_{n}$ a.s. By the tower property, $ \mathbb{E}\left[ X_{0} | \mathcal{G}_{n} \right] = X_{n}$ for all $ n\leq 0 $. Since $ X_{0}\in \mathcal{L}^{1} $, a backwards martingale is automatically UI. 
+\end{boxdef}
+
+
+\begin{theorem}[ $ \mathcal{L}^{p}$/a.s. backwards martingale convergence theorem]\label{thm: backwards mg conv theorem}
+	Let $ X$ be a backwards martingale with $ X_{0}\in \mathcal{L}^{p} $, $ 1\leq p <\infty$. Then $ X_{n}\to X_{-\infty}$ as $ m\to -\infty$ a.s. and in $ \mathcal{L}^{p} $ and $ X_{-\infty} = \mathbb{E}\left[ X_{o}| \mathcal{G}_{-\infty} \right]$ a.s., where $ \mathcal{G}_{-\infty} =\displaystyle\bigcap_{n\leq 0} \mathcal{G}_{n} $.
+\end{theorem}
+
+
+\begin{proof}
+	Set $ \F_{k} = \mathcal{G}_{-n+k}$, $ 0\leq k \leq n$. This is an increasing filtration and $ (X_{-n+k})_{0\leq k \leq n}$ is $ \F_{k}-$martingale. Let $ N_{-n}([a,b], X)$ be the number of upcrossings of the interval $ [a,b]$ between $ -n$ and $ 0$. Doob's upcrossing inequality gives:
+	\[
+		(b-a)\cdot \mathbb{E}\left[ N_{-n}([a,b], X) \right]\leq \mathbb{E}\left[ (X_{n}-a)^{-} \right].
+	\]
+As before, we get that $ X_{n}\to X_{-\infty}$ as $ n\to -\infty$ a.s. We also have $ X_{-\infty} $is $ \mathcal{G}_{-\infty}-$measurable. Also observe that n$ X_{o}\in \mathcal{L}^{p} $ implies $ X_{n}\in \mathcal{L}^{p} $ for all $ n\leq 0$.\\ 
+
+\mymark{Lecture 9} $ X_{n} = \mathbb{E}\left[ X_{n}| \mathcal{G}_{n} \right]$ a.s. (backwards martingale). If $ X_{n}\in \mathcal{L}^{p} $, $ p\in [1,\infty)$ $ X_{n\to X_{-\infty}}$ a.s. $ n\to -\infty$ a.s. and $ X_{-\infty}$ is $ \mathcal{G}_{-\infty} =\displaystyle\bigcap_{n\leq 0} \mathcal{G}_{n}-$measurable.
+
+\end{proof}
+
+Observe we have that $ X_{n}\in \mathcal{L}^{p} $ by conditional Jensen and using Fatou, we obtain
+$ X_{-\infty}\in \mathcal{L}^{p} $. Now we need to show that $ X_{n}\to X_{-\infty}$ in $ \mathcal{L}^{p} $. Indeed, 
+
+\[
+\begin{array}{ll}
+    |X_{n}-X_{-\infty}|^{p} &= |\mathbb{E}\left[ X_{0}| \mathcal{G}_{n} \right]-\mathbb{E}\left[ X_{-\infty}| \mathcal{G_{n}} \right]|^{p} \\
+			    & = |\mathbb{E}\left[ X_{0]-X_{-\infty}| \mathcal{G}_{n}} \right]|^{p} \\ 
+			    &\stackrel{\text{Jensen}}{\leq}\displaystyle\underbrace{\mathbb{E}\left[ |X_{0}-X_{-\infty}|^{p} | \mathcal{G }_{n}\right]}_{\text{UI family}}. 
+\end{array}
+\]
+Hence, $ (|X_{n}-X_{-\infty}|^{p})_{n\leq 0}$ is UI, hence giving $ \mathcal{L}^{1} $ convergence.\\
+
+\underline{NTS:} $ X_{-\infty} = \mathbb{E}\left[ X_{o}| \mathcal{G_{-\infty}} \right]$ a.s.\\ 
+
+Let $ A\in \mathcal{G}_{-\infty} =\displaystyle\bigcap_{n\geq 0} \mathcal{G}_{n} $ implies that $A \in \mathcal{G}_{n}$ for all $ n\leq 0$. Hence, $ \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{0}\cdot \mathbf{1}(A) \right]$, for all $ n\leq 0$. Take $ n\to -\infty$ and use $ \mathcal{L}^{1} $ convergence to get $ \mathbb{E}\left[ X_{-\infty}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{0}\cdot \mathbf{1}(A) \right]$ to conclude.
+
+
+\section{Applications of martingales}\label[{sec: applications of mgs}
+
+\begin{theorem}[Kolmogorov's $ 0-1$ law]\label{thm: Kolmogorov's 0-1}
+	Let $ (X_{i})$ be iid and for all $ n\in \N$, $ \F_{n} = \sigma(X_{k}:k\geq n)$, $ \F_{\infty} =\displaystyle\bigcap_{n\geq 0}\F_{n} $. Then, $ \F_{\infty}$ is trivial, i.e. for all $ A'in 'F_{\infty}$, $ \PP(A)\in \{0,1\}$.
+\end{theorem}
+
+
+\begin{proof}
+    Let $ A\in \F_{\infty}$. Define $ \mathcal{G_{n } = \sigma(X_{n }: k\leq n)}$ and $ \mathcal{G}_{\infty} = \sigma (\mathcal{G}_{n}, n\geq )$. Now, we have that $ \mathbb{E}\left[ \mathbf{1}(A)| \mathcal{G}_{n} \right]$ is a martingale and 
+    \[
+	    \mathbb{E}\left[ \mathbf{1}(A) | \mathcal{G}_{n}\right] \stackrel{n\to \infty}{\longrightarrow} \mathbb{E}\left[ \mathbf{1}(A)| \mathcal{G}_{\infty} \right] \quad \text{ a.s.}
+    \]
+    Now, $ A\in \F_{\infty}$ implies that $ A\in \F_{n+1}$ and also have $ \mathcal{G}_{n}\perp \F_{n+1}$ and $ \mathbb{E}\left[ \mathbf{1}(A) | \mathcal{G}_{n}\right] = \PP(A)$ a.s., $ \mathbb{E}\left[ \mathbf{1}(A) | \mathcal{G_{\infty}} \right] = \mathbf{1}(A)$ a.s. since $ \F_{\infty}\subseteq \mathcal{G}_{\infty}$ implies that $ A\in \mathcal{G}_{\infty}$. So $ \PP(A) = \mathbf{1}(A)$ a.s. finally giving $ \PP(A) \in \{0,1\}$.   
+\end{proof}
+
+
+\begin{theorem}[Strong law of large numbers]\label{thm: slln}
+Let $ (X_{i})_{i\in I}$ be an iid sequence in $ \mathcal{L}^{1} $ with $ \mathbb{E}\left[ X_{1} \right]$. Define $ S_{n} = X_{1}+\cdots X_{n}$. Then $ \frac{S_{n}}{n}$ converges a.s. and in $ \mathcal{L}^{1} $ to $ \mu$ as $ n\to \infty$ a.s.
+\end{theorem}
+
+\begin{proof}
+    Define $\mathcal{G} = \sigma(S_{n}, S_{n+1}\cdots)  = \sigma(S_{n}, X_{n+1}, \cdots)$. For $ n\leq -1$, $ M^{n} = \frac{S_{-n}}{-n}$. We will show that $ (M_{n})_{n\leq -1}$ is a backwards martingale with respect to $ (\mathcal{G}_{-n}_{n\leq -1} )$. Indeed, 
+    \[
+    \begin{array}{ll}
+	    \mathbb{E}\left[ M_{m+1}|\mathcal{G}_{-m}  \right] &= M_{-m}  \quad \text{a.s. for } m\leq -1\\         &= \mathbb{E}\left[ \frac{S_{-m-1}}{-m-1} |\mathcal{G}_{-m}  \right] \stackrel{\tet{set }n = -m}{=} \mathbb{E}\left[ \frac{S_{n-1}}{n-1} | \mathcal{G}_{n}  \right]\\ 
+							       & = \mathbb{E}\left[ \frac{S_{n-1}}{n-1}| S_{n-1}, X_{n+1}\cdots \right]\\ 
+							       &= \mathbb{E}\left[ \frac{S_{n}-X_{n}}{n-1}S_{n} \right] \\ 
+							       & = \frac{S_{n}}{n-1}-\mathbb{E}\left[ \frac{X_{n}}{n-1}|S_{n} \right].
+    \end{array}
+    \]
+    Now since $ S_{n} = X_{1} +\stackrel{\text{iid}}{\cdots}+X_{n}$, we have that $ \mathbb{E}\left[ X_{k}|S_{n} \right]= \mathbb{E}\left[ X_{1}| \right]S_{n}$ and so $ \frac{S_{n}}{n-1}-\frac{1}{n-1} \left( \frac{S_{n}}{n} \right) = \frac{S_{n}}{n-1} \left( \frac{n-1}{n} \right) = \frac{S_{n}}{n}$. Hence $ \frac{S_{n}}{n} \stackrel{n\to \infty}{\longrightarrow} Y$ a.s. and in $ \mathcal{L}^{1} $measurable for all $ k\geq 0$. Thus $ Y$ is $\displaystyle\underbrace{\bigcap_{k} \sigma(X_{k+1}, \cdots )}_{\text{Kolmogorov 0-1 law}\implies \text{trivial}}-$measurable. So there exists $ c\in \R$ such that $ \PP(Y = c)  = 1$. So $ \frac{S_{n}}{n}\stackrel{n\to \infty}{\longrightarrow}$ in $ \mathcal{L}^{1} $ and hence $ c = \mathbb{E}\left[ Y \right] = \lim_{i \to \infty} \mathbb{E}\left[ \frac{S_{n}}{n} \right] = \mu$ and so finally $ c = \mu$. 
+\end{proof}
+
+\begin{theorem}[Radon-Nikodym Theorem]\label{thm: radon nokodym thm}
+Let $ P$ and $ Q$ be two probability measures on the space $ (\Omega, \F, \PP)$. Suppose that $\F $ is countable generated, i.e. there exists a sequence $ (F_{n})_{n\in \N}$ such that $ \F = \sigma(F_{n}: n\in \N)$. Then the following are equivalent: 
+
+\begin{enumerate}
+	\item For all $ A\in \F$, $\PP(A) = 0$ implies $ Q(A) = 0$. $ (Q<<P)$.
+	\item For all $ \epsilon >0$, there exists $ \delta>0$ such that if $ A\in \F$ with $ \PP(A)<\delta$, then $ Q(A)<\epsilon$. 
+	\item There exists a non-negative random variable $ X$ such that $ Q(A) = \mathbb{E}\left[ X\cdot \mathbf{1}(A) \right]$, for all $ A\in \F$.
+\end{enumerate}
+
+\end{theorem}
+
+\begin{remark}
+$ X$ is called a version of the \underline{Radon-Nikodym derivative} of $ Q$ with respect to $ P$, or $ X = \frac{\diff  Q}{\diff  P}$ on $ \F $ a.s.
+\end{remark}
+
+
+\begin{proof}
+	\underline{$ 1)\implies 2):$} Suppose $ 2)$ does not hold, then there exists an $ \epsilon>0$ such that for all $n\in \N$, there exist $ A_{n}$ with $ P(A_{n})\leq \frac{1}{n^{2}}$ and $ Q(A_{n})\geq \epsilon$. Now, since $\displaystyle\sum^{\infty}_{n=1}P(A_{n})<\infty$ Borel-Cantelli implies $ P(A_{n}\text{ i.o})=0 $ and so $ Q(A_{n}) = 0$. However, 
+	\[
+	\begin{array}{ll}
+	\{A_{n} \text{i.o.} \} &= \bigcap_{n} \bigcup_{k\geq n} A_{k} \implies Q(A_{n}\text{ i.o})  \\
+	     &= \lim_{n \to \infty} Q \left( \bigcup_{k\geq n } A_{n}\right)\\ 
+	     &\geq  \lim_{n \to \infty} Q(A_{n})\geq \epsilon \,
+	\end{array}
+	\]
+a contradiction.	
+
+\underline{$ 3) \implies 1):$} trivial. \\ 
+
+\underline{$ 2) \implies 3):$} Let $ \mathcal{A}_{n} = \{H_{1}\cap \cdots\cap H_{n}:H_{i} = F_{i} \text{ or } F_{i}^{c} \text{ for all } i \}$. In other words $ \mathcal{A}_{n} = \left\{F_{1}, F_{2}, \cdots, F_{n}, \bigcup_{k\geq n} F_{k}\right\}$. Let $ \F_{N} = \sigma (\mathcal{A}_{n})$, so $ \F_{n}$ is a filtration.\\ 
+
+Now defined
+\[
+X_{n}(\omega) =\displaystyle\sum_{A\in \mathcal{A_{n}}}\frac{Q(A)}{P(A)} \cdot \mathbf{1}(\omega \in A). 
+\]
+Thus, for all $ A|in \F_{n}$, $ \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(A) \right] = Q(A) = \stackrel{F_{n}\subseteq\F_{n+1}}{=} \mathbb{E}\left[ X_{n+1}\cdot \mathbf{1}(A) \right]
+$. So $ (X_{n})_{n\in \N}$ is indeed a martingale. Furthermore $ \mathbb{E}\left[ X_{n} \right] = Q(\Omega)=1$ (and since $ X_{n}\geq 0$ for all $ n\geq 0$), we have that $ X_{n}$ is an $ \mathcal{L}^{1 }$ bounded martingale. Thus, $ X_{n}\stackrel{n\to \infty}{\longrightarrow}X_{\infty}$ a.s.\\ 
+
+Now we show that $ (X_{n})_{n\in \N}$ is UI: 
+\[
+\begin{array}{ll}
+	\PP(X_{n}\geq \lambda)&\leq 1/\lambda<\infty \\
+     &\leq \delta
+\end{array}
+\]
+using Markov's inequality and taking $ \lambda = 1/\delta$. Thus, $ \mathbb{E}\left[ X_{n}\cdot \mathbf{1}(X_{n}\geq \lambda) \right] = Q(X_{n}\geq \lambda)<
+epsilon$. Thus $ (X_{n})_{n\in \N}$ is UI and so $ X_{n}\to X_{\infty}$ in $ \mathcal{L}^{1} $.\\ 
+
+Now define $ \tilde{Q}(A) = \mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right]
+$. Want to show: $ \tilde(Q)(A) = Q(A)$ for all $ A\in \F$. Indeed, we have $ X_{n} = X_{\infty}|\F_{n}$. Now if we let for a moment $ A \in \bigcup_{n\geq 0}\F_{n} $, there exists some $ N\in \N$ such that $ A\in \F_{N}$. Thus, 
+\[
+	\displaystyle\underbrace{\mathbb{E}\left[ X_{N}\cdot \mathbf{1}(A) \right] }_{= Q(A)} =\displaystyle\underbrace{\mathbb{E}\left[ X_{\infty}\cdot \mathbf{1}(A) \right] }_{=\tilde{Q}(A)}.
+\]
+
+Hence, $ Q = \tilde{Q}$ on a $\pi-$system, $ \left( \bigcup_{n} \F_{n} \right)$, that generates $ \F$, and by the extension theorem we have that $ Q \equiv \tilde{Q}$ everywhere.
+\end{proof}
+
+\mymark{Lecture 10}\section{Continuous Time processes}\label{sec: cont time processes}
+Let $X  =(X_{n})_{n\in \N} $ be a process, that is for all $ n\in \N$ $ X_{n}$ is a random variable on some underlying probability space $ (\Omega, \F ,\PP))$. $ X$ can also be viewed as the map
+\[
+X:(\omega,n)\mapsto X_{n}(\omega).
+\]
+and observe that this map is $ \F\otimes \mathcal{P}(\N) = \sigma(\{A\times \{k\}: A\in \F, k\in \N\})$ as long as $ X_{n}$ is $ \F-$measurable for all $ n\in \N$. Now we consider random variables taking values in the spaces $ \R^{d}$, $ d\geq 1$. \\ 
+
+\begin{boxdef}[Stochastic process]\label{def: stoch proces}
+	The family $ (X_{t})_{t\in \R_{+}}$ is called a \underline{stochastic process} if for all $ t$ positive $ X_{t}$ is a random variable.
+\end{boxdef}
+
+
+\begin{remark}
+    The map $ X:(\omega, t)\mapsto X_{t}(\omega)$ need not be $ \F\otimes  \mathcal{B}(\R_{+})-$measurable. 
+\end{remark}
+
+\underline{Claim:} If for all $ \omega \in \Omega$, $ \mapsto X_{t}(\omega)$ is a continuous function for $ t\in(0,1]$, then the map $ X:(\omega, t)\mapsto X_{t}(\omega)$ is $ \F\otimes  \mathcal{B}(\R_{+})-$measurable. \\ 
+
+Indeed, by continuity we can write 
+
+\[
+	X_{t}(\omega) = \lim_{n \to \infty}\displaystyle\overbrace{\displaystyle\sum^{2^{n}-1}_{k=0}  \mathbf{1}(t\in (k\cdot 2^{-n}, (k+1)\cdot 2^{-n}])X_{k\cdot 2^{-n}}(\omega) }^{\text{for all }n \text{this sum is} \F\otimes \mathcal{B}((0,1])-\text{meas.} }
+\]
+Thus $ X$ is measurable with as a limit of measurable functions.\\ 
+
+From now onwards, we will always (unless otherwise stated) assume that $ X$ is right-continuous and admits left limits, almost everywhere. \underline{We call such processes cadlag}.
+
+
+We now revisit some of the earlier definition we have made in the discrete setting and extend the to the continuous case. A \underline{filtration} is an increasing family of sigma algebras $ (\F_{t})_{t\in \R_{+}}$ whenever $ t\leq t'$. We say $ X$ is adapted to the filtration above if $ X_{t}$ if $ \F_{t}-$measurable for all $t\in \R_{+}$. A random variable $ T:\Omega \to [0,\infty]$ is called a \underline{stopping time} if for all $ t$, $ \{T\leq t\}\in \F_{t}
+$. Define $ \F_{T} = \{A|in \F: A\cap \{T\leq t\}\in \F_{t} \text{ for all } t\}$ and $ A|in \mathcal{B}(\R)$. Furthermore, $ T_{A} = \displaystyle\inf_{t\geq 0 : X_{t}\in A}$ is \underline{not} always a stopping time.\\ 
+\[
+	\{T_{A}\leq t\} = \bigcup_{s\leq t} \{X_{s}\in A\}\,
+\]
+an uncountable union so not immediately clear whether it in $ \F_{t}$.\\ 
+
+\begin{examplesblock}{Examples: }\label{examples: 5}
+
+		\begin{wrapfigure}{r}{0.3\textwidth}
+		    \centering
+		    \includesvg[width = 0.8\linewidth]{images/stopping time counterexample.svg}
+		    \caption{Illustration of $ X$.}
+		    \label{fig: counterexample stopping time}
+		\end{wrapfigure}
+
+	Let $ J= \left\lbrace
+	\begin{array}{@{}l@{}}
+		1, \text{ with probability} \frac{1}{2} \\
+		-1, \text{ with probability} \frac{1}{2}
+	\end{array}\right.$
+	and 
+	\[	X_{t}(\omega) = \left\lbrace
+	\begin{array}{@{}l@{}}
+		t, \quad t\in [0,1] \\
+	1+ J(t-1), \quad t>1.
+	\end{array}\right.
+	\]
+	Let $(\F_{t})_{t\geq 0} = (\F^{X}_{t})_{t\geq 0}$ and fix $ A\in (1,2)$. Then $ \{T_{A}\leq 1\}\not in \F_{1} = \{\emptyset, \Omega\}$, since $\{T_{A}\leq 1\} = \{J = 1\}$.
+\end{examplesblock}
+
+Again, we say $ X^{T}_{t} = X_{T\land t}$, $ X_{T}(\omega) = X_{T(\omega)}(\omega)$ whenever $ T(\omega)<\infty$.
+
+\begin{boxprop}\label{prop: stopping times continuous}
+	Let $ S,T$ be stopping times and $ X$ a cadlag adapted process. Then
+\begin{enumerate}
+	\item If $ S\leq T$, then $ \F_{S}\subseteq \F_{T}$.
+	\item $ S\land T$ is a stopping time.
+	\item $ X_{T}\cdot \mathbf{1}(T<\infty)$ is $ \F_{T}-$measurable.
+	\item $ X^{T}$ is adapted.
+\end{enumerate}
+
+\end{boxprop}
+
+
+\begin{proof}
+    $ 1), 2)$ are clear (check!) and $ 4)$ is immediate from $ 3)$, since $ X_{T\land t}$ if $ \F_{T\land t}-$measurable and $\F_{T\land t} \subseteq \F_{t}$.\\ 
+
+\underline{proof of $ 3)$:} \underline{Claim:} a random variable $ Z$is $ \F_{T\land t}-$measurable if and only if $ Z\cdot \mathbf{1}(T\leq t)$ is $ \F_{t}-$measurable for all $ t\geq 0$. Indeed, \\ 
+
+\underline{$ \impliedby$):} is true by definition. \\ 
+
+\underline{$ \implies):$} if $ Z = c\cdot \mathbf{1}(A)$, $ A\in \F$, then $ A\in \F_{T}$ which means that $ Z$ is $ \F_{T}-$measurable. Now, if $ Z =\displaystyle\sum_{i}c_{i}\cdot \mathbf{1}(A_{i}) $, a finite sum with $ c_{i}>0$, $ A_{i}\in \F$, then $ Z$ is $ \F_{T}-$measurable.\\ 
+
+\underline{$ Z$ general ($ \geq 0$)}: let $ Z_{n}\uparrow Z$, where 
+\[
+	Z_{n} = 2^{-n}\lfloor 2^n Z\rfloor \land n, \quad \text{ for all } n \in \N.
+\]
+Observe that $ Z_{n}$ are simple for all $ n$ and so by the previous steps $ Z_{n}$ is $ \F_{T}-$measurable and hence so is $ Z$, being an a.s. pointwise limit of measurable functions.\\ 
+
+The case for completely general $ Z$ follows by decomposing $ Z = Z^{+}-Z^{-}$, $ Z^{+} = Z \lor, Z^{-} = (-Z)\lor 0$ and apply the previous case to $ Z^{+}, Z^{-}$.\\ 
+
+Now, by the above claim, it suffice to show: $ X_{T}\cdot \mathbf{1}(T\leq t)$ if $ F_{t}$ measurable for all $ t$. We have $ X_{T} \mathbf{1}(T\leq t) = X_{T}\cdot \mathbf{1}(T<t)+X_{t}\cdot \mathbf{1}(T=t)$. Hence, it suffices to show  that  $ X_{T}\cdot \mathbf{1}(T< t)$ if $ F_{t}$ measurable for all $ t$.\\ 
+
+Define $ T_{n} = 2^{-n}\lceil 2^n T \rceil $, stopping times since 
+\[
+\begin{array}{ll}
+	\{T_{n}\leq t\} &= \{\lceil 2^n T\rceil \leq 2^n t\} \\
+			&= \{2^n T\leq \lfloor 2^n t\rfloor\} = \{T\leq 2^{-n}\lfloor 2^n T\rfloor\}\\ 
+			&\in \F_{2^{-n}\lfloor 2^n T\rfloor}\subseteq \F_{t}.
+\end{array}
+\]
+Also, $ T_{n}\downarrow T$, as $ n\to \infty$. Now by the cadlag property of $ X$,\\ 
+$ X_{T}\cdot \mathbf{1}(T<t) = \lim_{n \to \infty} X_{T_{n}\land t}\cdot \mathbf{1}(T<t)$.\\ 
+
+Furthermore, $ T_{n}$ takes values in $ \mathcal{D}_{n}= \{k\cdot 2^{-n}, k\in \N\}$. Now, 
+\[
+\begin{array}{ll}
+	X_{T_{n}\land t}\cdot \mathbf{1}(T<t) &=\displaystyle\sum_{d\in \mathcal{D}_{n}, d\leq t} \overbrace{X_{d}\cdot \mathbf{1}(T_{n} = d)\cdot \mathbf{1}(T<t)}^{\F_{t}-\text{meas.}} \\
+     &+ X_{t}\cdot \mathbf{1}(T_{n}=t)\cdot \mathbf{1}(T<t).
+\end{array}
+\]
+Hence, $ X_{T}\cdot \mathbf{1}(T<\infty)$ is $ \F_{t}-$measurable as a limit of $ \F_{t}-$measurable functions.
+
+
+\end{proof}
+
+
+\begin{boxprop}\label{prop: stopping time cont process}
+	Let $ X$ be a continuous and adapted process and let $ A$ be a closed set. Then $ T_{A} = \{t\geq 0: X_{t}\in A\}$ is a stopping time.
+\end{boxprop}
+
+
+\begin{proof}
+	\underline{Need to show:} $ \{T_{A}\leq t\} = \left\{ \displaystyle\inf_{s\in \Q, s\leq t} d(X_{s}, A) = 0 \right\}$.
+
+	\underline{$ (\subseteq ):$} $ d(x,A)=$distance of $ x$ from $ A$. Let $ T_{A} = s\leq t$, then there exists a sequence $ s_{n}\downarrow s$, such that $ X_{S_{n}}\in A$. Since $ A$ is closed, we have $ d(X_{s}, A) = 0$ and $ X_{s_{n}}\to X_{s}$, as $ n \to \infty$. Again $ A$ being closed implies that $ d(X_{s}, A) = 0$. The continuity of $ X$ and $ d(\cdot, A)$ means that there exists another sequence $ (q_{n})_{n\in \N}\subseteq \Q$ such that $ q_{n}\uparrow s$ such that $ d(X_{q_{n}}, A)\to 0$ hence $\inf_{s\in \Q, s\leq t} d(X_{s}, A) = 0$. \\ 
+
+	\underline{($\supseteq  $):} If $\inf_{s\in \Q, s\leq t} d(X_{s}, A) = 0$, then there exists a sequence $ (s_{n})_{n\in \N}$ such that $ s_{n}\leq t$ for all $ n$ and $ d(X_{s_{n}, A}\to 0)$ as $ n\to \infty$. Then by compactness, there exists a convergent subsequence of $ s_{n}\to s$ (without relabelling), such that $ s\leq t$ and $ d(X_{s_{n}, A})\to 0$ as $ n\to \infty$ and by continuity we obtain $ d(X_{s}, A) =0$, hence $ X_{s}\in A$ and so $ T_{A}\leq t$.
+
+\end{proof}
+
+\begin{boxdef}\label{def: future sigma algebra}
+	Given a filtration $ (\F_{t})_{t\geq 0}$, we define $ \F_{t^{+}}= \bigcap_{s>t} \F_{s}$, for all $ t\geq 0$. Observe that $ (\F_{t^{+}})_{t\geq 0}$ is a filtration. If for all $ t\geq 0$, $ \F_{t^{+}}$, we say $ (\F_{t})_{t\geq 0}$ is right-continuous. 
+\end{boxdef}
+
+
+\mymark{Lecture 11}\begin{boxprop}\label{prop: open set stopping time wrt future filtration}
+	Let $ X$ be a continuous process, and $ A$ be an \underline{open} set. Then 
+	\[
+		T_{A} = \displaystyle\inf\{t\geq 0: X_{t}\in A\}
+	\]
+	is a stopping time with respect to the filtration $ (\F_{t^{+}})_{t\geq 0}$.
+\end{boxprop}
+
+
+\begin{proof}
+	\underline{Need to show: } for all $ t\geq 0$, $ \{T_{A}\leq t\}\in \F_{t^{+}}$. Have, 
+\[
+\begin{array}{ll}
+	\{T_{A}<s\} &= \displaystyle\bigcup_{q\in \Q, q<s}\displaystyle\underbrace{X_{q}\in A}_{\in \F_{s}}\in \F_{s}  \\
+	\{T_{A}\leq t\} &= \bigcap_{n}\displaystyle\underbrace{\{T_{A}<t+\frac{1}{n}\}}_{\in \F_{t+\frac{1}{n}}} \in \F_{t^{+}}.
+\end{array}
+\]
+\end{proof}
+Let $ (X_{t})_{t\geq 0}
+$ be a stochastic process. It can be viewed, as a random element in the space of functions $ \{f:\R_{+}\to E\}$ endowed with the product sigma-algebra making all projections measurable. Further, let $ \mathcal{C}(\R_{+}, E)$ be the space of all continuous functions and $ \mathcal{D}(\R_{+}, E)$ the space of all cad lag functions. Endow the spaces $ \mathcal{C}, \mathcal{D}$ with the sigma algebra that makes all projections $ \pi_{t}: f\mapsto f_{t}$ measurable for all $ t\geq 0$. This sigma algebra is generated by the cylinder sets 
+\[
+	\left\{ \displaystyle\bigcap_{s\in J} \{f_{s}\in A_{s}: \text{for all } T\subseteq \R_{+}, \text{ finite}, A_{s}\in \mathcal{B}(E)\} \right\}.
+\]
+For $ A$ in the product sigma algebra, we write $ \mu(A) = \PP(X\in A)$ and we call $ \mu$ the law of $ X$. (``$ X_{*}\PP = \mu$``). For every $ J$ finite subset of $ \R_{+}$, write $ \mu_{J}$ for the law of $ (X_{t})_{t\in J}$. The measures $ (\mu_{J})$ are called the finite dimensional marginals of $ X$. The $ \mu_{J}$ completely characterise the law of $ \mu$. This follows because the sets above form a $\pi-$system that generates the sigma fields previously mentioned.
+
+
+\begin{examplesblock}{Examples: }\label{examples: 6}
+	Let $ X = 0$ for all $ t\in [0,1]$ and $ U\sim [0,1]$ (uniform) and $ X_{t'} = \mathbf{1}(U = t)$ for $ t\in [0,1]$. Both of them have the same finite dimensional distributions which are Dirac masses at zero, but the processes are not \underline{equal}. 
+	\[
+	\begin{array}{ll}
+		\PP(X_{t} = 0 \text{ for all } t\in [0,1])) &= 1 \\
+							   \PP(X'_{t} = 0 \text{ for all } t\leq 1) &= 0. \quad \text{ But, }\\ 
+ \PP(X_{t } = X'_{t}) &= 1 \quad \text{ for all } t\in [0,1]. 
+	\end{array}
+	\]
+\end{examplesblock}
+
+\begin{boxdef}\label{def: version processes}
+Let $ X$ and $ X'$ be two processes on $ (\Omega, \F, \PP)$, we say $ X'$ is a version of $ X$ if ($X_{t} = X'_{t}$ a.s.) for all $ t$. That is 
+\[
+\text{For all} t\geq 0: \PP(X_{t} = X'_{t})=1.
+\]
+\end{boxdef}
+
+
+\begin{boxdef}\label{def: sigma null sets}
+Fix a filtered probability space $ (\Omega, \F, (\F_{t})_{t\geq 0}, \PP)$. Set $ \mathcal{N}$ to be the collection of sets of measure zero. Furthermore, set 
+\[
+	\tilde{\F}_{t} = \sigma(\F_{t}, \mathcal{N})
+\]
+for all $ t\geq 0$. If for all $ t$, $ \F_{t} = \tilde{\F}_{t}$, we say that $ (\F_{t})_{t\geq 0}$ satisfies the usual conditions. 
+\end{boxdef}
+
+
+\begin{theorem}[Martingale regularisation theorem]\label{thm: mg reg thm}
+	Let $ (X_{t})_{t\geq 0 }$ be a martingale wrt $ (\F_{t})_{t\geq 0}$. Then, there exists a cadlag process $ (\tilde{X}_{t})_{t\geq 0}$ satisfying for all $ t\geq 0$:
+	\[
+		X_{t} = \mathbb{E}\left[ \tilde{X}_{t}| \F_{t} \right] \quad \text{a.s.}
+	\]
+	and $ X$ is a martingale with respect to the augmented filtration $ (\tilde{\F}_{t})_{t\geq 0}$. If $ (\F_{t)_{t\geq 0}}$ satisfies the usual conditions, then $ \tilde{X}$ is a version of $ X$. 
+\end{theorem}
+
+We start with a Lemma
+\begin{boxlemma}\label{lemma: mg reg lemma}
+Let $ f: \Q_{+}\to \R$ such that for all $ I\subseteq \Q_{+}$ bounded, $ f$ is bounded on $ I$ and for any $ a<b, a,b,\in \Q_{+}$, for all $ I$ bounded and suppose 
+\[
+\begin{array}{ll}
+	\mathcal{N}([a,b], I, f) = \displaystyle\sup\left\{ n\geq 0 : \text{ there exists } 0<s_{1}<t_{1}<\cdots <s_{n}<t_{n},\right. \\ 
+	\left.s_{i}, t_{i}\in I \text{ s.t. } f(s_{i})<a, f(t_{i}>b)\right\}<\infty.
+\end{array}
+\]
+Then, for all $ t\geq 0$, the limits 
+\[
+\lim_{s\uparrow t, s\in \Q_{+}}f(s), \lim_{s\downarrow t, s\in \Q_{+}}f(s)  
+\]
+exist and are finite.
+\end{boxlemma}
+
+\begin{proof}
+	Let $ s_{n}\downarrow t$, the sequence $ (f(s_{n}))$ will converge by the finite upcrossing property (see lemma \ref{lemma: upcrossing lemma}). Now suppose $ t_{n}\downarrow t$ is another such sequence, then combining them (by selecting elements from each sequence in an alternating fashion exploiting convergence) we get a decreasing sequence converging to $ t$ to conclude $ \lim_{n \to \infty} f(s_{n}) = \lim_{n \to \infty}f(t_{n})  $. Finally, $ f$ being bounded gives that both limits are equal and finite.
+\end{proof}
+
+\underline{Goal:} To define $ \tilde{X}_{t} = \lim_{s\downarrow t, s\in \Q_{+}} X_{s}$ on a set of measure $ 1$, and zero otherwise. We now outline below the main steps in the proof of Theorem \ref{thm: mg reg thm}. 
+
+\underline{Steps:}
+\begin{enumerate}
+	\item Show that the limit exists and is finite on a set of measure one. 
+	\item Show that $ \tilde{X}$ is $ \tilde{\F}_{t}-$measurable and satisfies $ \mathbb{E}\left[ \tilde{X}_{t}|\F_{t} \right]$ a.s. for all $ t\geq 0$.
+	\item $ \tilde{X}$ is a $ (\tilde{\F}_{t})_{t\geq 0}$ martingale. 
+	\item $ \tilde{X}$ is cadlag.
+\end{enumerate}
+
+\begin{proof}{(Theorem \ref{thm: mg reg thm})}
+   \begin{enumerate}
+	   \item Let $ I$ be a bounded subset of $ \Q_{+}$. Need to show that $ \PP\left(\displaystyle\sup_{t\in I}|X_{t}|<\infty\right)=1$. Observe that 
+		   \[
+		   \displaystyle\sup_{t\in I}|X_{t}| = \displaystyle\sup_{J \subseteq I, J \text{ finite}}\displaystyle\sup_{t\in J}|X_{t}|.
+		   \]
+		   Now, let $ J = \{j_{1}, \cdots, j_{n}\}\subseteq I$ with $ j_{1}<\cdots j_{n}$ and $ k>\displaystyle\sup I$. Then $ (X_{t})_{t\in J}$ is a discrete time martingale. Hence the maximal inequality in \ref{thm: doob maximal ineq discrete} gives
+		   \[
+		   \lambda \cdot \PP(\displaystyle\sup_{t\in J}|X_{t}|\geq \lambda)\leq \mathbb{E}\left[ |X_{j_{n}}| \right]\leq \mathbb{E}\left[ |X_{k}| \right]
+		   \]	
+		    by the martingale property and Jensen. Now taking the limit as $ J\uparrow I$, 
+	\[
+	 \lambda \cdot \PP\left(\displaystyle\sup_{t\in I}|X_{t}|\geq \lambda\right)\leq \mathbb{E}\left[ |X_{j_{n}}| \right]\leq \mathbb{E}\left[ |X_{k}| \right]
+	\]
+	So, $ \PP \left(\displaystyle\sup_{t\in I}|X_{t}|\geq \lambda \right) = 1$. Now for $ M\in \N$ define $ I_{M} = \Q_{+}\cap [0,M]$, then by the above, 
+	\[
+	\PP \left( \displaystyle\bigcap_{M\in \N} \left\{ \displaystyle\sup_{t\in I_{M}}|X_{t}|<\infty \right\} \right) = 1
+	\]
+	and on the above event, $ X_{t}$  is bounded on bounded intervals of $ \Q_{+}$.
+
+	\mymark{Lecture 12} Let $ a<b$, $ a,b \in \Q_{+}$, $ I\subseteq \Q_{+}$, bounded. Observe that
+	\[
+		\mathcal{N}([a,b], I, X) = \displaystyle\sup_{I \subseteq I, J \text{ finite}} \mathcal{N}([a,b], J, X).
+	\]
+	Now, let $ J = \{j_{1}, \cdots, j_{n}\}\subseteq I$ with $ j_{1}<\cdots j_{n}$ and $ k>\displaystyle\sup I$. Then $ (X_{t})_{t\in J}$ is a discrete time martingale. Now, Doob's upcrossing inequality from \ref{lemma: doob upcrossing} gives
+	\[
+	\begin{array}{ll}
+		(b-a)\cdot \mathbb{E}\left[ \mathcal{N}([a,b], J, X) \right] &\leq \mathbb{E}\left[ (X_{j_{n}}-a)^{-} \right] \\
+	     &\leq \mathbb{E}\left[ (X_{k}-a)^{-} \right].
+	\end{array}
+	\]
+	By monotone convergence, we get 
+\[
+(b-a)\cdot \mathbb{E}\left[ \mathcal{N}([a,b], I, X) \right]<\infty.
+	\]
+	Let $ M\in \N$, $ I_{M} = \Q_{+}\cap [0,M]$ and 
+ \[
+	 \Omega_{0} = \displaystyle\bigcap_{m\in\N} \left( \displaystyle\bigcap_{a<b, a,b\in\Q} \{ \mathcal{N}([a,b], I_{M}, X)<\infty\} \bigcup \left\{ \displaystyle\sup_{t\in I_{m}} |X_{t}|<\infty \right\}\right).
+ \]
+ On $ \Omega_{0}$, from lemma \ref{lemma: mg reg lemma}, $ \lim_{s \downarrow tX_{s}} $ exists and we have $\PP(\Omega_{0})=1$. Now, define 
+ \[
+	 \tilde{X}_{t} = \left\lbrace
+\begin{array}{@{}l@{}}
+	\lim_{s\downarrow t, s\in \Q_{+}} X_{s}, \quad \text{ on }\Omega_{0}    \\
+	0 , \quad\quad\quad\quad\quad \text{ otherwise}. 
+\end{array}\right. 
+ \]
+ Recall $ \tilde{\F}_{t} = \sigma(\F_{t}, \mathcal{N})$ for all $ t\geq 0$. From the definition definition, we see that $ \tilde{X}$ is $ \tilde{\F}-$adapted.\\ 
+
+ It remains to show that $X_{t} =  \mathbb{E}\left[ \tilde{X}_{t}|\F_{t} \right]$ a.s. and $ \tilde{X}$ is cadlag and a martingale. 
+
+\item Let $ t_{n\downarrow} t$, $ t_{n\in \Q_{+}}$, then 
+	\[
+		\tilde{X}_{t} = \lim_{n\to \infty}X_{t_{n}} 
+	\]
+	a.s. Observe that $ (X_{t_{n}})$ is a backwards martingale with respect to the filtration $ (\F_{t_{n}})_{n\in \N}$. SO $ (X_{t_{n}})$ converges a.s. and in $ \mathcal{L}^{1} $. In other words, $ X_{t } = in $ $\mathcal{L}^{1} $. So $ X_{t} = \mathbb{E}\left[ \tilde{X}_{t}|\F_{t}\right]$ a.s.
+
+\item We now prove that $ \tilde{X}$ is a martingale. Let $ s<t$, we need to show that $ \mathbb{E}\left[ \tilde{X}_{t}|\tilde{\F}_{s} \right] = 'tilde{X}_{s}$ a.s.\\ 
+
+	\underline{Claim:} $ \mathbb{E}\left[ X_{t}|\F_{t^{+}} \right] = \tilde{X}_{s}$ a.s. Indeed, first observe that for $ Y$ any random variable and $ \mathcal{G}$ a sigma algebra it follows that
+	\[
+	\mathbb{E}\left[ Y| \sigma \mathcal{G}, \mathcal{N}) \right] = \mathbb{E}\left[ X | \mathcal{G} \right]
+	\]
+	which is clear because the conditional expectation is defined almost surely and $ \mathcal{N}$ only contains sets of measure zero.\\ 
+
+Now, fix $ s<t$ and let  $ s_{n}\downarrow s$, $ s_{n}\in \Q_{+}$, $ s_{0}<t$. We have by the  tower property that $ (\mathbb{E}\left[ X_{t}|\F_{s_{n}} \right])_{n\in \N}$ is a backwards martingale and so it converges a.s. and in $ \mathcal{L}^{1} $ to $ \mathbb{E}\left[ X_{t}|\F_{t^{+}} \right]$. But $ \mathbb{E}\left[ X_{t}|\F_{s_{n}} \right] = X_{s_{n}}$ a.s. and $ X_{s_{s}}\to \tilde{X}_{s}$ a.s. as $ n'to \infty$. So $ \tilde{X}_{s} = \mathbb{E}\left[ X_{t}|\F_{s^{+}} \right]$.
+	
+\item Finally, we show that $\tilde{X}$ is a cadlag. First we show that $ \tilde{X}
+	$ is right continuous. Suppose \underline{not}. Then, there exists $ \omega \in \Omega_{0}$ and some $ t\geq 0$ such that $ \tilde{X}(\omega)$ is not right continuous at $ t$. That is there exists a sequence $ s_{n}\downarrow t$ such that $ |\tilde{X}_{s_{n}}-\tilde{X}_{t}|\geq \epsilon >0$ (for some positive $ \epsilon$). By the definition of $ \tilde{X}$, there exists another sequence $ s'_{n}>s_{n}$, for all $ n\in \N$ and $ s^{'}_{n}\downarrow t$, $ s'_{n}\in \Q_{+}$ such that $ |\tilde{X}_{s_{n}}-X_{s_{n}'}|\leq \frac{\epsilon}{2}$. So $ |X_{s^{'}_{n}}-\tilde{X}_{t}|\geq \frac{\epsilon}{2}$, a contradiction since $ s'_{n}\downarrow t$, $ s'_{n}\in \Q_{+}$. The argument for left continuity is entirely analogous. 
+	
+   \end{enumerate}
+    
+\end{proof}
+
+\begin{examplesblock}{Examples: }\label{examples: 7}
+Let $ \xi , \eta$ be independent iid  symmetric Bernoulli with success probability $ 1/2$. Define
+\[
+X_{t = }\left\lbrace
+\begin{array}{@{}l@{}}
+    0, \quad t<1 \\
+    \xi, \quad t =1 \\ 
+    \xi+\eta, \quad t>1.
+\end{array}\right.
+\]
+and let $ \F_{t} = \sigma(X_{s}, s<\leq)$ for all $ t\geq 0$. Observe that $ X$ is an $ (\F_{t})_{t\geq 0}$ martingale. Also, $ \tilde{X}$ satisfies $ X_{t} = \mathbb{E}\left[ \tilde{X}_{t}|\F_{t} \right]$ where 
+\[
+	\tilde{X}_{t} = \left\lbrace
+	\begin{array}{@{}l@{}}
+	    0, \quad t<1 \\
+	    \xi+\eta, \quad t\geq 1.
+	\end{array}\right.
+\]
+Furthermore, $ \F_{1} = \sigma(\xi)$ and $ \F_{t} = \sigma(\xi, \eta)$ for all $ t>1$, $ \tilde{X}$ is cadlag with respect to $ \tilde{F}$. Observe finally that $ \F_{1^{+}} = \sigma(\xi, \eta
+)$ and so the filtration $ \F$ is not right continuous and $ \tilde{X}$ is not a version of $ X$. We thus see that the right-continuity of $ (\F_{t})_{t\geq 0}$ is necessary in Theorem \ref{thm: mg reg thm}. 
+\end{examplesblock}
+
+\begin{theorem}[Almost sure martingale convergence theorem]\label{thm: a.s. mg conv thm cont time}
+Let $ X$ be a cadlag martingale bounded in $ \mathcal{L}^{1} $. Then $ X_{t}\to X_{\infty}$ a.s. with $ X_{\infty}\in \mathcal{L}^{1}(\F_{\infty}) $. 
+\end{theorem}
+
+\begin{proof}
+	Let $ I_{M} = \Q_{+}\cap[0,M]$. Then Doob's upcrossing inequality \ref{lemma: doob upcrossing} from the discrete setting and a monotone convergence argument give for $ a<b, a,b \in \Q_{+}$
+	\[
+		(b-a)\cdot \mathbb{E}\left[ \mathcal{N}([a,b] , I_{M}, X) \right]\leq a + \displaystyle\sup_{t\geq 0}\mathbb{E}\left[ |X_{t}| \right].
+	\]
+	Taking $ M\to \infty$ gives $ \mathcal{N}([a,b], \Q_{+}, X)<\infty$ a.s. Hence, for the event
+	\[
+		\Omega_{0} = \displaystyle\bigcap_{a<b, a,b\in \Q+} \left\{ \mathcal{N}([a,b], \Q_{+}, X)<\infty \right\}
+	\]
+we have $ \PP(\Omega_{0})=1$ and on $ \Omega_{0}$, $ \lim_{q\to \infty, q\in \Q_{+}} X_{q}$ exists and is finite. We thus have $ X_{\infty} = \lim_{q\to \infty, q\in \Q_{+}} X_{q}$ on $ \Omega_{0}$.  Now for all $ \epsilon>0$, there exists $ q_{0}$ such that $ |X_{q_{0}}-X_{\infty}|\leq \frac{\epsilon}{2}$ for all $ q>q_{0}$, $ q\in \Q_{+}$. Now let $ t>q_{0}$. Then there exists some $ q>t$, $ q\in \Q_{+}$ such that $ |X_{t}-X_{q}|\leq \frac{\epsilon}{2}$ by right continuity of $ X$. So $ |X_{t}-X_{\infty}|\leq\epsilon$.
+
+\end{proof}
+
+
+\begin{theorem}[Doob's maximal inequality]\label{thm: doob maximal ineq cont time}
+Let $ X$ be a cadlag martingale, $ X^{*}_{t} = \displaystyle\sup_{s\leq t}|X_{s}|$. Then for all $ \lambda>0$, 
+\[
+\lambda\cdot \PP(X^{*}_{t}\geq \lambda)\leq \mathbb{E}\left[ |X_{t}|\cdot \mathbf{1}(X^{*}_{t}\geq \lambda) \right] \leq \mathbb{E}\left[ |X_{t}| \right].
+\]
+
+\end{theorem}
+
+\begin{proof}
+    Have 
+    \[
+	    \displaystyle\sup_{s\leq t}|X_{s}| = \displaystyle\sup_{s\in \{t\}\cup(\Q_{+}\cap[0,t])}|X_{s}|
+    \]
+    and use the beginning of the proof of theorem \ref{thm: mg reg thm}.
+\end{proof}
+
+
+\begin{theorem}[Optional stopping theorem for cadlag UI martingales]\label{thm: ost for UI }
+Let $ X$ be a cadlag UI martingale, then for all $ S\leq T$ stopping times 
+\[
+	\mathbb{E}\left[  X_{T}|\F_{S} \right] = X_{S} \quad \text{ a.s.}
+\]
+\end{theorem}
+
+
+\begin{proof}
+	Let $ T_{n} = 2^{-n}\rceil 2^nT\rceil$ and $ S_{n} = 2^{-n}\lceil 2^n S\rceil$. Both are stopping times and $ T_{n}'downarrow T$, $S_{n}\downarrow S $ as $ n\to \infty$. \underline{need to show:} for $ A'in \F_{S}$, then $ \mathbb{E}\left[ X_{T}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{S}\cdot \mathbf{1}(A) \right]$. Indeed, $ X_{T_{n}}\to X_{T}$ and $ X_{S_{n}}\to X_{S}$ a.s. as $ n\to \infty$ ($ X$ is right continuous).\\ 
+
+	Now, by the discrete optional stopping theorem applied to the martingale $ (X_{k\cdot 2^{-n}})_{k\in \N}$ with respect to the filtration $ (\F_{K\cdot 2^{-n}})_{k\in \N}$, $ X_{T_{n}}= \mathbb{E}\left[ X_{\infty}|\F_{T_{n}} \right]$, so $ X_{T_{n}}$ is UI  (since $ T_{n}$ take values in $ 2^{-n}\cdot \N$). Thus, $ X_{T_{n}}\to X_{T}$ in $ \mathcal{L}^{1} $, and the same holds for $ X_{S_{n}}\to X_{S}$ using the exact same argument. By the discrete optional stopping theorem, we have that $ \mathbb{E}\left[ X_{T_{n}}|\F_{S_{n}} \right] = X_{S_{n}}$ a.s. Now for $ A\in \F_{S}$, we have that $ A\in \F_{S_{n}}$ for all $ n\in \N$ since $ S_{n}\geq S$. So $ \mathbb{E}\left[ X_{T_{n}}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{S_{n}}\cdot \mathbf{1}(A) \right]$.
+\end{proof}
+
+
+\begin{theorem}[Kolmogorov's continuity criterion]\label{thm: kolmogorov continuity criterion}
+	Let $ \mathcal{D}_{n} = \{K\cdot 2^{-n}: 0\leq k \leq 2^{n}\}$ and $ \mathcal{D} = \displaystyle\bigcup_{n\geq 0} \mathcal{D}_{n}$. Let $ (X_{t})_{t\in \mathcal{D}}$ be a stochastic process taking real values. Suppose there exists some $ \epsilon>0$ $ p>0$, such that
+	\[
+	\mathbb{E}\left[ |X_{t}-X_{s}|^{p} \right]\leq c\cdot |t-s|^{1+\epsilon}, \quad \text{ for all }s,t\in \mathcal{D}
+	\]
+	where $ c$ is a positive constant. Then for all $ \alpha \in (0, \epsilon/p)$, the process is $ \alpha-$H\"{o}lder continuous, that is there exists a random variable $ K_{\alpha}<\infty$ such that
+	\[
+	|X_{t}-X_{s}|\leq K_{\alpha}\cdot |t-s|^{\alpha}, \quad \text{ for all } s,t\in \mathcal{D}.
+	\]
+\end{theorem}
+
+
+
+\begin{proof}
+\[
+	\PP \left( |X_{k\cdot 2^{-n}}-X_{(K+1)\cdot 2^{-n}}| \geq 2^{-n\alpha}\right)\stackrel{\text{Markov + assumption}}{\leq} c\cdot 2^{-n\alpha}p\cdot2^{-n(1+\epsilon)}. 
+\]
+Thus, 
+\[
+	\PP \left( \max_{0\leq k \leq 2^n}|X_{k\cdot 2^{-n}}-X_{(K+1)\cdot 2^{-n}}| \geq 2^{-n\alpha} \right)\stackrel{\text{union bound}}{\leq} c\cdot 2^{n\alpha p n\epsilon}, \quad (\alpha \in (0, \frac{\epsilon}{p}).   
+\]
+By Borel-Cantelli, 
+\[
+\max_{0\leq k \leq 2^n}|X_{k\cdot 2^{-n}}-X_{(K+1)\cdot 2^{-n}}| \leq 2^{-n\alpha}
+\]
+for all $ n\in \N$ sufficiently large. Thus, 
+\[
+ \displaystyle\sup_{ n\geq 0}\max_{0\leq k \leq 2^n} \frac{ |X_{k\cdot 2^{-n}}-X_{(K+1)\cdot 2^{-n}}|}{2^{-n\alpha}} \leq 2^{-n\alpha}\leq M(\omega)<\infty
+\]
+a.s. For some random variable $ M$. \\ 
+
+\underline{Need to show: } there exists some $ M'$ such that $ |X_{t}-X_{s}|\leq M'\cdot |t-s|^{\alpha}$ for all $ s,t \in \mathcal{D}$.\\ 
+
+Let $ s<t$, $ s,t\in \mathcal{D}$ and let $ r$ be the unique integer such that $ 2^{-(r+1)}<t-s\leq 2^{-r}$. Then there exists some $ k\in \N$ such that $ s<k\cdot 2^{-(r+1)}<t$. Now, observe that $ t-\alpha\leq 2^{-r}$ so 
+\[
+	t-\alpha = \displaystyle\sum^{\infty}_{j=r+1} \frac{x_{j}}{2^j}, \quad x_{j}\in \{0,1\}
+\]
+and 
+\[
+	\alpha-s = \displaystyle\sum^{\infty}_{j=r+1} \frac{y_{j}}{2^j}, \quad y_{j}\in \{0,1\}.
+
+\]
+Observe that $ [s, t)$ is a disjoint union of dyadic intervals each of them having length $ 2^{-n}$ with $ n\geq r+1$ and each interval of length will appear at most twice. Thus, we get the bound
+\[
+\begin{array}{ll}
+|X_{t}-X_{s}| &\leq\displaystyle\overbrace{\sum_{d,n}\displaystyle\underbrace{|X_d-X_{d+2^{-n}}|}_{\leq 2^{-n\alpha\cdot M}}}^{d,n \text{ is the endpoint of a dyadic interval in the decomposition of }[s,t) \text{ of length } 2^{-n}}  \\
+	      &\leq 2\cdot M \cdot\displaystyle\sum^{\infty}_{n =  r+1} 2^{-n\alpha} = \frac{2M\cdot 2^{-(r+1)\alpha}}{1-2^{-\alpha}} < \frac{2M}{1-2^{-\alpha}}|t-s|^{\alpha}.
+\end{array}
+\]
+\end{proof}
+
+\section{Weak Convergence}\label{sec: weak convergence}
+
+We fix $  (\mathcal{M}, d)$ a metric space endowed with its Borel sigma algebra.
+
+\begin{boxdef}\label{def: weak convergence of measures}
+Let $ (\mu_{n})_{n\in \N}$ be a sequence of probability measures on $ \mathcal{M}$. We say $ (\mu_{n})_{n\in \N}$ converges weakly to $ \mu$ and write $\mu_{n}\implies \mu$ as $ n\to \infty$ if 
+\[
+	\mu_{n}(f) \coloneqq \int_{\mathcal{M}} f(x) \mu_{n}(\diff  x) \stackrel{n\to \infty}{\longrightarrow} \int_{ \mathcal{M}} f(x) \mu(\diff  x) \coloneqq \mu(f)
+\]
+for any $ f$ continuous and bounded.
+
+\end{boxdef}
+
+
+\begin{examplesblock}{Examples: }\label{examples: 8}
+\begin{enumerate}
+	\item Let $ x_{n}\to x$ as $ n\to \infty$ in $ ( \mathcal{M}, d)$ then $ \delta_{x_{n}}\stackrel{n\to \infty}{\longrightarrow}\delta_{x}$ ,since $ \delta_{x_{n}}(f)= f(x_{n})\stackrel{n\to \infty}{\longrightarrow}f(x) = \delta_{x}(f)$. 
+	\item Let $  \mathcal{M} = [0,1]$, with the Euclidean metric and its Borel sigma algebra. Let $ \mu_{n} = \frac{1}{n}\displaystyle\sum_{0\leq k\leq n}\delta_{k/n} $. Then $ \mu_{n}$ converges weakly to the Lebesgue measure. Indeed, $ \mu_{n}(f) = \frac{1}{n}f(k/n)\stackrel{n\to \infty}{\longrightarrow}\int f(x) \diff x$, being Riemann sums.
+	\item $ \mu_{n} = \delta_{\frac{1}{n}}\implies \delta_{0}$, as $ n\to \infty$. Notice however that for $ A = (0,1)$, $ \mu_{n}(A) = $ for all $ n\geq 0$ and so $ \nu_{n}(A) \cancel{\rightarrow} \delta_{0}(A) = 0$.
+\end{enumerate}
+
+\end{examplesblock}
+
+
+\begin{theorem}\label{thm: weak convergence equivalence}
+Let $ (\mu_{n})_{n\in \N}$ be a sequence of probability measures on $ ( \mathcal{M}, d)$. Then the following are equivalent: 
+\begin{enumerate}
+	\item $ \mu_{n}\implies \mu$.
+    \item For all $ G$ open, $ \displaystyle\liminf_{n}\mu_{n}(G)\geq \mu(G)$.
+    \item For all $ A$ closed, $ \displaystyle\limsup_{ n} \mu_{n}(A)\leq \mu(A)$.
+    \item For all $ A$ with $ \mu(\partial A) = 0$, then $ \mu_{n}(A)\to \mu(A)$. 
+\end{enumerate}
+
+\end{theorem}
+
+
+\begin{proof}
+	\underline{$ 1\implies 2$:} Let $ G$ be open with $ G^{c}\neq \emptyset$. Let $ M>0$ and set $ f_{M}(x) = \mathbf{1}(M d(x, G^{c}))\leq \mathbf{1}(x\in G)$. Observe that 	$ f_{M}(x)\uparrow \mathbf{1}(x\in G)$ as $ M\to \infty$, $ f_{M}$ is bounded and continuous for all $ M$. So $ \mu_{n}(f_{M})\to \mu(f_{M})$ as $ n\to \infty$ for all $ M$. Thus, 
+	\[
+		\displaystyle\liminf_{n}\mu_{n}(G)\geq \displaystyle\liminf_{n}\mu_{n}(f_{M}) = \mu(f_{M})\stackrel{\text{monotone convergence}}{\to}\mu(G).
+	\]
+	\underline{$2\implies 3$:} follows from the previous case by taking complements. 
+	\underline{$ 2,3\implies 4$:} $ 0 = \mu(\partial A) = \mu(A\setminus \int{A})$, hence $ \mu(\overline{A}) = \mu(A) = \mu(\int{A})$.\ \ 
+	\underline{$ 2:$} $ \displaystyle\liminf_{n}\mu(\int{A})\geq \mu(\int{A})=\mu(A)$.
+	\underline{$ 3:$} $ \displaystyle\limsup_{n} \mu_{n}(\overline{A})\leq \mu(\overline{A}) = \mu(A)$.
+
+	\underline{$ 4\implies 1$:} Need to show for any $ f$ continuous and bounded, $ \mu_{n}(f)\to \mu(f)$. We can assume further that $ f\geq 0$. Fix $ K> \displaystyle\sup f$. Have, 
+	\[
+	\begin{array}{ll}
+		\displaystyle\int_{ \mathcal{M}}f(x) \mu_{n}(\diff x)    &= \displaystyle\int_{ \mathcal{M}} \left( \int^{K}_{0} \mathbf{1}(t\leq f(x)) \diff t \right) \mu_{n}(\diff  x)  \\
+									 &\stackrel{\text{Fubini}}{=} \int^{K}_{0}\mu_{n}(f\geq t) \diff t.  
+	\end{array}
+	\]
+	It suffices to show $ \mu_{n}(f\geq t)\to \mu(f \geq t)$ as $ n\to \infty$. Since then we can conclude using dominated convergence. Thus it suffices to show that $ \mu(\partial \{f\geq t\}) = 0$. Indeed, 
+	\[
+		\partial\{f\geq t \} \subset \{f = t\}.
+	\]
+	since $ f$ is continuous and $ \{f>t\}$ is open and $ \subset \int\{f\geq t\}$. Also observe thath there exists an at most countable number of $ t$ such that $ \mu(f = t)>0$. Thus, 
+	\[
+	\{t: \mu(f=t)>0\} = \displaystyle\bigcup_{n}\displaystyle\underbrace{\{t: \mu(\{f = t\})\geq \frac{1}{n}\}}_{\#\leq n} .
+	\]
+	Thus, $ \partial \{f\geq t\}$ is countable and has Lebesgue measure zero.
+\end{proof}
+
 
 \end{document}
