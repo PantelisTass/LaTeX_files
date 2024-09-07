@@ -1564,7 +1564,7 @@ Let $ X$ be a cadlag UI martingale, then for all $ S\leq T$ stopping times
 \end{proof}
 
 
-\begin{theorem}[Kolmogorov's continuity criterion]\label{thm: kolmogorov continuity criterion}
+\mymark{Lecture 13}\begin{theorem}[Kolmogorov's continuity criterion]\label{thm: kolmogorov continuity criterion}
 	Let $ \mathcal{D}_{n} = \{K\cdot 2^{-n}: 0\leq k \leq 2^{n}\}$ and $ \mathcal{D} = \displaystyle\bigcup_{n\geq 0} \mathcal{D}_{n}$. Let $ (X_{t})_{t\in \mathcal{D}}$ be a stochastic process taking real values. Suppose there exists some $ \epsilon>0$ $ p>0$, such that
 	\[
 	\mathbb{E}\left[ |X_{t}-X_{s}|^{p} \right]\leq c\cdot |t-s|^{1+\epsilon}, \quad \text{ for all }s,t\in \mathcal{D}
@@ -1657,8 +1657,8 @@ Let $ (\mu_{n})_{n\in \N}$ be a sequence of probability measures on $ ( \mathcal
 		\displaystyle\liminf_{n}\mu_{n}(G)\geq \displaystyle\liminf_{n}\mu_{n}(f_{M}) = \mu(f_{M})\stackrel{\text{monotone convergence}}{\to}\mu(G).
 	\]
 	\underline{$2\implies 3$:} follows from the previous case by taking complements. 
-	\underline{$ 2,3\implies 4$:} $ 0 = \mu(\partial A) = \mu(A\setminus \int{A})$, hence $ \mu(\overline{A}) = \mu(A) = \mu(\int{A})$.\ \ 
-	\underline{$ 2:$} $ \displaystyle\liminf_{n}\mu(\int{A})\geq \mu(\int{A})=\mu(A)$.
+	\underline{$ 2,3\implies 4$:} $ 0 = \mu(\partial A) = \mu(A\setminus \intr{A})$, hence $ \mu(\overline{A}) = \mu(A) = \mu(\intr{A})$.\ \ 
+	\underline{$ 2:$} $ \displaystyle\liminf_{n}\mu(\int{A})\geq \mu(\intr{A})=\mu(A)$.
 	\underline{$ 3:$} $ \displaystyle\limsup_{n} \mu_{n}(\overline{A})\leq \mu(\overline{A}) = \mu(A)$.
 
 	\underline{$ 4\implies 1$:} Need to show for any $ f$ continuous and bounded, $ \mu_{n}(f)\to \mu(f)$. We can assume further that $ f\geq 0$. Fix $ K> \displaystyle\sup f$. Have, 
@@ -1672,12 +1672,455 @@ Let $ (\mu_{n})_{n\in \N}$ be a sequence of probability measures on $ ( \mathcal
 	\[
 		\partial\{f\geq t \} \subset \{f = t\}.
 	\]
-	since $ f$ is continuous and $ \{f>t\}$ is open and $ \subset \int\{f\geq t\}$. Also observe thath there exists an at most countable number of $ t$ such that $ \mu(f = t)>0$. Thus, 
+	since $ f$ is continuous and $ \{f>t\}$ is open and $ \subset \int\{f\geq t\}$. Also observe that there exists an at most countable number of $ t$ such that $ \mu(f = t)>0$. Thus, 
 	\[
 	\{t: \mu(f=t)>0\} = \displaystyle\bigcup_{n}\displaystyle\underbrace{\{t: \mu(\{f = t\})\geq \frac{1}{n}\}}_{\#\leq n} .
 	\]
 	Thus, $ \partial \{f\geq t\}$ is countable and has Lebesgue measure zero.
 \end{proof}
+
+Now, let $ \mathcal{M} = \R$. Let $ \mu$ be a probability measure on $ \R$. We define the distribution function of $ \mu$ to be the function $ F_{\mu}:x\mapsto \mu((-\infty,x] )$, $ F_{\mu}\R\to [0,1]$. 
+
+
+\begin{boxprop}\label{prop: weak convergence distribution function}
+	Let $ (\mu_{n})_{n\in \N}$. be a sequence of probability measures on $ \R$. Then the following are equivalent: 
+	\begin{enumerate}
+	    $ \mu_{n}\implies \mu$, as $ n\to \infty$.
+	    \item $F_{\mu_{n}}(x)\stackrel{n\to \infty}{\longrightarrow}F_{\mu}(x)$ for all $ x\in \R$ continuity points of $ F_{\mu}$.
+	\end{enumerate}
+\end{boxprop}
+
+\begin{proof}
+	\underline{$ 1\implies 2$:}  Let $ x$ be a continuity point of $ F_{\mu}$. Have $ F_{\mu_{n}}(x) = \mu_{n}((-\infty, x])$ and 
+	\[
+	\begin{array}{ll}
+		\mu(\partial(-\infty, x]) &= \mu(\{x\}) \\
+					  &= \mu((-\infty, x])- \lim_{n \to \infty} \mu((-\infty, x-\frac{1}{n}])\\ 
+					  & = F_{\mu}(x)- \lim_{n \to \infty} F_{\mu}(d-\frac{1}{n}) = 0
+	\end{array}
+	\]
+	since $ x$ is a continuity point of $ F_{\mu}$. 
+\end{proof}
+
+\underline{$ 2\implies 1$:} Let $ G$ be an open set in $ \R$. Then $ G = \displaystyle\bigcup_{n} (a_{k}, b_{k})$, a union of disjoint open intervals. Now, 
+
+\[
+\begin{array}{ll}
+    \displaystyle\liminf_{n}\mu_{n}(G) &= \displaystyle\liminf_{n}\displaystyle\sum_{k}\mu_{n}(a_{k}, b_{k})  \\
+				       &\stackrel{\text{Fat}}{\geq}\displaystyle\sum_{k} \displaystyle\liminf_{n} \mu_{n}(a_{k}, b_{k}). 
+     &= +d
+\end{array}
+\]
+So it suffices to show that $ \displaystyle\liminf_{n} \mu_{n}(a,b)\geq \mu(a,b)$ for all $ a<b\in \R$.\\ 
+
+Indeed, We have $ \mu_{n}((a,b)) = F_{\mu_{n}}(b-)-F_{\mu_{n}}(a)$ and since $ F_{\mu}$ is non-decreasing and has at most countably many discontinuities, there exist $ a', b'$ continuity points of $ \F_{\mu}$. Hence, $ F_{\mu_{n}}(a') \stackrel{n\to \infty}{\longrightarrow} F_{\mu}(a')$ and $ F_{\mu_{n}}(b') \stackrel{n\to \infty}{\longrightarrow} F_{\mu}(b')$. This means that
+\[
+    \displaystyle\liminf_{n}\mu_{n}((a,b)) \geq F_{\mu}(b')-F_{\mu}(a').
+\]
+By the density of continuity points, there exist $(b'_{m})_{m\in \N}$, such that $ b'_{m}\uparrow b'$ and $ (a'_{m})_{m\in \N}$, $ a'_{m} \downarrow a'$ all continuity points. Thus, 
+\[
+\begin{array}{ll}
+	\displaystyle\liminf_{n} \mu_{n}((a,b)) &\geq \displaystyle\sup_{n}F_{\mu_{n}}(b'_{m})-F_{\mu}(a'_{m})\\
+     &= F_{\mu}(b-)-F_{\mu}(a) = \mu((a,b)).
+\end{array}
+\]
+\begin{boxdef}\label{def: weak conv law}
+Let $ (X_{n})_{n\in \N}$ be a sequence of random variables taking values in $ ( \mathcal{M}, d)$, defined on probability spaces $ (\Omega_{n}, \F_{n}, \PP_{n})$. We say that $ (X_{n})_{n\in \N}$ converges weakly (or in distribution) to a random  variable $ X$ defined on $ (\Omega, \F, \PP)$ if $  \mathcal{L}(X_{n})\implies \mathcal{L}(X)$ (i.e. the laws converge weakly). 
+\end{boxdef}
+
+
+\begin{remark}
+	Equivalently, $ X_{n} \stackrel{w/d}{\implies}X$ if for all $ F$ continuous and bounded, $  \mathbb{E}_{\PP_{n}}\left[ f(X_{n}) \right]\to \mathbb{E}_{\PP}\left[ f(X) \right]$, as $ n\to \infty$.
+\end{remark}
+
+\begin{boxprop}\label{prop: conv in prob conv in dist}
+\begin{enumerate}
+	\item If $ X_{n}\stackrel{\PP}{\implies} X$ as $ n\to \infty$, then $ X_{n}\stackrel{d}{\implies} X$ as $ n\to \infty$. 
+	\item If $  X_{n}\stackrel{d}{\implies} c$, $ c$ a constant, then $  X_{n}\stackrel{\PP}{\implies} c$
+\end{enumerate}
+
+\end{boxprop}
+
+
+\begin{examplesblock}{Examples: (CLT)}\label{examples: 8}
+	Let $(X_{n})_{n\in \N}$ be iid and $ \mathbb{E}\left[ X_{1} \right] = m$ and $ \sigma^{2} = \text{Var}(X_{1})$. Then with $ S_{n} =\displaystyle\sum^{n}_{i=1}X_{i} $
+	\[
+		\frac{S_{n}-n\cdot m}{\sqrt{n\sigma^{2}}} \stackrel{d}{\longrightarrow} \mathcal{N}(0,1)
+	\]
+	as $ n\to \infty$.
+\end{examplesblock}
+
+\begin{boxdef}[Tightness]\label{def: waek conv tightness}
+	Let $ ( \mathcal{M}, d)$ be a metric space. A sequence of probability measures $ (\mu_{n})_{n\in \N}$ on $ \mathcal{M}$ is called \underline{tight} if for all $ \epsilon>0$, there exists a compact set $ K\subseteq \mathcal{M}$ such that 
+\[
+ \displaystyle\sup_{n\geq 0}\mu( \mathcal{M}\setminus K)\leq \epsilon.
+\]
+\end{boxdef}
+
+
+\begin{remark}
+    It $ \mathcal{M}$ is compact, then all sequences of probability measures are tight. 
+\end{remark}
+
+\begin{theorem}[Prohorov]\label{thm: prohorov}
+Let $ (\mu_{n})_{n\in\N}$ be a tight sequence of probability measures, then there exists a subsequence $ (\mu_{n_{k}})_{k\in \N}$ and a probability measure $ \mu$ such that 
+\[
+	\mu_{n_{k}} \stackrel{d}{\implies} \mu, \quad \text{ as }k\to \infty.
+\]
+\end{theorem}
+
+\begin{proof}   
+
+We focus on the case $ \mathcal{M} = \R$. Let $ \Q = \{x_{1}, x_{2}, \cdots\}$ be an enumeration of $ \Q$ and $ F_{n} = F_{\mu_{n}}$. Then, the sequence $ (F_{n}(x_{1}))_{n\in \N}$ in $ [0,1]$ has a convergent subsequence $F_{n^{(1)}_{k}}(x_{1})\stackrel{k\to \infty}{\longrightarrow} F(x_{1})$ by compactness. So does $ (F_{n^{(1)}_{k}}(x_{2}))_{k\in \N}$. Thus, continuing so inductively, we obtain for all $ i\in \N$ that there exist sequences $ (n^{(i)}_{k})_{k\in \N}$ such that 
+\[
+F_{n^{(i)}_{k}}(x_{j}) \stackrel{k\to \infty}{\longrightarrow}F(x_{j}), \quad \text{ for all } 1\leq j\leq i.
+\]
+Thus, we can extract a diagonal sequence $ (m_{k})_{k\in \N}$, where $ m_{k} = n^{(k)}_{k}$ for all $ k\in \N$ and Have 
+\[
+F_{m_{k}}(x) \stackrel{k\to \infty}{\longrightarrow} F(x), \quad \text{ for all } x\in \Q.
+\]
+Observe now that the functions $ F_{m_{k}}$ are non-decreasing, and so $ F$ is non-decreasing, so for $ x\in \R$ define $ F(x) = \lim_{q\downarrow x, q\in \Q} F(q)$. Thus, $ F$ is right continuous, non-decreasing and so $ F$ has left-limits.\\ 
+
+Let $ x\in \R$ be a continuity point of $ F$. We need to show that $ F_{m_{k}}(x)\stackrel{k\to \infty}{\longrightarrow}F(x)$. Indeed, for any $ \epsilon >0$, there exist $ s_{1}<x<s_{2}$, $ s_{i}\in \Q$ such that  $F(s_{i})-F(x)|<\epsilon/2$ (since $ F$ is continuous at $ x$). We now have the chain of inequalities
+\[
+	F(x)-\epsilon\leq F(s_{1})-\frac{\epsilon}{2}\leq F_{m_{k}}(s_{1})\leq F_{m_{k}}(x)\leq F_{m_{k}}(s_{2}\stackrel{\text{conv. in } \Q}{\leq} F(s_{2})+\frac{\epsilon}{2}\leq F(x)+\epsilon
+\]
+for all $ k\in \N$ sufficiently large.\\ 
+
+Finally, it remains to show that  there exists some probability measure $ \mu$ such that $ F = F_{\mu}$. Indeed, by tightness, we have that for all $ \epsilon>0$, there exists $ N\in \R$ large enough so that (with $ \pm N$ being continuity points of $ F$)
+\[
+	\displaystyle\sup_{n\geq 0 }\mu_{n}([-N, N]^{c})\leq \epsilon.
+\]
+Thus, $ F(-N)\leq \epsilon$ and $ 1-F(N)\leq \epsilon$. This guarantees that 
+\[
+\lim_{x\to -\infty} F(x) = 0, \quad \lim_{x \to \infty} F(x) = 1.
+\]
+Finally, define define $ \mu((a,b]) = F(b)-F(a)$. Then, $\mu$ can be extended to the Borel sigma algebra by Calathea dory's extension theorem.
+\end{proof}
+
+\begin{boxdef}\label{def: charateristic function}
+Let $ X$ be a random variables with values in $ R^{d}$. The characteristic function of $ X$ is defined as 
+\[
+	\phi_{X}(u) = \mathbb{E}\left[ e^{i\bracket{u}{X}} \right], \quad u\in \R^{d}.
+\]
+\end{boxdef}
+\underline{Properties of $ \phi_{X}$:}
+\begin{enumerate}
+	\item $ \phi_{X}$ is continuous on $ \R^{d}$ and $ \phi_{X}(0)=1$.
+	\item $ \phi_{X}$ completely determines the law of $ X$, that is if $ \phi_{X}(u) = \phi_{Y}(u)$ for all $ u\in \R^{d}$, then $  \mathcal{L}(X) = \mathcal{L}(Y)$.
+\end{enumerate}
+
+\mymark{Lecture 15} \begin{theorem}[L\'{e}vy's convergence theorem]\label{thm: levy conv thm}
+Let $ (X_{n})_{n\in \N}$, $ X$ be random variables taking values in $ \R^{d}$. Then 
+\begin{enumerate}
+	\item $ \mathcal{L}(X_{n})\implies \mathcal{L}(X)$  as $ k\to \infty$, then $ \phi_{X_{n}}(u) \stackrel{n\to \infty}{\longrightarrow}\phi_{X}(u)$ for all $ u\in \R^{d}$. 
+	\item Suppose there exists $ \psi:\R^{d}\to \C$ such that $ \psi(0) = 1$, $ \psi$ is continuous at zero and  $ \phi_{X_{n}}(u) \stackrel{n\to \infty}{\longrightarrow}\psi(u)$ for all $ u\in \R^{d}$. Then there exists a random variable $ X$ with characteristic function $ \psi = \phi_{X}$ and $ \mathcal{L}(X_{n})\implies \mathcal{L}(X)$. 
+ 
+\end{enumerate}
+
+\end{theorem}
+
+Before we proceed with the proof of the theorem, we state a Lemma
+\begin{boxlemma}\label{lemma: characteristic function bound}
+Let $ X$ be a random variable in $ \R^{d}$. Then, for all $ K>0$, 
+\[
+	\PP(\norm{X}_{\infty})\leq C\cdot \left( \frac{K}{2} \right)^{d} \displaystyle\int_{[-\frac{1}{K}, \frac{1}{K}]^{d}} (1-\phi_{X}(u))  \diff  u, 
+\]
+where $ C = (1-sin(1))^{-1}$.
+\end{boxlemma}
+
+\begin{proof}
+    Fix $ \lambda>0$ and let $ \mu = \mathcal{L}(X)$. Then,
+    \[
+    \begin{array}{ll}
+	    \displaystyle\int_{[-\lambda, \lambda]^{d}}\phi_{X}(u) \diff u   &= 
+ \displaystyle\int_{[-\lambda, \lambda]^{d}} \left( \displaystyle\int_{\R^{d}} \prod^d_{j=1}e^{iu_{j}\cdot x_{j}}\mu(\diff x)   \right) \diff   u \\
+									     &\stackrel{\text{Fubini}}{=} \displaystyle\int_{\R^{d}} \mu(\diff  x) \displaystyle\prod^d_{j=1} \left( \displaystyle\int_{[-\lambda,\lambda]}e^{iu_{j}\cdot x_{j}} \diff u_{j} \right) \\ 
+									     &= \displaystyle\int_{\R^{d}} \mu(\diff  x) \displaystyle\prod^d_{j=1} \left( \frac{e^{ix_{j}\lambda}-e^{-ix_{j}\lambda}}{ix_{j}} \right) \\ 
+									     &= \displaystyle\int_{\R^{d}}\displaystyle\prod^d_{j=1} \frac{2\cdot \sin(\lambda x_{j})}{x_{j}} \mu( \diff  x)\\ 
+									     & = (2\lambda)^{d}\displaystyle\int_{\R^{d}}\displaystyle\prod^d_{j=1} \left(\frac{2\cdot \sin(\lambda x_{j})}{\lambda x_{j}}\right) \mu( \diff  x).
+
+    \end{array}
+    \]
+     Thus, 
+     \[
+     \displaystyle\int_{[-\lambda, \lambda]^{d}}(1-\phi_{X}(u)) \diff u  = (2\lambda)^{d}\displaystyle\int_{\R^{d}}\displaystyle\prod^d_{j=1} \left(1- \frac{2\cdot \sin(\lambda x_{j})}{\lambda x_{j}}\right) \mu( \diff  x)
+\]
+     Now, let $ f(u) = \displaystyle\prod^d_{j=1} \left(\frac{2\cdot \sin(u_{j})}{u_{j}}\right)$, $ f:\R^{d}\to \R$. \\ 
+	     \underline{Claim: } not hard to see that if $ x\geq 1$, then $ \left| \frac{\sin(x)}{x} \right|\leq \sin(1)$. Hence, if $ \norm{u}_{\infty}\geq 1$, then $ |f(u)|\leq \sin(1)$. So $ \mathbf{1}(\norm{u}_{\infty}\geq 1)\leq C\cdot(1-f(u))$, where $ C = (1-\sin(1))^{-1}$. Hence, 
+	     \[
+		     \PP(\norm{X}_{\infty}\geq k)\leq C\cdot \mathbb{E}\left[ 1- f \left( \frac{X}{K} \right) \right]
+	     \]
+and by simple scaling, one can conclude for the general case.
+\end{proof}
+
+\begin{proof}{(Theorem \ref{thm: levy conv thm})}
+   \begin{enumerate}
+	   $ f(x) = e^{i\bracket{u}{x}}$ is continuous and bounded so by bounded convergence, have 
+	   \[
+	   \phi_{X_{n}}(u) = \mathbb{E}\left[ f(X_{n}) \right]\to \mathbb{E}\left[ f(X) \right]
+	   \]
+	   as $ n\to \infty$. 
+	   \item First we prove that $  \mathcal{L}(X_{n}))_{n\in \N}$ is tight. By Lemma \ref{lemma: characteristic function bound}, have that 
+		   \[
+		   	\PP(\norm{X_{n}}_{\infty})\leq C\cdot \left( \frac{K}{2} \right)^{d} \displaystyle\int_{[-\frac{1}{K}, \frac{1}{K}]^{d}} (1-\phi_{X_{n}}(u))  \diff  u
+		   \]
+and $ |1-\phi_{X_{n}}(u)|\leq 2$ for all $ u\in \R^{d}, n\in \N$. Thus, by dominated convergence, 
+\[
+ \displaystyle\int_{[-\frac{1}{K}, \frac{1}{K}]^{d}} (1-\phi_{X_{n}}(u))  \diff  u \stackrel{n\to \infty}{\longrightarrow} \displaystyle\int_{[-\frac{1}{K}, \frac{1}{K}]^{d}} (1-\psi(u))  \diff  u. 
+\]
+Since $ \psi$ is continuous at zero and $ \psi(0) = 1$, taking $ K$ large enough we get 
+\[
+\displaystyle\int_{[-\frac{1}{K}, \frac{1}{K}]^{d}} (1-\psi(u))  \diff  u <\frac{\epsilon}{2^d Cd}(2K^{-1})^{d}.
+\]
+Thus, $ \PP(\norm{X_{n}}_{\infty}\geq K)\leq \epsilon$ for all $ n\in \N$ sufficiently large. Taking $ K$ possibly even larger, we conclude that 
+\[
+	\displaystyle\sup_{n\geq 0}\PP(\norm{X}_{\infty}\geq K)\leq \epsilon,
+\]
+hence showing that $ ( \mathcal{L}_{n})_{n\in \N}$ is tight. By Pro horror, there exists a subsequence $ (n_{k})_{k\in \N}$ such that
+\[
+ \mathcal{L}(X_{n_{k}}) \stackrel{n\to \infty}{\implies} \mathcal{L}(X)
+\]
+and so $ \phi_{X_{n_{k}}}(u) \to \phi_{X}(u)$ for all $ u\in \R^{d}$. Thus, $ \psi \equiv \phi$.\\ 
+
+Suppose for a contradiction that $ \mathcal{L}_{X_{n}
+}$ does not converge. Then there exists $ f$ continuous and bounded and a subsequence $ m_{k}$ such that  
+\[
+ \left|\mathbb{E}_{m_{k}}\left[ f(X_{m_{k}}) \right] - \mathbb{E}\left[ f(X) \right]\right|\geq \epsilon
+\]
+for all $ k\ni \N$. Now, since $ (\mathcal{L}(X_{m_{k}}))_{k\in \N}
+$ is tight, there exist a subsequence, without relabelling, such that $ ( \mathcal{L}(X_{m_{k}}))$ converges weakly, a contradiction. Thus, the limit must also be $ X$. 
+   \end{enumerate}
+    
+\end{proof}
+
+Now, we briefly embark on a discussion of the theory of \textit{large deviations}.
+
+\section{Large deviations}\label{sec: large deviations}
+
+
+Let $ X_{1}, X_{2}, \cdots$ be iid $\sim \mathcal{N}(0,1) $ random variables. Let $ \widehat{S}_{n} = \frac{1}{n}\displaystyle\sum^{n}_{i=1} X_{i} \sim \mathcal{N}(0, 1/n)$. Let $ \delta >0$, we by the weak law of large numbers that 
+\begin{enumerate}
+	\item 
+\[
+	\PP(|\hat{S}_{n}|\geq \delta)\stackrel{n\to \infty}{\longrightarrow} 0.
+\]
+\item \[ \PP(\sqrt{n}|\hat{S}_{n}|\in \stackrel{\text{interval}}{A})$ \stackrel{\text{CLT}}{\longrightarrow} \displaystyle\int_{A} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}\diff x. 
+	\item \[ 
+			\PP(|\hat{S}_{n}|\geq \delta)$ = 1- \displaystyle\int^{\delta\sqrt{n}}_{-\delta \sqrt{n}} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}\diff x. 
+	\]
+In other words, 
+\[
+ \frac{\log \PP(|\hat{S}_{n}|\geq \delta)}{n} \stackrel{n\to \infty}{\longrightarrow} -\frac{\delta}{2}.
+\]
+\end{enumerate}
+
+Observe that $ \hat{S}_{n}$, the ``typical `` value is of the order $ \frac{1}{\sqrt{n}}$ and it can take relatively large values $ (\geq \delta>0)$ with very small probability $ \tilde e^{-\frac{\delta^{2}n}{2}}$. Furthermore, $ 1, 2$ are universal but $ 3$ depends on the distribution. We shall focus on quantifying $ 3$ for an appropriate class of random variables.\\ 
+
+Let $ X_{1}, X_{2}, \cdots$ be an iid family of random variables, such that $ \mathbb{E}\left[  X_{1}\right] = \overline{x}$, $S_{n} = X_{1}+X_{2}+\cdots+X_{n}$. Let $ a\in \R$. Now 
+\[
+	\PP(S_{n+m}\geq a(n+m))\stackrel{\text{independence}}{\geq}\PP(S_{n}\geq a_{n})\cdot \PP(S_{m\geq a_{m}}). 
+\]
+Now, with $ b_{n} = -\log \PP(S_{n}\geq an)$ for all $ n\in \N$, have that $ b_{n+m}\leq b_{n}+b_{m}$. This is called  sub-additive sequence. Actually, for such sequences one has 
+\[
+\lim_{n \to \infty} \frac{b_{n}}{n} = \displaystyle\inf_{n}\frac{b_{n}}{n}.
+\]
+\begin{examplesblock}{Sub-additive sequences}\label{aside: subbadtive sequences}
+To quickly see this, suppose first that $ \displaystyle\inf_{n}\frac{b_{n}}{n}>-\infty$. Fix any $ \epsilon>0$, then there exists some $ m\in \N$ such that $ \frac{b_{m}}{m}< \displaystyle\inf_{n}\frac{b_{n}}{n}+\epsilon$. Hence, for any $ k \geq m$, we have by Euclidean division that there exists some $ q\in \Z_{+}$ and $ r\in [0,m)\cap \N$ such that $ k = qm + r$. Thus, the sub-additivity of $ (b_{n})_{n\in \N}$ implies that 
+\[
+\begin{array}{ll}
+	\frac{b_{k}}{k} = \frac{b_{qm+r}}{qm+r}&\leq \frac{q \cdot b_{m} + b_{r}}{qm+r} \\
+					       &\leq \cancelto{1}{\frac{qm}{qm+r}}\displaystyle\inf_{n}\frac{b_{n}}{n} + \cancelto{0}{\epsilon\cdot mq + \frac{b_{r}}{qm+r}}
+\end{array}
+\]
+as $ k\to \infty$. The case where  $ \displaystyle\inf_{n}\frac{b_{n}}{n}=-\infty$ can be dealt with similarly.
+
+\end{examplesblock}
+
+So, we have that 
+\[
+-\frac{1}{n}\log\PP(S_{n}\geq a_{n}) \stackrel{n\to \infty}{\longrightarrow} I(a).
+\]
+Also, 
+\[
+\begin{array}{ll}
+	\PP(S_{n}\geq an) &\stackrel{\lambda >0}{=} \PP(e^{\lambda S_{n}}\geq e^{\lambda an}) \\
+			  &\stackrel{\text{Markov}}{\leq} \mathbb{E}\left[ e^{\lambda S_{n}} \right]\cdot e^{-n\lambda a} = \mathbb{E}\left[ e^{\lambda X_{1}} \right]\cdot e^{-\lambda an}.
+\end{array}
+\]
+Define $ M(\lambda) = \mathbb{E}\left[ e^{\lambda \cdot X_{1}} \right]$, $ \psi(\lambda) = \log M(\lambda)$, $ \lambda \in \R$. In other words, we have 
+\[
+\PP(S_{n}\geq an)\leq \exp(-n(\lambda a-\psi(\lambda))).
+\]
+Furthermore, let $ \psi^{*}(a) = \displaystyle\sup_{ \lambda\geq 0}(\lambda a-\psi(\lambda))\geq 0$. So $ \PP(S_{n}\geq an)\leq \exp(-n\psi^{*}(a))$ and so have obtained 
+\[
+ \frac{-\log \PP(S_{n\geq an})}{n} \geq \psi^{*}(a).
+\]
+
+\mymark{Lecture 16} 
+\begin{theorem}[Cramer's Theorem]\label{thm: cramer}
+	Let $ X_{1}, X_{2}, \cdots$ be an iid sequence of random variables with $ \mathbb{E}\left[ X_{1} \right] = \overline{x}$. Let $ S_{n} =\displaystyle\sum^{n}_{i=1}X_{i} $. Then, 
+	\[
+	-\frac{1}{n}\log\PP(S_{n}\geq an) \stackrel{n\to \infty}{\longrightarrow} \psi*(a)
+\]
+for all $ a\geq \overline{x}$ where $ \psi^{*}(a) = \displaystyle\sup_{\lambda \geq 0}(\lambda alpha-psi(\lambda))$, $ \psi(\lambda) = \log \mathbb{E}\left[ e^{\lambda \cdot X_{1}} \right]$ ($ \psi^{*}$ is known as the \textit{Legendre transform}).
+\end{theorem}
+
+We collect some basic facts about the function $ M(\lambda) = \mathbb{E}\left[ e^{\lambda X_{1}} \right]$, $ \lambda \in \R$.
+
+\begin{boxlemma}\label{lemma: cramer log mgf}
+	The functions $ M$ and $ \psi$ are continuous on $ \mathcal{D} = \{\lamda: M(\lambda)<\infty\}$ and differentiable in $ \intr{\mathcal{D}}$ with $ M'(\lambda) = \mathbb{E}\left[ X_{1\cdot e^{\lambda X_{1}}} \right]$ and $ \psi'(\lambda) = \frac{M'(\lambda)}{\lambda}$, $ \lambda \in \mathcal{D}$. 
+\end{boxlemma}
+
+\begin{proof}
+	\underline{Continuity:} Fix a sequence $ \lambda_{n} \stackrel{n\to \infty}{\longrightarrow}\lambda\in \mathcal{D}$. Then, pointwise, $ e^{\lambda_{n}X_{1}}\stackrel{n\to \infty}{\longrightarrow} e^{\lambda X_{1}}$ and take $ n\in \N$ such that for all $ n\geq N$, $ e^{\lambda_{n}X_{1}}\leq e^{\lambda_{N}X_{1}}+e^{\lambda X_{1}}\in \mathcal{L}^{1}$ (which holds by since $ \lambda_{N}\leq \lambda_{n}\leq \lambda$ for $ n$ possible larger). Thus, can conclude by dominated convergence that $ \psi(\lamnda_{n})\stackrel{n\to \infty}{\longrightarrow}\psi(\lambda)$.\\ 
+
+	\underline{Differentiability:} Fix $ \eta \in \intr{ \mathcal{D}}$. We can now bound 
+	\[
+	\begin{array}{ll}
+	    \left|\frac{M(\eta + \epsilon)-M(\eta)}{\epsilon}\right| &= \left| \mathbb{E}\left[\frac{ e^{(\eta+\epsilon)\cdot X_{1}}-e^{\eta\cdot X_{1}}}{\epsilon} \right] \right|\\
+	     &\leq e^{\eta\cdot X_{1}} \left| \frac{e^{\epsilon\cdotX_{1}}-1}{\epsilon} \right|.
+	\end{array}
+	\]
+	Now, let $ \delta>0$ sufficiently small such that $ (\eta-\delta, \eta+\delta)\subseteq \intr{ \mathcal{D}}$. Now, for all $ \epsilon \in (-\delta, \delta)$
+	\[
+		\left| \frac{e^{\epsilonX_{1}}-1}{\epsilon} \right| &\stackrel{\text{comparing power series}}{\leq} \frac{e^{\delta|X_{1}|}-1}{\delta}.
+	\]
+	So 
+	\[
+\left| \frac{e^{(\eta+\epsilon)X_{1}}-e^{\eta X_{1}}}{\epsilon} \right|	\leq e^{\eta X_{1}}\cdot \frac{e^{\delta|X_{1}|}-1}{\delta}. 
+	\]
+	Now, since $ e^{\eta X_{1}}\cdot e^{\delta |X_{1}|}\leq e^{\eta X_{1}}\cdot(e^{\delta X_{1}}+e^{-\delta X_{1}})\in \mathcal{L}^{1}$ since $ \eta \in \intr{ \mathcal{D}}$ and we can thus conclude by dominated convergence.
+\end{proof}
+
+
+\begin{proof}{(Theorem \ref{thm: cramer})}
+    From the previously derived Chernoff bound, we have 
+    \[
+    \lim_{n \to \infty} -\frac{1}{n}\log \PP(S_{n}\geq an)\geq \psi^{*}(a).
+    \]
+    It suffices to show now that 
+    \[
+	    \lim_{n \to \infty} -\frac{1}{n}\log \PP(S_{n}\geq an)\leq \psi^{*}(a), \quad \text{ for all }a\geq \overline{x}.
+    \]
+    Observe that we can replace each $ X_{i}$ by $ \tilde{X}_{i} = X_{i}-a$ and define $ \tilde{S}_{n} =\displaystyle\sum^{n }_{i=1}\tilde{X}_{i}$ and \\ 
+    $ \tilde{M}(\lambda) = \mathbb{E}\left[ e^{\lambda \tilde{X}} \right] = e^{-a\lambda}M(\lambda)$, where $ \tilde{\psi}(\lambda) = \psi(\lambda)-a\lambda$, $ \lambda \in \R$. 
+\end{proof}
+
+Thus we can restate the original inequality as follows
+\[
+\lim_{n \to \infty} -\frac{1}{n}\log \PP(S_{n}\geq an)= \lim_{n \to \infty} -\frac{1}{n}\log \PP(\tilde{S}_{n}\geq 0)\leq \tilde{\psi}^{*}(0)\,
+\]
+where $ \tilde{\psi}^{*}(\lambda) = \displaystyle\sup_{\lambda \geq 0}(-\tilde{\psi}(\lambda))$. Thus, without loss of generality, it suffices to show that 
+\[
+ \lim_{n \to \infty} -\frac{1}{n}\log \PP(S_{n}\geq 0)\geq \displaystyle\inf_{\lambda \geq 0}\psi(\lambda),
+\]
+when $ \overline{x}\leq 0$.\\ 
+
+
+For the remainder of the proof, we let $ \mu = \mathcal{L}(X)$ and break the proof into several cases.\\ 
+
+\underline{Case 1: } $ M(\lambda)<\infty$ for all $ \lambda \in \R$.\\ 
+
+Define a new measure $ \mu_{\theta}$ for all $ \theta \geq 0$, absolutely continuous with respect to $ \mu$ and radon-Nikodym derivative 
+\[
+	\frac{\diff \mu_{\theta}}{\diff  \mu} = \frac{e^{\theta X_{1}}}{M(\theta)}.
+\]
+We compute
+\[
+ \mathbb{E}_{\theta}\left[ f(X_{1})\right] = \displaystyle\int_{\R} \frac{e^{\theta x}f(x)}{M(\theta)}\mu (\diff  x).    
+\]
+Now, if $X_{1}, \cdots, X_{n}$ are iid $ \sim \mu$. Then 
+\[
+	\mathbb{E}_{\theta}\left[ F(X_{1}, \cdots, X_{n}) \right] = \displaystyle\int F(X_{1}, \cdots, X_{n}) \displaystyle\prod^{n}_{i=1}\frac{e^{\theta x_{i}}}{M(\theta)}\mu(\diff  x_{i}).   
+\]
+Set $ g(\theta) = \mathbb{E}_{\theta}\left[ X_{1} \right] = \int x \frac{e^{\theta x}}{M(\theta)}\diff  \mu = \frac{M'(\theta)}{M(\theta)} = \psi'(\theta)$.\\ 
+
+\underline{Seek:} $ \theta$ such that $ g(\theta) = \psi'(\theta) = 0$.\\ 
+
+If $ \PP(X_{1}>0) = 0$, then $ \PP(S_{n}\geq 0) = (\PP(X_{1}=0))^{n}$ by independence. Thus, 
+\[
+\frac{1}{n}\log \PP(S_{n}\geq 0) = \PP(X_{1} = 0)
+\]
+and\[
+\displaystyle\inf_{\lambda\geq 0} \leq \lim_{\lambda \to \infty}\psi(\lambda) = \lim_{\lambda \to \infty}\mathbb{E}\left[ e^{\lambda X_{1}} \right] \stackrel{\text{DCT}}{=} \lim_{\lambda \to \infty}\mathbb{E}\left[ e^{\lambda X_{1}} \mathbf{1}(X_{1}=0) \right] =  \PP(X_{1}=0).
+\]
+
+We can now focus on the case where $ \PP(X_{1}>0)>0$. Now, there exists an $ N\in \N$ such that $ \PP(X_{1}>\frac{1}{N})>0$. We deduce that 
+\[
+	\lim_{\theta\to \infty}\psi(\theta) = \lim_{\theta \to \infty}\mathbb{E}\left[ e^{\theta X_{1}} \right] \geq \lim_{\theta \to \infty} \mathbb{E}\left[ e^{ \frac{\theta}{N}} \mathbf{1}\left(X_{1}>\frac{1}{N}\right)\right] = \infty. 
+\]
+Thus, there exists some $ \eta \geq 0$ such that $ \displaystyle\inf_{\lambda \geq 0}\psi(\lambda) = \psi(\eta)$ and $ \psi'(\eta) = 0$. Now, 
+\[
+\begin{array}{ll}
+	\PP(S_{n}\geq 0) &\geq \PP(S_{n}\in [0, \epsilon n])\geq \mathbb{E}\left[ e^{\eta S_{n}-\eta\epsilon n} \mathbf{1}(S_{n}\in [0,\epsilon n]) \right] \\
+			 & = e^{-\eta \epsilon n}(M(\eta))^{n}\cdot\PP_{\eta}(S_{n}\in [0,\epsilon n])
+\end{array}
+\]
+where $ \PP_{\eta}(X_{1}\in \cdot) = \mu_{\eta}(\cdot)$. Now, since $ \mathbb{E}_{\eta}\left[ X_{1} \right] = 0$, we claim that we can use the CLT on iid copies of $ X_{1}$ with law $ \mu_{\eta}$ to deduce 
+\[
+	\PP(S_{n}\in[0,\epsilon n])\stackrel{n\to \infty}{\longrightarrow}\frac{1}{2}.
+\]
+\begin{examplesblock}{Proof of claim}\label{aside: cramer clt}
+This is a little messy, be warned! Fix any $ \epsilon'>0$. We have by the triangle inequality
+\[
+	\left| \PP_{\eta}(S_{n}\in [0,\epsilon n])-\frac{1}{2} \right|\leq \left| \PP_{\eta}(S_{n}\in [0,\epsilon n])- \PP_{\eta}(S_{n}\in [0,\infty)) \right| + \left| \PP_{\eta}(S_{n}\in [0,\infty))-\frac{1}{2} \right|.
+\]
+for all $ n\in \N$. Now, by the CLT and Theorem \ref{thm: weak convergence equivalence} we have that 
+\[
+\PP(S_{n}\in[0,\infty)) \stackrel{n\to \infty}{\longrightarrow} \frac{1}{2}. 
+\]
+
+Thus, for all n sufficiently large, we have that $ |\PP(S_{n}\in[0,\infty))-1/2|<\epsilon'/3$. Furthermore, there exists some $ N\in \N$ such that $ \PP( \mathcal{N}\in(\epsilon \sqrt{N}, \infty))<\epsilon'/3$ where $ \mathcal{N}$ denotes a standard normal random variable. Thus, for all $ n\in \N$ sufficiently large 
+\[
+\begin{array}{ll}
+	\left| \PP_{\eta}(S_{n} \in [0,\epsilon n])-\frac{1}{2} \right|&\leq \frac{\epsilon'}{3}+ \left| \PP_{\eta}(\frac{S_{n}}{\sqrt{n}}\in (\epsilon \sqrt{n},\infty))\right| \leq \frac{\epsilon'}{3} + \left| \PP_{\eta}(\frac{S_{n}}{\sqrt{n}}\in (\epsilon \sqrt{n},\infty))\right| \\
+								       &\leq \frac{\epsilon'}{3} + \left| \PP_{\eta}(\frac{S_{n}}{\sqrt{n}}\in (\epsilon \sqrt{N},\infty))\right| \leq  \frac{\epsilon'}{3} + \PP( \mathcal{N}\in(\epsilon \sqrt{N}, \infty))\\ 
+								       &+ \left| \PP_{\eta}(\frac{S_{n}}{\sqrt{n}}\in (\epsilon \sqrt{N},\infty))- \PP_{\eta}(\frac{ \mathcal{N}}{\sqrt{n}}\in (\epsilon \sqrt{N},\infty))\right|\\  
+								       &\leq \frac{\epsilon'}{3}+ \frac{\epsilon'}{3} + \cancelto{\text{(CLT) }\leq \frac{\epsilon'}{3}}{\left| \PP_{\eta}(\frac{S_{n}}{\sqrt{n}}\in (\epsilon \sqrt{N},\infty))- \PP_{\eta}(\frac{ \mathcal{N}}{\sqrt{n}}\in (\epsilon \sqrt{N},\infty))\right|}\\
+								       &\leq \epsilon'
+\end{array}
+\]
+as required.
+\end{examplesblock}
+
+Thus, 
+\[
+	\frac{\log \PP(S_{n}\geq 0)}{n}\geq -\eta \epsilon +\log M(\eta) + \frac{\log\PP_{\eta}(S_{n}\in[0,\epsilon n])}{n}.
+\]
+Now, for all $ \epsilon> 0$, 
+\[
+ \displaystyle\liminf_{ n}\frac{1}{n}\log \PP(S_{n}\geq 0 )\geq \log M(\eta) -\eta \epsilon= \psi(\eta)\geq \displaystyle\inf_{\lambda \geq 0}\psi(\lambda).
+\]
+Sending $ \epsilon \to 0$ gives the desired inequality.\\ 
+
+\underline{General Case:}\\ 
+
+Without loss of generality, (arguing as in the previous case), let $ K>0$ sufficiently large so that $ \mu([0, K])>0$. Then define the conditional laws $ \nu = \mathcal{L}(X_{1}| |X_{1}|\leq K)$, $ \nu_{n} = \mathcal{L}\left(S_{n}\Big| \displaystyle\bigcap^n_{i = 1} \{|X_{i}|\leq K\}\right)$. Have 
+\[
+	\mu_{n([0,\infty)}\geq \nu_{n}([0,\infty))\cdot (\mu([-K,K]))^{n}
+\]
+and 
+\[
+\log \mu_{n}([0,\infty))\geq \frac{\log \nu_{n}([0,\infty)
+}{n} +\mu([-K, K]).
+\]
+Let $ \psi_{K}(\lambda) = \log \displaystyle\int^{K}_{-K} e^{\lambda x}\diff\mu(x)$. Then, 
+$ \log \displaystyle\int^{\infty}_{-\infty}e^{\lambda x} \diff \nu(x) = \psi_{K}(\lambda) -\log\mu([-K,K]) $. So, 
+\[
+	\overbrace{\lim_{n \to \infty}\frac{1}{n}\log\mu_{n}([0,\infty))]}^{ \text{exists again by sub-additivity}} \stackrel{\text{first step}}{\geq} \displaystyle\inf_{\lambda\geq 0} \left( \log \displaystyle\int^{\infty}_{-\infty}e^{\lambda x} \diff \nu(x)   \right)+ \log\mu([-K,K]) = \displaystyle\inf_{\lambda \geq 0}\psi_{K}(\lambda) \coloneqq J_{K}>-\infty.\\ 
+\]
+Now, as observe that $ \psi_{K}$ is a non-decreasing family of continuous functions. Hence, the $(J_{k})_{k\in \N}$ are non-decreasing and so one has $ J_{k}\uparrow J>-\infty$ $ K\to \infty$. Furthermore, the sets $ \{\lambda: \psi_{K}(\lambda)\leq J\}$ are compact by the continuity of the $ \psi_{K}$and the fact that $ \mu([0,K])>0$ implies $ \displaystyle\lim_{\lambda  \to \infty}\psi_{K}(\lambda) = \infty $, as well as nested. Thus, there exists some $ \lambda_{0}\in \displaystyle\bigcap_{k} \{\lambda: \psi_{K}(\lambda)\leq J\}$. hence, $ \psi(\lambda_{0}) = \displaystyle\lim_{k\to\infty}\psi_{K}(\lambda)\leq J $ by monotone convergence. So, 
+	\[
+\lim_{n \to \infty}\frac{1}{n}\log\mu_{n}([0,\infty)) \geq J\geq \psi(\lambda_{0})\geq \displaystyle\inf_{\lambda\geq 0 }\psi(\lambda)
+	\] 
+as required.\\
+
+\section{Brownian Motion}\label{Brownian motion}
+\mymark{Lecture 17} 
+\begin{boxdef}[]\label{def: }
+
+\end{boxdef}
 
 
 \end{document}

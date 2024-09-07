@@ -1,6 +1,6 @@
 # Fdb version 4
-["pdflatex"] 1725646665.67435 "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main.tex" "main.pdf" "main" 1725646670.70825 2
-  "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main.tex" 1725646665.46451 96142 fb7e9496ddb7e0ca9dba5f2b6e171a90 ""
+["pdflatex"] 1725742608.20799 "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main.tex" "main.pdf" "main" 1725742613.57233 2
+  "/Users/pantelistassopoulos/Documents/texfiles/partiiinotes/advanced_proba/main.tex" 1725742607.98291 123239 6ba25800859ea512c928323cc64d1743 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -367,10 +367,10 @@
   "images/Doob-crossing.svg" 1725393425.93444 26838 472e5890de6bc1551694d22dd34eece1 ""
   "images/SRW-on-Z.svg" 1725294399.27675 34231 da015f7d9bc248df4c93bd8ce65290d8 ""
   "images/stopping time counterexample.svg" 1725565827.08811 8170 93a72350daef89abd2ef4cd1312f5e6a ""
-  "main.aux" 1725646670.03992 12402 99b6f92ed6d94521c541476899e9e9c0 "pdflatex"
-  "main.out" 1725646670.04258 1989 b81264c534d3725c91264f73ee50182d "pdflatex"
-  "main.tex" 1725646665.46451 96142 fb7e9496ddb7e0ca9dba5f2b6e171a90 ""
-  "main.toc" 1725646670.04335 940 cfd70a1129a0e5f05a5cba357560563b "pdflatex"
+  "main.aux" 1725742612.78977 14381 78b44d12af6d631b00c624a39ed9720a "pdflatex"
+  "main.out" 1725742612.79222 2238 2832137d602ba7d19ff54357e3018350 "pdflatex"
+  "main.tex" 1725742607.98291 123239 6ba25800859ea512c928323cc64d1743 ""
+  "main.toc" 1725742612.793 1085 795cbe2ab2d68851034ed020e5cc5bea "pdflatex"
   "preamble.tex" 1725538817.78494 6996 eba9e0238125db1cb13434fc166b0c07 ""
   "svg-inkscape/Doob-crossing_svg-tex.pdf" 1725393938.05961 17536 24a2cb7aa481a2ef2b3c0b4d0eaaa4f5 ""
   "svg-inkscape/Doob-crossing_svg-tex.pdf_tex" 1725393938.06012 2295 23eb6c3b0e3312fdb021b30fe37a1e97 ""

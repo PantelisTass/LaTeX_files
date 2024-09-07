@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  6 SEP 2024 21:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  7 SEP 2024 23:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1864,7 +1864,11 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 \c@boxdef=\count430
 \c@boxlemma=\count431
 \c@boxprop=\count432
-) (./main.aux)
+) (./main.aux
+
+LaTeX Warning: Label `examples: 8' multiply defined.
+
+)
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 14.
@@ -1887,8 +1891,7 @@ LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 14.
 LaTeX Font Info:    ... okay on input line 14.
 LaTeX Info: Command `\dddot' is already robust on input line 14.
 LaTeX Info: Command `\ddddot' is already robust on input line 14.
-
-(/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+ (/usr/local/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count433
 \scratchdimen=\dimen372
@@ -3406,14 +3409,14 @@ Package mdframed Info: mdframed detected package amsthm
 Package svg Info: Last page of `./svg-inkscape/SRW-on-Z_svg-tex.pdf' is 2 on in
 put line 681.
 (./svg-inkscape/SRW-on-Z_svg-tex.pdf_tex
-<./svg-inkscape/SRW-on-Z_svg-tex.pdf, id=255, page=1, 247.69905pt x 73.65207pt>
+<./svg-inkscape/SRW-on-Z_svg-tex.pdf, id=265, page=1, 247.69905pt x 73.65207pt>
 
 File: ./svg-inkscape/SRW-on-Z_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/SRW-on-Z_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/SRW-on-Z_svg-tex.pdf , page1 used on in
 put line 58.
 (pdftex.def)             Requested size: 242.41995pt x 72.08525pt.
-<./svg-inkscape/SRW-on-Z_svg-tex.pdf, id=256, page=2, 247.69905pt x 73.65207pt>
+<./svg-inkscape/SRW-on-Z_svg-tex.pdf, id=266, page=2, 247.69905pt x 73.65207pt>
 
 File: ./svg-inkscape/SRW-on-Z_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/SRW-on-Z_svg-tex.pdf, page 2>
@@ -3470,14 +3473,14 @@ Package mdframed Info: Not enough space on this page on input line 743.
 Package svg Info: Last page of `./svg-inkscape/Doob-crossing_svg-tex.pdf' is 2 
 on input line 769.
  (./svg-inkscape/Doob-crossing_svg-tex.pdf_tex
-<./svg-inkscape/Doob-crossing_svg-tex.pdf, id=280, page=1, 304.20073pt x 111.48
+<./svg-inkscape/Doob-crossing_svg-tex.pdf, id=290, page=1, 304.20073pt x 111.48
 83pt>
 File: ./svg-inkscape/Doob-crossing_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Doob-crossing_svg-tex.pdf, page 1>
 Package pdftex.def Info: ./svg-inkscape/Doob-crossing_svg-tex.pdf , page1 used 
 on input line 56.
 (pdftex.def)             Requested size: 341.43436pt x 125.1382pt.
-<./svg-inkscape/Doob-crossing_svg-tex.pdf, id=281, page=2, 304.20073pt x 111.48
+<./svg-inkscape/Doob-crossing_svg-tex.pdf, id=291, page=2, 304.20073pt x 111.48
 83pt>
 File: ./svg-inkscape/Doob-crossing_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/Doob-crossing_svg-tex.pdf, page 2>
@@ -4083,7 +4086,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 1226--1228
 Package svg Info: Last page of `./svg-inkscape/stopping time counterexample_svg
 -tex.pdf' is 1 on input line 1233.
 (./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
-<./svg-inkscape/stopping time counterexample_svg-tex.pdf, id=352, page=1, 284.9
+<./svg-inkscape/stopping time counterexample_svg-tex.pdf, id=362, page=1, 284.9
 8112pt x 170.82794pt>
 File: ./svg-inkscape/stopping time counterexample_svg-tex.pdf Graphic file (typ
 e pdf)
@@ -4489,6 +4492,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 1561--1562
 
  []
 
+Package marginnote Info: Margin note 26.1 is on absolute page 27 on input line 
+1567.
+Package marginnote Info: right page because not two side mode on input line 156
+7.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 1567.
 [26]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
@@ -4777,19 +4785,930 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[28] [29] (./main.aux)
+
+Overfull \hbox (9.56819pt too wide) in paragraph at lines 1658--1663
+\OML/cmm/m/it/10 ^^V\U/matha/m/n/10 p\OML/cmm/m/it/10 A\U/matha/m/n/10 z [] \OM
+L/cmm/m/it/10 A\U/matha/m/n/10 q$\OT1/cmr/m/n/10 , hence $\OML/cmm/m/it/10 ^^V\
+U/matha/m/n/10 p[]q ^^P \OML/cmm/m/it/10 ^^V\U/matha/m/n/10 p\OML/cmm/m/it/10 A
+\U/matha/m/n/10 q ^^P \OML/cmm/m/it/10 ^^V\U/matha/m/n/10 p[] \OML/cmm/m/it/10 
+A\U/matha/m/n/10 q$\OT1/cmr/m/n/10 .  $[]$ $[] \OML/cmm/m/it/10 ^^V\U/matha/m/n
+/10 p[] \OML/cmm/m/it/10 A\U/matha/m/n/10 q ¥ \OML/cmm/m/it/10 ^^V\U/matha/m/n/
+10 p[] \OML/cmm/m/it/10 A\U/matha/m/n/10 q ^^P \OML/cmm/m/it/10 ^^V\U/matha/m/n
+/10 p\OML/cmm/m/it/10 A\U/matha/m/n/10 q$\OT1/cmr/m/n/10 . $[]$ $[] \OML/cmm/m/
+it/10 ^^V[]\U/matha/m/n/10 p[]q ¤
+ []
+
+[28]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1685.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1689 	    \item $
+                   F_{\mu_{n}}(x)\stackrel{n\to \infty}{\longrightarrow}F_{\...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1689 	    \item $
+                   F_{\mu_{n}}(x)\stackrel{n\to \infty}{\longrightarrow}F_{\...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1689 	    \item $
+                   F_{\mu_{n}}(x)\stackrel{n\to \infty}{\longrightarrow}F_{\...
+
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.1690 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1690 	\end{enumerate}
+                       
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.1690 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1690 	\end{enumerate}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1690 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.1690 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1690 	\end{enumerate}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1690 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Extra alignment tab has been changed to \cr.
+<recently read> \endtemplate 
+                             
+l.1711      &
+             = +d
+You have given more \span or & marks than there were
+in the preamble to the \halign or \valign now in progress.
+So I'll assume that you meant to type \cr instead.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1713--1715
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1727.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1736.
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.1740 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.1740 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1740 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1740 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.1740 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1740 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1740 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: Not enough space on this page on input line 1742.
+[29]
+Package mdframed Info: Not enough space on this page on input line 1742.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1753.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1765.
+
+Underfull \hbox (badness 10000) in paragraph at lines 1781--1783
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1787--1789
+
+ []
+
+[30]
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1801.
+
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1811 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1811 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1811 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.1811 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1811 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+Package marginnote Info: Margin note 31.1 is on absolute page 31 on input line 
+1813.
+Package marginnote Info: right page because not two side mode on input line 181
+3.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 1813.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1813.
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.1819 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.1819 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1819 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1819 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.1819 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1819 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1819 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1824.
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1883--1885
+
+ []
+
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.1893    \end{enumerate}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.1893    \end{enumerate}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1893    \end{enumerate}
+                         
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1893    \end{enumerate}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.1893    \end{enumerate}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1893    \end{enumerate}
+                         
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1893    \end{enumerate}
+                         
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Display math should end with $$.
+<to be read again> 
+                    
+l.1908 ...{n}|\in \stackrel{\text{interval}}{A})$ 
+                                                  \stackrel{\text{CLT}}{\lon...
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1908 ...$ \stackrel{\text{CLT}}{\longrightarrow}
+                                                   \displaystyle\int_{A} \fr...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+! LaTeX Error: Command \item invalid in math mode.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1909 	\item
+              \[
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1909 	\item \[
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Something's wrong--perhaps a missing \item.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1909 	\item \[
+                
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: Bad math environment delimiter.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1909 	\item \[
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.1910 			\PP(|\hat{S}_{n}|\geq \delta)$
+                                         = 1- \displaystyle\int^{\delta\sqrt...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1910 ...{S}_{n}|\geq \delta)$ = 1- \displaystyle
+                                                  \int^{\delta\sqrt{n}}_{-\d...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.1911 	\]
+          
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1916 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1916 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1916 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.1916 \end{enumerate}
+                      
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.1916 \end{enumerate}
+                      
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1918--1919
+
+ []
+
+[32]
+Package marginnote Info: Margin note 33.1 is on absolute page 33 on input line 
+1960.
+Package marginnote Info: right page because not two side mode on input line 196
+0.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 1960.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1961.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 1971.
+
+! Undefined control sequence.
+l.1972 ...e continuous on $ \mathcal{D} = \{\lamda
+                                                  : M(\lambda)<\infty\}$ and...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: Not enough space on this page on input line 1973.
+[33]
+Package mdframed Info: Not enough space on this page on input line 1973.
+
+! Undefined control sequence.
+l.1976 ...ominated convergence that $ \psi(\lamnda
+                                                  _{n})\stackrel{n\to \infty...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1976--1977
+
+ []
+
+! Undefined control sequence.
+<argument> e^{\epsilon \cdotX 
+                              _{1}}-1
+l.1982 ...frac{e^{\epsilon\cdotX_{1}}-1}{\epsilon}
+                                                   \right|.
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+<argument> e^{\epsilonX 
+                        _{1}}-1
+l.1987 ...ft| \frac{e^{\epsilonX_{1}}-1}{\epsilon}
+                                                   \right| &\stackrel{\text{...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.1987 ...e^{\epsilonX_{1}}-1}{\epsilon} \right| &
+                                                  \stackrel{\text{comparing ...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2017--2019
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2021--2022
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2023--2024
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2036--2038
+
+ []
+
+[34]
+Underfull \hbox (badness 10000) in paragraph at lines 2039--2040
+
+ []
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 2094--2096
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2097--2098
+
+ []
+
+
+Overfull \hbox (1.73434pt too wide) in paragraph at lines 2099--2100
+\OML/cmm/m/it/10 ^^V\U/matha/m/n/10 pr\OT1/cmr/m/n/10 0\OML/cmm/m/it/10 ; K\U/m
+atha/m/n/10 sq ¡ \OT1/cmr/m/n/10 0$. Then de-fine the con-di-tional laws $\OML/
+cmm/m/it/10 ^^W \U/matha/m/n/10 ^^P \OMS/cmsy/m/n/10 L\U/matha/m/n/10 p\OML/cmm
+/m/it/10 X[]\U/matha/m/n/10 ||\OML/cmm/m/it/10 X[]\U/matha/m/n/10 | ¤ \OML/cmm/
+m/it/10 K\U/matha/m/n/10 q$\OT1/cmr/m/n/10 , $\OML/cmm/m/it/10 ^^W[] \U/matha/m
+/n/10 ^^P \OMS/cmsy/m/n/10 L []$\OT1/cmr/m/n/10 .
+ []
+
+
+Overfull \hbox (11.98018pt too wide) detected at line 2112
+[] [] [] [] \U/matha/m/n/10 ^^@ [] \OML/cmm/m/it/10 ^^V\U/matha/m/n/10 pr^^A\OM
+L/cmm/m/it/10 K; K\U/matha/m/n/10 sq ^^P [] \OML/cmm/m/it/10  []\U/matha/m/n/10
+ p\OML/cmm/m/it/10 ^^U\U/matha/m/n/10 q [][]^^P \OML/cmm/m/it/10 J[] \U/matha/m
+/n/10 ¡ ^^A8\OML/cmm/m/it/10 :[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 2116--2118
+
+ []
+
+Package marginnote Info: Margin note 36.1 is on absolute page 36 on input line 
+2120.
+Package marginnote Info: right page because not two side mode on input line 212
+0.
+Package marginnote Info: xpos seems to be 85.35826pt on input line 2120.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 2121.
+[36] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B81264C534D3725C91264F73EE50182D;1989.
+(rerunfilecheck)             Checksum: 2832137D602BA7D19FF54357E3018350;2238.
  ) 
 Here is how much of TeX's memory you used:
- 59101 strings out of 474116
- 1423101 string characters out of 5743682
- 2036381 words of memory out of 5000000
- 80346 multiletter control sequences out of 15000+600000
+ 59183 strings out of 474116
+ 1424372 string characters out of 5743682
+ 2037452 words of memory out of 5000000
+ 80397 multiletter control sequences out of 15000+600000
  574730 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,21n,134p,1753b,1369s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -4821,10 +5740,10 @@ texmf-dist/fonts/type1/public/mathabx-type1/matha5.pfb></usr/local/texlive/2024
 e/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/te
 xlive/2024/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local
 /texlive/2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (29 pages, 475879 bytes).
+Output written on main.pdf (36 pages, 523938 bytes).
 PDF statistics:
- 596 PDF objects out of 1000 (max. 8388607)
- 472 compressed objects within 5 object streams
- 187 named destinations out of 1000 (max. 500000)
- 285 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 670 PDF objects out of 1000 (max. 8388607)
+ 538 compressed objects within 6 object streams
+ 218 named destinations out of 1000 (max. 500000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
