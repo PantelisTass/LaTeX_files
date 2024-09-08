@@ -661,6 +661,34 @@ INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
 INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf_tex
 INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
 INPUT ./svg-inkscape/stopping time counterexample_svg-tex.pdf
+INPUT ./images/cone.svg
+INPUT ./images/cone.svg
+INPUT ./images/cone.svg
+INPUT ./svg-inkscape/cone_svg-tex.pdf
+INPUT ./svg-inkscape/cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone_svg-tex.pdf
+INPUT ./svg-inkscape/cone_svg-tex.pdf
+INPUT ./svg-inkscape/cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone_svg-tex.pdf
+INPUT ./svg-inkscape/cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone_svg-tex.pdf
+INPUT ./svg-inkscape/cone_svg-tex.pdf
+INPUT ./images/reflection principle.svg
+INPUT ./images/reflection principle.svg
+INPUT ./images/reflection principle.svg
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf_tex
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf_tex
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf_tex
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf_tex
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf_tex
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
+INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

@@ -10,4 +10,7 @@
 \contentsline {section}{\numberline {6}Continuous Time processes}{21}{section.6}%
 \contentsline {section}{\numberline {7}Weak Convergence}{28}{section.7}%
 \contentsline {section}{\numberline {8}Large deviations}{32}{section.8}%
-\contentsline {section}{\numberline {9}Brownian Motion}{36}{section.9}%
+\contentsline {section}{\numberline {9}Brownian Motion}{37}{section.9}%
+\contentsline {subsection}{\numberline {9.1}Properties of Brownian Motion}{38}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}Martingales for Brownian motion}{44}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}Transience and recurrence}{46}{subsection.9.3}%

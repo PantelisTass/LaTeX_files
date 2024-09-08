@@ -1905,9 +1905,9 @@ Let $ X_{1}, X_{2}, \cdots$ be iid $\sim \mathcal{N}(0,1) $ random variables. Le
 \[
 	\PP(|\hat{S}_{n}|\geq \delta)\stackrel{n\to \infty}{\longrightarrow} 0.
 \]
-\item \[ \PP(\sqrt{n}|\hat{S}_{n}|\in \stackrel{\text{interval}}{A})$ \stackrel{\text{CLT}}{\longrightarrow} \displaystyle\int_{A} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}\diff x. 
-	\item \[ 
-			\PP(|\hat{S}_{n}|\geq \delta)$ = 1- \displaystyle\int^{\delta\sqrt{n}}_{-\delta \sqrt{n}} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}\diff x. 
+\item \[ \PP(\sqrt{n}|\hat{S}_{n}|\in \stackrel{\text{interval}}{A}) \stackrel{\text{CLT}}{\longrightarrow} \displaystyle\int_{A} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}\diff x.
+	\]
+	\item \[ \PP(|\hat{S}_{n}|\geq \delta) = 1- \displaystyle\int^{\delta\sqrt{n}}_{-\delta \sqrt{n}} \frac{1}{\sqrt{2\pi}}e^{-\frac{x^{2}}{2}}\diff x. 
 	\]
 In other words, 
 \[
@@ -2116,11 +2116,642 @@ Now, as observe that $ \psi_{K}$ is a non-decreasing family of continuous functi
 	\] 
 as required.\\
 
+\newpage
 \section{Brownian Motion}\label{Brownian motion}
 \mymark{Lecture 17} 
-\begin{boxdef}[]\label{def: }
-
+\begin{boxdef}\label{def: Brownian motion}
+	A process $ (B_{t})_{t\in \R_{+}}$ is called a \underline{Brownian motion} in $ \R^{d}$, $ d\geq 1$ starting from $ x\in \R^{d}$ if $ (B_{t})_{t\geq 0}$ is a continuous process and 
+	\begin{enumerate}
+		\item $ B_{0} = x$ a.s.
+		\item For all $ s<t$, $ B_{t}-B_{s}\sim \mathcal{N}(0, (t-s)\cdot \Id_{d})$. 
+		\item $ (B_{t})_{t\geq 0}$ has independent increments independent of $ B_{0}$. 
+	\end{enumerate}
+	If $ x = 0$ we call it a standard Brownian motion. Observe that $ i$ .determine uniquely its law.
 \end{boxdef}
+
+\begin{examplesblock}{Examples: }\label{examples: 9}
+	Let $ (B_{t})_{t\geq 0}$ be a standard Brownian motion in $ \R$, $ U\sim [0,1]$ uniformly distributed and independent from $ (B_{t})_{t\geq 0}$ and define
+	\[
+		\tilde{B}_{t} = \left\lbrace
+	\begin{array}{@{}l@{}}
+	    B_{t}, \quad  t\neq U \\
+	    0, \quad t = U
+	\end{array}\right.
+	\]
+	Then $ \tilde{B}$ is a.s. discontinuous, so even though $ B, \tilde{B}$ have the same finite dimensional distributions, $ \tilde{B}$ is \underline{not} a Brownian motion.
+\end{examplesblock}
+
+\begin{theorem}[Wiener]\label{thm: wiener BM}
+There exists a Brownian motion on some probability space.
+\end{theorem}
+
+\begin{proof}{(L\'{e}vy and Kolmogorov)}
+
+    \begin{enumerate}
+	    \item We shall proceed to construct a BM on $ [0,1]$ in $ d = 1$. Let $ \mathcal{D}_{0} = \{0,1\}$, $ \mathcal{D}_{n} = \{k\cdot 2^{-n}: 0\leq k \leq 2^n\}$ for $ n\in \N$ and $ \mathcal{D} = \displaystyle\bigcup_{n\geq 0} \mathcal{D_{n}}$.\\ 
+
+		    We will now construct $ (B_{d}, d'in \mathcal{D})$ inductively. First for $ \mathcal{D}0$. Let $ (Z_{d}, d\in \mathcal{D})$ be an iid sequence $ \sim \mathcal{N}(0,1)$ on some probability space $ (\Omega, \F, \PP)$. Set $ b_{0} = 0$, $ B_{1} = Z_{1}$ (clearly satisfies properties in \ref{def: Brownian motion}). Suppose now we have constructed $ (B_{d}, d\in \mathcal{D}_{n-1})$ satisfying properties $ 2 \& 3$. We need to construct $ (B_{d}, d\in \mathcal{D}_{n})$.\\ 
+
+		    For $ d\in \mathcal{D}_{n}\setminus \mathcal{D}_{n-1}$, have $d_{\pm} = d\pm 2^{-n}\in \mathcal{D}_{n-1}$. Now, set
+		    \[
+	 B_{d} =   \left\lbrace
+		    \begin{array}{@{}l@{}}
+		       \frac{B_{d-}+B_{d+}}{2}+\frac{Z_{d}}{2^{\frac{n+1}{2}}}, \quad d\in \mathcal{D}_{n}\setminus \mathcal{D}_{n-1} \\
+		        B_{d}, \quad d\in \mathcal{D}_{n-1}.
+		    \end{array}\right.
+		    \]
+		   We now show that our candidate process $ (B_{d})_{d\in \mathcal{D}_{n}}$ has independent increments. Indeed, we have that for $ d\in \mathcal{D}_{n}\setminus \mathcal{D}_{n-1}$,
+		   \[
+			   \begin{array}{cc}
+		       &B_{d}-B_{d-} = \frac{B_{d+}-B_{d-}}{2}+\frac{Z_{d}}{2^{\frac{n+1}{2}}}\\ 
+		       &B_{d+}-B_{d} = \frac{B_{d+}-B_{d-}}{2}-\frac{Z_{d}}{2^{\frac{n+1}{2}}}
+		   \end{array}		   
+		   \]
+		   are independent. To see this, note that by induction we have that $\frac{B_{d+}-B_{d-}}{2}\sim \mathcal{N}(0, \frac{d+-d-}{4})$ and the same holds for $ \frac{Z_{d}}{2^{\frac{n+1}{2}}}$. Thus, $ _{d}-B_{d-}$, $B_{d+}-B_{d}$ are two mean-zero uncorrelated Gaussians, hence they are independent.\\ 
+
+		   Now for any two disjoint intervals of length $ 2^{-n}$, the corresponding increments of the process $ (B_{d})_{d\in \mathcal{D}_{n}}$ are independent since one can express every increment as half the increment of the previous scale plus an independent Gaussian and apply the induction step.\\ 
+
+		   Thus, we have been able to construct $ (B_{d}, d\in \mathcal{D})$ satisfying the conditions $ 2 \& 3$. Furthermore, by Gaussianity we have 
+		   \[
+		   \mathbb{E}\left[ |B_{d}-B_{q}|^{p} \right] = |d-q|^{\frac{p}{2}}\cdot \mathbb{E}\left[ |N|^{p} \right], 
+		   \]
+		   where $ N\sim \mathcal{N}(0,1)$. Since for all $p>0$ $ \mathbb{E}\left[ |N|^{p} \right]<\infty$. By Kolmogorov's continuity criterion, for all $ \alpha \in (0, \frac{\epsilon}{p})$ with $ \epsilon = \frac{p}{2}-1$ $(B_{d}, d\in \mathcal{D})$ is a.s. $ \alpha-$H\"{o}lder continuous for all $ \alpha <\frac{1}{2}$.\\
+
+		   We now extend to the whole of $ [0,1]$ by setting $ B_{t} = \displaystyle\lim_{i \to \infty}B_{d_{i}} $, $ d\in \mathcal{D}$, $ d_{i}\to t$, $ i\to \infty$. It is immediate that $(B_{t, t\in [0,1])$ is a.s. $ \alpha-$ H\"{o}lder continuous for all $ \alpha<\frac{1}{2}$. Now it remains to check conditions $ 2\& 3$ are satisfied.\\
+
+			   Let $ 0=t_{0\leq t_{1}\leq \cdots \leq t_{n}\leq 1$. Then, we claim 
+				   the increments $ (B_{t_{i}}-B_{t_{i-1}})_{i=1,\cdots,k}$ are \underline{independent} Gaussian with $(B_{t_{i}}-B_{t_{i-1}})\sim \mathcal{N}(0, t_{i}-t_{i-1})$ for all $ 1\leq i \leq k$. Indeed, let
+				   \[
+				   \begin{array}{cc}
+					      0\leq t^{n}_{0}\leq t^{n}_{1}\leq \cdots \leq t^{n}_{k}\leq 1 \\ 
+ \downarrow \quad \quad  \downarrow \quad \cdots\quad\downarrow \\
+ 0\leq t_{0}\leq t_{1}\leq \cdots \leq t_{k}\leq 1
+					   \end{array}		   
+			   \]
+			   be dyadic rationals. By continuity, we have a.s. $ B_{t^{n}_{j}}-B_{t^{n}_{j-1}}\stackrel{n\to \infty}{\longrightarrow}B_{t_{j}}-B_{t_{j-1}}$ for all $ j\leq k$. Thus, by bounded convergence, 
+			   \[
+			   \begin{array}{ll}
+				   \mathbb{E}\left[ \exp \left( i\displaystyle\sum^{k}_{j=1}u_{j}(\smash{\overbrace{B_{t^{n}_{j}}-B_{t^{n}_{j-1}} )}^{\text{independent, normal}}} \right) \right] &= \displaystyle\prod^k_{j=1} \exp \left( \frac{-u^{2}_{j}(t^{n}_{j}-t^{n}_{j-1})}{2} \right) \\
+			        &\stackrel{n\to \infty}{\longrightarrow} \displaystyle\prod^k_{j=1} \exp \left( \frac{-u^{2}_{j}(t_{j}-t_{j-1})}{2} \right)\equiv \phi(u). 
+			   \end{array}
+			   \]
+			   By L\'{e}vy's convergence theorem, since $ \phi:\R^{k}\to \R$ is the characteristic function of independent Gaussians $ \sim \mathcal{N}(0, t_{j}-t_{j-1})$ and since the characteristic functions of the increments and the independent Gaussians agree, this forces the law of $ (B_{t_{j}}-B_{t_{j-1}})_{j\leq k}$ to be that of $ k$ independent $ \mathcal{N}(0, t_{j}-t_{j-1})$ gaussians. Hence, $ (B_{t}, t\in [0,1])$ satisfies all the properties.  
+
+		   \item Extending the construction to all of $ \R$. Let $ (B^{i}_{t}, t\in[0,1])$ be independent brownian motions and define 
+			   \[
+			   B_{t} = B^{\lfloor t\rfloor}_{t-\lfloor t\rfloor} +\displaystyle\sum^{\lfloor t\rfloor-1}_{i=0} B^{i}_{t}, \quad t\geq 0.
+			   \]
+			   It is not hard to see that the conditions in \ref{def: Brownian motion} are satisfied. 
+
+		   \item Now for $ d> 1$, let $ (B^{1}_{t})_{t\geq 0}, (B^{1}_{t})_{t\geq 0},\cdots, (B^{d}_{t})_{t\geq 0}$ be independent one dimensional Brownian motions. Set $ (B_{t})_{t\geq 0} = (B^{}_{t}, \cdots, B^{d_{t}})_{t\geq 0}$ and it is easy to check that the conditions are met. 
+
+    \end{enumerate}
+    
+\end{proof}
+
+\begin{theorem}\label{thm: scale invariance BM}
+Let $ B$ be a standard Brownian motion in $ \R^{d}$. Then 
+\begin{enumerate}
+	\item If $ U$ is an orthogonal matrix, then $ UB = (UB_{t})_{t\geq 0}$ is also a standard Brownian motion. Hence so is $ -B$.
+	\item (Scale invariance:) Let $ \lambda >0$ be given. Then $ \left( \frac{B_{\lambda t}}{\sqrt{\lambda}} \right)_{t\geq 0}$ is also a standard brownian motion. 
+	\item (Simple Markov property:) For all $ c\geq 0$, $ (B_{t+s}-B_{s})_{t\geq 0}$ is also a standard Brownian motion and is independent of $ \F^{B}_{s}$, where $ \F^{B}_{s} = \sigma(B_{u}:u\leq s)$.
+\end{enumerate}
+
+\end{theorem}
+\begin{proof}
+    Easy to check that it follows from the definition of Brownian motion.
+\end{proof}
+
+
+\mymark{Lecture 18}
+\subsection{Properties of Brownian Motion}\label{sec: bm properties}
+
+
+\begin{theorem}[Time inversion]\label{thm: bm time inversion}
+Let $ B$ be a standard Brownian motion in $ d=1$. Let 
+\[
+X_{t} = \left\lbrace
+\begin{array}{@{}l@{}}
+	tB_{\frac{1}{t}}, \quad t>0\\ 
+	0, \quad t = 0.     
+\end{array}\right.
+\]
+Then $ (X_{t})_{t\geq 0}$ is a standard brownian motion.
+\end{theorem}
+
+\begin{proof}
+    Fix $ t_{t}, \cdots ,t_{k}>0$. Then $ (B_{t_{1}}, \cdots, B_{t_{k}})$ is  Gaussian random vector with zero mean and $ \text{Cov}(B_{s, B_{t}}= s\land t$. Need to check that $ (X_{t_{1}}, \cdots, X_{t_{k}})$ is Gaussian and with the same covariance as above. By inspection, we se thtah this vecto is clearly Gaussian with zero mean. Now for the covariance, we compute
+    \[
+    \text{Cov}(X_{t_{i}}, X_{t_{j}}) = \text{Cov}(t_{i}B_{t_{i}}, t_{j}B_{t_{j}}) = t_{i}t_{j}\text{Cov}(B_{t_{i}}, B_{t_{j}}) = t_{i}t_{j} \left( \frac{1}{t_{i}}\land \frac{1}{t_{j}} \right) = t_{i}\land t_{j}.
+    \]
+   Now it remains to show that $ X$ is continous. Indeed, for positive $ t$, $ X$ is clearly continuous. Now, we also claim that $ \lim_{t\downarrow 0} X_{t} = 0$ a.s. Observe that 
+   \[
+	   (X_{t}, t\in \Q_{+}) \stackrel{d}{=} (B_{t}, t\in \Q_{+})
+   \]
+   and so 
+\[
+\begin{array}{ll}
+     
+	\PP \left( \displaystyle\lim_{t\downarrow 0, t\in \Q_{+}}X_{t} = 0  \right) &=  \PP \left( \displaystyle\bigcap_{N\in \N} \displaystyle\bigcup_{r\in Q_{+}} \displaystyle\bigcap_{q\in \Q_{+}, q< r} \left\{|X_{q}|\leq \frac{1}{N}\right\}  \right)\\ 
+								       &= \PP \left( \displaystyle\bigcap_{N\in \N} \displaystyle\bigcup_{r\in \Q_{+}} \displaystyle\bigcap_{q\in \Q_{+}, q< r} \left\{|B_{q}|\leq \frac{1}{N}\right\}  \right) = \PP \left( \displaystyle\lim_{t\downarrow 0, t\in \Q_{+}}B_{t} = 0  \right) = 1.
+\end{array}
+\]
+Finally, since $ \Q_{+}$ is dense in $ \R_{+}
+$ and $ X$ is continuous for $ t> 0$, we have that 
+\[
+\displaystyle\lim_{t\downarrow 0}X_{t} = \displaystyle\lim_{t\downarrow 0, t\in \Q_{+}}X_{t} = 0, \quad \text{ a.s.}
+\] 
+\end{proof}
+
+
+
+\begin{boxcor}\label{cor: bm time inversion}
+Let $ B$ be a standard brownian motion in $ d =1$. Then, 
+\[
+ \frac{B_{t}}{t}\stackrel{t\to \infty}{\longrightarrow}0,  \quad \text{ a.s. }
+\]
+
+\end{boxcor}
+
+\begin{proof}
+
+	By theorem \ref{thm: bm time inversion}, we have that with $ X$ defined therein,
+	\[
+	\displaystyle\lim_{t\to \infty}\frac{B_{t}}{t} = \displaystyle\lim_{t\to \infty}X \left( \frac{1}{t} \right) = 0
+\]
+by the continuity of $ X$ at zero.
+\end{proof}
+
+
+\begin{boxdef}\label{def: bm future sigma algebra}
+For $ s\geq 0$, let $ \F^{+}_{s} = \displaystyle\bigcap_{t>s} \F^{B}_{t} = \sigma(B_{u}:u\leq t)$. Have $ \F^{B}_{s}\subseteq \F^{+}_{s}$.
+\end{boxdef}
+
+\begin{remark}
+    From the simple Markov property, we have that 
+    \[
+	    (B_{t+s}-B_{s})_{t\geq 0}\perp \F^{B}_{s}.
+    \]
+    
+\end{remark}
+
+In fact we have more, that is 
+\begin{theorem}\label{thm: bm Markov future sigma}
+For all $s\geq 0$, 
+\[
+(B_{t+s}-B_{s})_{t\geq 0}\perp \F^{+}_{s}.
+\]
+\end{theorem}
+
+\begin{proof}
+It suffices to show that if $ t_{1}, \cdots, t_{k}$\in \R_{+}$ and $ F$ is a continuous and bounded, function on $ (\R^{d})^{k}$ and if $ A \subset \F^{+}_{s}$ then 
+\[
+  \mathbb{E}\left[ F(B_{t_{1}+s}-B_{s}, \cdots, B_{t_{k}+s}-B_{s})\cdot \mathbf{1}(A)
+  \right] =  \mathbb{E}\left[ F(B_{t_{1}+s}-B_{s}, \cdots, B_{t_{k}+s}-B_{s})\right] \cdot \PP(A).
+\]
+Since, for any open set, $ U \subset (\R^{d})^{k}$, one can approximate $F_{m}\uparrow \mathbf{1}(U)$ from below by bounded continuous functions $ F_{m}(x) = f_{m}(\text{dist}(x, U^{c}))$, $ x\in (\R^{d})^{k}$ where $f: \R \to \R$ is the continuous, bounded function 
+\[
+f(r) = \left\lbrace
+\begin{array}{@{}l@{}}
+   1, \quad r \geq \epsilon  \\
+   \frac{1}{\epsilon}r, \quad r<\epsilon. 
+\end{array}\right. 
+\]
+for $ r\in \R$ and apply monotone convergence. Then one just has to observe that the collection of open sets generates the borel sigma algebra on $ (\R^{d})^{k}$ and apply the uniqueness of extension theorem.\\ 
+
+Now, let $ s_{n}\downarrow s$ be a strictly decreasing sequence. Then, by continuity, have $ B_{t_{i}s_{n}}-B_{s_{n}}\stackrel{n\to \infty}{\longrightarrow}B_{t_{i}+s}-B_{s}$ a.s. for all $ i\leq k$.
+ Thus, we have 
+ \[
+	 \mathbb{E}\left[ F(B_{t_{1}+s}-B_{s}, \cdots, B_{t_{k}+s}-B_{s})\cdot \mathbf{1}(A) \right]
+\stackrel{\text{DCT}}{=}\mathbb{E}\left[ F(B_{t_{1}+s_{n}}-B_{s}, \cdots, B_{t_{k}+s_{n}}-B_{s_{n}})\cdot \mathbf{1}(A)
+  \right]
+  \]
+ and observe that $ A\in \F^{+}_{s}$ implies $ A\in \F^{B}_{s_{n}}$
+  for all $ n\in \N$. Thus, we can conclude by the simple Markov Property and another application of Dominated convergence.  
+\end{proof}
+
+\begin{boxcor}[Blumenthal's 0-1 Law]\label{cor: bm blumenthal}
+	The sigma algebra $ \F^{+}_{0}$ is trivial, i.e. if $ A\in \F^{+}_{0}$, then $ \PP(A)\in \{0,1\}$. 
+\end{boxcor}
+
+\begin{proof}
+    Take $ A\in \F^{+}_{0}\subseteq \sigma(B_{t}:t\geq 0 )$. But, bu the above, we have $ \sigma(B_{t}:t\geq 0 )\perp \F^{+}_{0}$ and so $ A \perp A$ which gives 
+    \[
+    \PP(A) = \PP(A\cap A) = \PP(A)\cdot\PP(A).
+    \]
+\end{proof}
+
+\begin{theorem}\label{thm: bm zeros near zero}
+Let $ B$ be a standard Brownian motion in $ d=1$. Define $ \tau = \displaystyle\inf\{t>0: B_{t} >0}$ and $ \sigma = \displaystyle\inf\{t>0 : B_{t} = 0\}$. Then $ \PP(\tau = 0) = \PP(\sigma=0) =1$.
+\end{theorem}
+
+\begin{proof}
+	For all $ n\in \N$, have that $ \{\tau=0\} = \displaystyle\bigcap_{k\geq n} \underbrace{\{\therexists \epsilon\in(0, 1/k) \text{ s.t. } B_{\epsilon}>0\}}_{\F^{B}_{\frac{1}{n}}}$ and so have $ \{\tau = 0\}\in \F^{+}_{0}$ which means that $ \PP(\tau = 0) \in\{0,1\}$. Now, $ \PP(\tau \leq t)\geq \PP(B_{t}>0) = \frac{1}{2}$ for all $ t>$.  So, 
+	\[
+	\{{(\tau =0) = \displaystyle\limit_{t\downarrow 0}\PP(\tau \leq t)\geq \frac{1}{2}$
+	\]
+which gives that $ \PP(\tau = 0)=1$. By symmetry ($-B $ is a std BM) we also have that 
+\[
+	\displaystyle\inf\{t>0:B_{t}<0\} = 0, \quad \text{ a.s.}
+\]
+Since $ B$ is continuous, by the intermediate value theorem we get thath $ \sigma = 0$ a.s.
+\end{proof}
+
+\begin{boxprop}\label{prop: bm pos and neg values always attained}
+Let $ B$ be a standard brownian motion in $ d=1$. For all $ t\geq0$,  set $ S_{t} = \displaystyle\sup_{s\leq t}B_{s}$ and $ I_{t} = \displaystyle\inf_{s\leq t}B_{s}$. Then, 
+
+\begin{enumerate}
+	\item For all $ \epsilon >0 $, have $ S_{\epsilon}>0$ and $ I_{\epsilon}<0$ a.s. In other words, in every interval $ (0,\epsilon)$ there exists a zero of BM.
+	\item $ \displaystyle\sup_{t\geq 0}B_{t}  = +\infty$ and $ \displaystyle\inf_{t\geq 0}B_{t} = -\infty$ a.s. 
+\end{enumerate}
+\end{boxprop}
+
+\begin{proof}
+	\begin{enumerate}
+		\item Let $ t_{n}\downarrow t$ as $ n\to \infty$. Then we have 
+			\[
+				\{B_{t_{n}} \text{ i.o }\}\subseteq \{S_{\epsilon}>0\}.
+			\]
+		It is not hard to see that $\{B_{t_{n}} \text{ i.o }\} \in \F^{+}_{0}$. Thus applyinf Fatou's lemma we deduce 
+		\[
+		\begin{array}{ll}
+			\PP(B_{t_{n}} \text{ i.o. }) &= \PP(\displaystyle\limsup_{n} \{B_{t_{n}}\geq 0\}) \\
+						     &\stackrel{\text{Fatou}}{\geq}\displaystyle\limsup_{n} \PP (\{B_{t_{n}}\geq 0\}) = \frac{1}{2}
+		\end{array}
+		\]
+		Thus, $\PP(B_{t_{n}} \text{ i.o. })= 1 $ and so $ \PP(S_{\epsilon}>0) = 1$. By symmetry, ($-B$ is a std BM) we conclude that $ \PP(I_{\epsilon}<0) = 1$.
+	\item Have for all $ \lambda >0$ that
+		\[
+			S_{\infty} = \displaystyle\sup_{t\geq 0}B_{t} = \displaystyle\sup_{t\geq 0}B_{\lambda t} \stackrel{d}{=} \sqrt{\lambda}\displaystyle\sup_{t\geq 0}\frac{B_{\lambda t}}{\sqrt{\lambda}}.
+	\]
+	So $ S_{\infty} \stackrel{d}{=} \alpha S_{\infty}$ for all $ \alpha >0$. We also know now thath $ S_{\infty}$. Hence it can only be the case that $ S_{\infty} = +\infty$ a.s. One can show that $ \displaystyle\inf_{t\geq 0}B_{t} = -\infty$ a.s.
+	\end{enumerate}
+\end{proof}
+
+\begin{boxprop}\label{prop: bm cone}
+Let $ B$ be a standard Brownian motion and let $ C$ be a cone with origin at zero and non-empty interior, that is $ \mathcal{C} = \{tu: t>0, u\in A\}$ with $ A\subseteq \mathbb{S}^{1} $(= unit sphere in $ \R^{d}$). Set $ H_{ \mathcal{C}} = \displaystyle\inf\{t>0: B_{t}\in \mathcal{C}\}$. Then, $ \PP(H_{ \mathcal{C}}=0)=1$.
+\end{boxprop}
+
+\begin{proof}
+	Observe that $ \{H_{C}=0\}\in \F^{+}_{0}$ and $ \PP(B_{t}\in \mathcal{C}) = \PP(B_{1}\in \mathcal{C})$ by scale invariance of Brownian motion and $ \mathcal{C}$. Since $ \intr{ \mathcal{C}}\neq \emptyset$, $ \PP(B_{1}\in \mathcal{C})>0$. Thus, $ \PP(H_{ \mathcal{C}}\leq t)\geq \PP(B_{t}\in \mathcal{C})>0$.Taking $ t\downarrow 0$ and applying Blumenthal concludes the argument.
+\end{proof}
+
+\begin{figure}[H]
+   \centering
+   \includesvg[width=0.5\linewidth]{images/cone.svg}
+   \caption{Illustration of cone in proposition \ref{prop: bm cone}}
+\end{figure} 
+
+\newpage
+\mymark{Lecture 19} 
+\begin{theorem}[Strong Markov Property]\label{thm: bm strong markov property}
+Let $ B$ be a standard Brownian motion and let $ T$ be an a.s. finite stopping time. Then, 
+$(B_{t+T}-B_{T})_{t\geq 0}$ is a standard Brownian motion and
+\[
+	(B_{t+T}-B_{T})_{t\geq 0}\perp \F^{+}_{T}.
+\]
+\end{theorem}
+
+\begin{proof}
+	Let $ T_{n} = 2^{-n}\lceil 2^n T\rceil$, $ T_{n}\downarrow T$, $ n\to \infty$. For $ k\in \N$, let $ B^{(k)}_{t} = B_{t+k\cdot 2^{-n}}-B_{k\cdot 2^{-n}}$ and $ B^{(n)}_{*}(t) = B_{t+T_{n}}-B_{T_{n}}$. Will show thath $ B_{*}$ is a Brownian motion independent of $ \F^{+}_{T_{n}}$.\\ 
+
+	Clearly, $ B^{(n)}_{*}$ is continuous. Now, let $ A$ be any event and fix $ E\in \F^{+}_{T_{n}}$. Then, we compute 
+	\[
+	\begin{array}{ll}
+		\PP(B_{*}\in A, E) &=\displaystyle\sum^{\infty}_{k=0}\PP(\displaystyle\overbrace{T_{n} = k\cdot 2^{-n}}^{\in \F^{+}_{k\cdot 2^{-n}}} ,\displaystyle\overbrace{B^{(k)}}^{\perp \F^{+}_{k\cdot 2^{-n}}} \in A, E)  \\
+	     &= \displaystyle\sum^{\infty}_{k=0}\PP(T_{n} = k\cdot 2^{-n} ,E)\cdot \PP(B^{(k)}\in A) \\ & = \PP(B\in A)\cdot \PP(E).
+	\end{array}
+	\]
+	He have thus shown that $ B_{*} \stackrel{d}{=} B$ and $ \perp \F^{+}_{T_{n}}$. Now, observe that 
+	\[
+\displaystyle\underbrace{B_{s+t+T}-Bs+T}_{ \mathcal{N}(0,t)} = \displaystyle\lim_{n\to \infty}(\displaystyle\underbrace{B_{s+t+T_{n}}-B_{s+T_{n}}}_{ \mathcal{N}(0,t)} ). 
+	\]
+	So, $ (B_{t+T}-B_{T})_{t\geq 0}$ is a standard BM.\\ 
+
+
+It remains to show that $ (B_{t+T}-B_{T})_{t\geq 0} \perp \F^{+}_{T}$. Indeed, fix $ t_{1}, \cdots, t_{k}>0$ and let $ F:(\R^{d})^{k}:\to \R$ be a continuous and bounded function. Fix $ A\in\F^{+}_{T}$ and compute 
+\[
+	\mathbb{E}\left[ F(B_{t_{t}+T}-B_{T}, \cdots, B_{t_{k}+T}-B_{T})\cdot \mathbf{1}(A) \right] \stackrel{\text{DCT}}{=} \displaystyle\lim_{n\to \infty}\mathbb{E}\left[ F(B_{t_{t}+T_{n}}-B_{T_{n}}, \cdots, B_{t_{k}+T_{n}}-B_{T_{n}})\cdot \mathbf{1}(A) \right].
+\]
+Since $ A\in \F^{+}_{T}$, $ A\in \F^{+}_{T_{n}}$ for all $ n\in \N$. Finally, using that $ B^{(n)}_{*}\perp \F^{+}_{T_{n}}$ concludes the proof.
+\end{proof}
+
+\begin{theorem}[Reflection principle]\label{thm: bm reflection principle}
+Let $ B$ be a standard Brownian motion in $ d=1$ and $ T$ an a.s. finite stopping time. Define 
+\[
+	\tilde{B}_{t} = \left\lbrace
+	\begin{array}{@{}l@{}}
+	    B_{t}, \quad 0\leq t\leq T \\
+	    2B_{T}-B_{t}, \quad t>T
+	\end{array}\right.
+\]
+Then $ \tilde{B}$ is a standard Brownian motion.
+\end{theorem}
+
+\begin{figure}[H]
+    \centering
+    \includesvg[width=0.5\linewidth]{images/reflection principle.svg}
+    \caption{Illustration of reflection of $ B$ at time $ T$. }
+    \label{fig: reflection}
+\end{figure}
+
+\begin{proof}
+    We have by the Strong Markov Property that $B^{(T)} = (B_{t+T}-B_{T})_{t\geq 0}$ is a standard Brownian Motion independent of $ \F^{+}_{T}$. Let $ \mathcal{C_{0}} = \mathcal{C}_{0}([0,\infty):\R)$ denote the space of continuous functions on the positive reals that vanish at zero, endowed with the topology of local uniform convergence and $  \mathcal{A}$ the induced Borel sigma algebra. 
+
+   \begin{examplesblock}{Metrisability of topology of local uniform convergence}\label{aside: metrisability of local uniform topology}
+ Recall from Topology that this topology is induced by the metric 
+\[
+	\begin{array}{cc}
+    d:  \mathcal{C}_{0}([0,\infty):\R)\times \mathcal{C}_{0}([0,\infty):\R)\to \R_{+}\\ 
+    (f,g)\mapsto d(f,g)\coloneqq \displaystyle\sum_{n=1}^{\infty} \frac{1}{2^n}\frac{ \displaystyle\sup_{x\in [0,n]}|f(x)-g(x)|}{1+ \displaystyle\sup_{x\in [0,n]}|f(x)-g(x)|}
+\end{array}
+\]
+   \end{examplesblock} 
+
+   We also have the useful fact that
+
+   \begin{examplesblock}{Characterisation of $ \mathcal{A}$}\label{aside: sigma alg space of cont funcs }
+   We have, see Kallenberg's book on the `Foundations of Modern Probability` for instance, that
+   \[
+	   \mathcal{A} = \sigma(\{\pi_{t}: t\geq 0\})
+   \]
+   where for $ t\geq 0$, $ \pi_{t}: \mathcal{C}_{0}\to \R$ denotes the projection onto the $ t$ coordinate.
+   \end{examplesblock}
+
+    Now define the function 
+    \[
+	    \begin{array}{cc}
+
+\psi: (\mathcal{C}_{0}\times [0,\infty) \times \mathcal{C}_{0},  \mathcal{A}\otimes \mathcal{B}([0,\infty))\otimes \mathcal{A})\to (\mathcal{C}_{0}, \mathcal{A})\\ 
+(X,T,Y)\mapsto \psi_{T}(X,Y)(t)\\ 
+\coloneqq X(t)\cdot \mathbf{1}([0,T])(t)+(X(t)+Y(t-T)) \mathbf{1}(T, \infty).
+    
+\end{array}
+
+        \]
+    is a continuous map in the product topology, therefore measurable. To see that $ \psi$ is continuous, 
+    \begin{examplesblock}{Continuity of $ \psi$}\label{aside: proof of continuity reflection map}
+	    Fix $ (X,T,Y)\in \mathcal{C}_{0}\times [0,\infty) \times \mathcal{C}_{0}$. Due to the metrisability of the underlying topologies, it suffices to show that for any sequence $(X_{n}, T_{n}, Y_{n})_{n\in \N}\subseteq  \mathcal{C}_{0}\times [0,\infty)$ such that $ X_{n}\stackrel{d}{\longrightarrow}X$, $Y_{n}\stackrel{d}{\longrightarrow}Y $ and $ T_{n}\to T$ as $ n\to \infty$, $\psi(X_{n}, T_{n}, Y_{n} ) \stackrel{d}{\longrightarrow} \psi(X,T,Y) $.\\ 
+
+	    Now, fix $\epsilon>0 $, an arbitrary compact set $ K\subseteq  \R_{+}$ and let $ t\in K$ be arbitrary. We estimate
+	    \[
+	    \begin{array}{ll}
+	    &|\psi(X_{n}, T_{n}, Y_{n})(t)-\psi(X, T, Y)(t)|\\ 
+	    &\leq |(X(t)-X(T))\cdot \mathbf{1}(t\leq T)- (X_{n}(t)-X_{n}(T_{n}))\cdot \mathbf{1}(t\leq T_{n})| + \cancelto{0}{|X(T)-X_{n}(T_{n})|}  \\[10pt]
+	    &+ |Y(t-T)\cdot \mathbf{1}((T_{n}\land T, T_{n}\lor T])|+ |Y(t-T)-Y_{n}(t-T_{n})|\\[10pt]
+	    &\leq|(X(t)-X(T))\cdot \mathbf{1}((T_{n}\land T, T_{n}\lor T])|+ \cancelto{0}{\norm{X-X_{n}}_{\infty, K}}+ \cancelto{0}{|X(T)-X_{n}(T_{n})|} \\[10pt]
+	    &+ |Y(t-T)\cdot \mathbf{1}((T_{n}\land T, T_{n}\lor T])|+ \cancelto{0}{|Y(t-T)-Y_{n}(t-T_{n})|}\\[10pt]
+	    &\leq |(X(t)-X(T))\cdot \mathbf{1}((T_{n}\land T, T_{n}\lor T])| + |Y(t-T)\cdot \mathbf{1}((T_{n}\land T, T_{n}\lor T])|+\epsilon
+	    \end{array}
+	    \]
+	    (where we make the set harmlessly $Y(t-T)=0$ for $ t\leq T$) for $ n\in \N$ large enough independent of $ t\in K$, since the crossed-out terms converge to zero uniformly in $ t\in K$ due to local uniform convergence and uniform contuinity on compact sets. The fact that $ Y(t-T)$ and $ X(t)-X(T)$ vanish at $ T$ and that $ T_{n}\to T$, $ n\to \infty$ enables us to bound for $ n$ sufficiently large independent of $ t$:
+\[
+	|\psi(X_{n}, T_{n}, Y_{n})(t)-\psi(X, T, Y)(t)|&\leq \displaystyle\sup_{t\in (T_{n}\land T, T_{n}\lor T]}\big(|(X(t)-X(T)|+|Y(t-T)|\big)+ \epsilon \leq 2\epsilon
+\]
+and conclude the argument. 
+	    
+	    
+    \end{examplesblock}
+
+
+
+Also observe that 
+    \[
+	    \begin{array}{cc}
+		    \psi((B_{t\land T})_{t\geq 0}, T, B^{(T)}) = B\\ 
+	\psi((B_{t\land T})_{t\geq 0}, T, -B^{(T)}) = \tilde{B}\\ 
+    \end{array}
+    \]
+    By observing that $ B_{(T)}$ is independent of the stopped process $(B_{t\land T})_{t\geq 0}$,  we have that 
+    \[
+	    ((B_{t})_{t\geq 0}), T, (B^{T}_{t})_{t\geq 0}) \stackrel{d}{=} ((B_{t})_{t\geq 0}), T, -(B^{T}_{t})_{t\geq 0})
+    \]
+    and so it follows that $ B \stackrel{d}{=} \tilde{B}$. 
+\end{proof}
+
+\begin{boxcor}\label{cor: bm reflection principle}
+For $ t\geq 0$, let $ S_{t} = \displaystyle\sup_{s\leq t}B_{s}$ and fix $ b>0$ and $ a\leq b$. Then 
+\[
+\PP(S_{t}\geq b, B_{t}\leq B_{t}\leq a) = \PP(B_{t}\geq 2b-a).
+\]
+\end{boxcor}
+
+\begin{proof}
+	Fix $ x>0$ and define $ T_{x} = \displaystyle\inf\{t\geq 0: B_{t} = x\}$. Since $ S_{\infty}<\infty$ a.s., it follows that $ T_{x}<\infty$ a.s. and $ B_{T_{x}} = x$. Observe that $ \{S_{t}\geq b\} = \{T_{b}\leq t\}$. Now we compute, 
+	\[
+	\begin{array}{ll}
+	    \\
+	    \PP(S_{t}\geq b, B_{t}, \leq a) &= \PP(\overbrace{T_{b}\leq t, B_{t}\leq a}^{\text{ on } T_{b}\leq t, \tilde{B}_{t} = 2b-B_{t}})\\ 
+					    &= \PP(\tilde{B}_{t}\geq 2b-a, T_{b}\leq t)=\PP(\overbrace{\tilde{B}_{t}\geq 2b-a}^{ \tilde{B}_{t}\geq 2b-a \implies T_{b}\leq t})\\ 
+				& = \PP(B_{t}\geq 2b-a).
+	\end{array}
+	\]
+\end{proof}
+
+\begin{boxcor}\label{cor: bm dist of running max}
+	S_{t} \stackrel{d}{=} |B_{t}|.
+\end{boxcor}
+
+\begin{proof}
+	\[
+	\begin{array}{ll}
+		\PP(S_{t}\geq a) &= \PP(\overbrace{S_{t}\geq a, B_{t}>a}^{=\PP(B_{t}\geq a)})+\overbrace{\PP(S_{t}\geq a, B_{t}\leq a)}^{=\PP(B_{t}\geq 2b-a) \text{ by the reflection principle}} \\
+	     &= 2\PP(B_{t}\geq a)\\ 
+	     &= \PP(|B_{t}|\geq a).
+	\end{array}
+	\]
+\end{proof}
+
+\begin{boxcor}\label{cor: bm hitting time distribution}
+	Fix $ x>0$ and let $ T_{x} = \displaystyle\inf\{t\geq 0 : B_{t}=x\}$. Then 
+	\[
+		T_{x} \stackrel{d}{=} \left( \frac{x}{B_{1}} \right)^{2}.
+	\]
+\end{boxcor}
+
+\subsection{Martingales for Brownian motion}
+
+\begin{theorem}\label{thm: bm martingales}
+Let $ (B_{t})_{t\geq 0}$ be a standard Brownian motion in $ d=1$. Then 
+\begin{enumerate}
+	\item $ (B_{t})_{t\geq 0}$ is a martingale with respect to the filtration $ (\F^{+}_{t})_{t\geq 0}$ 
+	\item  $(B_{t}^{2}-t)_{t\geq 0}$ is a martingale with respect to the filtration $ (\F^{+}_{t})_{t\geq 0}$. 
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+	Fix $ s\leq t$. Compute 
+	\[
+		\mathbb{E}\left[ B_{t}| \F^{+}_{s} \right] = \mathbb{E}\left[ \smash{\overbrace{B_{t}-B_{s}}^{\perp \F^{+}_{s}}} + B_{s} |\F^{+}_{s} \right] = B_{s}, \quad \text{ a.s.}
+	\]
+	and 
+	\[
+		\mathbb{E}\left[ (B_{t}^{2}-t)| \F^{+}_{s} \right] = \mathbb{E}\left[ (B_{t}-B_{s})^2 |\F^+_{s} \right] + 2 \cancelto{0}{\mathbb{E}\left[ (B_{t}-B_{s})B_{s} |\F^{+}_{s} \right]}\\ 
+	+ \mathbb{E}\left[ B^{2}_{s}|\F^{+}_{s} \right]-t = B^{2}_{s}-s, \quad \text{ a.s.}
+
+	\]	
+\end{proof}
+
+\begin{boxcor}\label{cor: bm gambler's ruin}
+Let $ B$ be a standard Brownian motion in $ d=1$ and suppose $ x,y>0$. Then 
+\[
+	\PP(T_{-x}<T_{y}) = \frac{y}{x+y}
+\]
+and 
+\[
+ \mathbb{E}\left[ T_{-x}\land T_{y} \right] = x\cdot y
+\]
+with $ T_{\cdot}$ defined as in corollary \ref{cor: bm hitting time distribution}.
+\end{boxcor}
+
+\begin{boxprop}\label{prop: bm exp martingale}
+Let $ B$ be a standard Brownian motion in $ \R^{d}$. Set 
+\[
+	M_{t} = \exp \left( \bracket{u}{B_{t}}-\frac{|u|^{2}t}{2} \right)
+\]
+is an $ \F^{+}_{t}$ martingale for all $ u\in \R^{d}$.
+\end{boxprop}
+
+\begin{proof}
+    Fix $ u\in \R^{d}$. Integrability and adaptedness are clear. Now, for the martingale property, we have 
+    
+    \[
+    \begin{array}{ll}
+	    \mathbb{E}\left[ M_{t}|\F^{+}_{s} \right] &= \mathbb{E}\left[ \exp(\bracket{u}{B_{t}-B_{s}}-\bracket{u}{B_{s}}) |\F^{+}_{s}\right]\cdot e^{-\frac{|u|^{2}t}{2}}\\  
+						      &= \exp(\bracket{u}{B_{s}})\cdot \exp \left( \frac{|u|^{2}(t-s)}{2} \right)\cdot e^{-\frac{|u|^{2}t}{2}} = M_{s}
+    \end{array}
+    \]
+\end{proof}
+
+\mymark{Lecture 20} 
+\begin{theorem}\label{thm: bm ito formula}
+Let $ f(t, x):\R_{+}\times \R^{d}\to \R$ be continuously differentiable in $ t$ and twice continuously differentiable in $ x$. Assume $ f$ and all its derivatives are bounded. Then the process 
+\[
+M_{t} = f(t, B_{t})-f(0, B_{0})- \displaystyle\int^{t}_{0} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r, B_{r})\diff r   
+\]
+is an $\F^{+}_{t}-$martingale. 
+\end{theorem}
+
+\begin{proof}
+    By the boundedness assumption, $ M$ is integrable and is clearly adapted. Now it remains to show the martingale property, that is for all $ t, z\geq 0$ $ \mathbb{E}\left[ M_{t+s}-M_{s} |\F^{+}_{s}\right] = 0$. We have 
+    \[
+    \begin{array}{ll}
+        M_{t+s}-M_{s} &= f(t+s, B_{t+s})-f(s, B_{s}) - \displaystyle\int^{t+s}_{s} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r, B_{r})\diff r    \\
+         &= f(t+s, B_{t+s})-f(s, B_{s}) - \displaystyle\int^{t}_{0} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, B_{r+s})\diff r.
+    \end{array}
+    \]
+    Now, taking conditional expectations, we have 
+    \[
+    \begin{array}{ll}
+        \mathbb{E}\left[ M_{t+s}-M_{s}  |\F^{+}_{s}\right] &= -f(s, B_{s}) + \mathbb{E}\left[ f(t+s, B_{t+s}-B_{s}+B_{s}) |\F^{+}_{s} \right] \\
+         &- \mathbb{E}\left[ \displaystyle\int^{t}_{0} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, B_{r+s}-B_{s}+B_{s})\diff r |\F^{+}_{s}\right]\\ 
+	 &\stackrel{(B_{r+s}-B_{s})_{r\geq 0}\perp \F^{+}_{s}}{=} -f(s, B_{s}) - \displaystyle\int_{\R^{d}}\left( \displaystyle\int^{t}_{0} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, x+B_{s})\diff r \right) p_{r}(0,x)\diff x\\ 
+	 &+ \displaystyle\int_{\R^{d}}f(t+s, x+B_{s}) p_{t}(0,x)\diff x
+    \end{array}
+    \]
+    where $ p_{t}(0,x) = \frac{1}{\sqrt{2\pi t}^{d}}\exp \left( \frac{-|x|^{2}}{2t} \right)$ for $ x\in \R^{d}$, $ t>0$. Note that $ p_{t}$ satisfies the heat equation:
+    \[
+    \frac{\partial p_{t}}{\partial{t}} = \frac{1}{2}\Delta p_{t}.
+    \]
+    Using dominated convergence, we have that 
+    \[
+    \begin{array}{ll}
+          \displaystyle\int_{\R^{d}}\left( \displaystyle\int^{t}_{0} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, x+B_{s})\diff r \right) p_{r}(0,x)\diff x \\ 
+	  = \displaystyle\lim_{\epsilon \downarrow 0}  \displaystyle\int_{\R^{d}}\left( \displaystyle\int^{t}_{\epsilon} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, x+B_{s})\diff r \right) p_{r}(0,x)\diff x.
+    \end{array}
+    \]
+   On $ (\epsilon, t)$, we have enough regularity to integrate by parts and s theorem to obtain 
+   \[
+   \begin{array}{ll}
+        \displaystyle\int_{\R^{d}}\left( \displaystyle\int^{t}_{0} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, x+B_{s})\diff r \right) p_{r}(0,x)\diff x \\
+        = \displaystyle\lim_{\epsilon \downarrow 0}  \displaystyle\int_{\R^{d}}\left( \displaystyle\int^{t}_{\epsilon} \left( \frac{\partial}{\partial r}+\frac{1}{2}\Delta \right) f(r+s, x+B_{s})\diff r \right) p_{r}(0,x)\diff x.\\ 
+	= \displaystyle\int_{\R^{d}}f(t+s, x+B_{s}) p_{t}(0,x)\diff x - \displaystyle\lim_{\epsilon\downarrow 0}\displaystyle\int_{\R^{d}}f(\epsilon+s, x+B_{s}) p_{\epsilon}(0,x)\diff x \\ 
+	+  \displaystyle\lim_{\epsilon \downarrow 0}  \displaystyle\int_{\R^{d}}\left( \displaystyle\int^{t}_{\epsilon} \left(\cancelto{0 (\text{PDE})}{-\frac{\partial p_{r}(0,x)}{\partial r}+\frac{1}{2}\Delta p_{r(0,x)} }\right) f(r+s, x+B_{s})\diff r \right) \diff x\\ 
+	= \mathbb{E}\left[ f(t+s, B_{t+s}) \right]
+- \displaystyle\lim_{\epsilon\downarrow 0}\mathbb{E}\left[ f(\epsilon+s, B_{\epsilon+s})|\F^{+}_{s} \right]\\ 
+\stackrel{\text{DCT}}{=}\mathbb{E}\displaystyle\int_{\R^{d}}f(t+s, x+B_{s}) p_{t}(0,x)\diff x
+-  f(s, B_{s}).
+   \end{array}
+   \]
+   Combining all of the above together yields the desired equality $ \mathbb{E}\left[ M_{T+s}-M_{s} | \F^{+}_{s} \right]=0$ a.s.
+\end{proof}
+
+\subsection{Transience and recurrence}\label{sec: transience and recurrence}
+Recall that if $ B$ is  Brownian motion $ B_{0}=0$ then it is called a standard Brownian motion. More generally, if $ B_{0} =x$ then call its law $ \PP_{x}$ and note that $ (B_{t}-x, t\geq 0)$ is a standard Brownian motion.\\ 
+
+\begin{theorem}\label{thm: bm recurrence and transience}
+Let $ B$ be a standard Brownian motion in $ \R^{d}$.\\ 
+
+\begin{enumerate}
+		\item If $ d=1$, then $ B$ is \underline{point-recurrent}, i.e. for all $ x,z$ $ \{t\geq 0: B_{t} = x\}$ is unbounded $ \PP_{z}-$a.s. \\ 
+		\item If $ d = 2$, then $ B$ is \underline{neighbourhood recurrent}, that is for all $ \epsilon >0$ and $ x, z\in R^{d}$ the set of times $ \{t\geq 0 : |B_{t}-z|\leq \epsilon\}$ is unbounded $ \PP_{x}-$a.s. However, it does not hit points that is $ \PP_{x}(\exists t\geq 0: B_{t} = z)=0$. 
+		\item If $ d=3$, $ B$ is \underline{transient}, that is $ |B_{t}|\to \infty$, as $ t\to \infty$ $ \PP_{x}-a.s.$
+\end{enumerate}
+
+\end{theorem}
+
+\begin{proof}
+    \begin{enumerate}
+	    \item \underline{$ d=1$:} we have almost surely that $ \displaystyle\limsup_{t\to \infty} B_{t} = \infty$, $ \displaystyle\liminf_{t\to \infty}B_{t} = -\infty$ which gives the result. 
+    \item \underline{$ d=2$:} by translation, it suffices to consider $ z = 0$. Fix radii $ \epsilon<|x|<R$. Let $ T_{r} = \displaystyle\inf\{t\geq 0: |B_{t}|=r\}$ for $ r>0$. We want to compute $ \PP_{x}(T_{\epsilon}<T_{R})$. Let $ H = T_{\epsilon}\land T_{R}$, an a.s. finite stopping time. Let $ \phi: \R^{2}\to \R$ be given by $ \phi(y) = \log|y|$ on the annulus $ \epsilon<|y|<R$ and extended outside that region in a fashion so that $ \phi\in \mathcal{C}^{2}_{b}(\R^{2})$. Then, $ \Delta\phi = 0$ in the annulus. 
+	    \parbox[b]{0.55\textwidth}{ % The text part occupies 55% of the width  
+	    By theorem \ref{thm: bm ito formula}, the process 
+		    \[
+		    M_{t} = \phi(B_{t})-\phi(B_{0})- \displaystyle\int^{t}_{0} \frac{1}{2}\Delta \phi(B_{s}) \diff s  
+		    \]
+		    is a continuous  $(\F^{+}_{t})_{t\geq 0}-$martingale. An argument similar to that in Theorem \ref{thm: OST for UI mg}\footnote{Approximate $ n\land H$ from above by the sequence $(T_{m})_{m\in\N}=(2^{-m}\lceil 2^m n\land H \rceil)_{m\in \N}$, use the discrete OST on the UI martingale $ (M_{d\land T_{m}})_{d\in \mathcal{ D}_{m}}$ of bdd stopping times and pass to the limit as $ m\to \infty$ using DCT.} gives $\mathbb{E}\left[ M_{n\land H} \right] = 0$ for all $ n\in \N$, in other words, $\mathbb{E}\left[ \log(|B_{n\land H}|) \right]=\log|x| $. Taking $ n\uparrow \infty$ and applying DCT gives $\mathbb{E}\left[ \log(|B_{H}|) \right]=\log|x| $. In other words, expressed in terms of the stopping times $ T_{\epsilon}, T_{R}$, this leads to
+}
+    \hfill  % Add space between the text and the figure
+    \parbox[b]{0.4\textwidth}{ % The figure part occupies 40% of the width
+        \centering
+        \begin{tikzpicture}[scale=0.4]  % Adjust scale to fit nicely in the minipage
+
+            % Define radii
+            \def\innerRadius{2}
+            \def\outerRadius{4}
+
+            % Draw annulus (semi-complete)
+            \draw[thick] (0,0) circle (\innerRadius); % Inner circle
+            \draw[thick] (0,0) circle (\outerRadius); % Outer circle
+
+            % Rays from origin to outer and inner circles
+            \draw[thick] (0,0) -- (15:\innerRadius);   % First ray stopping at inner disk
+            \draw[thick] (0,0) -- (30:\outerRadius);   % Second ray extending to outer disk
+
+            % Draw portion of the annulus as incomplete
+            \draw[thick] (45:\innerRadius) arc[start angle=45,end angle=135,radius=\innerRadius]; % Partial inner boundary
+            \draw[thick] (45:\outerRadius) arc[start angle=45,end angle=135,radius=\outerRadius]; % Partial outer boundary
+
+            % Add point x inside the annulus
+            \filldraw[black] (25:3) circle (2pt); % Point in the annulus
+            \node at (25:3.3) {$x$};  % Label for point x
+
+            % Add label for inner and outer boundaries
+            \node at (15:\innerRadius+0.3) {$\epsilon$}; % Move epsilon closer to the intersection with the inner disk
+            \node at (30:\outerRadius+0.3) {$R$}; % Label for outer circle
+
+            % Add label for origin
+            \node at (0,0) [below left] {$0$};
+
+        \end{tikzpicture}
+    }	     		    \[
+		    \PP_{x}(T_{\epsilon}<T_{R}) = \frac{\log R -\log |x|}{\log R - \log \epsilon} \tag{$\ast$}.
+		    \]
+		    Now, taking $ R\to \infty$, $ T_{R}\to \infty$ a.s. and so $ \PP_{x}(T_{\epsilon}<\infty)=1$. We now compute 
+		    \[
+		    \begin{array}{ll}
+			    \PP_{x}(|B_{t}|\leq \epsilon \text{ for some }t>n) = \PP_{x}(|B_{t+n}-B_{n}+B_{n}|\leq \epsilon \text{ for some } t>0) \\
+		         = \displaystyle\int_{\R} \PP_{0}(|B_{t}+y|\leq \epsilon \text{ for some }t>0) p_{n(x,y)}\diff y = 1.
+		    \end{array}
+		    \]
+		    Hence, $ \{t\geq 0: |B_{t}|\leq \epsilon\}$ is unbounded $ \PP_{x}-$a.s. Now, in (*), letting $ \epsilon \to 0$, $ \PP_{x}(\text{ hit }0 \text{ before } R)=0$. Let $ R\to \infty$ we finally obtain $ \PP_{x}(\exists t>0: B_{t} = 0)=0$ for all $ x\neq 0$.\\ 
+
+\mymark{Lecture 21} hello world continue here
+		    
+	
+    \end{enumerate}
+    
+\end{proof}
 
 
 \end{document}
