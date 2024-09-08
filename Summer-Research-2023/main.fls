@@ -677,6 +677,29 @@ INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-gauss-anisotropic.png
 INPUT ./images/NGuyen2018-pde-sgd-gauss-anisotropic.png
 INPUT ./images/NGuyen2018-pde-sgd-gauss-anisotropic.png
@@ -715,6 +738,22 @@ INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss8.tfm
 INPUT ./images/MullerB-potential-plot-3d.png
@@ -781,69 +820,6 @@ INPUT ./images/3d_spin_sphere_plot_d_5.png
 INPUT ./images/3d_spin_sphere_plot_d_5.png
 INPUT ./images/3d_spin_sphere_plot_d_5.png
 INPUT ./images/3d_spin_sphere_plot_d_5.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-heatmap-3dspin.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Eijnden2018-loss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Eijnden2018-SGD-algos-risk-3dspin.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
-INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
 INPUT ./images/3d-spin-model-neural-net-loss-d=3.png
 INPUT ./images/3d-spin-model-neural-net-loss-d=3.png
 INPUT ./images/3d-spin-model-neural-net-loss-d=3.png

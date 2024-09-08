@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  6 SEP 2024 22:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.8.28)  8 SEP 2024 23:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1909,6 +1909,9 @@ LaTeX Warning: Label `fig: description' multiply defined.
 LaTeX Warning: Label `sub@fig: description' multiply defined.
 
 
+LaTeX Warning: Label `eq:firstupdaterule' multiply defined.
+
+
 LaTeX Warning: Label `a' multiply defined.
 
 
@@ -1928,24 +1931,6 @@ LaTeX Warning: Label `sub@c' multiply defined.
 
 
 LaTeX Warning: Label `fig' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: description' multiply defined.
-
-
-LaTeX Warning: Label `sub@fig: description' multiply defined.
-
-
-LaTeX Warning: Label `fig: label' multiply defined.
 
 
 LaTeX Warning: Label `a' multiply defined.
@@ -2403,12 +2388,12 @@ Underfull \hbox (badness 10000) in paragraph at lines 301--302
 
  []
 
-<images/Nguyen2018-SGD-1.png, id=258, 306.14375pt x 204.765pt>
+<images/Nguyen2018-SGD-1.png, id=253, 306.14375pt x 204.765pt>
 File: images/Nguyen2018-SGD-1.png Graphic file (type png)
 <use images/Nguyen2018-SGD-1.png>
 Package pdftex.def Info: images/Nguyen2018-SGD-1.png  used on input line 308.
 (pdftex.def)             Requested size: 170.71718pt x 114.1833pt.
-<images/Nguyen2018-paper-numerical-validation-iso-gauss.png, id=260, 453.695pt 
+<images/Nguyen2018-paper-numerical-validation-iso-gauss.png, id=255, 453.695pt 
 x 298.11375pt>
 File: images/Nguyen2018-paper-numerical-validation-iso-gauss.png Graphic file (
 type png)
@@ -2490,7 +2475,7 @@ You may provide a definition with
 Package svg Info: Last page of `./svg-inkscape/non-monotone-activation_svg-tex.
 pdf' is 2 on input line 332.
 (./svg-inkscape/non-monotone-activation_svg-tex.pdf_tex
-<./svg-inkscape/non-monotone-activation_svg-tex.pdf, id=272, page=1, 318.70921p
+<./svg-inkscape/non-monotone-activation_svg-tex.pdf, id=267, page=1, 318.70921p
 t x 299.00107pt>
 File: ./svg-inkscape/non-monotone-activation_svg-tex.pdf Graphic file (type pdf
 )
@@ -2498,7 +2483,7 @@ File: ./svg-inkscape/non-monotone-activation_svg-tex.pdf Graphic file (type pdf
 Package pdftex.def Info: ./svg-inkscape/non-monotone-activation_svg-tex.pdf , p
 age1 used on input line 56.
 (pdftex.def)             Requested size: 256.0774pt x 240.25507pt.
-<./svg-inkscape/non-monotone-activation_svg-tex.pdf, id=273, page=2, 318.70921p
+<./svg-inkscape/non-monotone-activation_svg-tex.pdf, id=268, page=2, 318.70921p
 t x 299.00107pt>
 File: ./svg-inkscape/non-monotone-activation_svg-tex.pdf Graphic file (type pdf
 )
@@ -2516,23 +2501,23 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-<images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png, id=276, 256.887pt x 209.
+<images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png, id=271, 256.887pt x 209.
 583pt>
 File: images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png Graphic file (type p
 ng)
 <use images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png  
-used on input line 347.
+used on input line 349.
 (pdftex.def)             Requested size: 170.71718pt x 139.28459pt.
-<images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png, id=277, 287.766pt x 207.612pt
+<images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png, id=272, 287.766pt x 207.612pt
 >
 File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
-on input line 353.
+on input line 355.
 (pdftex.def)             Requested size: 170.71718pt x 123.1711pt.
 
-Underfull \hbox (badness 1102) in paragraph at lines 354--354
+Underfull \hbox (badness 1102) in paragraph at lines 356--356
 []\OT1/cmr/m/n/9 (b) |Plot com-par-ing the av-er-age dis-tance of the
  []
 
@@ -2543,32 +2528,53 @@ inkscape/non-monotone-activation_svg-tex.pdf
 pdfTeX warning: pdflatex (file ./svg-inkscape/non-monotone-activation_svg-tex.p
 df): PDF inclusion: multiple pdfs with page group included in a single page
 >]
-<images/NGuyen2018-pde-sgd-gauss-anisotropic.png, id=293, 265.7565pt x 198.7425
+<images/Nguyen2018-SGD-algos-risk-aniso-gauss.png, id=288, 236.8485pt x 179.361
+pt>
+File: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png Graphic file (type png)
+<use images/Nguyen2018-SGD-algos-risk-aniso-gauss.png>
+Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png  used
+ on input line 391.
+(pdftex.def)             Requested size: 192.0548pt x 145.44032pt.
+<images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png, id=289, 462.528pt x 34
+6.896pt>
+File: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png Graphic file (type
+ png)
+<use images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png>
+Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
+  used on input line 392.
+(pdftex.def)             Requested size: 192.0548pt x 144.04384pt.
+File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
+<use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
+Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
+on input line 393.
+(pdftex.def)             Requested size: 192.0548pt x 138.5671pt.
+<images/NGuyen2018-pde-sgd-gauss-anisotropic.png, id=290, 265.7565pt x 198.7425
 pt>
 File: images/NGuyen2018-pde-sgd-gauss-anisotropic.png Graphic file (type png)
 <use images/NGuyen2018-pde-sgd-gauss-anisotropic.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-gauss-anisotropic.png  used 
-on input line 385.
+on input line 413.
 (pdftex.def)             Requested size: 170.71718pt x 127.67087pt.
-<images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png, id=294, 583.17876pt x 45
+<images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png, id=291, 583.17876pt x 45
 2.69125pt>
 File: images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png Graphic file (type p
 ng)
 <use images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>
 Package pdftex.def Info: images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png  
-used on input line 391.
+used on input line 419.
 (pdftex.def)             Requested size: 170.71718pt x 132.51353pt.
  [10 <./images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png> <./images/NGuyen2
-018-pde-sgd-iso-gauss-non-mon.png> <./images/NGuyen2018-pde-sgd-gauss-anisotrop
-ic.png> <./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>]
+018-pde-sgd-iso-gauss-non-mon.png>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 403.
+(mdframed)              on input line 431.
+ [11 <./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png> <./images/Nguyen2018-
+SGD-algos-risk-iso-gauss-non-mon.png> <./images/NGuyen2018-pde-sgd-gauss-anisot
+ropic.png> <./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png>]
 Package svg Info: Last page of `./svg-inkscape/piecewise-constant_svg-tex.pdf' 
-is 1 on input line 414.
-
-(./svg-inkscape/piecewise-constant_svg-tex.pdf_tex
-<./svg-inkscape/piecewise-constant_svg-tex.pdf, id=316, page=1, 392.91856pt x 2
+is 1 on input line 442.
+ (./svg-inkscape/piecewise-constant_svg-tex.pdf_tex
+<./svg-inkscape/piecewise-constant_svg-tex.pdf, id=321, page=1, 392.91856pt x 2
 89.74008pt>
 File: ./svg-inkscape/piecewise-constant_svg-tex.pdf Graphic file (type pdf)
 <use ./svg-inkscape/piecewise-constant_svg-tex.pdf, page 1>
@@ -2578,12 +2584,12 @@ used on input line 56.
 )
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 426.
+(mdframed)              on input line 454.
 
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2594,7 +2600,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2605,7 +2611,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2614,7 +2620,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2625,7 +2631,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2636,7 +2642,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2645,7 +2651,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.432 \end{enumerate}
+l.460 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2654,297 +2660,238 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 464--465
 
  []
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 440.
-Package mdframed Info: Not enough space on this page on input line 443.
-[11 <./svg-inkscape/piecewise-constant_svg-tex.pdf>]
-Package mdframed Info: Not enough space on this page on input line 443.
+(mdframed)              on input line 468.
+[12 <./svg-inkscape/piecewise-constant_svg-tex.pdf>]
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 461.
-<images/Spiliopoulos2019-LLN-singleNN-mnist.png, id=343, 412.2675pt x 226.665pt
+(mdframed)              on input line 489.
+<images/Spiliopoulos2019-LLN-singleNN-mnist.png, id=349, 412.2675pt x 226.665pt
 >
 File: images/Spiliopoulos2019-LLN-singleNN-mnist.png Graphic file (type png)
 <use images/Spiliopoulos2019-LLN-singleNN-mnist.png>
 Package pdftex.def Info: images/Spiliopoulos2019-LLN-singleNN-mnist.png  used o
-n input line 478.
+n input line 506.
 (pdftex.def)             Requested size: 341.43436pt x 187.72722pt.
-
-Underfull \hbox (badness 10000) in paragraph at lines 487--488
-
- []
-
-[12 <./images/Spiliopoulos2019-LLN-singleNN-mnist.png>]
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakl' on page 13 undefined 
-on input line 489.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 489--491
-
- []
-
-! Undefined control sequence.
-l.494 ...bla \Phi(X_{t})\diff t + \sqrt{2}\betadfB
-                                                  _{t}, \quad X_{0}\sim \eta...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 531--536
-
- []
-
-[13]
-
-LaTeX Warning: Reference ` eq: SGLD' on page 14 undefined on input line 564.
-
-
-LaTeX Warning: Reference ` eq: SGLD' on page 14 undefined on input line 570.
-
-
-LaTeX Warning: Reference ` eq: SGLD' on page 14 undefined on input line 575.
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweaklSy' on page 14 undefine
-d on input line 589.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 588--590
-
- []
-
-[14]
-Underfull \hbox (badness 10000) in paragraph at lines 642--648
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 668--672
-
- []
-
-
-LaTeX Warning: Citation `weinan2005analysis' on page 15 undefined on input line
- 675.
-
-[15]
-<images/MullerB-potential-plot-3d.png, id=418, 395.4775pt x 339.2675pt>
-File: images/MullerB-potential-plot-3d.png Graphic file (type png)
-<use images/MullerB-potential-plot-3d.png>
-Package pdftex.def Info: images/MullerB-potential-plot-3d.png  used on input li
-ne 719.
-(pdftex.def)             Requested size: 170.71718pt x 146.45161pt.
-<images/MullerB-contour-with-grad-field.png, id=419, 574.145pt x 428.60126pt>
-File: images/MullerB-contour-with-grad-field.png Graphic file (type png)
-<use images/MullerB-contour-with-grad-field.png>
-Package pdftex.def Info: images/MullerB-contour-with-grad-field.png  used on in
-put line 725.
-(pdftex.def)             Requested size: 170.71718pt x 127.43687pt.
-<images/MullerBrown-SGD.png, id=420, 511.9125pt x 441.65pt>
-File: images/MullerBrown-SGD.png Graphic file (type png)
-<use images/MullerBrown-SGD.png>
-Package pdftex.def Info: images/MullerBrown-SGD.png  used on input line 744.
-(pdftex.def)             Requested size: 192.0548pt x 165.69246pt.
-<images/MullerB-NesterovSGD.png, id=421, 511.9125pt x 418.56375pt>
-File: images/MullerB-NesterovSGD.png Graphic file (type png)
-<use images/MullerB-NesterovSGD.png>
-Package pdftex.def Info: images/MullerB-NesterovSGD.png  used on input line 745
-.
-(pdftex.def)             Requested size: 192.0548pt x 157.03127pt.
-<images/MullerBrown-HomSGLD.png, id=422, 511.9125pt x 407.5225pt>
-File: images/MullerBrown-HomSGLD.png Graphic file (type png)
-<use images/MullerBrown-HomSGLD.png>
-Package pdftex.def Info: images/MullerBrown-HomSGLD.png  used on input line 746
-.
-(pdftex.def)             Requested size: 192.0548pt x 152.88896pt.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 753.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 753.
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.764 tion error that universally scales as O(n−
-                                                  1). These properties are e...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 754--770
-
- []
-
-[16 <./images/MullerB-potential-plot-3d.png> <./images/MullerB-contour-with-gra
-d-field.png>] [17 <./images/MullerBrown-SGD.png> <./images/MullerB-NesterovSGD.
-png> <./images/MullerBrown-HomSGLD.png>]
-
-LaTeX Warning: Citation `Auffinger:2013kq' on page 18 undefined on input line 7
-86.
-
-
-LaTeX Warning: Citation `Sagun:2014tg' on page 18 undefined on input line 786.
-
-
-LaTeX Warning: Citation `Auffinger:2012gh' on page 18 undefined on input line 7
-86.
-
-
-LaTeX Warning: Citation `Choromanska:2014ui' on page 18 undefined on input line
- 789.
-
-<images/3d_spin_sphere_plot_d_3.png, id=443, 462.528pt x 346.896pt>
-File: images/3d_spin_sphere_plot_d_3.png Graphic file (type png)
-<use images/3d_spin_sphere_plot_d_3.png>
-Package pdftex.def Info: images/3d_spin_sphere_plot_d_3.png  used on input line
- 797.
-(pdftex.def)             Requested size: 140.84192pt x 105.63109pt.
-<images/3d_spin_sphere_plot_d_4.png, id=444, 462.528pt x 346.896pt>
-File: images/3d_spin_sphere_plot_d_4.png Graphic file (type png)
-<use images/3d_spin_sphere_plot_d_4.png>
-Package pdftex.def Info: images/3d_spin_sphere_plot_d_4.png  used on input line
- 798.
-(pdftex.def)             Requested size: 140.84192pt x 105.63109pt.
-<images/3d_spin_sphere_plot_d_5.png, id=445, 462.528pt x 346.896pt>
-File: images/3d_spin_sphere_plot_d_5.png Graphic file (type png)
-<use images/3d_spin_sphere_plot_d_5.png>
-Package pdftex.def Info: images/3d_spin_sphere_plot_d_5.png  used on input line
- 799.
-(pdftex.def)             Requested size: 140.84192pt x 105.63109pt.
-[18 <./images/3d_spin_sphere_plot_d_3.png> <./images/3d_spin_sphere_plot_d_4.pn
-g> <./images/3d_spin_sphere_plot_d_5.png>]
-
-LaTeX Warning: Reference `eq:34RBFpspin' on page 19 undefined on input line 846
-.
-
-
-LaTeX Warning: Reference `eq:34RBFpspin' on page 19 undefined on input line 849
-.
-
-
-LaTeX Warning: Reference `fig:5DRBF' on page 19 undefined on input line 852.
-
-<images/Eijnden2018-heatmap-3dspin.png, id=462, 206.6265pt x 157.3515pt>
-File: images/Eijnden2018-heatmap-3dspin.png Graphic file (type png)
-<use images/Eijnden2018-heatmap-3dspin.png>
-Package pdftex.def Info: images/Eijnden2018-heatmap-3dspin.png  used on input l
-ine 875.
-(pdftex.def)             Requested size: 170.71718pt x 130.00385pt.
-<images/Eijnden2018-loss.png, id=463, 225.6795pt x 166.5495pt>
-File: images/Eijnden2018-loss.png Graphic file (type png)
-<use images/Eijnden2018-loss.png>
-Package pdftex.def Info: images/Eijnden2018-loss.png  used on input line 881.
-(pdftex.def)             Requested size: 170.71718pt x 125.98933pt.
-[19 <./images/Eijnden2018-heatmap-3dspin.png> <./images/Eijnden2018-loss.png>]
-<images/Nguyen2018-SGD-algos-risk-aniso-gauss.png, id=488, 236.8485pt x 179.361
-pt>
-File: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png Graphic file (type png)
-<use images/Nguyen2018-SGD-algos-risk-aniso-gauss.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-aniso-gauss.png  used
- on input line 920.
-(pdftex.def)             Requested size: 192.0548pt x 145.44032pt.
-<images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png, id=489, 304.848pt x 21
-5.496pt>
-File: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png Graphic file (type
- png)
-<use images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png>
-Package pdftex.def Info: images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
-  used on input line 921.
-(pdftex.def)             Requested size: 192.0548pt x 135.76318pt.
-File: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png Graphic file (type png)
-<use images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png>
-Package pdftex.def Info: images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png  used 
-on input line 922.
-(pdftex.def)             Requested size: 192.0548pt x 138.5671pt.
-<images/Eijnden2018-SGD-algos-risk-3dspin.png, id=490, 254.916pt x 189.5445pt>
-File: images/Eijnden2018-SGD-algos-risk-3dspin.png Graphic file (type png)
-<use images/Eijnden2018-SGD-algos-risk-3dspin.png>
-Package pdftex.def Info: images/Eijnden2018-SGD-algos-risk-3dspin.png  used on 
-input line 940.
-(pdftex.def)             Requested size: 341.43436pt x 253.88417pt.
-
-[20 <./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png> <./images/Nguyen2018-S
-GD-algos-risk-iso-gauss-non-mon.png>]
-<images/Spiliopoulos2019-SGD-algos-single-digit classification.png, id=498, 250
+<images/Spiliopoulos2019-SGD-algos-single-digit classification.png, id=350, 250
 .6455pt x 184.617pt>
 File: images/Spiliopoulos2019-SGD-algos-single-digit classification.png Graphic
  file (type png)
 <use images/Spiliopoulos2019-SGD-algos-single-digit classification.png>
 Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit classif
-ication.png  used on input line 950.
+ication.png  used on input line 517.
 (pdftex.def)             Requested size: 170.71718pt x 125.74634pt.
-<images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png, id=499, 232.578p
+<images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png, id=351, 232.578p
 t x 178.3755pt>
 File: images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png Graphic file
  (type png)
 <use images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>
 Package pdftex.def Info: images/Spiliopoulos2019-SGD-algos-single-digit-late-ti
-me.png  used on input line 956.
+me.png  used on input line 523.
 (pdftex.def)             Requested size: 170.71718pt x 130.93974pt.
-<images/3d-spin-model-neural-net-loss-d=3.png, id=500, 462.528pt x 346.896pt>
+ [13 <./images/Spiliopoulos2019-LLN-singleNN-mnist.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 536--537
+
+ []
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakl' on page 14 undefined 
+on input line 538.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 538--540
+
+ []
+
+[14 <./images/Spiliopoulos2019-SGD-algos-single-digit classification.png> <./im
+ages/Spiliopoulos2019-SGD-algos-single-digit-late-time.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 580--585
+
+ []
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 15 undefined on input line 613.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 15 undefined on input line 619.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 15 undefined on input line 624.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweaklSy' on page 15 undefine
+d on input line 638.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 637--639
+
+ []
+
+[15]
+Underfull \hbox (badness 10000) in paragraph at lines 691--697
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 717--721
+
+ []
+
+[16]
+
+LaTeX Warning: Citation `weinan2005analysis' on page 17 undefined on input line
+ 724.
+
+! Extra }, or forgotten $.
+l.756 ...\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t}}
+                                                  .\end{array}\right.\label{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on pa
+ge 17 undefined on input line 773.
+
+[17]
+<images/MullerB-potential-plot-3d.png, id=434, 395.4775pt x 339.2675pt>
+File: images/MullerB-potential-plot-3d.png Graphic file (type png)
+<use images/MullerB-potential-plot-3d.png>
+Package pdftex.def Info: images/MullerB-potential-plot-3d.png  used on input li
+ne 812.
+(pdftex.def)             Requested size: 170.71718pt x 146.45161pt.
+<images/MullerB-contour-with-grad-field.png, id=435, 462.528pt x 346.896pt>
+File: images/MullerB-contour-with-grad-field.png Graphic file (type png)
+<use images/MullerB-contour-with-grad-field.png>
+Package pdftex.def Info: images/MullerB-contour-with-grad-field.png  used on in
+put line 818.
+(pdftex.def)             Requested size: 170.71718pt x 128.0372pt.
+ [18 <./images/MullerB-potential-plot-3d.png> <./images/MullerB-contour-with-gr
+ad-field.png>]
+<images/MullerBrown-SGD.png, id=448, 511.9125pt x 441.65pt>
+File: images/MullerBrown-SGD.png Graphic file (type png)
+<use images/MullerBrown-SGD.png>
+Package pdftex.def Info: images/MullerBrown-SGD.png  used on input line 840.
+(pdftex.def)             Requested size: 192.0548pt x 165.69246pt.
+<images/MullerB-NesterovSGD.png, id=449, 511.9125pt x 418.56375pt>
+File: images/MullerB-NesterovSGD.png Graphic file (type png)
+<use images/MullerB-NesterovSGD.png>
+Package pdftex.def Info: images/MullerB-NesterovSGD.png  used on input line 841
+.
+(pdftex.def)             Requested size: 192.0548pt x 157.03127pt.
+<images/MullerBrown-HomSGLD.png, id=450, 511.9125pt x 407.5225pt>
+File: images/MullerBrown-HomSGLD.png Graphic file (type png)
+<use images/MullerBrown-HomSGLD.png>
+Package pdftex.def Info: images/MullerBrown-HomSGLD.png  used on input line 842
+.
+(pdftex.def)             Requested size: 192.0548pt x 152.88896pt.
+
+
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on pa
+ge 19 undefined on input line 854.
+
+[19 <./images/MullerBrown-SGD.png> <./images/MullerB-NesterovSGD.png> <./images
+/MullerBrown-HomSGLD.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 870.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 870.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 872--873
+
+ []
+
+<images/3d_spin_sphere_plot_d_3.png, id=465, 722.7pt x 722.7pt>
+File: images/3d_spin_sphere_plot_d_3.png Graphic file (type png)
+<use images/3d_spin_sphere_plot_d_3.png>
+Package pdftex.def Info: images/3d_spin_sphere_plot_d_3.png  used on input line
+ 890.
+(pdftex.def)             Requested size: 140.84192pt x 140.84322pt.
+<images/3d_spin_sphere_plot_d_4.png, id=466, 722.7pt x 722.7pt>
+File: images/3d_spin_sphere_plot_d_4.png Graphic file (type png)
+<use images/3d_spin_sphere_plot_d_4.png>
+Package pdftex.def Info: images/3d_spin_sphere_plot_d_4.png  used on input line
+ 891.
+(pdftex.def)             Requested size: 140.84192pt x 140.84322pt.
+<images/3d_spin_sphere_plot_d_5.png, id=467, 1084.05pt x 1084.05pt>
+File: images/3d_spin_sphere_plot_d_5.png Graphic file (type png)
+<use images/3d_spin_sphere_plot_d_5.png>
+Package pdftex.def Info: images/3d_spin_sphere_plot_d_5.png  used on input line
+ 892.
+(pdftex.def)             Requested size: 149.37956pt x 149.36748pt.
+
+Overfull \hbox (4.27206pt too wide) in paragraph at lines 890--893
+ [][][][] 
+ []
+
+[20]
+
+LaTeX Warning: Citation `Rostkoff_2022' on page 21 undefined on input line 897.
+
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 933--936
+
+ []
+
+<images/3d-spin-model-neural-net-loss-d=3.png, id=480, 462.528pt x 346.896pt>
 File: images/3d-spin-model-neural-net-loss-d=3.png Graphic file (type png)
 <use images/3d-spin-model-neural-net-loss-d=3.png>
 Package pdftex.def Info: images/3d-spin-model-neural-net-loss-d=3.png  used on 
-input line 966.
-(pdftex.def)             Requested size: 192.0548pt x 144.04384pt.
-<images/3d-spin-model-neural-net-loss-d=4.png, id=501, 462.528pt x 346.896pt>
+input line 967.
+(pdftex.def)             Requested size: 213.39566pt x 160.05048pt.
+<images/3d-spin-model-neural-net-loss-d=4.png, id=481, 462.528pt x 346.896pt>
 File: images/3d-spin-model-neural-net-loss-d=4.png Graphic file (type png)
 <use images/3d-spin-model-neural-net-loss-d=4.png>
 Package pdftex.def Info: images/3d-spin-model-neural-net-loss-d=4.png  used on 
-input line 967.
-(pdftex.def)             Requested size: 192.0548pt x 144.04384pt.
-<images/3d-spin-model-neural-net-loss-d=5.png, id=502, 462.528pt x 346.896pt>
+input line 968.
+(pdftex.def)             Requested size: 213.39566pt x 160.05048pt.
+<images/3d-spin-model-neural-net-loss-d=5.png, id=482, 462.528pt x 346.896pt>
 File: images/3d-spin-model-neural-net-loss-d=5.png Graphic file (type png)
 <use images/3d-spin-model-neural-net-loss-d=5.png>
 Package pdftex.def Info: images/3d-spin-model-neural-net-loss-d=5.png  used on 
-input line 968.
-(pdftex.def)             Requested size: 192.0548pt x 144.04384pt.
- [21 <./images/Eijnden2018-SGD-algos-risk-3dspin.png> <./images/Spiliopoulos201
-9-SGD-algos-single-digit classification.png> <./images/Spiliopoulos2019-SGD-alg
-os-single-digit-late-time.png>]
-<images/3d-spin-model-neural-net-plot-d=3.png, id=512, 462.528pt x 346.896pt>
+input line 969.
+(pdftex.def)             Requested size: 213.39566pt x 160.05048pt.
+[21 <./images/3d_spin_sphere_plot_d_3.png> <./images/3d_spin_sphere_plot_d_4.pn
+g> <./images/3d_spin_sphere_plot_d_5.png>]
+<images/3d-spin-model-neural-net-plot-d=3.png, id=496, 462.528pt x 346.896pt>
 File: images/3d-spin-model-neural-net-plot-d=3.png Graphic file (type png)
 <use images/3d-spin-model-neural-net-plot-d=3.png>
 Package pdftex.def Info: images/3d-spin-model-neural-net-plot-d=3.png  used on 
-input line 974.
+input line 975.
 (pdftex.def)             Requested size: 213.39566pt x 160.05048pt.
-<images/3d-spin-model-neural-net-plot-d=4.png, id=513, 462.528pt x 346.896pt>
+<images/3d-spin-model-neural-net-plot-d=4.png, id=497, 462.528pt x 346.896pt>
 File: images/3d-spin-model-neural-net-plot-d=4.png Graphic file (type png)
 <use images/3d-spin-model-neural-net-plot-d=4.png>
 Package pdftex.def Info: images/3d-spin-model-neural-net-plot-d=4.png  used on 
-input line 975.
+input line 976.
 (pdftex.def)             Requested size: 213.39566pt x 160.05048pt.
-<images/3d-spin-model-neural-net-plot-d=5.png, id=514, 462.528pt x 346.896pt>
+<images/3d-spin-model-neural-net-plot-d=5.png, id=498, 462.528pt x 346.896pt>
 File: images/3d-spin-model-neural-net-plot-d=5.png Graphic file (type png)
 <use images/3d-spin-model-neural-net-plot-d=5.png>
 Package pdftex.def Info: images/3d-spin-model-neural-net-plot-d=5.png  used on 
-input line 976.
+input line 977.
 (pdftex.def)             Requested size: 213.39566pt x 160.05048pt.
  [22 <./images/3d-spin-model-neural-net-loss-d=3.png> <./images/3d-spin-model-n
-eural-net-loss-d=4.png> <./images/3d-spin-model-neural-net-loss-d=5.png>] [23 <
-./images/3d-spin-model-neural-net-plot-d=3.png> <./images/3d-spin-model-neural-
-net-plot-d=4.png> <./images/3d-spin-model-neural-net-plot-d=5.png>] (./main.bbl
-) [24]
-(./main.aux)
+eural-net-loss-d=4.png> <./images/3d-spin-model-neural-net-loss-d=5.png>]
+
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on pa
+ge 23 undefined on input line 990.
+
+[23 <./images/3d-spin-model-neural-net-plot-d=3.png> <./images/3d-spin-model-ne
+ural-net-plot-d=4.png> <./images/3d-spin-model-neural-net-plot-d=5.png>]
+[24] (./main.bbl) [25] (./main.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
@@ -2957,13 +2904,13 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 44C03171E45CBF67EA277BEF3B8E3A3E;3809.
+(rerunfilecheck)             Checksum: 0CBDF4EA221D79330AD1339415C783FC;3627.
  ) 
 Here is how much of TeX's memory you used:
- 59755 strings out of 474116
- 1440331 string characters out of 5743682
- 2039550 words of memory out of 5000000
- 81037 multiletter control sequences out of 15000+600000
+ 59748 strings out of 474116
+ 1439706 string characters out of 5743682
+ 2039713 words of memory out of 5000000
+ 81026 multiletter control sequences out of 15000+600000
  578226 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,14n,134p,1746b,1138s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -2996,10 +2943,10 @@ f-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2024/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msbm5.pfb></usr/local/texlive/20
 24/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb></usr/local/texlive
 /2024/texmf-dist/fonts/type1/public/cm-super/sfrm1000.pfb>
-Output written on main.pdf (24 pages, 4111204 bytes).
+Output written on main.pdf (25 pages, 3573811 bytes).
 PDF statistics:
- 687 PDF objects out of 1000 (max. 8388607)
+ 677 PDF objects out of 1000 (max. 8388607)
  508 compressed objects within 6 object streams
- 133 named destinations out of 1000 (max. 500000)
- 482 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 137 named destinations out of 1000 (max. 500000)
+ 459 words of extra memory for PDF output out of 10000 (max. 10000000)
 
