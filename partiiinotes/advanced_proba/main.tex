@@ -3043,7 +3043,7 @@ F_{n}(t) = \left\lbrace
 \]
 for $ n\geq 1$ and define $ F_{0}$ by interpolating linearly between $ Z_{1} $ and zero in $ [0,1]$. Now, a straightforward computation yields that for $c>0 $, $ n\in \N$ sufficiently large independent of $ c$, $\PP(|Z_{d}|\geq c\sqrt{n})\leq \exp \left( -\frac{c^{2}n}{2} \right) $. This in conjunction with the Borell-Cantelli lemma gives 
 \[
-	\PP(\{\exists d\in \mathcal{D}_{n}, \text{ s.t. } |Z_{d}|<c\sqrt{n}\}) = 0, 'quad \text{ for }c>\sqrt{2\log 2}.
+	\PP(\{\exists d\in \mathcal{D}_{n}, \text{ s.t. } |Z_{d}|<c\sqrt{n}\}) = 0, \quad \text{ for }c>\sqrt{2\log 2}.
 \]
 Thus, using the continuity of $ \PP$, there exists some $ M\in \N$ such that 
 \[
@@ -3119,7 +3119,218 @@ The main theorem of this section is Donsker's inavriance principle, which states
 		\item The sequence $ (T_{n})_{n\in N}$ and steps of mean $ \sigma^{2}$.
  
 	\end{enumerate}
+\end{theorem}
 
+\mymark{Lecture 23} 
+\begin{proof}
+Define the Borel measures on $ \mathcal{B}([0,\infty))$, for $ A\in \mathcal{B}([0,\infty))$
+    \begin{eqnarray*}
+	    &\mu_{+}(A) = \mu(A\cap [0, \infty))\\
+	    &\mu_{-}(A) = \mu(-A\cap (-\infty,0)).
+    \end{eqnarray*}
+    Let $ (\Omega, \F, \PP)$ be a probability space on which we define a standard Brownian motion $ (B_{t})_{t\geq 0}$ and the iid sequence $ (X_{n}, Y_{n})_{n\in \N}$ with law $ \nu(\diff x,\diff y)=C\cdot \mu_{-}(\diff x)\mu_{+}(\diff  y)$ (independent from $ B$) and $ C>0$ a normalising constant. We have 
+    \[
+    \begin{array}{ll}
+        \displaystyle\int^{\infty}_{0} \displaystyle\int^{\infty}_{0} \nu( \diff x,y\diff y) =1    &=  C\mu([0,\infty)) \displaystyle\int^{\infty}_{0}x\mu_{-}(\diff x)  \\
+         &+ C\mu((-\infty, 0)) \displaystyle\int^{\infty}_{0}y\mu_{+}(\diff y). 
+    \end{array}
+    \]
+    Since $ \mu$ has mean zero, we also have that $ \displaystyle\int^{\infty}_{0}x\mu_{-} (\diff x) =   \mu((-\infty, 0)) \displaystyle\int^{\infty}_{0}y\mu_{+}(\diff y)$ which gives 
+    \[
+    C  \displaystyle\int^{\infty}_{0}x\mu_{-} (\diff x)= C \mu((-\infty, 0)) \displaystyle\int^{\infty}_{0}y\mu_{+}(\diff y)=1.
+    \]
+    Now, define the random sequence $ T_{0}=0$, and for $ n\geq 1$
+    \[
+	    T_{n+1}= \displaystyle\inf\{t\geq T_{n}: B_{t}-B_{T_{n}}\in \{-X_{n+1}, Y_{n+1}\}\}.
+    \]
+    We claim that the $ (T_{n})_{n\in \N}$ are stopping times with respect to the filtration $ \F_{t}= \sigma(\F^{B}_{t}, \F_{0})$ for $ t\geq 0$ where $ \F_{0} = \sigma((X_{n}, Y_{n}):n\in \N)$.
+
+    \begin{examplesblock}{ $(T_{n})_{n\in\N}$ are stopping times}\label{aside: skorokhod stopping time}
+	    To see that the $(T_{n})_{n\in\N}$ are stopping times, we proceed by induction. Clearly $ T_{0}\equiv 0$ is a stopping time. Now, suppose for $ n\in N$ that $ T_{n}$ is a stopping time. Now, Fox $ s\geq 0$ and observe that since $ T_{n+1}=T_{n}+\eta$ a.s. where $ \eta = \displaystyle\inf\{t\geq 0 : B^{(T_{n})}\in \{-X_{n+1}, Y_{n+1}\}\}$
+	    \[
+		    \{T_{n+1}\leq s\} = \overbrace{\{T_{n}\leq r\}}^{\{T_{n+1}\leq t\}\subseteq \{T_{n}\leq t\}}\cap \{\eta\leq s\}.
+	    \]
+	    Observe, that $ \eta $ is $ \sigma(\F^{B}_{T_{n}}, \F_{0})-$measurable. Hence, we have that $ \{T_{n+1}\leq s\}\in \sigma(\F^{B}_{T_{n}}, \F_{0})\cap \F^{B}_{s}$. Noting that we can express $ sigma(\F^{B}_{T_{n}}, \F_{0})= \sigma(\{A\cap B: A\in \F^{B}_{T_{n}}, B\in \F_{0}\})\subseteq \F^{B}_{s} $, we conclude  that $ \{T_{n+1}\leq s\}\subseteq \F^{B}_{s}$ for any $ s\geq 0$, hence proving the statement. 
+    \end{examplesblock}
+
+    Now, define the measurable (wrt to the usual sigma algebras) function 
+\[
+\begin{array}{ll}
+    \tau: \mathcal{C}([0,\infty))\times \R \to \R \\
+    (f, x)\mapsto \displaystyle\inf\{t\geq 0 : f(t)=x\}
+\end{array}
+\]
+and conditioning on $ X_{1}, Y_{1}$ we compute 
+    \[
+    \begin{array}{ll}
+	    \PP(B_{T_{1}}=Y_{1}|X_{1, Y_{1}}) &= \mathbb{E}\left[ \mathbf{1}(\tau(B, Y)<\tau(B, -X))| X_{1}, Y_{1} \right] \\
+         &= \frac{X_{1}}{X_{1}+Y_{1}}
+    \end{array}
+    \]
+    using the well-known Gambler's ruin identity and the independence of $ B$ from $ (X_{n}, Y_{n})_{n\in \N}$. Similarly, we also obtain $ \mathbb{E}\left[ T_{1} |X_{1, Y_{1}}\right]= X_{1}\cdot Y_{1}$.\\ 
+
+    Now we determine the law of $ B_{T_{1}}$. Fix $ A\in \mathcal{B}([0,\infty))$ and compute
+    \[
+    \begin{array}{ll}
+	    \PP(B_{T_{1}}\in A)&= \displaystyle\int_{A} \displaystyle\int^{\infty}_{0} \frac{x}{x+y}C(x+y) \mu_{-}( \diff x) \mu_{+} (  \diff y)\\ 
+			       &= \mu_{+}(A) = \mu(A). 
+    \end{array}
+    \]
+    Similarly, we have for $ A\in \mathcal{B}((-\infty,0))$ $\PP(B_{T_{1}}\in A)=\mu(A) $ and 
+    \[
+    \mathbb{E}\left[ T_{1} \right]= \displaystyle\int^{\infty}_{0} \displaystyle\int^{\infty}_{0}x\cdot y\cdot C(x+y) \mu_{-}( \diff d) \mu_{+}(   \diff y)  = \displaystyle\int^{\infty}_{0}x^{2}\mu_{-}( \diff x) +    \displaystyle\int^{\infty}_{0}y^{2}\mu_{+}( \diff y) = \sigma^{2}. 
+    \]
+    This tease with the case $ n=1$, for the general case one proceeds inductively using the strong Markov property, that is $ (B_{t+T_{n}}-B_{T_{n}})_{t\geq 0}\perp \F^{B}_{T_{n}}$ and essentially reduce the argument to what we have already done.
+\end{proof}
+
+We now return to Theorem \ref{thm: donsker}.
+
+\begin{proof}{(Theorem \ref{thm: donsker})}
+    Without loss of generality, let $ \sigma^{2}=1$ (by scaling). Now, let $B$ be a Brownian motion and a sequence of stopping times $ (T_{n})_{n\in \N}$ as in Skorokhod's embedding theorem, on a possibly enlarged probability space such that 
+    \[
+	    (B_{T_{n}})_{n\in \N} \stackrel{d}{=} (S_{n})_{n\in \N}.
+    \]
+Now, define $ B^{(N)}_{t}= \sqrt{N}B_{\frac{t}{N}}$ a standard Brownian motion by scale invariance. Let $ (T^{(N)}_{n})_{n\N}$ be stopping times corresponding to $ B^{(N)}$ (again on a possibly enlarged probability space). Set $ S^{(N)}_{n} = B^{(N)}_{T^{(N)}_{n}}$ for all $ n\in \N$. Let $ S^{(N)}_{t}$ be the linear interpolation of $ (S^{(N)}_{n})_{n\in \N}$. Observe that we have 
+    \[
+	    \left( (S^{(N)}_{t})_{t\geq 0}, (T^{(N)}_{n})_{n\in \N} \right) \stackrel{d}{=} \left( (S_{t})_{t\geq 0}, (T_{n})_{n\in \N} \right).
+    \]
+Now, we need to show 
+    \[
+	    \mathbb{E}\left[ F \left( (S^{(N)}_{t})_{t\leq 1} \right) \right] \stackrel{N\to \infty}{\longrightarrow} \mathbb{E}\left[ F \left( (B_{t})_{t\leq 1} \right) \right] 
+    \]
+    for all continuous and bounded functionals $ F: \mathcal{C}([0,\infty)\to \R$. It suffices to show that $ S^{(N)}$ converges uniformly in probability to $ B$, that is 
+    \[
+	    \PP \left( \displaystyle\sup_{0\leq \leq 1} |\tilde{S}^{(N)}_{t}-B_{t}|>\epsilon \right) \stackrel{N\to \infty}{\longrightarrow} 0 
+    \]
+    for all $ \epsilon>0$, by Dominated convergence.\\ 
+
+    Now, for $n\leq N $, 
+    \[
+	    \tilde{S}^{(N)}_{n/N} = \frac{S^{(N)}}{\sqrt{N}} = \frac{B^{(N)}_{T^{(N)}}}{\sqrt{N}} = \frac{\sqrt{N}B^{(N)}_{T_{n}/N}}{\sqrt{N}} = B_{\tilde{T}^{(N)}_{n}}\,
+    \]
+    where $ \tilde{T}^{(N)}_{n} = \frac{T^{(N)}_{n}}{N}$. By the Strong law of large numbers, we have that $ \frac{T_{n}}{n}\stackrel{n\to \infty}{\longrightarrow} 1$ a.s. (from Skorokhod embedding, the $ T_{n}$ are a random walk with independent and identically distributed steps). 
+    \parbox[b]{0.4\textwidth}{Thus, 
+    \[
+    \frac{1}{N}\cdot \displaystyle\sup_{n\in \N}|T_{n}-n|\stackrel{n\to \infty}{\longrightarrow}0, \quad \text{ a.s.}
+    \]
+    Since $ \tilde{S}^{(N)}_{n/N}= B_{\tilde{T}^{(N)}_{n}}$ for all $ n\leq N-1$, we claim that for all $ \frac{n}{N}\leq t\leq \frac{n+1}{N}$, there exists $ \tilde{T}^{(N)}_{n}\leq u\leq \tilde{T}^{(N)}_{n+1}$ such that $ \tilde{S}^{(N)}_{t} = B_{u}$. This follows from an application of the Implicit Function Theorem and using the continuity of $ B$, $ \tilde{S}$ and that $ \tilde{S}$ is piecewise linear.}\makebox[2cm]{}\parbox[b]{0.4\textwidth}{
+    \includesvg[width=\linewidth]{images/donsker.svg}
+    }\\ 
+
+    So now we have
+
+\[
+\begin{array}{ll}
+	A&\coloneqq \left\{ |\tilde{S}^{(N)}_{t}-B_{t}|>\epsilon \text{ for some }t\in[0,1] \right\}   \\
+	 &\subseteq \left\{ |\tilde{T}^{(N)}_{n/N}-\frac{n}{N}|\geq \delta \text{ for some } n\geq N \right\}\coloneqq A_{1}\\  &
+	 \bigcup \left\{ |B_{t}-B_{n}|>\epsilon \text{ for some }t\in[0,1] \text{ and } |u-t|\leq \delta +\frac{1}{N} \right\}\coloneqq A_{2}.
+\end{array}
+\]
+Hence we have the bound $ \PP(A)\leq \PP(A_{1})+\PP(A_{2})$. Take $ N \geq 1/\delta$ and $ \delta>0$ sufficiently small so that $ \PP(A_{2})<\epsilon/2$ since Brownian motion is uniformly continuous on $ [0,1]$.
+\end{proof}
+
+\mymark{Lecture 24} 
+\section{Poisson random measures}\label{sec: poisson random measures}
+Recall that $ X\sim Po(\lambda)$, $ \lambda >0$ if $ \PP(X=n) = e^{-\lambda}\frac{\lambda^{n}}{n!}$ for all $ n\in \N$. If $ \lambda =0$ set $ X\equiv 0$ and if $ \lambda =\infty$, set $ X\equiv \infty$. Also recall the following basic facts about Poisson random variables. 
+
+\begin{boxprop}[Addition property]\label{prop: prm addition}
+Let $ (N_{k})_{k\in \N}$ be independent Poisson $ N_{k}\sim Po(\lambda_{k})$, $ \lambda_{k}>0$ for all $ k\in \N$. Then 
+\[
+\displaystyle\sum^{\infty}_{k=0}N_{k}\sim Po \left( \displaystyle\sum^{\infty}_{k=0}\lambda_{k}  \right). 
+\]
+\end{boxprop}
+
+\begin{boxprop}[Splitting property]\label{prop: prm splitting property}
+Let $N\sim Po(\lambda)$, $ \lambda >0$ and let $ (Y_{n})_{n\in \N}$ be an iid sequence and independent of $ N$ with $ \PP(Y_{1}=j)=p_{j}$, $ j=1\cdots, k$. Set $ N_{j}=\displaystyle\sum^{N}_{n=1} \mathbf{1}(Y_{n}=j) $. Then $ N_{1}, \cdots, N_{k}$ are independent and $ N_{j}\sim Po(\lambda p_{j})$. 
+\end{boxprop}
+
+\begin{boxdef}\label{def: poisson random measure}
+	Let $ (E, \mathcal{E}, \mu)$ be a $ \sigma-$finite measure space. A Poisson random measure \underline{with intensity $\mu$} $M$ is a random map $ M: \Omega \times \mathcal{E}\to \Z\cup\{\infty\}$ such that if $ (A_{k})_{k\in \N}$ is a disjoint collection in $ \mathcal{E}$, then 
+	\begin{enumerate}
+		\item $M \left( \displaystyle\bigcup_{k\in \N} A_{k} \right) =\displaystyle\sum^{\infty}_{k=0}M(A_{k})(\omega), \quad \text{ for all } \omega\in \Omega $
+		\item $(M(A_{k}))_{k\in \N}$ are independent random variables.
+		\item For all $ k\in \N$, $ M(A_{k})
+			\sim Po(\mu(A_{k}))$.
+	\end{enumerate}
+\end{boxdef}
+
+Let $ E^{*} = \{\Z_{+}\cup \{\infty\}-\text{valued measures on }(E, \mathcal{E})\}$. Now for $ A\in \mathcal{E}$ define the maps
+\[
+\begin{array}{ll}
+	X: E^{*}\times \mathcal{E}\to \Z_{+}\cup\{\infty\} \\
+	X_{A}:E^{*}\to \Z_{+}\{\infty\}\\ 
+	(m,A)\mapsto X_{A}(m)\coloneqq m(A).
+\end{array}
+\]
+Furthermore, set $ \mathcal{E}^{*} = \sigma(X_{A}:A\in \mathcal{E})$. We now can state the following existence (and uniqueness) theorem for Poisson random measures. 
+
+\begin{theorem}\label{thm: prm existence and uniqueness}
+	There exists a \underline{unique} probability measure $ \mu^{*}$ on $ (E^{*}, \mathcal{E}^{*})$ such that under $ \mu^{*}$, $ X$ is a Poisson random measure of intensity $ \mu$.
+\end{theorem}
+
+\begin{proof}
+	\underline{Uniqueness:} Let $ A_{1}, \cdots, A_{k}$ be disjoint in $ \mathcal{E}$ and $ n_{1}, \cdots, n_{k}\in \Z_{+}$. Set 
+	\[
+		A^{*} = \{m\in E^{*}: m(A_{1}) = n_{1}, \cdots, m(A_{k}) = n_{k}\}.
+	\]
+	Let $ \mu^{*}$ be as in the statement. Then compute 
+	\[
+		\mu^{*}(A^{*}) = \displaystyle \prod^{k}_{j=1}e^{-\mu(A_{j})}\frac{(\mu(A_{j}))^{n_{j}}}{n_{j}!}.
+	\]
+	But, $ A^{*}$ of the above form is a $ \pi-$system that generates $ \mathcal{E}^{*}$, so $ \mu^{*}$ is uniquely determined. \\
+
+\underline{Existence:} First assume $ \lambda = \mu(E)<\infty$. Let $ N\sim Po(\lambda)$ and $ (Y_{n})_{n\in \N}$ be an iid sequence independent of $ N$ with law $ \mu/\mu(E)$. Set 
+\[
+	M(A) =\displaystyle\sum^{N}_{n=1} \mathbf{1}(Y_{n}\in A) , \quad A\in \mathcal{E}^{*}.
+\]
+
+Let $ A_{1},\cdots,  A_{k}$ be disjoint in $ \mathcal{E}$. Need to show that $ M(A_{i})_{i\leq k}$ are independent $ \sim Po(\mu(A_{i}))$ random variables. Consider $ X_{n}=j$ whenever $ Y_{n}\in A_{j}$. The $ (X_{n})_{n\leq \N}$ are iid and $ M(A_{j}) =\displaystyle\sum^{N}_{n=1} \mathbf{1}(X_{n}=j) $. By the splitting property \ref{prop: prm splitting property}, we get that $ M(A_{1}, \cdots, M(A_{k})$ are independent and $ M(A_{j})\sim Po \left( \mu(E) \cdot \frac{\mu(A_{j})}{\mu(E)} \right)$.\\ 
+
+If $\mu(E) = \infty$, let $ (E_{k})_{k\in \N}$ be a partition of $ E$ into sets with $ \mu(E_{k})<\infty$ for all $ k\in \N$. Then on some probability space we can construct independent Poisson random measures $ M_{k}$ with intensity $ \mu |_{E_{k}}$ (on some suitable product space). Then for $ A\in \mathcal{E}$, set 
+\[
+	M(A) =\displaystyle\sum^{\infty}_{k=0}\overbrace{M_{k}(A\cap E_{k})}^{\sim Po(\mu(A\cap E_{k})}. 
+\]
+By the addition property \ref{prop: prm addition}, $ M(A) \sim Po \left(\displaystyle\sum^{\infty}_{k=0} \mu(A\cap E_{k}) = \mu(A)  \right)$. Independence follows since the $(M_{k})_{k\in \N}$ are PRM. \\ 
+
+We have now constructed Poisson random measures on some probability space $ (\Omega, \F, \PP)$. Now simply observe that $ \mu^{*}=\PP_{M}$ (the pushforward under of $ \PP$ under $ M$) is the probability measure on $ (E^{*}, \mathcal{E}^{*})$.
+
+\end{proof}
+
+\begin{boxprop}\label{prop: prm conditioning}
+Let $ M$ be a Poisson random measure with intensity $ \mu$. Let $ A\in \mathcal{E}$ be such that $ \mu(A)<\infty$. Then $ M(A)\sim Po(\mu(A))$ and conditional on $ M(A) = k$, then we can express $ M  =\displaystyle\sum^{k}_{i=1} \delta_{X_{i}}$
+, where $ (X_{1}, \cdots, X_{k})$ are independent and identically distributed, with law $ \frac{\mu(\cdot \cap A)}{\mu(A)}$. Moreover, is $ A\cap B = \emptyset$, $ \mu|_{A}$ is independent of $ \mu|_{B}$.
+\end{boxprop}
+	
+
+We leave the following as an exercise: let $ E = \R_{+}$ ,$ \theta >0$, $ \mu = \theta\cdot \mathbf{1}(t\geq 0 ) \diff  t$. Let $ M$ be a PRM($ \mu$), let $ T_{0}=0$, $ (T_{n}-T_{n-1})_{n\geq 1}$ be iid $ \sim Exp(\theta)$. Set 
+\[
+N_{t} =\displaystyle\sum^{\infty}_{n=1} \mathbf{1}(T_{n}\leq t). 
+\]
+Then, $ (N_{t}, t\geq 0) =\stackrel{d}{=} (M([0,t]), t\geq 0)$.
+
+\begin{theorem}\label{thm: integral wrt poisson random integral}
+Let $ M$ be a Poisson random measure with intensity $ \mu$. Let $ f\in \mathcal{L}^{1}(\mu) $ and define $ M(f) = \displaystyle\int f(y) M(\diff y)  $. Then $ M(f)\in \mathcal{L}^{1}(\mu) $ and 
+\[
+ \mathbb{E}\left[ M(f) \right] = \displaystyle\int f(y) M (\diff y).   
+\]
+Fix $ f:E\to \R_{+}$ measurable. Then for all $ u>0$, 
+\[
+	\mathbb{E}\left[ e^{-uM(f)} \right] = \exp \left( \displaystyle\int_{E}(e^{-uf(y)}-1) \mu(\diff y)\tag{\text{Campbell's formula}}   \right)
+\]
 
 \end{theorem}
+
+\begin{proof}
+    The first part follows from a standard approximation by simple functions argument and Dominated Convergence. Let $ (E_{n})_{n\in \N}\subseteq  \mathcal{E}^{*}$ be such that $ \mu(E_{n})<\infty$. Have 
+    \[
+    \begin{array}{ll}
+        \mathbb{E}\left[ e^{-yM(f\cdot \mathbf{1}(E_{n})} \right] &=\displaystyle\sum^{\infty}_{k=0} \mathbb{E}\left[  e^{-uM(f\cdot \mathbf{1}(E_{n})}| M(E_{n})=k \right]\\
+         &\cdot e^{-\mu(E_{n})}\frac{(\mu(E_{n}))^{k}}{k!} .
+    \end{array}
+    \]
+    Now, given $ M(E_{n}) = k$, $ M =\displaystyle\sum^{k}_{i=1}\delta_{X_{i}} $ with $ (X_{1}, \cdots, X_{k})$ independent 
+    \[ \sim M|_{E_{n}} =\displaystyle\sum^{\infty}_{k=0} \left( \displaystyle\int_{E_{n}} e^{-uf(x)} \frac{\mu( \diff  x)}{\mu(E_{n}})    \right). \]
+\end{proof}
+Since $ M(f\cdot \mathbf{1}(E_{n}))$ are independent and conclude with monotone convergence.
+
 \end{document}

@@ -731,6 +731,20 @@ INPUT ./svg-inkscape/cone bound_svg-tex.pdf
 INPUT ./svg-inkscape/cone bound_svg-tex.pdf_tex
 INPUT ./svg-inkscape/cone bound_svg-tex.pdf
 INPUT ./svg-inkscape/cone bound_svg-tex.pdf
+INPUT ./images/donsker.svg
+INPUT ./images/donsker.svg
+INPUT ./images/donsker.svg
+INPUT ./svg-inkscape/donsker_svg-tex.pdf
+INPUT ./svg-inkscape/donsker_svg-tex.pdf_tex
+INPUT ./svg-inkscape/donsker_svg-tex.pdf_tex
+INPUT ./svg-inkscape/donsker_svg-tex.pdf
+INPUT ./svg-inkscape/donsker_svg-tex.pdf
+INPUT ./svg-inkscape/donsker_svg-tex.pdf_tex
+INPUT ./svg-inkscape/donsker_svg-tex.pdf_tex
+INPUT ./svg-inkscape/donsker_svg-tex.pdf
+INPUT ./svg-inkscape/donsker_svg-tex.pdf_tex
+INPUT ./svg-inkscape/donsker_svg-tex.pdf
+INPUT ./svg-inkscape/donsker_svg-tex.pdf
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

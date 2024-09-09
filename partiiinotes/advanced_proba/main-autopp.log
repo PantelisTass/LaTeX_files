@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  9 SEP 2024 18:46
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  10 SEP 2024 00:35
 entering extended mode
  %&-line parsing enabled.
 **\let \APPmakepictures \empty \input  main.tex
@@ -6323,7 +6323,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2860 ...0.6\linewidth]{images/poincare cone.svg}
+l.2860 ...0.4\linewidth]{images/poincare cone.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/poincare cone_svg-tex.eps'
@@ -6336,7 +6336,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.2860 ...0.6\linewidth]{images/poincare cone.svg}
+l.2860 ...0.4\linewidth]{images/poincare cone.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/poincare cone_svg-tex.eps_tex'
@@ -6612,60 +6612,9 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-! Undefined control sequence.
-l.2945 ...u(x) = \mathbb{E}_{x}\left[ \phi(B_{\uta
-                                                  _{\partial D}}) \right] = ...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.2945 ...}\left[ \phi(B_{\tau_{\partial d}}) | \f
-                                                  ^{+}_{\tau}\right] \right]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no e in font msbm10!
-Missing character: There is no e in font msbm10!
 
 LaTeX Warning: Reference `thm: bm reflection principle' on page 49 undefined on input line 2955.
 
-! Undefined control sequence.
-l.2958 ...F(B_{\tau}, B^{(\tau)}) }+B_{\tau}) | \f
-                                                  ^{+}_{\tau}\right] \right]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no e in font msbm10!
-Missing character: There is no e in font msbm10!
-! Undefined control sequence.
-l.2960 ...F(B_{\tau}, B^{(\tau)}) }+B_{\tau}) | \f
-                                                  ^{+}_{\tau}\right] \right]\\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no e in font msbm10!
-! Undefined control sequence.
-l.2961 ...i(g(B_{\tau}, B^{(\tau)})+B_{\tau}) | \f
-                                                  ^{+}_{\tau}\right] \right]
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no e in font msbm10!
 ! Extra }, or forgotten \right.
 \overbrace@ ...lineskip }$\hfil \displaystyle {#2}
                                                   \hfil $\crcr }}}\limits 
@@ -6708,152 +6657,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 2984--2986
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 2987--2988
-
- []
-
-! Missing { inserted.
-<to be read again> 
-                   }
-l.3003 ...\PP_{x}(\tau_{\partial B(0,1)}<\tau_{C_}
-                                                  )\leq \alpha <1 \tag{***}.
-A left brace was mandatory here, so I've put one in.
-You might want to delete and/or insert some corrections
-so that I will find a matching right brace soon.
-(If you're confused by all this, try typing `I}' now.)
-
-! You can't use `\eqno' in math mode.
-\veqno ->\@kernel@eqno 
-                       \aftergroup \ignorespaces 
-l.3004 \]
-         
-Sorry, but I'm not programmed to handle this case;
-I'll just pretend that you didn't ask for it.
-If you're in the wrong mode, you might be able to
-return to the right one by typing `I}' or `I$' or `I\par'.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.3004 \]
-         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \right. inserted.
-<inserted text> 
-                \right .
-l.3015 \end
-           {array}
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Undefined control sequence.
-l.3029 ... \quad, t\in \mathcal{D}_{n}\setminus \D
-                                                  _{n-1} \\
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.3040 ...fty}< c\sqrt{n}2^{-\frac{n}{2}]\} \right
-                                                  ) > 0.
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `thm: wiener BM' on page 50 undefined on input line 3042.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 3041--3043
-
- []
-
-! Undefined control sequence.
-l.3057 ...0,2^{-(k-1)})}<\tau_{\mathcal{C}}) \cdpt
-                                                   \PP_{B_{\tau_{\partial B(...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.3059 \end{array}
-                  
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-
-Overfull \hbox (69.85449pt too wide) detected at line 3071
-[]
- []
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.3076 \]
-         
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-
-LaTeX Warning: Reference `thm: bm recurrence and transience' on page 51 undefined on input line 3086.
-
-
 Package svg Warning: You didn't enable `shell escape' (or `write18')
 (svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/cone bound.svg' on input line 3094.
-
-
-! Package svg Error: File `cone bound_svg-tex.eps' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3094 ...th=0.4\linewidth]{images/cone bound.svg}
-                                                  
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/cone bound_svg-tex.eps'
-although `images/cone bound.svg' was found.
-
-
-! Package svg Error: File `cone bound_svg-tex.eps_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.3094 ...th=0.4\linewidth]{images/cone bound.svg}
-                                                  
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/cone bound_svg-tex.eps_tex'
-although `images/cone bound.svg' was found.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/nested discs delta.svg' on input line 3101.
+(svg)                for `images/nested discs delta.svg' on input line 2990.
 
 
 ! Package svg Error: File `nested discs delta_svg-tex.eps' is missing.
@@ -6862,7 +6668,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3101 ...inewidth]{images/nested discs delta.svg}
+l.2990 ...inewidth]{images/nested discs delta.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/nested discs delta_svg-tex.eps'
@@ -6875,11 +6681,346 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.3101 ...inewidth]{images/nested discs delta.svg}
+l.2990 ...inewidth]{images/nested discs delta.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/nested discs delta_svg-tex.eps_tex'
 although `images/nested discs delta.svg' was found.
+
+
+LaTeX Warning: Reference `fig: cone bound' on page 50 undefined on input line 3016.
+
+
+LaTeX Warning: Reference `fig: cone bound' on page 50 undefined on input line 3016.
+
+
+Underfull \hbox (badness 2635) in paragraph at lines 3016--3016
+\OT1/cmr/m/n/10 es-sen-tially re-duces to bound-ing uni-formly
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3016--3016
+
+ []
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/cone bound.svg' on input line 3018.
+
+
+! Package svg Error: File `cone bound_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3018 }
+        
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/cone bound_svg-tex.eps'
+although `images/cone bound.svg' was found.
+
+
+! Package svg Error: File `cone bound_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3018 }
+        
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/cone bound_svg-tex.eps_tex'
+although `images/cone bound.svg' was found.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3016--3020
+
+ []
+
+
+LaTeX Warning: Reference `thm: wiener BM' on page 50 undefined on input line 3052.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3051--3053
+
+ []
+
+
+LaTeX Warning: Reference `thm: bm recurrence and transience' on page 52 undefined on input line 3098.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3103.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3115.
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.3121 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.3121 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3121 	\end{enumerate}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.3121 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.3121 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3121 	\end{enumerate}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.3121 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package marginnote Info: right page because not two side mode on input line 3124.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 3124.
+! Misplaced alignment tab character &.
+l.3151 		    \{T_{n+1}\leq s\} &
+                                = \overbrace{\{T_{n}\leq r\}}^{\{T_{n+1}\leq...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3169--3171
+
+ []
+
+
+LaTeX Warning: Reference `thm: donsker' on page 54 undefined on input line 3186.
+
+
+LaTeX Warning: Reference `thm: donsker' on page 54 undefined on input line 3188.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3204--3206
+
+ []
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/donsker.svg' on input line 3221.
+
+
+! Package svg Error: File `donsker_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3221     }
+            
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/donsker_svg-tex.eps'
+although `images/donsker.svg' was found.
+
+
+! Package svg Error: File `donsker_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.3221     }
+            
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/donsker_svg-tex.eps_tex'
+although `images/donsker.svg' was found.
+
+Package marginnote Info: right page because not two side mode on input line 3234.
+Package marginnote Info: xpos seems to be \@mn@currxpos  on input line 3234.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3238.
+
+Overfull \hbox (1.42957pt too wide) in paragraph at lines 3239--3240
+[][]\OT1/cmr/bx/n/10 Proposition 11.1 (Ad-di-tion prop-erty). []\OT1/cmr/m/n/10 Let $\U/matha/m/n/10 p\OML/cmm/m/it/10 N[]\U/matha/m/n/10 q[]$ \OT1/cmr/m/n/10 be in-de-pen-dent Pois-son $\OML/cmm/m/it/10 N[] \U/matha/m/n/10 ^^R \OML/cmm/m/it/10 Po\U/matha/m/n/10 p\OML/cmm/m/it/10 ^^U[]\U/matha/m/n/10 q$\OT1/cmr/m/n/10 ,
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3245.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3249.
+! Undefined control sequence.
+\enit@endenumerate ->\enit@after 
+                                 \endlist \ifx \enit@series \relax \else \if...
+l.3256 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...\else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.3256 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3256 	\end{enumerate}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.3256 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@endenumerate ...t \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.3256 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.3256 	\end{enumerate}
+                       
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.3256 	\end{enumerate}
+                       
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3269.
+
+Underfull \hbox (badness 10000) in paragraph at lines 3281--3283
+
+ []
+
+
+LaTeX Warning: Reference `prop: prm splitting property' on page 56 undefined on input line 3289.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3289--3290
+
+ []
+
+
+LaTeX Warning: Reference `prop: prm addition' on page 56 undefined on input line 3295.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 3294--3296
+
+ []
+
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3301.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 3313.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last box will be empty
+(mdframed)                you have to change it manually
+(mdframed)                by changing the text, the space
+(mdframed)                or something else on input line 3323.
+
+Package mdframed Info: You first box width is to small
+ mdframed fixed it
+(mdframed)              on input line 3323.
+
+Package mdframed Warning: You got a bad break
+(mdframed)                because the last split box is empty
+(mdframed)                You have to change the settings on input line 3323.
 
 
 Package pst-pdf Warning: Picture container needs cropping..
@@ -6893,10 +7034,10 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 58476 strings out of 474117
- 1414443 string characters out of 5743708
- 2079138 words of memory out of 5000000
- 79933 multiletter control sequences out of 15000+600000
+ 58493 strings out of 474117
+ 1414889 string characters out of 5743708
+ 2079136 words of memory out of 5000000
+ 79950 multiletter control sequences out of 15000+600000
  574730 words of font info for 93 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  103i,22n,134p,1716b,1367s stack positions out of 10000i,1000n,20000p,200000b,200000s
