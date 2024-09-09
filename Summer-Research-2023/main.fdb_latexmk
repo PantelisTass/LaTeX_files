@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex main"] 0 "main.aux" "main.bbl" "main" 1725828586.77653 -1
+["bibtex main"] 0 "main.aux" "main.bbl" "main" 1725868793.45103 -1
   "./references.bib" 1725661207.85257 6051 a9bb64cc92911d74c98e8769836d81d5 ""
   "/usr/local/texlive/2024/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "main.aux" 1725828585.92055 19332 e672f5c6eddb6370155340fca5616556 "pdflatex"
+  "main.aux" 1725868792.32289 20172 20598d5db56f1c71e80a2d1da92d39e0 "pdflatex"
   (generated)
   "main.bbl"
   "main.blg"
   (rewritten before read)
-["pdflatex"] 1725828581.06926 "/Users/pantelistassopoulos/Documents/texfiles/Summer-Research-2023/main.tex" "main.pdf" "main" 1725828586.77686 2
-  "/Users/pantelistassopoulos/Documents/texfiles/Summer-Research-2023/main.tex" 1725828580.84042 67769 566ce10e10b5e1798f52e894384b55d4 ""
+["pdflatex"] 1725868787.09095 "/Users/pantelistassopoulos/Documents/texfiles/Summer-Research-2023/main.tex" "main.pdf" "main" 1725868793.45147 2
+  "/Users/pantelistassopoulos/Documents/texfiles/Summer-Research-2023/main.tex" 1725868786.87863 70946 92358b5337072df87af37a4875262477 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm" 1136768653 1536 e07581a4bb3136ece9eeb4c3ffab8233 ""
@@ -39,6 +39,7 @@
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmr9.tfm" 1136768653 1292 6b21b9c2c7bebb38aa2273f7ca0fb3af ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss10.tfm" 1136768653 1316 b636689f1933f24d1294acdf6041daaa ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss8.tfm" 1136768653 1296 d77f431d10d47c8ea2cc18cf45346274 ""
+  "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmss9.tfm" 1136768653 1320 49357c421c0d469f88b867dd0c3d10e8 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1136768653 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1136768653 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1136768653 1120 8b7d695260f3cff42e636090a8002094 ""
@@ -392,11 +393,12 @@
   "images/3d_spin_sphere_plot_d_3.png" 1725664032.80223 100589 ff516ed8c9e940f67b46417fe46983d4 ""
   "images/3d_spin_sphere_plot_d_4.png" 1725664041.6867 107976 e9e321c37419dd9bf5b42160e6c7f91b ""
   "images/3d_spin_sphere_plot_d_5.png" 1725666366.37663 177503 277ee49f27432b3b261f34dbdd7f30f2 ""
-  "images/MullerB-NesterovSGD.png" 1725200138.59871 440070 68c26d306effd6f2afffb43d6d4acf0e ""
   "images/MullerB-contour-with-grad-field.png" 1725666608.62133 87198 393825a6710f68aca2e416473e865757 ""
   "images/MullerB-potential-plot-3d.png" 1725200088.90797 204881 5269a8f95f6a5c8e83a43f078a478e01 ""
-  "images/MullerBrown-HomSGLD.png" 1725200118.79254 521095 26893235820bac18fa54020db9664d8c ""
-  "images/MullerBrown-SGD.png" 1725200127.48228 428307 5470f53e4b4fedec5ab82ad422d5ebc7 ""
+  "images/MullerBrown-HomSGLD.png" 1725836074.26029 313581 e960c498df7acfd7a55505941e6f894e ""
+  "images/MullerBrown-MaSS.png" 1725833712.46008 210528 8baf43530c6b9461d4d9b7c52d3d3098 ""
+  "images/MullerBrown-NesterovSGD.png" 1725837722.62443 208053 ecc438062cc6297e345662839505ea71 ""
+  "images/MullerBrown-SGD.png" 1725837589.94941 220626 5248cbee7305ccd2b9811d7dbca4118d ""
   "images/NGuyen2018-pde-sgd-gauss-anisotropic.png" 1725190748.40311 86975 753eb771a6b63fc1faae41057cf702c0 ""
   "images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png" 1725190623.53886 128457 04af76bfe07aac7da1a4e169308eb489 ""
   "images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png" 1725378112.00953 148409 ca83848f55f7f89978b98a8bb5ba828e ""
@@ -410,11 +412,11 @@
   "images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png" 1725191056.66653 91379 c9af227b594e2014a255cb945578b83d ""
   "images/non-monotone-activation.svg" 1725363337.23612 13936 2a0ae0e8b944b0c21d0675d31a1e7eac ""
   "images/piecewise-constant.svg" 1725368141.43487 55457 3004e278c68d1617068543188129d123 ""
-  "main.aux" 1725828585.92055 19332 e672f5c6eddb6370155340fca5616556 "pdflatex"
+  "main.aux" 1725868792.32289 20172 20598d5db56f1c71e80a2d1da92d39e0 "pdflatex"
   "main.bbl" 1725638222.50229 3032 dfae808ca4162c59cb899a50fa03400f "bibtex main"
-  "main.out" 1725828585.92361 3627 0cbdf4ea221d79330ad1339415c783fc "pdflatex"
-  "main.tex" 1725828580.84042 67769 566ce10e10b5e1798f52e894384b55d4 ""
-  "main.toc" 1725828585.92432 1793 e707713642d7f6a4c3d24b4d0e25eca8 "pdflatex"
+  "main.out" 1725868792.32641 3917 425b6d996db26347a27dccb25e4bdd3f "pdflatex"
+  "main.tex" 1725868786.87863 70946 92358b5337072df87af37a4875262477 ""
+  "main.toc" 1725868792.32711 1928 5a01581d475c2a9bd39328db80ba732f "pdflatex"
   "preamble.tex" 1725453657.73822 7618 f5363ae51f1ee942b27c2c59a8514e4a ""
   "svg-inkscape/non-monotone-activation_svg-tex.pdf" 1725363503.31138 5033 c6df5a400eac7162a0d1a753abb8feb3 ""
   "svg-inkscape/non-monotone-activation_svg-tex.pdf_tex" 1725363503.31202 2904 834452b4dd71ef9c0e5a2891a63948a2 ""
