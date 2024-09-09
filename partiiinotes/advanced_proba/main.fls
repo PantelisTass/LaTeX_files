@@ -689,6 +689,48 @@ INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
 INPUT ./svg-inkscape/reflection principle_svg-tex.pdf_tex
 INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
 INPUT ./svg-inkscape/reflection principle_svg-tex.pdf
+INPUT ./images/poincare cone.svg
+INPUT ./images/poincare cone.svg
+INPUT ./images/poincare cone.svg
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf_tex
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf
+INPUT ./svg-inkscape/poincare cone_svg-tex.pdf
+INPUT ./images/nested discs delta.svg
+INPUT ./images/nested discs delta.svg
+INPUT ./images/nested discs delta.svg
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf_tex
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf_tex
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf_tex
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf_tex
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf_tex
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf
+INPUT ./svg-inkscape/nested discs delta_svg-tex.pdf
+INPUT ./images/cone bound.svg
+INPUT ./images/cone bound.svg
+INPUT ./images/cone bound.svg
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf_tex
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf
+INPUT ./svg-inkscape/cone bound_svg-tex.pdf
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

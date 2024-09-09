@@ -2491,7 +2491,7 @@ Then $ \tilde{B}$ is a standard Brownian motion.
         \]
     is a continuous map in the product topology, therefore measurable. To see that $ \psi$ is continuous, 
     \begin{examplesblock}{Continuity of $ \psi$}\label{aside: proof of continuity reflection map}
-	    Fix $ (X,T,Y)\in \mathcal{C}_{0}\times [0,\infty) \times \mathcal{C}_{0}$. Due to the metrisability of the underlying topologies, it suffices to show that for any sequence $(X_{n}, T_{n}, Y_{n})_{n\in \N}\subseteq  \mathcal{C}_{0}\times [0,\infty)$ such that $ X_{n}\stackrel{d}{\longrightarrow}X$, $Y_{n}\stackrel{d}{\longrightarrow}Y $ and $ T_{n}\to T$ as $ n\to \infty$, $\psi(X_{n}, T_{n}, Y_{n} ) \stackrel{d}{\longrightarrow} \psi(X,T,Y) $.\\ 
+	    Fix $ (X,T,Y)\in \mathcal{C}_{0}\times [0,\infty) \times \mathcal{C}_{0}$. Due to the metrisability of the underlying topologies, it suffices to show that for any sequence $(X_{n}, T_{n}, Y_{n})_{n\in \N}\subseteq  \mathcal{C}_{0}\times [0,\infty)\times \mathcal{C}_{0}$ such that $ X_{n}\stackrel{d}{\longrightarrow}X$, $Y_{n}\stackrel{d}{\longrightarrow}Y $ and $ T_{n}\to T$ as $ n\to \infty$, $\psi(X_{n}, T_{n}, Y_{n} ) \stackrel{d}{\longrightarrow} \psi(X,T,Y) $.\\ 
 
 	    Now, fix $\epsilon>0 $, an arbitrary compact set $ K\subseteq  \R_{+}$ and let $ t\in K$ be arbitrary. We estimate
 	    \[
@@ -2723,8 +2723,8 @@ Let $ B$ be a standard Brownian motion in $ \R^{d}$.\\
             \draw[thick] (45:\outerRadius) arc[start angle=45,end angle=135,radius=\outerRadius]; % Partial outer boundary
 
             % Add point x inside the annulus
-            \filldraw[black] (25:3) circle (2pt); % Point in the annulus
-            \node at (25:3.3) {$x$};  % Label for point x
+            \filldraw[black] (10:3) circle (2pt); % Point in the annulus
+            \node at (10:3.5) {$x$};  % Label for point x
 
             % Add label for inner and outer boundaries
             \node at (15:\innerRadius+0.3) {$\epsilon$}; % Move epsilon closer to the intersection with the inner disk
@@ -2746,12 +2746,380 @@ Let $ B$ be a standard Brownian motion in $ \R^{d}$.\\
 		    \]
 		    Hence, $ \{t\geq 0: |B_{t}|\leq \epsilon\}$ is unbounded $ \PP_{x}-$a.s. Now, in (*), letting $ \epsilon \to 0$, $ \PP_{x}(\text{ hit }0 \text{ before } R)=0$. Let $ R\to \infty$ we finally obtain $ \PP_{x}(\exists t>0: B_{t} = 0)=0$ for all $ x\neq 0$.\\ 
 
-\mymark{Lecture 21} hello world continue here
-		    
-	
+\mymark{Lecture 21} It remains to show now that $ \PP_{0}(B_{t}=0 \text{ for some }t>0)$=0. Indeed, let $ a>0$, and observe that 
+\[
+\begin{array}{ll}
+	\PP_{0}(B_{t+a}=0 \text{ for some }t>0) &= \PP_{0}(\overbrace{B_{t+a}-B_{a}}^{\perp \F^{+}_{a}}+ B_{a}=0 \text{ for some }t> 0) \\
+     &= \displaystyle\int_{R^{2}} \PP_{0}(\overbrace{B_{t+a}-B_{a}}^{\text{std BM}}+ y =0 \text{ for some }t> 0) p_{a}(y) \diff y  \\ 
+     & = \displaystyle\int_{R^{2}} \PP_{y}(B_{t} = 0 \text{ for some }t> 0) p_{a}(y) \diff y = 0
+\end{array}
+\]
+since $ \PP_{y}(\exists t>0: B_{t} = 0)=0$ for all $ y\neq 0$. So taking the limit as $ a\downarrow 0$, we get 
+\[
+\PP_{0}(B_{t}=0 \text{ for some }t>0) = \displaystyle\lim_{a\downarrow 0}\PP_{0}(B_{t}=0 \text{ for some }t>a) = 0.
+\]
+\item We now show that $ B$ is transient for $ d\geq 3$, that is $ |B_{t}|\to \infty$, as $t\to \infty$. To this end, it clearly suffices to prove transience for $ d=3$.\\ 
+\parbox[b]{0.55\textwidth}{ 
+As in the case $ d=2$, start by fixing radii $ \epsilon<|x|<R$. Let $ T_{r} = \displaystyle\inf\{t\geq 0: |B_{t}|=r\}$ for $ r>0$. Let $ H = T_{\epsilon}\land T_{R}$, an a.s. finite stopping time. Let $ \phi: \R^{2}\to \R$ be given by $ \phi(y) = \left(\frac{1}{|y|}\right)^{2-d}$ on the annulus $ \epsilon<|y|<R$ and extended outside that region in a fashion so that $ \phi\in \mathcal{C}^{2}_{b}(\R^{2})$. Then, $ \Delta\phi = 0$ in the annulus.}
+    \hfill  % Add space between the text and the figure
+    \parbox[b]{0.4\textwidth}{ % The figure part occupies 40% of the width
+        \centering
+        \begin{tikzpicture}[scale=0.4]  % Adjust scale to fit nicely in the minipage
+
+            % Define radii
+            \def\innerRadius{2}
+            \def\outerRadius{4}
+
+            % Draw annulus (semi-complete)
+            \draw[thick] (0,0) circle (\innerRadius); % Inner circle
+            \draw[thick] (0,0) circle (\outerRadius); % Outer circle
+
+            % Rays from origin to outer and inner circles
+            \draw[thick] (0,0) -- (15:\innerRadius);   % First ray stopping at inner disk
+            \draw[thick] (0,0) -- (30:\outerRadius);   % Second ray extending to outer disk
+
+            % Draw portion of the annulus as incomplete
+            \draw[thick] (45:\innerRadius) arc[start angle=45,end angle=135,radius=\innerRadius]; % Partial inner boundary
+            \draw[thick] (45:\outerRadius) arc[start angle=45,end angle=135,radius=\outerRadius]; % Partial outer boundary
+
+            % Add point x inside the annulus
+            \filldraw[black] (10:3) circle (2pt); % Point in the annulus
+            \node at (10:3.5) {$x$};  % Label for point x
+
+            % Add label for inner and outer boundaries
+            \node at (15:\innerRadius+0.3) {$\epsilon$}; % Move epsilon closer to the intersection with the inner disk
+            \node at (30:\outerRadius+0.4) {$R$}; % Label for outer circle
+
+            % Add label for origin
+            \node at (0,0) [below left] {$0$};
+
+        \end{tikzpicture}
+    }	     		
+By theorem \ref{thm: bm ito formula}, the process 
+		    \[
+		    M_{t} = \phi(B_{t})-\phi(B_{0})- \displaystyle\int^{t}_{0} \frac{1}{2}\Delta \phi(B_{s}) \diff s  
+		    \]
+		    is a continuous  $(\F^{+}_{t})_{t\geq 0}-$martingale. Arguing in the same way as above, we obtain\\ $\mathbb{E}\left[ \left(\frac{1}{|B_{H}|}\right)^{2-d} \right]= \left(\frac{1}{|x|}\right)^{2-d} $. In other words, expressed in terms of the stopping times $ T_{\epsilon}, T_{R}$, this leads to
+
+    \[
+		    \PP_{x}(T_{\epsilon}<T_{R}) = \frac{\left(\frac{1}{R}\right)^{2-d}  - \left(\frac{1}{|x|}\right)^{2-d} }{\left(\frac{1}{\epsilon}\right)^{2-d}  - \left(\frac{1}{R}\right)^{2-d} } \tag{$\ast\ast$}.
+		    \]
+		    Now, taking $ R\to \infty$, $ T_{R}\to \infty$ a.s. and so $ \PP_{x}(T_{\epsilon}<\infty)= \left(\frac{\epsilon}{|x|}\right)^{2-d} $.\\ 
+\parbox[b]{0.55\textwidth}{ % The text part occupies 55% of the width  
+	    For $ n\in \N$, let $ A_{n} = \{|B_{t}|>n \text{ for all }t\geq T_{n^{3}}\}$, $T_{n^{3}}$ being almost surely finite for all $ n\in \N$. To prove $ |B_{t}|\to \infty$ a.s. as $ t\to \infty$, it suffices to show that the $ A_{n}$ happen eventually a.s. (recall $ d=3$). We now compute
+		    \[
+		    \begin{array}{ll}
+		        \PP_{0}(A_{n}^{c}) &= \PP_{0}(|B_{t}|\leq n) \text{ for some }t\geq T_{n^{3}}) \\
+					   &\stackrel{\text{SMP}}{=} \mathbb{E}_{0}\left[ \PP_{B_{T_{n}^{3}}}(|B_{t}|\leq n) \text{ for some }t\geq 0)  \right] = \frac{1}{n^{2}}
+		    \end{array}
+		    \]
+		    so $\displaystyle\sum^{\infty}_{n=1}\PP(A_{n}^{c})<\infty $ and so we conclude that $ A_{n}$ occurs eventually in $ n\in \N$ a.s. thereby showing transience. }
+    \hfill  % Add space between the text and the figure
+    \parbox[b]{0.4\textwidth}{ % The figure part occupies 40% of the width
+        \centering
+        \begin{tikzpicture}[scale=0.4]  % Adjust scale to fit nicely in the minipage
+
+            % Define radii
+            \def\innerRadius{2}
+            \def\outerRadius{4}
+
+            % Draw annulus (semi-complete)
+            \draw[thick] (0,0) circle (\innerRadius); % Inner circle
+            \draw[thick] (0,0) circle (\outerRadius); % Outer circle
+
+            % Rays from origin to outer and inner circles
+            \draw[thick] (0,0) -- (15:\innerRadius);   % First ray stopping at inner disk
+            \draw[thick] (0,0) -- (30:\outerRadius);   % Second ray extending to outer disk
+
+            % Draw portion of the annulus as incomplete
+            \draw[thick] (45:\innerRadius) arc[start angle=45,end angle=135,radius=\innerRadius]; % Partial inner boundary
+            \draw[thick] (45:\outerRadius) arc[start angle=45,end angle=135,radius=\outerRadius]; % Partial outer boundary
+
+            % Add label for inner and outer boundaries
+            \node at (2:\innerRadius-0.5) {$n$}; % Move epsilon closer to the intersection with the inner disk
+            \node at (35:\outerRadius-0.5) {$n^{3}$}; % Label for outer circle
+
+            % Add label for origin
+            \node at (0,0) [below left] {$0$};
+
+        \end{tikzpicture}
+    }	
     \end{enumerate}
     
 \end{proof}
 
+\subsection{Dirichlet Problem}\label{sec: Dirichlet problem}
 
+\begin{boxdef}[Poincar\'{e} conce condition]\label{def: poincare cone condition}
+
+$ D\subseteq \R^{d}$ is called a \underline{domain} if it is open, non-empty and connected. We say that $ D$ satisfies the Poincar\'{e} cone condition at $ x\in \partial D$ if there exists a non-empty open cone $ \mathcal{C}$ with origin at $ x$ and $ r>0$ such that $ \mathcal{C}\cap B(x,r)\subseteq D^{c}$.
+\end{boxdef}
+
+\begin{figure}[H]
+    \centering
+    \includesvg[width=0.4\linewidth]{images/poincare cone.svg}
+    \caption{Illustration of Poincar\'{e} cone condition for a domain $ D\subseteq \R^{d}$.}
+    \label{fig: poincare cone}
+\end{figure}
+
+\begin{theorem}[Dirichlet problem]\label{thm: dirichlet problem}
+
+	let $ D$ be a bounded domain in $ \R^{d}$ such that every boundary point of $ D satisfies the  Poincar\'{e}$ cone condition, (see figure \ref{fig: poincare cone}). Let $ \phi$ be continuous on $ \partial D$ and let $ B$ be a Brownian motion, $ \tau_{\partial D} = \displaystyle\\displaystyle\inf_{\{t\geq 0 : B_{t}\in \partial D\}}$. Then the function 
+	\[
+		u(x)  = \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}}) \right], \quad x\in \overline{D}
+	\]
+	is the unique continuous function satisfying the boundary value problem 
+	\[
+	\left\lbrace
+	\begin{array}{@{}l@{}}
+	    \Delta u = 0, \quad \text{ in } D \\
+	    u = \phi, \quad \text{ on }\partial D.
+	\end{array}\right.
+	\]
+\end{theorem}
+
+Before we proceed with the proof we recall some facts from the theory of PDEs. 
+
+\begin{theorem}\label{thm: harmonic functions}
+Let $ D\subseteq \R^{d}$ be a domain and $ u:D\to \R$ be measurable and locally bounded. Then the following are equivalent:
+\begin{enumerate}
+	\item $ u$ is twice continuously differentiable and $ \Delta u=0$.
+	\item For all balls $B(x,r)\subseteq D $, 
+		\[
+		u(x) = \frac{1}{\mathcal{L}(B(x,r))} \displaystyle\int_{B(x,r)}u(y) \diff y .  
+		\]
+	\item For all balls $ B(x,r)\subseteq D$, 
+		\[
+		u(x) = \frac{1}{\sigma_{x,r}(B(x,r))} \displaystyle\int_{\partial B(x,r)}u(y) \diff\sigma_{x,r} y 
+		\]
+		where $ \sigma_{x,r}$ denotes the surface area measure of $ \partial B(x,r)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{boxdef}[Harmonic]\label{def: harmonic function}
+	if $ u$ satisfies any of the above, we call u \underline{harmonic} in $ D$. 
+\end{boxdef}
+
+\begin{theorem}[Maximum principle]\label{thm: maximum principle}
+Let $ u:\R^{d}:\to \R$ be harmonic in $ D$. Then 
+\begin{enumerate}
+\item If $ u$ attains its maximum in $ D$, then $ u$ is constant in $ D$. 
+\item If $u$ is continuous in $ \overline{D}$ and $ D$ is bounded, then $ \displaystyle'max_{x\in \overline{D}}u(x) = \displaystyle\max_{x\in \partial D}u(x)$.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+    \begin{enumerate}
+	    \item Let $ M$ be the maximum, let $ V = \{x\in D u(x) = M\}$, then by assumption such that the ball $ B(x,r\subseteq D$. Then, by the mean value property 
+		    \[
+		    M = u(x) = \frac{1}{\mathcal{L}(B(x,r))} \displaystyle\int_{B(x,r)}u(y) \diff y \leq M.
+		    \]
+		    Hence, $ u(y) = M$ for almost all $ y\in B(x,r)$. By the continuity of $ u$, we have equality everywhere in $ B(x,,r)$. Thus, $ B(x,r)\subseteq V$ and so $ V$ is now open, closed and also non-empty. Since, $ D$ is connected, we deduce that $ V = D$. 
+	    \item $ u$ is continuous in $ \overline{D}$ and $ D$ is bounded implies that $ u$ attains a maximum in $ \overline{D}$. By $ 1$, $ \displaystyle \max_{\overline{D}}u = \displaystyle\max_{\partial D}u$.
+    \end{enumerate}
+\end{proof}
+
+\begin{boxcor}\label{cor: max principle}
+If $ u_{1}, u_{2}:\R^{d}$ are harmonic in $ D$, with $ D$ bounded and $ u_{1}$, $ u_{2}$ agree on $ \partial D$, then $u_{1} = u_{2}$ in $ D$. 
+\end{boxcor}
+
+\begin{proof}
+    Have 
+    \[
+	    \displaystyle \max_{\overline{D}}(u_{1}-u_{2})=\displaystyle\max_{\partial D}(u_{1}-u_{2})=0
+    \]
+    by the maximum principle. Thus, $ u_{1}\leq  u_{2}$ for all $ x\in \overline{D}$ and  similarly we obtain $ u_{2}\leq u_{1}$ in $ \overline{D}$. Thus, we obtain $ u_{1}\equiv u_{2}$ in $ \overline{D}$.
+\end{proof}
+
+
+\mymark{Lecture 22} 
+\begin{proof}{(Theorem \ref{thm: dirichlet problem})}
+    With 
+    \[
+	    u(x) = \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}}) \right], \quad \text{ on } \overline{D}
+    \]
+    to show that $ u$ is twice continuously differentiable and harmonic, Theorem \ref{thm: harmonic functions} it suffices to show that it satisfies the mean value property.\\ 
+
+    Now, we have that $ \tau = \displaystyle\\displaystyle\inf\{t\geq 0: B_{t}\in \partialb(x, \delta)\}<\infty$ a.s. and by the tower property 
+    \[
+    u(x) = \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}}) \right] = \mathbb{E}\left[ \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial d}}) | \F^{+}_{\tau}\right] \right]
+    \]
+   Now, define the function 
+   \[
+	   \begin{array}{cc}
+       
+F : \R_{+}\times \mathcal{C}_{0}([0,\infty))\to \R \\ 
+(z, f)\mapsto F(z,f)\coloneqq \displaystyle\inf\{t\geq 0: z + f(t) \in D^{c}\}
+   \end{array}
+   \]
+   which is measurable with respect to $ \mathcal{B}(\R_{+}) \otimes \mathcal{A}$, where $ \mathcal{A}$ is the Borel sigma algebra induced by the topology of local uniform convergence, as in the proof of Theorem \ref{thm: bm reflection principle}. Observe now that $ \tau_{B_{\partial D}} = \tau + F(B_{\tau}, (B_{\tau +t}-B_{\tau})_{t\geq 0})$. a.s.  By the strong Markov property, $ (B_{\tau +t}-B_{\tau})_{t\geq 0}\perp \F^{+}_{\tau}$ and so we can conclude 
+   \[
+   \begin{array}{ll}
+        u(x) &= \mathbb{E}\left[ \mathbb{E}_{x}\left[ \phi(B^{(\tau)}_{\tau + F(B_{\tau}, B^{(\tau)}) }+B_{\tau}) | \F^{+}_{\tau}\right] \right]
+ \\
+	     &= \mathbb{E}\left[ \mathbb{E}_{x}\left[ \phi(B^{(\tau)}_{\tau + F(B_{\tau}, B^{(\tau)}) }+B_{\tau}) | \F^{+}_{\tau}\right] \right]\\ 
+	     & = \mathbb{E}\left[ \mathbb{E}_{x}\left[ \phi(g(B_{\tau}, B^{(\tau)})+B_{\tau}) | \F^{+}_{\tau}\right] \right]
+
+   \end{array}
+   \]
+   where $ g$ is the continuous, hence measurable function 
+\[
+	   \begin{array}{cc}
+       
+F : \R_{+}\times \mathcal{C}_{0}([0,\infty))\to \R \\ 
+(z, f)\mapsto g(z,f)\coloneqq f(z)
+\end{array}
+   \]
+   thus another application of the strong Markov property gives 
+    \[
+    \begin{array}{ll}
+	    u(x) &\stackrel{\text{SMP \& indep.}}{=} \overbrace{\mathbb{E}_{x}\left[ \displaystyle \int_{ \mathcal{C}_{0}([0,\infty))}\left[ \phi(g(B_{\tau}, w)+B_{\tau}) \underbrace{\mu(\diff w)}_{\mu \text{ denotes the Wiener measure of BM started at }x} \right]}^{\text{the law of }B_{\tau} \text{ is invariant under rotations and by uniqueness is the spherical measure } \sigma(x,\delta)}  \\
+	     &=  \frac{1}{\sigma_{x,r}(B(x,\delta))} \displaystyle\int_{\partial B(x,\delta)}\displaystyle \int_{ \mathcal{C}_{0}([0,\infty))} \phi(g(y, w)+y) \mu(\diff w)
+ \diff\sigma_{x,\delta} y  \\
+	     &=  \frac{1}{\sigma_{x,r}(B(x,\delta))} \displaystyle\int_{\partial B(x,\delta)}\mathbb{E}_{y}\left[\phi(g(y, B)+y)\right] 
+ \diff\sigma_{x,\delta} y  \\ 
+	     & = \frac{1}{\sigma_{x,r}(B(x,\delta))} \displaystyle\int_{\partial B(x,\delta)}u(y) \diff\sigma_{x,\delta} y  
+
+    \end{array}
+    \]
+    thus, showing that $ u$ is indeed harmonic. Uniqueness follows from the result \ref{cor: max principle} established earlier. \\ 
+
+    It remains to show that $ u$ is continuous up to the boundary, $ \partial D$. Let $ z\in \partial D$. Need to show that $ u$ is continuous at $ z$. Since $ \phi$ is continuous on $ \partial D$, we have that for all $ \epsilon>0$, there exists a $ \delta >0$ such that if $ |y-z|\leq \delta$, $ y\in \partial D$, $ |\phi(y)-\phi(z)|<\epsilon$. 
+\begin{figure}[H]
+	    \centering
+	    \includesvg[width=0.6\linewidth]{images/nested discs delta.svg}
+	    \caption{Illustration of situation near the boundary.}
+	    \label{fig: nested discs delta}
+	\end{figure}
+    Let $ k\in \N$ to be determined and let $ x$ be such that $ |x-z|\leq 2^{-k}\cdot \delta$, then we estimates 
+    \[
+    \begin{array}{ll}
+        |u(x)-u(z)| &\leq \left| \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}})-\phi(z) \right] \right|\\
+         &\leq  \mathbb{E}_{x}\left[| \phi(B_{\tau_{\partial D}})-\phi(z)| \right] \\ 
+	 &\leq \epsilon \cdot \PP_{x}(\tau_{\partial D}<\tau_{\partial B(z,\delta)}) + 2\norm{\phi}_{\infty}\cdot \PP_{x}(\tau_{\partial B(z,\delta}<\tau_{\partial D}).	 
+    \end{array}
+    \]
+   Now, By the Poincar\'{e} cone condition, let $  \mathcal{C}_{z}$ be an open cone at $ z$ that lies in $ D^{c}$ sufficiently close to $ z$. Then 
+	 \[
+	\PP_{x}(\tau_{\partial B(z,\delta}<\tau_{\partial D})\leq \PP_{x}(\tau_{\partial B(z,\delta}<\tau_{\partial C_{z}}).
+	 \]
+We claim that 
+\[
+	\displaystyle\sup_{x\in B(0, \frac{1}{2})}\PP_{x}(\tau_{\partial B(0,1)}<\tau_{C})\leq \alpha <1 \tag{***}.
+\]
+where $ \mathcal{C}$ is a translate of the cone $ \mathcal{C}_{z}$ to the origin. 
+\begin{examplesblock}{Proof of (***)}\label{aside: proof cone bound}
+\parbox[b]{0.5\textwidth}{To establish $ (***)$ it suffices to show that Brownian motion stays arbitrarily close to straight bounded segment of lines (and in fact to any continuous function) with positive probability, i.e. 
+\[
+	p_{\epsilon, x, a} \coloneqq \PP_{x}(\norm{B-\ell_{x,a}}_{\infty, [0,1]}\leq \epsilon) >0 
+\]
+$ \epsilon >0, x\in \R^{d}$ and lines $ \ell_{x,a}$ connecting points $x,a\in \R^{d}$, i.e. $\ell_{x,a}(t) = tx + (1-t)a$, $ t\in [0,1]$ (see figure \ref{fig: cone bound}). To see this, the bound $ (***)$ essentially reduces to bounding uniformly from zero the probability that a Brownian path starting from a point $ x\in B(0, 1/2)$ stays within some uniform in $ x$ amount $ \epsilon > 0$ close to a line of length $ \leq 2$ (figure \ref{fig: cone bound}).\\ }\makebox[1cm]{}\parbox[b]{0.4\textwidth}{ 
+	    \includesvg[width=\linewidth]{images/cone bound.svg}\label{fig: cone bound}
+}
+By the geometry of the situation, an $ \epsilon>0$ exists, so that no matter where the BM starts in $ B(0,1/2)$, there is a direction it can stay within epsilon to for times $t \in [0,1]$ that would guarantee it never touches the boundary $ \partial B(0,1)$ before the cone, in $ [0,1]$. \\  
+
+We proceed with several reduction steps. By translation, we can let without loss of generality $ x=0$ and consider only $ p_{\epsilon,a}\coloneqq p_{\epsilon, 0, a}$ for $ \epsilon>0, a\in \R^{d}$. Moreover, by containment of events that $ p_{\epsilon, a}$ is decreasing in $ \epsilon>0$ and less than one away from zero with $ p_{\epsilon, 0} = 1$ for all $ \epsilon>0$. By independence of the components of $ B$ and rotational symmetry, we have 
+\[
+\begin{array}{ll}
+	\PP_{0}(\norm{B_{t}-at}_{\infty, [0,1]}\leq \epsilon) &= \left(\PP_{0}(\norm{B}_{\infty, [0,1]}\leq \epsilon\right)^{d-1}\cdot \PP_{0}\left(\norm{B^{1}_{t}-\norm{a}\cdot t}_{\infty, [0,1]}\leq \epsilon\right)\\			      
+\end{array}
+\]
+We now show that for fixed $ \epsilon,  >0$ and $|\lambda|$ bounded, one has a positive uniform lower bound on the probabilities 
+\[
+\PP_{0}(|W_{t}-\lambda t|\leq \epsilon). 
+\]
+where $ W$ is a standard Brownian motion in one dimension. To show this it suffices to note that from L\'{e}vy's construction of Brownian motion, one constructs $ (W_{t}, t\in [0,1])$ as an a.s. uniformly convergent power series (starting from the iid sequence $ (Z_{d})_{d\in \mathcal{D}}$) as 
+\[
+W_{t} =\displaystyle\sum^{\infty}_{n=1}F_{n}(t) 
+\]
+where the $ F_{n}$ are independent, piecewise linear functions given by 
+\[
+F_{n}(t) = \left\lbrace
+\begin{array}{@{}l@{}}
+	2^{-\frac{n+1}{2}}Z_{t}, \quad t\in \mathcal{D}_{n}\setminus \mathcal{D}_{n-1} \\
+    0, \quad t\in \mathcal{D}_{n-1}\\ 
+    \text{linear between consecutive points in } \mathcal{D}_{n}.
+\end{array}\right.
+\]
+for $ n\geq 1$ and define $ F_{0}$ by interpolating linearly between $ Z_{1} $ and zero in $ [0,1]$. Now, a straightforward computation yields that for $c>0 $, $ n\in \N$ sufficiently large independent of $ c$, $\PP(|Z_{d}|\geq c\sqrt{n})\leq \exp \left( -\frac{c^{2}n}{2} \right) $. This in conjunction with the Borell-Cantelli lemma gives 
+\[
+	\PP(\{\exists d\in \mathcal{D}_{n}, \text{ s.t. } |Z_{d}|<c\sqrt{n}\}) = 0, 'quad \text{ for }c>\sqrt{2\log 2}.
+\]
+Thus, using the continuity of $ \PP$, there exists some $ M\in \N$ such that 
+\[
+	\PP \left( \displaystyle\bigcap_{n\geq M} \{\norm{Z_{n}}_{\infty}< c\sqrt{n}2^{-\frac{n}{2}}\} \right) > 0.
+\]
+Additionally, observe that for the truncated series $ \sum_{n=1}^{N} F_{n}$ corresponds to the piecewise linear extension of the dyadic approximations to $ W$ in Theorem \ref{thm: wiener BM}. Now, for $ |\lambda|$ bounded, $ M$ possibly even larger,  by the independence of the Gaussians $ (Z_{d}, d\in \mathcal{D})$ it is not hard to approximate $ \lambda t$ on $ [0,1]$ by the truncated series up to stage $ M-1$ and then use the independence of the $ F_{n}$ and the above to obtain with a positive probability that the tail is also uniformly close and the approximation at stage $ M-1$, hence proving there is a uniform positive lower bound, thus proving $ (***)$. \\ 
+\end{examplesblock}
+
+In the final step, essentially we will iterate the bound $ (***)$ on nested balls surrounding the origin to get expo natal decay in the corresponding version of $ (***)$. More precisely, 
+
+\begin{examplesblock}{Exponential decay step}\label{aside: poincare cone decay bound}
+Let $ k\in \N$. We want to bound 
+\[
+\PP_{x}(\tau_{\partial B(0,1)}\subseteq \tau_{ \mathcal{C}}), \quad x\in B(0, 1/2^k).
+\]
+Now, we have 
+\[
+\begin{array}{ll}
+	\PP_{x}(\tau_{\partial B(0,1)}\subseteq \tau_{ \mathcal{C}})&\\ 
+	&= \mathbb{E}_{x}\left[ \mathbf{1}(\tau_{\partial B(0,1)}<\tau_{\mathcal{C}}) \right] \\
+								&= \mathbb{E}_{x}\left[ \overbrace{\mathbf{1}(\tau_{\partial B(0,2^{-(k-1)})}<\tau_{\mathcal{C}})}^{\{\tau_{\partial B(0, 2^-k)}<\tau_{ \mathcal{C}}\}\supseteq \tau_{\partial B(0, 1)}<\tau_{ \mathcal{C}}\}}\cdot \mathbb{E}\left[ \mathbf{1}(\tau_{\partial B(0,1)}<\tau_{ \mathcal{C}})|\F^{+}_{\tau_{\partial B(0, 2^{-(k-1})}} \right] \right]\\ 
+								&\stackrel{SMP}{=} \mathbb{E}_{x}\left[ \mathbf{1}(\tau_{\partial B(0,2^{-(k-1)})}<\tau_{\mathcal{C}}) \cdot \PP_{B_{\tau_{\partial B(0,2^{-(k-1)})}}}(\tau_{\partial B(0,1)}<\tau_{ \mathcal{C}})\right]\\ 
+								&\leq \PP_{x}(\tau_{\partial B(0,1)}<\tau_{ \mathcal{C}})\cdot \displaystyle\sup_{y\in B(0, 2^{-(k-1))}}\PP_{y}(\tau_{\partial B(0,1)}<\tau_{ \mathcal{C}})\tag{A}.
+\end{array}
+\]
+Now, for $ x\in B(0, 2^-k)$ consider $ \PP_{x}(\tau_{\partial B(0, 2^{-(k-1)})}<\tau_{ \mathcal{C}})$. By scale invariance of Brownian motion and the cone, $ \mathcal{C}$ we have with $ \lambda = 2^{(k-1)}$, 
+\[
+\begin{array}{ll}
+&\PP_{x}(\tau_{\partial B(0, 2^{-(k-1)})}<\tau_{ \mathcal{C}})\\[10pt]
+&= \PP_{0}(\displaystyle\inf\{t\geq 0: \overbrace{W_{t}}^{\text{std BM}} \in \overline{B(0, 2^{-(k-1)})}\}<(\displaystyle\inf\{t\geq 0: W_{t} \in \overline{ \mathcal{C}}\}) \\[10pt]
+&\stackrel{\text{scale invariance}}{=} \PP_{0}(\displaystyle\inf\{t\geq 0: 1/\lambda W_{\lambda^{2}t} \in \overline{B(0, 2^{-(k-1)})}\}<(\displaystyle\inf\{t\geq 0: /\lambda W_{\lambda^{2}t} \in \overline{ \mathcal{C}}\}) \\[10pt]
+& = \PP_{0}(\displaystyle\inf\{t\geq 0: W_{\lambda^{2}t}+\lambda x \in \overline{B(0, 1)}\}<(\displaystyle\inf\{t\geq 0: W_{\lambda^{2}t} + \lambda x \in \overline{ \mathcal{C}}\}) \\[10pt]
+& = \PP_{0}(1/\lambda^{2}\displaystyle\inf\{\lambda^{2}t\geq 0: W_{\lambda^{2}t}+\lambda x \in \overline{B(0, 1)}\}<1/\lambda^{2}\displaystyle\inf\{\lambda^{2}t\geq 0: W_{\lambda^{2}t} + \lambda x \in \overline{ \mathcal{C}}\}) \\[10pt]
+& = \PP_{\lambda x}(\displaystyle\inf\{t\geq 0: B_{t} \in \overline{B(0, 1)}\}<\displaystyle\inf\{t\geq 0: B_{t}\in \overline{ \mathcal{C}}\}) \\[10pt]
+& = \PP_{\lambda x}(\tau_{\partial B(0, 1)}<\tau_{ \mathcal{C}}) \leq \displaystyle\sup_{|y|\leq 2^{-(k-1)}}\PP_{y}(\tau_{\partial B(0,1)}<\tau_{ \mathcal{C}}).
+\end{array}
+\]
+\end{examplesblock}
+Thus, inducting on $ k\in \N$ and using $ (***)$ as the base case and $ (A)$ as the induction step we deduce that 
+\[
+	\displaystyle\sup_{x\in B(0, 2^{-k})}\PP_{x}(\tau_{\partial B(z,\delta)}<\tau_{\mathcal{C}_{z}})\leq \alpha^k\to 0, \quad k\to \infty
+\]
+which allows us to conclude the proof.  
+
+\end{proof}
+
+\begin{examplesblock}{Example: }\label{examples: 10}
+	Let $ d=2$ and let $ \phi:\partial B(0,1)\to \R$ continuous. Let $ v:D\to \R$ where $ D = B(0,1)\setminus \{0\}$ be the unique solution to the Dirichlet problem on $ B(0,1)$ with boundary data $ \phi$. Augment $ \phi $ to $ \partial B(0,1)\cap \{0\}$ and observe that 
+	\[
+	u(x) = \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}}) \right]
+	\]
+	is \underline{not} a solution if $ v(0)\neq \phi(0)$ since $ u(0)  = \phi(0) = v(0)$ because Brownian motion does not hit points, as we proved in Theorem \ref{thm: bm recurrence and transience}.
+	\end{examplesblock}
+
+	\section{Donsker's invariance principle}\label{sec: Donsker}
+The main theorem of this section is Donsker's inavriance principle, which states 
+\begin{theorem}[Donsker's invariance principle]\label{thm: donsker}
+	Let $ X_{1}, X_{2}, \cdots$ be iid $ \R-$valued integrable random variables with law $ \mu$, such that $ \mathbb{E}\left[ X_{1} \right]=0$, and variance $ \sigma^{2}\in (0,\infty)$. Set $ S_{0}=0$, $ S_{n} X_{1}+\cdots +X_{n}$ for $ n\geq 1$ and $ S_{t} = (1-\{t\})S_{[t]}+\{t\}S_{[t]+1}$, where $ \{t\}= t-[t]$ and $ [t]$ is the integer part of $ t\geq 0$. Now, define 
+	\[
+		S^{[N]}_{t} = \frac{S_{tN}}{\sqrt{\sigma^{2}N}}
+	\]
+	for $ 0\leq t\leq 1$. Then, $ \left(  S^{[N]}_{t}, 0\leq t\leq 1\right)$ converges weakly to $ (B_{t}, 0\leq 1\leq 1)$, that is to a standard Brownian motion. More explicitly, we have for all continuous (in the local uniform topology) and bounded functionals $ F: \mathcal{C}([0,1], \R)\to \R$
+	\[
+	\mathbb{E}\left[ F(S^{[N]}) \right] \stackrel{N\to \infty}{\longrightarrow} \mathbb{E}\left[ F(B) \right].
+	\]
+\end{theorem}
+	Before we prove it we need a supporting result, the so-called Skorokhod embedding.
+
+	\begin{theorem}[Skorokhod embedding]\label{thm: skorokhod embedding}
+	Let $ \mu$ be a probability measure with zero mean and variance $ \sigma^{2}\in (0,\infty)$. Then, there exists a probability space $ (\Omega, \F, \PP)$, a filtration $ (\F_{t})_{t\geq 0}$, a Brownian motion $ (B_{t})_{t\geq 0}$ and a sequence of stopping times $ 0=T_{0}\leq T_{1}\leq \cdots\leq$ such that
+	\begin{enumerate}
+		\item The sequence defined by $ (S_{n})_{n\in \N} = (B_{T_{n}})_{n\in \N}$ for $ n\in \N$ is a random walk with step distribution $ \mu$.
+		\item The sequence $ (T_{n})_{n\in N}$ and steps of mean $ \sigma^{2}$.
+ 
+	\end{enumerate}
+
+
+\end{theorem}
 \end{document}
