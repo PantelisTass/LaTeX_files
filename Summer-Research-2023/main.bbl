@@ -28,6 +28,10 @@ S.N. Ethier and T.G. Kurtz.
 Nikolas Kantas, Panos Parpas, and Grigorios~A. Pavliotis.
 \newblock The sharp, the flat and the shallow: Can weakly interacting agents learn to escape bad minima?, 2019.
 
+\bibitem{liu2019acceleratingsgdmomentumoverparameterized}
+Chaoyue Liu and Mikhail Belkin.
+\newblock Accelerating sgd with momentum for over-parameterized learning, 2019.
+
 \bibitem{Mei_2018}
 Song Mei, Andrea Montanari, and Phan-Minh Nguyen.
 \newblock A mean field view of the landscape of two-layer neural networks.

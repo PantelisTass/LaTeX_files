@@ -1,6 +1,0 @@
-PWD /Users/pantelistassopoulos/Documents/texfiles/Summer-Research-2023
-INPUT /usr/local/texlive/2024/texmf.cnf
-INPUT /usr/local/texlive/2024/texmf-dist/web2c/texmf.cnf
-INPUT /usr/local/texlive/2024/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT /Users/pantelistassopoulos/Documents/texfiles/Summer-Research-2023/references.bib
-OUTPUT references.log

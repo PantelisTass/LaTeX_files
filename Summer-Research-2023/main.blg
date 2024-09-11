@@ -13,50 +13,47 @@ I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "kantas2019sharpflatshallowweakl"
 Warning--I didn't find a database entry for "kantas2019sharpflatshallowweaklSy"
 Warning--I didn't find a database entry for "weinan2005analysis"
-Warning--I didn't find a database entry for "Auffinger:2013kq"
-Warning--I didn't find a database entry for "Sagun:2014tg"
-Warning--I didn't find a database entry for "Auffinger:2012gh"
-Warning--I didn't find a database entry for "Choromanska:2014ui"
+Warning--I didn't find a database entry for "Rostkoff_2022"
 Warning--there's a month but no year in Tassopoulos_Imperial_Summer_Research_2023
-You've used 14 entries,
+You've used 15 entries,
             2118 wiz_defined-function locations,
-            588 strings with 6663 characters,
-and the built_in function-call counts, 3903 in all, are:
-= -- 360
-> -- 209
+            585 strings with 6704 characters,
+and the built_in function-call counts, 4136 in all, are:
+= -- 380
+> -- 222
 < -- 0
-+ -- 84
-- -- 68
-* -- 244
-:= -- 676
-add.period$ -- 39
-call.type$ -- 14
-change.case$ -- 73
++ -- 89
+- -- 72
+* -- 254
+:= -- 714
+add.period$ -- 41
+call.type$ -- 15
+change.case$ -- 78
 chr.to.int$ -- 0
-cite$ -- 15
-duplicate$ -- 131
-empty$ -- 318
-format.name$ -- 68
-if$ -- 804
+cite$ -- 16
+duplicate$ -- 138
+empty$ -- 340
+format.name$ -- 72
+if$ -- 854
 int.to.chr$ -- 0
-int.to.str$ -- 14
+int.to.str$ -- 15
 missing$ -- 11
-newline$ -- 67
-num.names$ -- 28
-pop$ -- 102
+newline$ -- 71
+num.names$ -- 30
+pop$ -- 112
 preamble$ -- 1
-purify$ -- 62
+purify$ -- 66
 quote$ -- 0
-skip$ -- 108
+skip$ -- 117
 stack$ -- 0
-substring$ -- 155
-swap$ -- 14
+substring$ -- 160
+swap$ -- 15
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 50
+type$ -- 54
 warning$ -- 1
-while$ -- 33
-width$ -- 16
-write$ -- 138
+while$ -- 35
+width$ -- 17
+write$ -- 146
 (There was 1 error message)

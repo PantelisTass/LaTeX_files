@@ -592,6 +592,9 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
 INPUT ./main.toc
 INPUT ./main.toc
 INPUT main.toc
+OUTPUT main.toc
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
+INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
@@ -610,9 +613,6 @@ INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathb5.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/mathabx/mathx10.tfm
-OUTPUT main.toc
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx12.tfm
-INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/jknappen/ec/tcrm1000.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm
 INPUT /usr/local/texlive/2024/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm
@@ -632,6 +632,14 @@ INPUT ./svg-inkscape/piecewise-constant_svg-tex.pdf
 INPUT ./svg-inkscape/piecewise-constant_svg-tex.pdf_tex
 INPUT ./svg-inkscape/piecewise-constant_svg-tex.pdf
 INPUT ./svg-inkscape/piecewise-constant_svg-tex.pdf
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
+INPUT ./images/Spiliopoulos2019-LLN-singleNN-mnist.png
 INPUT ./images/MNIST-hist-N-100.png
 INPUT ./images/MNIST-hist-N-100.png
 INPUT ./images/MNIST-hist-N-100.png
@@ -727,6 +735,14 @@ INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
 INPUT ./images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
+INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
 INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
 INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
 INPUT ./images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png
@@ -751,14 +767,6 @@ INPUT ./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png
 INPUT ./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png
 INPUT ./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png
 INPUT ./images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
-INPUT ./images/Nguyen2018-SGD-algos-risk-aniso-gauss.png
 INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
 INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
 INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
@@ -767,6 +775,14 @@ INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
 INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
 INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
 INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit classification.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
+INPUT ./images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png
 INPUT ./images/MullerB-potential-plot-3d.png
 INPUT ./images/MullerB-potential-plot-3d.png
 INPUT ./images/MullerB-potential-plot-3d.png
@@ -887,9 +903,6 @@ INPUT ./images/3d-spin-model-neural-net-plot-d=5.png
 INPUT ./images/3d-spin-model-neural-net-plot-d=5.png
 INPUT ./images/3d-spin-model-neural-net-plot-d=5.png
 INPUT ./images/3d-spin-model-neural-net-plot-d=5.png
-INPUT ./main.bbl
-INPUT ./main.bbl
-INPUT main.bbl
 INPUT main.aux
 INPUT ./main.out
 INPUT ./main.out

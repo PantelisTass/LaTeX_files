@@ -89,7 +89,7 @@ Now, more formally, one typically encounters, in the context of supervised learn
 
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[scale = 1.3, x=2cm, y=1.5cm, thick, every node/.style={scale=1}]
+    \begin{tikzpicture}[scale = 1.5, x=2cm, y=1.5cm, thick, every node/.style={scale=1}]
 
 % Input node (smaller size)
 \node[circle, draw, minimum size=0.7cm] (I) at (0, 0) {$\mathbf{x}$};
@@ -287,9 +287,9 @@ This estimate helps one get a sense of the terms that need to be controlled in t
 
 The PDE formulation leads to several insights and simplifications. One can exploit symmetries in the data distribution $ \PP$ for instance. If $ \PP$ has rotational symmetry, then one can look for solutions to the PDE problem that share such rotational symmetry, thereby reducing the dimensionality of the problem which facilitates theoretical and numerical analysis. This is manifest in the case of two isotropic Gaussians considered later. Such symmetry cannot be achieved when considering the discrete dynamics since no set of poitns $ \mathbf{\theta}_{1}, \cdots, \mathbf{\theta}_{N}\in \R^{d}$ is invariant under rotations (excluding trivial cases).
 
-\subsection{MNIST data classification}
+\subsection{MNIST data classification}\label{sec: MNIST classification}
 
-I studied the proofs for the propagation of chaos and the mean-field limit of the distribution of neural network weights in the 2019 paper of Spiliopoulos and Sirgiano entitled ‘Mean Field Analysis of Neural Networks: A Law of Large Numbers’ and its companion paper \cite{sirignano2019meanfieldanalysislln}, \cite{sirignano2019meanfieldanalysisclt}. I did some background reading to supplement my understanding of the above papers of a book entitled ‘Markov Processes: Characterization and Convergence’ by Stewart N. Ethier, Thomas G. Kurtz \cite{ethier2009markov}, specifically the chapter on weak convergence of probability measures with values in Skorokhod spaces defined below.
+I studied the proofs for the propagation of chaos and the mean-field limit of the distribution of neural network weights in the 2019 paper of Spiliopoulos and Sirgiano entitled ‘Mean Field Analysis of Neural Networks: A Law of Large Numbers’ and its companion paper \cite{sirignano2019meanfieldanalysislln}, \cite{sirignano2019meanfieldanalysisclt}. Note there are many similarities in the framerowk between these papers and the work in \cite{Mei_2018}, though the gradient of the loss being Lipschitz is dropped. I did some background reading to supplement my understanding of the above papers of a book entitled ‘Markov Processes: Characterization and Convergence’ by Stewart N. Ethier, Thomas G. Kurtz \cite{ethier2009markov}, specifically the chapter on weak convergence of probability measures with values in Skorokhod spaces defined below.
 
 \begin{boxdef}[Skorokhod space]\label{def: skorokhod}
 	Let $  E = (\mathcal{M}, d)$ be a metric space and $ T>0$. Then, we deefine the \underline{Skorokhod space} 
@@ -326,7 +326,14 @@ Let $  \mathcal{S}$ be a complete separable metric space, then there exists a to
 
 Hence, we have that the scaled empirical measure $ (\mu^{N}_{t})_{t\in [0,T]})$ is a random element of $ \mathcal{D}_{ \mathcal{M}(\R)^{d}} \coloneqq \mathcal{D}([0,T]; ( \mathcal{M}(\R^{d}), d_\mathcal{T}))$, where $d_ \mathcal{T}$ is the induced metric from \ref{lemma: vague topology}. Note that $  \mathcal{D}_{ \mathcal{M}(\R)^{d}}$ space is a Polish space in its own space endowed with the \textit{Skorokhod topology} with well-understood criteria for compactness that feature prominently in the proof of the main theorem in \cite{sirignano2019meanfieldanalysislln}, and \cite{sirignano2019meanfieldanalysisclt}.\\
 
-The main result of the paper \cite{sirignano2019meanfieldanalysislln} concerns the convergence in distribution of $ \mu^{N}_{t}$ in the aforementioned Skorokhod space under certain `reasonable` structural assumptions.
+The main result of the paper \cite{sirignano2019meanfieldanalysislln} concerns the convergence in distribution of $ \mu^{N}_{t}$ in the aforementioned Skorokhod space under certain the `reasonable` structural assumptions
+
+\begin{itemize}\label{assumptions spiliopoulos}
+	\item[{\sf S1.}] The activation function $\sigma\in C^{2}_{b}(\mathbb{R})$, i.e. $\sigma$ is twice continuously differentiable and bounded.
+\item[{\sf S2.}] The sequence of data samples $(x_k, y_k)$ is i.i.d. from a probability distributed $\pi(dx,dy)$ such that $\mathbb{E}\parallel x_{k}\parallel^{4}+\mathbb{E}|y_{k}|^{4}$ is bounded.
+\item[{\sf S3.}] The randomly initialized parameters $(c_0^i, w_0^i)$ are i.i.d. with a distribution $\bar \mu_0$ such that $\mathbb{E}[ \exp \big{(} q | c_0^i | \big{)} ] < C$ for some $0 < q < \infty$ and $\mathbb{E}[ \parallel w_0^i \parallel^4 ] < C$.
+
+\end{itemize}
 
 \begin{theorem}[Spiliopoulos LLN]\label{thm: spilopoulos lln}
 	For all $ T>0$, the scaled empirical measure $ \mu^{N}_{t}$ on $ [0,T]$ converges in distribution to a
@@ -350,7 +357,7 @@ The main result in \cite{sirignano2019meanfieldanalysisclt} is that asymptotical
 has a Gaussian distribution.
 
 \begin{theorem}[Spiliopoulos CLT]\label{thm: spiliopoulos CLT}
-	Under the 'reasonable' assumptions outlined in \cite{sirignano2019meanfieldanalysisclt}, $J \geq 3\left \lceil \frac{d}{2}\right\rceil+7$ and any $ 0<T<\infty$. The sequence
+	Under the 'reasonable' assumptions \ref{assumptions spiliopoulos}, $J \geq 3\left \lceil \frac{d}{2}\right\rceil+7$ and any $ 0<T<\infty$. The sequence
 	\begin{equation} 
 		((\eta^{N}_{t})_{t\in [0,T]})_{N\in \N}\stackrel{d}{\to} ((\bar{\eta}_{t})_{t\in [0,T]})_{N\in \N}
 	\end{equation}
@@ -361,14 +368,34 @@ has a Gaussian distribution.
 	For a brief introduction into the Sobolev spaces mentioned above, refer to section $ 2$ to in \cite{sirignano2019meanfieldanalysisclt}.
 \end{remark}
 
+In \cite{sirignano2019meanfieldanalysislln}, the authors prove that the neural network has the  ``propagation of chaos" property under suitable structural assumptions mentioned therein.
+\begin{theorem} \label{TheoremChaos}
+Consider $T<\infty$ and let $t\in(0,T]$. Define the probability measure $\rho^N_t \in \mathcal{M} (\mathbb{R}^{(1+d)N})$ where
+\begin{eqnarray*}
+\rho^N_t(dx^1, \ldots, dx^N) = \mathbb{P}[ (c_{\floor*{N t}}^1, w_{\floor*{N t}}^1) \in dx^1, \ldots, (c_{\floor*{N t}}^N, w_{\floor*{N t}}^N) \in dx^N ].
+\end{eqnarray*}
+Then, the sequence of probability measures $\rho^N_\cdot$ is $\bar \mu_\cdot$-chaotic. That is, for $k\in\mathbb{N}$
+\begin{eqnarray}
+\lim_{N \rightarrow \infty } \la   f_1(x^1) \times \cdots \times f_k(x^k), \rho_\cdot^N(dx^1, \ldots, dx^N) \ra = \prod_{i=1}^k \la  f_i, \bar \mu_{\cdot} \ra, \phantom{....} \forall f_1, \ldots, f_k \in C^{2}_{b}(\mathbb{R}^{1+d}).
+\label{PropChaos}
+\end{eqnarray}
 
-Furthermore, regarding the paper of Spiliopoulos (2019) on the LLN for the one-layer neural net \cite{sirignano2019meanfieldanalysislln}, I implemented a single-digit classifier with the architecture satisfying the assumptions made in the paper and was able to reproduce the distribution of parameters in the paper.
+\end{theorem}
 
-\begin{figure}[H]
-    \centering
-    \includegraphics[width=0.8\textwidth]{images/Spiliopoulos2019-LLN-singleNN-mnist.png}
-    \caption{weights of MNIST single digit classification single layer neural net}
-    \label{fig: MNIST spiliopoulos}
+This mneans that as $N \rightarrow \infty$, the neural network converges (in probability) to a deterministic model. This is despite the fact that the neural network is randomly initialized and it is trained on a random sequence of data samples via stochastic gradient descent.
+The propagation of chaos result (\ref{PropChaos}) indicates that, as $N \rightarrow \infty$, the dynamics of the weights $(c^i_k, w^i_k)$ will become independent of the dynamics of the weights $(c^j_k, w^j_k)$ for any $i \neq j$. Note that the dynamics $(c^i_k, w^i_k)$ are still random due to the random initialization. However, the dynamics of the $i$-th set of weights will be uncorrelated with the dynamics of the $j$-th set of weights in the limit as $N\rightarrow\infty$.\\ 
+\end{itemize}
+
+I thus implemented a single-digit classifier neural network with a single hidden layer satisfying the assumptions \ref{assumptions spiliopoulos}, as discussed above using a sigmoid activation function, trained on the MNIST data set containing around $60,000$ images of hand-drawn digits. I tried to establish numerically whether one obtains convergence of the (asymptotically identical) distribution of any one of the parameters $ (c_{i})_{1\leq i\leq N}$, see figure \ref{fig: MNIST spiliopoulos}. The result seems to match that presented in \cite{sirignano2019meanfieldanalysislln}. 
+
+
+\begin{figure}[H]\centering
+\subfloat[$ N=10^{2}$, $ 10^2$ epochs.]{\label{a}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-100.png}}\hfill
+\subfloat[$ N=10^{3}$, $ 10^3$ epochs.]{\label{b}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-1000.png}}\par 
+\subfloat[$ N= 5\cdot 10^{3}$, $ 5\cdot 10^3$ epochs.]{\label{c}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-5000.png}}\hfill 
+\subfloat[$ N=10^{4}$, $ 10^4$ epochs.]{\label{d}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-10000.png}}
+\caption{Plots of histograms of parameters connecting hidden layer outputs to the final output for different values of $N$ and epochs in line with Theorem \ref{thm: spilopoulos lln}.}
+\label{fig: MNIST spiliopoulos}
 \end{figure}
 
 \section{Non-convex landscape}
@@ -420,10 +447,6 @@ appropriate conditions)
 \begin{equation}
 \nabla\Phi^{h}\left(x\right)=\int\nabla\Phi(x+y)\mu(dy).\label{eq:smooth_grad}
 \end{equation}
-An additional point here is that when $y\sim\mu$, $\nabla\Phi(x+y)$
-is an unbiased estimate of the ``biased'' gradient $\nabla\Phi^{h}$.
-This implies, in particular, that there is an additional option for
-randomization of the smoothed gradient.\\ 
 
 Loosely speaking the effect of $\mu$ here is to smooth $\Phi$.
 It is natural to ask how one designs $\mu$ (or $G_{h}$)
@@ -449,13 +472,13 @@ entropy (Kullback-Leibler divergence) to the unique stationary state
 \rho_{\infty}=\frac{1}{Z}\exp(-\beta\Phi(x)),
 \]
 (see for instance \cite[Ch. 4]{pavliotis2014stochastic}) where $Z$ denotes the normalization constant.
-Finding the mode or maximiser of $\rho_{\infty}$ is equivalent finding
+Finding the maximiser of $\rho_{\infty}$ is equivalent finding
 $x^{*}$ (the minimizer of $ \Phi$). Here it is noted that higher values of $ \beta$
 result to $\rho_{\infty}$ putting more of its mass around lower valued
 local minima of $\Phi$. For high $\beta$, the SGLD \ref{ eq: SGLD}
 reduces to a deterministic gradient descent, so it could be harder
 to escape from local minima. In practice, the trade-off between convergence
-speed and optimality is difficult to balance.
+speed and optimality is difficult to balance.\\
 
 An alternative approach is to use interacting SGLD, as opposed to
 i.i.d. copies of the Langevin dynamics~\ref{ eq: SGLD}. In \cite{kantas2019sharpflatshallowweakly}, a system of interacting SGLD of the form 
@@ -465,8 +488,7 @@ dX_{t}^{i} & =-\nabla\Phi(X_{t}^{i})dt-\big(\nabla D\star\eta_{t}^{N}\big)(X_{t}
 where $i=1,\ldots,N,$ $\eta_{t}^{N}=\frac{1}{N}\sum_{i=1}^{N}\delta_{X_{t}^{i}}$,
 $X_{0}^{i}\sim\eta_{0}(\cdot)$. Compared to the i.i.d. SGLD \ref{ eq: SGLD},
 the dynamics \ref{eq:interacting_sde} uses $D(x,y)$ as an interaction
-potential, which, in this paper, we will take to be convex. In particular,
-we will consider the so-called Curie-Weiss interaction
+potential, taken to be the so-called Curie-Weiss interaction
 \begin{equation}
 D(x,y)=\frac{\lambda}{2}\|x-y\|^{2}\label{e:inter}
 \end{equation}
@@ -521,8 +543,9 @@ dY_{t} & =-\frac{1}{\epsilon}\left(\frac{1}{\gamma}Y_{t}-\nabla\Phi(X_{t}-Y_{t})
 \end{subequations}The parameter $\epsilon$ measures scale separation.
 The limit $\epsilon\rightarrow0$ can be justified using multiscale
 analysis. Note that this is a gradient
-scheme for the modified loss function $\Phi(x-\frac{y}{\epsilon})+\frac{1}{2\gamma}\left\Vert \frac{y}{\epsilon}\right\Vert ^{2}$.
-It is noted in \cite{kantas2019sharpflatshallowweakly} that $\gamma$ acts as a regularization parameter,precisely like the inverse of the interaction strength $\lambda$
+scheme for the modified loss function $\Phi(x-\frac{y}{\epsilon})+\frac{1}{2\gamma}\left\Vert \frac{y}{\epsilon}\right\Vert ^{2}$.\\ 
+
+It is noted in \cite{kantas2019sharpflatshallowweakly} that $\gamma$ acts as a regularization parameter, precisely like the inverse of the interaction strength $\lambda$
 in the previous section. We emphasize the similarities between~\ref{eq:integrate phi}
 and \ref{eq:hom_sde_lim}.
 
@@ -549,10 +572,8 @@ is the one that will be used in Algorithm \ref{alg: mf hom sgld}.
 
 
 \subsubsection{Synthesis: combine both multi-scale analysis and weakly interacting gents for MF Hom SGLD}
-In brief this algorithm, \ref{alg: mf hom sgld} corresponds to a discretization of the dynamics of gradient descent against a potential with an $ \ell_{2}$ penalty and a regularized version of the original potential $\Phi$, using the method introduced by Chaudhari et al. (2018).
-
-More precisely, combining~\ref{eq:hom_sde_lim} with \ref{eq:interacting_sde}
-we obtain: 
+In brief this algorithm, \ref{alg: mf hom sgld} corresponds to a discretization of the dynamics of gradient descent against a potential with an $ \ell_{2}$ penalty and a regularized version of the original potential $\Phi$, using the method introduced by Chaudhari et al. (2018). More precisely, combining~\ref{eq:hom_sde_lim} with \ref{eq:interacting_sde}
+one obtains: 
 \begin{align}
 dX_{t}^{i} & =-\frac{1}{\gamma}(X_{t}^{i}-Y_{t}^{i})dt-\lambda\left(X_{t}^{i}-\frac{1}{N}\sum_{j=1}^{N}X_{t}^{j}\right)dt\label{eq:hom_mf_sde1}\\
 dY_{t}^{i} & =-\frac{1}{\epsilon}\left(\nabla\Phi(Y_{t}^{i})-\frac{1}{\gamma}(X_{t}^{i}-Y_{t}^{i})\right)dt+\sqrt{\frac{2\beta^{-1}}{\epsilon}}dW_{t}^{i}\label{eq:hom_mf_sde2}
@@ -587,6 +608,8 @@ for small $\epsilon$ I followed \cite{kantas2019sharpflatshallowweakly} and used
 
 \subsubsection{Nesterov SGD}
 
+It is well-known that in the deterministic setting, the Nesterov gradient descent achieves acceleration over plain gradient descent. However, in the stochastic setting, this is not as clear. I thus implemented a stochastic version of Nesterov's gradient descent algorithm below (where $ \tilde{\nabla}$ denotes the stochastic gradient, that is the sample mean of a batch's worth of iid samples).
+
 \begin{examplesblock}{Nesterov SGD}\label{alg: nesterov sgd}
 \begin{algorithmic}
 \Require $ m\in \N $, $ \gamma\in (0,1)$ and $ \eta_{1}>0$
@@ -603,9 +626,32 @@ for small $\epsilon$ I followed \cite{kantas2019sharpflatshallowweakly} and used
 
 \end{examplesblock}
 
+I also came across the paper \cite{ odonoghue2012adaptiverestartacceleratedgradient}, which provided a scheme for the dynamic selection of the parameter $ \gamma$ in \ref{alg: nesterov sgd}, called gradient restarting. They prove in the case of convex potentials, acceleration over plain Nesterov is achieved, and I implemented the following algorithm to test its performance in the non-convex case. 
+
+\begin{examplesblock}{Gradient restarted Nesterov SGD}\label{alg: gradient restarted nesterov}
+\begin{algorithmic}
+\Require $ m\in \N $, $ \eta_{1}>0$ and $ \alpha = 1$
+\State $ \gamma = \frac{\alpha-1}{\alpha+2}<1$
+\State Initialise the parameters $(\mathbf{\theta}_{i})_{i\leq \N} \sim \rho_{0}$, that is according to some initial distribution $ \rho_{0}$.
+\While{loss is greater than tolerance}
+\State Compute stochastic gradient $\tilde{\nabla}f(u_{t}) $ using a mini-batch of some predetermined size $ m$.
+\State  \begin{eqnarray}\left.\begin{array}{lll}
+\mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
+\mathbf{u}_{t+1} &\leftarrow& (1+\gamma)\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t}.\end{array}\right.
+\end{eqnarray}
+\If{ $\tilde{\nabla}f(\mathbf{u}_{t})^{T}\cdot (\mathbf{w}_{t+1}-\mathbf{w}_{t})>0  $} \Comment{Adaptive restart}
+\State $ \alpha \leftarrow 1$
+\EndIf 
+\State $\alpha \leftarrow \alpha +1$
+\EndWhile
+
+\end{algorithmic}
+
+\end{examplesblock}
+
 \subsubsection{MaSS algorithm}
 
- I also came across a paper entitled ‘ACCELERATING SGD WITH MOMENTUM FOR OVER-PARAMETERIZED LEARNING’ by Liu and Belkin, where the authors claim that Nesterov SGD with any parameter selection does not in general provide acceleration over ordinary SGD’. There the authors come up with a modified algorithm which they call ‘Momentum-added stochastic solver (MaSS)’. 
+ I also came across a paper entitled ‘Accelerating SGD with momentum for over-parameterised learning’ by Liu and Belkin, where the authors claim that Nesterov SGD with any parameter selection does not in general provide acceleration over ordinary SGD’ (as opposed to the acceleration provided by the deterministic Nesterov GD over plain GD). There the authors come up with a modified algorithm which they call ‘Momentum-added stochastic solver (MaSS)’ and prove that for a strongly convex loss,in a certain batch regime (batch size $ <m_{1}^{*}$), i.e. the `linear` regime MaSS out-performs both Nesterov and plain SGD. They observe that the larger the batch size, the closer the MaSS algorithm becomes to deterministic Nesterov gradient descent  They also demonstrate numerically that MaSS also outperforms Nesterov and plain SGD on deep neural networks, which are non-convex. When testing examples, we use relatively small batch sizes to observe this acceleration.
 
  \begin{eqnarray}\left.\begin{array}{lll}
 \mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
@@ -616,28 +662,26 @@ Here, $\tilde{\nabla}$ represents the stochastic gradient. The step size $\eta_1
 
 \begin{examplesblock}{MaSS accelerated SGD}\label{alg: MaSS sgd}
 \begin{algorithmic}
-\Require $ m\in \N $, $ \gamma\in (0,1)$ and $ \eta_{1}>0$
+\Require $ m\in \N $, $ \eta_{1}, \eta_{2}>0$ and $ \alpha = 1$
+\State $ \gamma = \frac{\alpha-1}{\alpha+2}<1$
 \State Initialise the parameters $(\mathbf{\theta}_{i})_{i\leq \N} \sim \rho_{0}$, that is according to some initial distribution $ \rho_{0}$.
 \While{loss is greater than tolerance}
-\State Compute stochastic gradient $\tilde{\nabla} $ using a mini-batch of some predetermined size $ m$.
-\State \begin{eqnarray}\label{eq:newrules}
-\begin{array}{l}
-\mathbf{w}_{t+1} \leftarrow \mathbf{u}_t - \eta \tilde{\nabla}f(\mathbf{u}_t),\\
-\mathbf{v}_{t+1} \leftarrow (1-\alpha)\mathbf{v}_t + \alpha \mathbf{u}_t - \delta \tilde{\nabla}f(\mathbf{u}_t),\label{eq:updateb}\\
-\mathbf{u}_{t+1} \leftarrow \frac{\alpha}{1+\alpha}\mathbf{v}_{t+1} + \frac{1}{1+\alpha}\mathbf{w}_{t+1}.\end{array}
+\State Compute stochastic gradient $\tilde{\nabla}f(u_{t}) $ using a mini-batch of some predetermined size $ m$.
+\State  \begin{eqnarray}\left.\begin{array}{lll}
+\mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
+\mathbf{u}_{t+1} &\leftarrow& (1+\gamma)\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t} + \underline{ \eta_2 \tilde{\nabla}f(\mathbf{u}_t)}.\end{array}\right.
 \end{eqnarray}
+\If{ $\tilde{\nabla}f(\mathbf{u}_{t})^{T}\cdot (\mathbf{w}_{t+1}-\mathbf{w}_{t})>0  $} \Comment{Adaptive restart}
+\State $ \alpha \leftarrow 1$
+\EndIf 
+\State $\alpha \leftarrow \alpha +1$
 \EndWhile
 
 \end{algorithmic}
 
 \end{examplesblock}
-
-Note, there is a bijection between the hyper-parameters ($\eta_1,\eta_2,\gamma$) and ($\eta,\alpha,\delta$), which is given by:
-\begin{equation}\label{eq:parabijection}
-    \gamma =(1-\alpha)/(1+\alpha), \ \ \eta_1 = \eta,   \ \  \eta_2 = (\eta-\alpha\delta)/(1+\alpha).
-\end{equation}
-
-
+  
+I used a variety of batch sizes, from $m=1 $ to the classification problems in \cite{Mei_2018} and for the MNIST single-digit classification neural networks from \cite{sirignano2019meanfieldanalysislln}, to $ m=10^{2}$ for the $ 3-$sphere spin function and for the Muller Brown potential, classical variants of the algorithms are used, that is replacing the stochastic with the full gradient, corresponding to $ m \to \infty$. We also use the gradient-adaptive restarting to reset $ \gamma$ roughly when the change in weights points in the direction of the gradient, whose benefits were expanded upon in \cite{ odonoghue2012adaptiverestartacceleratedgradient}. 
 \subsection{Applications}
 
 \subsubsection{Centred Isotropic Gaussians}
@@ -645,34 +689,32 @@ Note, there is a bijection between the hyper-parameters ($\eta_1,\eta_2,\gamma$)
 The authors in \cite{Mei_2018} were interested in numerically testing their PDE framework on the classification problem of Gaussians with the same mean. That is, assume the joint law $ \PP$ of $(\mathbf{x}, y) $ to be:
 \begin{equation}
 \begin{array}{cc}
-& \text{with probability}  1/2: y = +1, \mathbf{x}\sim N(0, (1+\Delta)^{2}\cdot\Id_{d})\\
-& \text{with probability} 1/2: y = -1, \mathbf{x}\sim N(0, (1-\Delta)^{2}\cdot\Id_{d})
+& \text{with probability }  1/2: y = +1, \mathbf{x}\sim N(0, (1+\Delta)^{2}\cdot\Id_{d})\\
+& \text{with probability } 1/2: y = -1, \mathbf{x}\sim N(0, (1-\Delta)^{2}\cdot\Id_{d})
 \end{array}
 \end{equation}
 
-For the activation function set $ \sigma( \mathbf{x}; \mathbf{\theta}) = \sigma(\bracket{w}{ \mathbf{x}})$ where $ \sigma$ is a simple piewewise linear activation function.\\
+For the activation function set $ \sigma( \mathbf{x}; \mathbf{\theta}) = \sigma(\bracket{w}{ \mathbf{x}})$ where $ \sigma$ is a simple piecewise linear activation function.\\
 
-To try and reproduce the findings in \cite{Mei_2018},I implemented the SGD and the asymptotic PDE for the isotropic Gaussian case (SGD for isotropic gaussians with $10^7$ iterations) with $(w_i^0 )_{i\leq\N} \sim_{iid} \rho_0$, where $\rho_0$ is spherically symmetric. More specifically, I ran a monte carlo simulation of the discrete SGD dynamics and recorded the distance of the particles (hidden parameters $ \mathbf{\theta}$) after a set amount of iterations and aggreagated them, producing figure \ref{fig: SGD histogram isotropic Gaussians}. It compares nicely with the last subplot in \ref{fig: Nguyen 2018 isotropic Gaussian simulation}. 
+To try and reproduce the findings in \cite{Mei_2018},I implemented the SGD and the asymptotic PDE for the isotropic Gaussian case (SGD for isotropic gaussians with $10^7$ iterations) with $(w_i^0 )_{i\leq\N} \sim_{iid} \rho_0$, where $\rho_0$ is spherically symmetric. More specifically, I ran a monte carlo simulation of the discrete SGD dynamics and recorded the distance of the particles (hidden parameters $ \mathbf{\theta}$) after a set amount of iterations and aggreagated them, producing figure \ref{fig: SGD histogram isotropic Gaussians}. It compares nicely with the corresponding simulation in the paper  by Nguyen et al. \cite{Mei_2018}. 
 
-\begin{figure}[H]
-\begin{subfigure}{0.5\textwidth}
-  \centering
+\begin{figure}[H]    
+\centering
   \includegraphics[width=0.8\linewidth]{ images/Nguyen2018-SGD-1.png}
   \caption{fig: SGD histogram for isotropic Gaussians\\ with $ 10^{7}$ iterations.}
   \label{fig: SGD histogram isotropic Gaussians}
-\end{subfigure}%
-\begin{subfigure}{0.5\textwidth}
-  \centering
-  \includegraphics[width=0.8\linewidth]{images/Nguyen2018-paper-numerical-validation-iso-gauss.png}
-  \caption{Corresponding simulation in the paper\\ by Nguyen et al.}
-  \label{fig: Nguyen 2018 isotropic Gaussian simulation}
-\end{subfigure}
-\caption{Isotropic Gaussian SGD simulation.}
-\label{fig:  isotropic gaussians SGD}
 \end{figure}
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/Nguyen2018-SGD-algos-risk-iso-gauss.png}
+    \caption{Plot of losses by various variants of SGD for the centred isotropic Gaussian.}
+    \label{fig: SGD iso gauss losses}
+\end{figure}
 
-Upon suggestion of my supervisor, I studied the possible non-uniqueness of stationary states for the mean field PDE that is derived in the paper by Mei et al.’ and its connection to the fact that SGD does not always converge to a near global optimum. There they introduce a non-monotone activation function
+I made some observations regarding the loss profiles in figure \ref{fig: SGD iso gauss losses}. Plain SGD perhaps coming as no surprise, performs the worst. Nesterov achieves acceleration over plain SGD, though not exponentially, and the decline in loss is rather slow. The MaSS algorithm slightly outperforms the Nesterov accelerated SGD, in line with theoretical predictions made in \cite{liu2019acceleratingsgdmomentumoverparameterized}, where the stochastic gradient seems to not be saturated.\\
+
+In the meantime, upon suggestion of my supervisor, I studied the possible non-uniqueness of stationary states for the mean field PDE that is derived in the paper by Mei et al.’ and its connection to the fact that SGD does not always converge to a near global optimum. There they introduce a non-monotone activation function
 \begin{equation}
 	\sigma_*( \mathbf{x}; \mathbf{\theta})= \sigma(\bracket{w}{x}), 
 \end{equation}
@@ -687,13 +729,15 @@ interpolates from $(0, −2.5)$ to $(0.5, −4)$, and from $(0.5, −4)$ to $(1.
 \end{figure}
 
 \noindent Depending on the initialization,
-\begin{equation}
+\begin{equation}\label{eq: initialisation non-mon}
 (w^{0}_{i})_{i\leq N}\sim_{iid} N(0, \kappa^{2}/d\Id_{d})
 \end{equation}
-with $ \kappas = 0.4, 0.1$, the SGD converges to two different limits, one with a small risk,
-and the second with high risk (respectively). I reproduced this phenomenon in with a close match to the data presented in the \cite{Mei_2018}, see figure \ref{fig: non-monotone simulation sgd vs pde}.
+with $ \kappa = 0.4, 0.1$, the SGD converges to two different limits, one with a small risk,
+and the second with high risk (respectively). I reproduced this phenomenon in with a close match to the data presented in the \cite{Mei_2018}, see figure \ref{fig: non-monotone simulation sgd vs pde}.\\
 
-I implemented a single layer neural network with a non-monotone activcation function and trained in on jointly Bernoulli and isotropic Gaussian data constructed in the 2018 paper by Mei et al. entitled 'A mean field view of the landscape of two-layer neural networks' using stochastic gradient descent. I studied limiting properties of the evolution of the network parameters, treated as interacting particles and made comparisons in monitoring losses incurred by the discretised SGD algorithm and the distributional dynamics introduced in the paper. I also modified the training algorithm using Nesterov's method to see if the bad local minimum is avoided as opposed to vanilla SGD which got stuck.
+I implemented a single layer neural network with a non-monotone activcation function (see figure \ref{fig: non-monotone activation fn}) and trained in on jointly Bernoulli and isotropic Gaussian data constructed in the 2018 paper by Mei et al. entitled 'A mean field view of the landscape of two-layer neural networks' using stochastic gradient descent. I studied limiting properties of the evolution of the network parameters, treated as interacting particles and made comparisons in monitoring losses incurred by the discretised SGD algorithm and the distributional dynamics introduced in the paper. I also studied the loss profiles incurred by running various algorithms from plain SGD, to second order algorithms like stochastic MaSS with gradient restart and an interacting particle system-based approach using the MF Hom SGLD algorithm.\\ 
+
+Again, similarly to the isotropic Gaussian case with a monotone activation function, the PDE dynamisc were simulated as in the paper by Nguyen et al., and the SGD seemed to match the distributional dynamics at least qualitatively. It is noteworthy to mention that in plot \ref{fig: avg distance pde sgd non-monotone} there is almost perfect agreement, beautifully showcasing the theory and validating the empirical results in \cite{Mei_2018}.
 
     \begin{figure}[H]
 \begin{subfigure}{0.5\textwidth}
@@ -706,7 +750,7 @@ I implemented a single layer neural network with a non-monotone activcation func
   \centering
   \includegraphics[width=0.8\linewidth]{images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png}
   \caption{ Plot comparing the average distance of the weights $ \norm{w}_{2}$ in the PDE vs SGD simulations for the non-monotone activation.}
-  \label{fig:  avg distance pde sgd non-monotone}
+  \label{fig: avg distance pde sgd non-monotone}
 \end{subfigure}
 \caption{ Separating two isotropic Gaussians, with a non-monotone activation function $ \sigma$. Here $N = 800, d = 320, \Delta = 0.5$. Continuous lines are prediction
 obtained with the Distributional Dynamics simplified to reflect the spherical symmetry of the problemS.
@@ -714,36 +758,19 @@ obtained with the Distributional Dynamics simplified to reflect the spherical sy
 \label{fig:  non-monotone simulation sgd vs pde}
 \end{figure}
 
-
-	For the Isotropic Gaussian learning problem in the 2018 paper by Mei et al.
-o	Nesterov-accelerated GD beats plain SGD, as expected
+The non-monotone activation function in the neural network introduced some non-global minima the specific initialisation was around a non-global minimum, that is taking $ \kappa = 0.4$ in equation \ref{eq: initialisation non-mon}. This was observed in the loss profiles in figure \ref{fig: sgd risk iso gauss non-monotone}, where the plain SGD and MF Homm SGLD-driven trajectories seemed to get stuck, whereas Nesterov SGD and MaSS seem to avoid such this ‘bad minima’. Note that the MaSS algorithm does not achieve acceleration over stochastic Nesterov. This could be because of the high dimensionality of the problem and the non-convexity of the landscape, in addition to the batch size being around $ 10^2$, maybe being close to the saturation regime (see \cite{liu2019acceleratingsgdmomentumoverparameterized} for details), though this does not appear to be the case in the other classification loss profiles (see \ref{fig: risk anisotropic} and \ref{fig: SGD iso gauss losses}). The  MF-HomSGLD algorithm seems to take longer to converge, maybe the hyper-parameters of the algorithm are not optimally tuned, though it has inherently a higher computational complexity. This instance is the only in which it performs poorly, and may just be an artefact of poor parameter selection. 
 
 
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{7cm}|p{7cm}|} % Adjust column widths as needed
-\hline
-\textbf{Algorithms} & \textbf{Observations} \\
-\hline\hline
-Mass & In most cases, despite claims in the paper by Liu and Belkin \cite{liu2019acceleratingsgdmomentumoverparameterized} of exponential convergence (assuming certain regularity restraints on the loss which may be optimistic in my case), the performance at least matches Nesterov SGD, since it is a perturbation thereof. However, in the non-monotone activation function case, it beats all algorithms in later iterations and descends the fastest in loss.
-\\
-\hline
-MF-Hom SGLD &MF-HomSGLD matches the performance of plain SGD, but it seems to get stuck for larger iterations and plateaus. However in the MNIST one-digit classification, the algorithm attains a substantially smaller loss, about two orders of magnitude less than the other algorithms, but it suffers from plateauing early again.
- \\
-\hline
-Nesterov & 	In the deterministic case, as showcased by the 3d-spin model, Nesterov clearly beats plain GD;  this is to be expected.
-	This acceleration is harder to see in the stochastic setting. Nesterov-accelerated SGD seems on all occasions to perform better than plain SGD, but in some cases marginally so.
-	The more noteworthy observation is that it gets ‘unstuck’ at the ‘bad’ minimum in the non-monotone activation case.
- \\
-\hline
-\end{tabular}
-\caption{Two-Column Table with Multi-Line Rows}
-\end{table}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.8\linewidth]{images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png}
+    \caption{Risk for variants of SGD for Isotropic Gaussian with non-monotone activation.}
+    \label{fig: sgd risk iso gauss non-monotone}
+\end{figure}
 
 \subsubsection{Anisotropic Gaussians}
 
-I also implemented code for SGD and PDE simulations of risk for the non-isotropic Gaussian case of failure of SGD given two initializations motivated by the theory developed in \cite{Mei_2018}. The PDE simulations reproduce the numerical findings in the paper, but SGD runs fail to match the PDE profiles exactly, though qualitatively, they are similar (figure \ref{fig: anisotropic gaussian case plots}. More precisely, the data is now 
+Having extensively studied the isotropic Gaussian cse, I also decided to implement code for SGD and PDE simulations of risk for the non-isotropic Gaussian case of failure of SGD given two initializations motivated by the theory developed in \cite{Mei_2018}. More precisely, the data is now 
 \begin{equation}
 \begin{array}{cc}
 & \text{with probability}  1/2: y = +1, \mathbf{x}\sim N(0, \Sigma_+)\\
@@ -757,89 +784,46 @@ where
  \Sigma_- &= \text{Diag}(\underbrace{(1-\Delta)^{2}, \cdots, (1-\Delta)^{2}}_{s_0}, \underbrace{1,\cdots, 1}_{d-s_0})
 \end{array}
 \end{equation}
-and as in the previous case, we choose $\sigma_*(\mathbf{x};\mathbf{\theta}_{i})=a_{i}\sigma_{\text{ReLU}}(\bracket{\mathbf{x}}{w_{i}}+b_{i})$  where $ \sigma_{\text{ReLU}}(x) = \max{x,0}$.
+and as in the previous case, we choose $\sigma_*(\mathbf{x};\mathbf{\theta}_{i})=a_{i}\sigma_{\text{ReLU}}(\bracket{\mathbf{x}}{w_{i}}+b_{i})$  where $ \sigma_{\text{ReLU}}(x) = \max\{x,0\}$.\\ 
 
+The PDE simulations reproduce the numerical findings in the paper, but SGD runs fail to match the PDE profiles exactly, though qualitatively, they are similar (figure \ref{fig: anisotropic gaussian case plots}. Ass for the loss profiles in figure \ref{fig: risk anisotropic}, the second order methods MaSS and gradient restarted Nesterov achieve acceleration over plain SGD and Nesterov with $ \gamma = 0.9$. The latter two have very similar behaviour. The above suggests Nesterov with optimal $ \gamma$ could beat plain SGD.
 
-
-\begin{figure}\centering
-\subfloat[legend]{\label{a}\includegraphics[width=.45\linewidth]{images/Nguyen2018-SGD-algos-risk-aniso-gauss.png}}\hfill
-\subfloat[legend]{\label{b}\includegraphics[width=.45\linewidth]{images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png}}\par 
-\subfloat[legend]{\label{c}\includegraphics[width=.45\linewidth]{images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png}}
-\caption{my fig}
-\label{fig}
-\end{figure}
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{7cm}|p{7cm}|} % Adjust column widths as needed
-\hline
-\textbf{Algorithms} & \textbf{Observations} \\
-\hline\hline
-Mass & In most cases, despite claims in the paper by Liu and Belkin \cite{liu2019acceleratingsgdmomentumoverparameterized} of exponential convergence (assuming certain regularity restraints on the loss which may be optimistic in my case), the performance at least matches Nesterov SGD, since it is a perturbation thereof. However, in the non-monotone activation function case, it beats all algorithms in later iterations and descends the fastest in loss.
-\\
-\hline
-MF-Hom SGLD &MF-HomSGLD matches the performance of plain SGD, but it seems to get stuck for larger iterations and plateaus. However in the MNIST one-digit classification, the algorithm attains a substantially smaller loss, about two orders of magnitude less than the other algorithms, but it suffers from plateauing early again.
- \\
-\hline
-Nesterov & 	In the deterministic case, as showcased by the 3d-spin model, Nesterov clearly beats plain GD;  this is to be expected.
-	This acceleration is harder to see in the stochastic setting. Nesterov-accelerated SGD seems on all occasions to perform better than plain SGD, but in some cases marginally so.
-	The more noteworthy observation is that it gets ‘unstuck’ at the ‘bad’ minimum in the non-monotone activation case.
- \\
-\hline
-\end{tabular}
-\caption{Two-Column Table with Multi-Line Rows}
-\end{table}
-
-
-
-•	Isotropic Gaussian with non-monotone activation learning problem in the 2018 paper by Mei et al.
-o	Here Nesterov accelerated and plain SGD were implemented
-o	The non-monotone activation function in the neural network introduced some non-global minima where SGD seemed to get stuck, whereas Nesterov SGD seemed to avoid such ‘bad minima’ and attain monotonically decreasing losses characteristic of a global minimum. MF-HomSGLD seems to take longer to converge, maybe the hyper-parameters of the algorithm are not optimally tuned.
-o	Here The MaSS algorithm seems to outperform the Nesterov accelerated sgd only in later iterations
- 
-
- 
-•	Anisotropic Gaussian learning problem in the 2018 paper by Mei et al.
-o	Here Nesterov accelerated SGD performs the best, outperforming plain SGD, and while in the beginning, the MF-HomSGLD matches the performance of plain SGD, it seems to get stuck for larger iterations. 
-
-
-     \begin{figure}[H]
+\begin{figure}[H]
  \begin{subfigure}{0.5\textwidth}
    \centering
-   \includegraphics[width=0.8\linewidth]{images/NGuyen2018-pde-sgd-gauss-anisotropic.png}
+   \includegraphics[width=\linewidth]{images/NGuyen2018-pde-sgd-gauss-anisotropic.png}
    \caption{Mean value of $ a$ for PDE and SGD in the anisotropic Gaussian case.}
    \label{fig: val a anisotropic}
  \end{subfigure}%
  \begin{subfigure}{0.5\textwidth}
    \centering
-   \includegraphics[width=0.8\linewidth]{images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png}
+   \includegraphics[width=\linewidth]{images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png}
    \caption{PDE vs SGD risk for Anisotropic Gaussian}
    \label{fig: risk anisotropic}
  \end{subfigure}
- \caption{ caption}
+ \caption{ PDE versus SGD risk for Anisotropic Gaussian}
  \label{fig: anisotropic gaussian case plots}
  \end{figure} 
 
 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.7\linewidth]{images/Nguyen2018-SGD-algos-risk-aniso-gauss.png}
+    \caption{Risk for variants of SGD for Anisotropic Gaussian.}
+    \label{fig: sgd risk anisotropic gauss}
+\end{figure}
+ 
+
 \subsubsection{MNIST data single digit classification}\label{sec: single digit classification}
-•	Single-digit classification algorithm on the MNIST dataset
-o	Nesterov acceleration beat plain SGD, but was beaten by MF-HomSGLD, which plateaued early but achieved a substantially smaller loss in the same amount of time
-     \begin{figure}[H]
- \begin{subfigure}{0.5\textwidth}
+
+I implemented a single-digit classification algorithm on the MNIST dataset and implemented various algorithms. For more details regarding the implementation, see the end of section \ref{sec: MNIST classification}.	Nesterov acceleration beat plain SGD, but was beaten by MF-HomSGLD and MaSS, the former plateaued the earliest achieving the steepest descent however, achieving a substantially smaller loss in the same amount of time. Again, we are in the low saturation regimes in this simulation too, which is consistent with the theoretical predictions in \cite{liu2019acceleratingsgdmomentumoverparameterized} regarding the acceleration of MaSS over plain SGD and Nesterov. Note finally that MH Homm SGLD is computationally more complex than the rest, but ca be terminated sooned due to the quick plateau, thereby saving computational time.
+\begin{figure}[H]
    \centering
    \includegraphics[width=0.8\linewidth]{images/Spiliopoulos2019-SGD-algos-single-digit classification.png}
-   \caption{ caption}
-   \label{fig: description}
- \end{subfigure}%
- \begin{subfigure}{0.5\textwidth}
-   \centering
-   \includegraphics[width=0.8\linewidth]{images/Spiliopoulos2019-SGD-algos-single-digit-late-time.png}
-   \caption{ caption}
-   \label{fig:  description}
- \end{subfigure}
- \caption{ caption}
- \label{fig:  label}
- \end{figure} 
+   \caption{MNIST single-digit classification losses.}
+   \label{fig: MNIST losses}
+ \end{figure}
+
 
 
 \subsubsection{Muller Brown Potential}
@@ -853,67 +837,38 @@ where $A_{i}, a_{i}, b_{i}, c_{i}, d_{i}, i\leq 4$ are as in the paper \cite{mul
     \begin{figure}[H]
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=0.8\linewidth]{images/MullerB-potential-plot-3d.png}
+  \includegraphics[width=\linewidth]{images/MullerB-potential-plot-3d.png}
   \caption{3d plot of the Muller-Brown potential}
   \label{fig: muller-brown 3d}
 \end{subfigure}%
 \begin{subfigure}{0.5\textwidth}
   \centering
-  \includegraphics[width=0.8\linewidth]{images/MullerB-contour-with-grad-field.png}
-  \caption{ caption}
+  \includegraphics[width=\linewidth]{images/MullerB-contour-with-grad-field.png}
+  \caption{Contour plot of Muller-Brown potential.}
   \label{fig:  muller-brown contour}
 \end{subfigure}
 \caption{Contour plot of the Muller-Brown potential}
 \label{fig:  muller-brown plots}
 \end{figure}
 
-I have implemented second-order methods, namely, Nesterov accelerated gradient descent and ‘Discretized mean field SGLD with homogenization’ as conceived in your paper entitled ‘The sharp, the flat and the shallow: Can weakly interacting agents learn to escape bad minima?’.I have made the following observations:
+I have implemented deterministic second-order methods, namely, Nesterov and MaSS accelerated gradient descent as well as sstochastic algorithms such as plain SGD and MF Homm SGLD. I have made some observations below.
 
+Nesterov seems to perform slightly better than the MaSS algorithm, with similar characteristics to the SGD-driven trajectories and convergence to local minima appears to be faster than the rest of the algorithms. The drawback is that it still gets stuck in non-global minima. Full Gradient MaSS seems to behave as expected, that is behaves like the full-gradient Nesterov algorithm. It is not really clear whether any acceleration with respect to plain SGD is observed, which might be due to the highly non-convex nature of the potential.SGD  Seems to perform slightly better than the MaSS algorithm, with similar characteristics to the Nesterov-driven trajectories. Since it essentially performs descent in the heat-regularised Muller-Brown potential by solving numerically the SDE \ref{eq: SGLD}. A drawback is that it still gets stuck in non-global minima. MF-HomSGLD seems to avoid the `bad` minima in the Muller-Brown potential, as evidenced by the plots in figure \ref{fig: muller brown trajectories} with great efficacy and substantially outperforms all other methods. However it suffers from higher algorithmic complexity, dealing with multi-scale SDE system simulations, essentially performing a gradient flow of a regularised potential, where regularisation is done at the level of the Gibbs measure.
 
-•	Muller-Brown potential analysis:
-o	- Most algorithms on the MB potential get stuck equally on two local minima, i.e. the global one (which is narrow) and the one with the next smallest local minimum
-o	- Convolving with a solution to the heat equation does not improve performance as the narrow steep global minimum (as seen from the plot) is smeared out first thus giving no hope of real convergence, unless the algorithms is lucky with the initialisation
-o	- The Hom-MF-SGLD works surprisingly well against all others since it performs a gradient flow of a regularised potential, where regularisation is done at the level of the gibbs measure
-o	- Idea, sample points (to initialise GD) more judiciously, i.e. with gibbs measure (inspired by Andrew Stuart's paper ) by performing a gradient flow and use that 'educated guess as the initialisation of a gd algorithm. (e.g. Wasserstein gradient flow, i.e. sgd on log of Gibbs measure of potential, or affine invariant Wasserstein)
-o	- This idea seems to perform better that all algorithms except the MF-Hom-SGLD algorithm
-o	- Regularising using the HJB equation (essentially performed in the MF-Hom SGLD algorithm) is better suited to minima that are narrower compared to regularisation with the heat equation that destroys such peaks first (due to large curvature)
-o	- Tried regularising wrt soln of HJB equation directly and apply nesterov's accelerated gd algorithm with gradient restarting
-
-\begin{figure}\centering
-\subfloat[legend]{\label{a}\includegraphics[width=.5\linewidth]{images/MullerBrown-SGD.png}}\hfill
-\subfloat[legend]{\label{b}\includegraphics[width=.5\linewidth]{images/MullerBrown-NesterovSGD.png}}\par 
-\subfloat[legend]{\label{c}\includegraphics[width=.5\linewidth]{images/MullerBrown-HomSGLD.png}}\hfill 
-\subfloat[legend]{\label{d}\includegraphics[width=.5\linewidth]{images/MullerBrown-MaSS.png}}
-\caption{my fig}
-\label{fig}
+\begin{figure}[H]\centering
+\subfloat[Plain SGD]{\label{a}\includegraphics[width=.5\linewidth]{images/MullerBrown-SGD.png}}\hfill
+\subfloat[Nesterov accelerated GD]{\label{b}\includegraphics[width=.5\linewidth]{images/MullerBrown-NesterovSGD.png}}\par 
+\subfloat[MF Hom SGLD]{\label{c}\includegraphics[width=.5\linewidth]{images/MullerBrown-HomSGLD.png}}\hfill 
+\subfloat[Full-gradient MaSS]{\label{d}\includegraphics[width=.5\linewidth]{images/MullerBrown-MaSS.png}}
+\caption{Muller Brown potential trajectories.}
+\label{fig: muller brown trajectories}
 \end{figure}
 
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{7cm}|p{7cm}|} % Adjust column widths as needed
-\hline
-\textbf{Algorithms} & \textbf{Observations} \\
-\hline\hline
-Mass & In most cases, despite claims in the paper by Liu and Belkin \cite{liu2019acceleratingsgdmomentumoverparameterized} of exponential convergence (assuming certain regularity restraints on the loss which may be optimistic in my case), the performance at least matches Nesterov SGD, since it is a perturbation thereof. However, in the non-monotone activation function case, it beats all algorithms in later iterations and descends the fastest in loss.
-\\
-\hline
-MF-Hom SGLD &MF-HomSGLD matches the performance of plain SGD, but it seems to get stuck for larger iterations and plateaus. However in the MNIST one-digit classification, the algorithm attains a substantially smaller loss, about two orders of magnitude less than the other algorithms, but it suffers from plateauing early again.
- \\
-\hline
-Nesterov & 	In the deterministic case, as showcased by the 3d-spin model, Nesterov clearly beats plain GD;  this is to be expected.
-	This acceleration is harder to see in the stochastic setting. Nesterov-accelerated SGD seems on all occasions to perform better than plain SGD, but in some cases marginally so.
-	The more noteworthy observation is that it gets ‘unstuck’ at the ‘bad’ minimum in the non-monotone activation case.
- \\
-\hline
-\end{tabular}
-\caption{Two-Column Table with Multi-Line Rows}
-\end{table}
 
 
 \subsubsection{$ 3-$d spin model analysis}
 
-At the same time that I was investigating the non-uniqueness of stationary states in the distributional dynamics in the \cite{Mei_2018} paper, I began to read the paper by Van Eijnden et al. \cite{Rotskoff_2022} and studied the proofs of asymptotic convergence to a gradient flow in the mean field limit and how this is preferable due to the convexification of the loss (as a functional of measures), similar to that observed in \cite{Mei_2018}. The framework the authors develop is similar to the aforementioned paper and I focused more on applying the algorithms thus explored to the task of accurately representing high dimensional functions, such as the energy function of the continuous 3-spin model on the sphere.\\
+At the same time that I was investigating the non-uniqueness of stationary states in the distributional dynamics in the \cite{Mei_2018} paper, I began to read the paper by Van Eijnden et al. \cite{Rotskoff_2022} and studied the proofs of asymptotic convergence to a gradiunt flow in the mean field limit and how this is preferable due to the convexification of the loss (as a functional of measures), similar to that observed in \cite{Mei_2018}. The framework the authors develop is similar to the aforementioned paper and I focused more on applying the algorithms thus explored to the task of accurately representing high dimensional functions, such as the energy function of the continuous 3-spin model on the sphere.\\
 
 More precisely, by the spherical 3-spin model, we mean the function
 $f: S^{d-1}(\sqrt{d}) \to \mathbb{R}$, given by
@@ -931,11 +886,11 @@ particular (random) realization of $a_{p,q,r}$ and study the accuracy of that
 representation.
 
  \begin{figure}[H]\centering
-\subfloat[legend]{\label{a}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_3.png}}
-\subfloat[legend]{\label{b}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_4.png}}
-\subfloat[legend]{\label{c}\vspace{-3pt}\includegraphics[width=.35\linewidth]{images/3d_spin_sphere_plot_d_5.png}}
-\caption{my fig}
-\label{fig}
+\subfloat[d=3]{\label{a}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_3.png}}
+\subfloat[d=4]{\label{b}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_4.png}}
+\subfloat[d=5]{\label{c}\vspace{-3pt}\includegraphics[width=.35\linewidth]{images/3d_spin_sphere_plot_d_5.png}}
+\caption{Spherical $ 3-$ spin function plots.}
+\label{fig: spherical 3-spin function plot}
 \end{figure}
 
 We first consider the case when $D = S^{d-1}(\sqrt{d})$ and following \cite{Rostkoff_2022}, I used the Gaussian kernel
@@ -1000,51 +955,30 @@ sphere defined as
     \cos(\theta),0,0\right), \quad d = 5.
   \end{array}\right. 
 \end{equation}%
-with $\theta\in[0,\pi]$ and $\phi\in [0,2\pi)$. The level sets of both functions are generally in good agreement, see the figure ([INSERT FIGURE REFERENCE]). Also shown on
-this figure is the projection on the slice of the position of the 64
+with $\theta\in[0,\pi]$ and $\phi\in [0,2\pi)$. The level sets of both functions are generally in good agreement, see the figure \ref{fig: Muller Brown contour plots}. Also shown on
+this figure is the projection on the slice of the position of the
 particles on the sphere. In this result, the parameters $c_i$ take
 values that are initially uniformly distributed by about
-$-40 d^2 = -10^3$ and $40 d^2 = 10^3$.
- 
+$-40 d^2 = -10^3$ and $40 d^2 = 10^3$. Observe however, that increasing the dimensionality of the problem worsens the approximations. Below are some observations I made.\\ 
+
+Mass outperforms all the other algorithms in smaller dimensions $ d=3, 4$. This is in line with the fact that the stochastic gradient is not yet fully saturated, which places the algorithm in the regime where MaSS achieves acceleration over plain SGD and stochastic Nesterov. However, as the dimensionality of the problem increases, the algorithms seem to converge in terms of performance, except plain SGD, with substantially worse performance. Nesterov has mixed behaviour in these simulations. The plots in figure \ref{fig: 3-d spin losses} suggest that optimal selection for $ \gamma$ leads to better performance than plain SGD, but in dimensions $ d=3, 4$ the MaSS algorithm has better performance except for the dimension $ d=5$, where second order methods seems to converges relatively early and outperform plain SGD. MF-Hom SGLD matches the performance of plain MaSS, achieving the second best loss profile for $ d=3$. However it suffers from higher algorithmic complexity, and seems to be volatile, with fluctuations of size two or so orders of magnitudes, though it displays a downward trend. Plain SGD consistently performs the worst as expected, still achieving exponential convergence though like the rest of the algorithms. \\
 
  \begin{figure}[H]\centering
-\subfloat[legend]{\label{a}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-loss-d=3.png}}\hfill
-\subfloat[legend]{\label{b}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-loss-d=4.png}}\par 
-\subfloat[legend]{\label{c}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-loss-d=5.png}}
-\caption{my fig}
-\label{fig}
+\subfloat[$ d=3$]{\label{a}\includegraphics[width=.7\linewidth]{images/3d-spin-model-neural-net-loss-d=3.png}}\hfill
+\subfloat[$ d=4$]{\label{b}\includegraphics[width=.7\linewidth]{images/3d-spin-model-neural-net-loss-d=4.png}}\par 
+\subfloat[$ d=5$]{\label{c}\includegraphics[width=.7\linewidth]{images/3d-spin-model-neural-net-loss-d=5.png}}
+\caption{Plots of the logarithm of the loses of variants of SGD for the $ 3-$sphere spin function.}
+\label{fig: 3-d spin losses}
 \end{figure}
 
 \begin{figure}[H]\centering
-\subfloat[legend]{\label{a}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-plot-d=3.png}}\hfill
-\subfloat[legend]{\label{b}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-plot-d=4.png}}\par 
-\subfloat[legend]{\label{c}\includegraphics[width=.5\linewidth]{images/3d-spin-model-neural-net-plot-d=5.png}}
-\caption{my fig}
-\label{fig}
+\subfloat[$ d=3$(Hom MF SGLD)]{\label{a}\includegraphics[width=.7\linewidth]{images/3d-spin-model-neural-net-plot-d=3.png}}\hfill
+\subfloat[$ d=4$(MaSS)]{\label{b}\includegraphics[width=.7\linewidth]{images/3d-spin-model-neural-net-plot-d=4.png}}\par 
+\subfloat[$ d=5$(Mass)]{\label{c}\includegraphics[width=.7\linewidth]{images/3d-spin-model-neural-net-plot-d=5.png}}
+\caption{Muller Brown potential comparison to neural network (using algorithm incurring the smallest final) output contour plots.}
+\label{fig: Muller Brown contour plots}
 \end{figure}
 
-
-
-\begin{table}[H]
-\centering
-\begin{tabular}{|p{7cm}|p{7cm}|} % Adjust column widths as needed
-\hline
-\textbf{Algorithms} & \textbf{Observations} \\
-\hline\hline
-Mass & In most cases, despite claims in the paper by Liu and Belkin \cite{liu2019acceleratingsgdmomentumoverparameterized} of exponential convergence (assuming certain regularity restraints on the loss which may be optimistic in my case), the performance at least matches Nesterov SGD, since it is a perturbation thereof. However, in the non-monotone activation function case, it beats all algorithms in later iterations and descends the fastest in loss.
-\\
-\hline
-MF-Hom SGLD &MF-HomSGLD matches the performance of plain SGD, but it seems to get stuck for larger iterations and plateaus. However in the MNIST one-digit classification, the algorithm attains a substantially smaller loss, about two orders of magnitude less than the other algorithms, but it suffers from plateauing early again.
- \\
-\hline
-Nesterov & 	In the deterministic case, as showcased by the 3d-spin model, Nesterov clearly beats plain GD;  this is to be expected.
-	This acceleration is harder to see in the stochastic setting. Nesterov-accelerated SGD seems on all occasions to perform better than plain SGD, but in some cases marginally so.
-	The more noteworthy observation is that it gets ‘unstuck’ at the ‘bad’ minimum in the non-monotone activation case.
- \\
-\hline
-\end{tabular}
-\caption{Two-Column Table with Multi-Line Rows}
-\end{table}
 
 \newpage
 

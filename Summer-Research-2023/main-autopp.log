@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  6 SEP 2024 18:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=latex 2024.8.28)  11 SEP 2024 01:16
 entering extended mode
  %&-line parsing enabled.
 **\let \APPmakepictures \empty \input  main.tex
@@ -1907,176 +1907,36 @@ LaTeX Warning: Reference `thm: Doob' on page 8 undefined on input line 285.
 LaTeX Warning: Reference `lemma: Hoeffding' on page 8 undefined on input line 285.
 
 
-LaTeX Warning: Citation `Mei_2018' on page 8 undefined on input line 293.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 8 undefined on input line 292.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 301--302
-
- []
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 8 undefined on input line 292.
 
 
-LaTeX Warning: Citation `Mei_2018' on page 8 undefined on input line 303.
+LaTeX Warning: Citation `Mei_2018' on page 8 undefined on input line 292.
 
 
-LaTeX Warning: Reference `fig: SGD histogram isotropic Gaussians' on page 8 undefined on input line 303.
-
-
-LaTeX Warning: Reference `fig: Nguyen 2018 isotropic Gaussian simulation' on page 8 undefined on input line 303.
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 where $\sigma(t) = −
-                            2.5 for t \leq 0, σ(t) = 7.5$ for $t \geq 1.5$,...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character σ (U+03C3)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.327 where $\sigma(t) = −2.5 for t \leq 0, σ
-                                                (t) = 7.5$ for $t \geq 1.5$,...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 interpolates from $(0, −
-                                2.5)$ to $(0.5, −4)$, and from $(0.5, −4...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 ...rpolates from $(0, −2.5)$ to $(0.5, −
-                                                  4)$, and from $(0.5, −4)...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-! LaTeX Error: Unicode character − (U+2212)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.328 ...5)$ to $(0.5, −4)$, and from $(0.5, −
-                                                  4)$ to $(1.5, 7.5)$, see f...
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
-LaTeX Warning: Reference `fig: non-monotone activation fn' on page 9 undefined on input line 328.
-
-
-Package svg Warning: You didn't enable `shell escape' (or `write18')
-(svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/non-monotone-activation.svg' on input line 332.
-
-
-! Package svg Error: File `non-monotone-activation_svg-tex.eps' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.332 ...idth]{images/non-monotone-activation.svg}
-                                                  
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/non-monotone-activation_svg-tex.eps'
-although `images/non-monotone-activation.svg' was found.
-
-
-! Package svg Error: File `non-monotone-activation_svg-tex.eps_tex' is missing.
-
-See the svg package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.332 ...idth]{images/non-monotone-activation.svg}
-                                                  
-Did you run the export with Inkscape? There's no file
-`./svg-inkscape/non-monotone-activation_svg-tex.eps_tex'
-although `images/non-monotone-activation.svg' was found.
-
-! Undefined control sequence.
-l.341 with $ \kappas
-                     = 0.4, 0.1$, the SGD converges to two different limits,...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Citation `Mei_2018' on page 9 undefined on input line 342.
-
-
-LaTeX Warning: Reference `fig: non-monotone simulation sgd vs pde' on page 9 undefined on input line 342.
-
-
-Underfull \hbox (badness 1102) in paragraph at lines 354--354
-[]\OT1/cmr/m/n/9 (b) |Plot com-par-ing the av-er-age dis-tance of the
- []
-
-
-LaTeX Warning: Citation `Mei_2018' on page 9 undefined on input line 366.
-
-
-LaTeX Warning: Reference `fig: anisotropic gaussian case plots' on page 9 undefined on input line 366.
-
-
-LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 9 undefined on input line 401.
-
-
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 9 undefined on input line 401.
-
-
-LaTeX Warning: Citation `ethier2009markov' on page 9 undefined on input line 401.
+LaTeX Warning: Citation `ethier2009markov' on page 8 undefined on input line 292.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 403.
-Package mdframed Info: Not enough space on this page on input line 409.
+(mdframed)              on input line 294.
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 411.
-
-
-LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 10 undefined on input line 411.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 8 undefined on input line 302.
 
 
-LaTeX Warning: Citation `Mei_2018' on page 10 undefined on input line 411.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 8 undefined on input line 302.
 
 
-LaTeX Warning: Reference `fig: piecewise constant extension of function' on page 10 undefined on input line 411.
+LaTeX Warning: Citation `Mei_2018' on page 8 undefined on input line 302.
+
+
+LaTeX Warning: Reference `fig: piecewise constant extension of function' on page 8 undefined on input line 302.
 
 
 Package svg Warning: You didn't enable `shell escape' (or `write18')
 (svg)                so it wasn't possible to launch the Inkscape export
-(svg)                for `images/piecewise-constant.svg' on input line 414.
+(svg)                for `images/piecewise-constant.svg' on input line 305.
 
 
 ! Package svg Error: File `piecewise-constant_svg-tex.eps' is missing.
@@ -2085,7 +1945,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414 ...textwidth]{images/piecewise-constant.svg}
+l.305 ...textwidth]{images/piecewise-constant.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/piecewise-constant_svg-tex.eps'
@@ -2098,7 +1958,7 @@ See the svg package documentation for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.414 ...textwidth]{images/piecewise-constant.svg}
+l.305 ...textwidth]{images/piecewise-constant.svg}
                                                   
 Did you run the export with Inkscape? There's no file
 `./svg-inkscape/piecewise-constant_svg-tex.eps_tex'
@@ -2106,14 +1966,14 @@ although `images/piecewise-constant.svg' was found.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 426.
+(mdframed)              on input line 317.
 
-LaTeX Warning: Reference `eq: vague conv' on page 10 undefined on input line 429.
+LaTeX Warning: Reference `eq: vague conv' on page 9 undefined on input line 320.
 
 ! Undefined control sequence.
 \enit@endenumerate ->\enit@after 
                                  \endlist \ifx \enit@series \relax \else \if...
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2124,7 +1984,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...\else \ifnum \enit@resuming 
                                                   =\@ne \enit@setresumekeys ...
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2135,7 +1995,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2144,7 +2004,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2155,7 +2015,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 \enit@endenumerate ...t \fi \ifnum \enit@resuming 
                                                   =\thr@@ \enit@setresumekey...
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2166,7 +2026,7 @@ and I'll forget about whatever was undefined.
 ! Missing number, treated as zero.
 <to be read again> 
                    =
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 A number should have been here; I inserted `0'.
 (If you can't figure out why I needed to see a number,
@@ -2175,7 +2035,7 @@ look up `weird error' in the index to The TeXbook.)
 ! Undefined control sequence.
 \enit@setresumekeys ...xpandafter {\enit@savekeys 
                                                   }\xdef \enit@afterlist {#2...
-l.432 \end{enumerate}
+l.323 \end{enumerate}
                      
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -2184,64 +2044,117 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `lemma: vague topology' on page 10 undefined on input line 436.
+LaTeX Warning: Reference `lemma: vague topology' on page 9 undefined on input line 327.
 
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 10 undefined on input line 436.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 9 undefined on input line 327.
 
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 436.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 9 undefined on input line 327.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 436--437
+Underfull \hbox (badness 10000) in paragraph at lines 327--328
 
  []
 
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 10 undefined on input line 438.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 9 undefined on input line 329.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 440.
+(mdframed)              on input line 338.
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 454.
-
-
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 454.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 9 undefined on input line 352.
 
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 458.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 9 undefined on input line 352.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 9 undefined on input line 356.
 
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 461.
+(mdframed)              on input line 359.
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 462.
+LaTeX Warning: Reference `assumptions spiliopoulos' on page 9 undefined on input line 360.
 
-Package mdframed Info: Not enough space on this page on input line 467.
-Package mdframed Info: Not enough space on this page on input line 467.
+Package mdframed Info: Not enough space on this page on input line 365.
+Package mdframed Info: Not enough space on this page on input line 365.
 
-LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 11 undefined on input line 470.
-
-
-LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 11 undefined on input line 474.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysisclt' on page 10 undefined on input line 368.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 487--488
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 10 undefined on input line 371.
 
- []
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakl' on page 11 undefined on input line 489.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 489--491
-
- []
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 372.
+! Undefined control sequence.
+l.375 ...1, \ldots, dx^N) = \mathbb{P}[ (c_{\floor
+                                                  *{N t}}^1, w_{\floor*{N t}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.494 ...bla \Phi(X_{t})\diff t + \sqrt{2}\betadfB
-                                                  _{t}, \quad X_{0}\sim \eta...
+l.375 ...mathbb{P}[ (c_{\floor*{N t}}^1, w_{\floor
+                                                  *{N t}}^1) \in dx^1, \ldot...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.375 ...or*{N t}}^1) \in dx^1, \ldots, (c_{\floor
+                                                  *{N t}}^N, w_{\floor*{N t}...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.375 ...1, \ldots, (c_{\floor*{N t}}^N, w_{\floor
+                                                  *{N t}}^N) \in dx^N ].
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.379 \lim_{N \rightarrow \infty } \la
+                                         f_1(x^1) \times \cdots \times f_k(x...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.379 ...^k), \rho_\cdot^N(dx^1, \ldots, dx^N) \ra
+                                                   = \prod_{i=1}^k \la  f_i,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.379 ...^1, \ldots, dx^N) \ra = \prod_{i=1}^k \la
+                                                    f_i, \bar \mu_{\cdot} \r...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.379 ...od_{i=1}^k \la  f_i, \bar \mu_{\cdot} \ra
+                                                  , \phantom{....} \forall f...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -2249,185 +2162,502 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Reference `alg: mf hom sgld' on page 11 undefined on input line 498.
+LaTeX Warning: Reference `PropChaos' on page 10 undefined on input line 386.
+
+! Undefined control sequence.
+\enit@enditemize ->\enit@after 
+                               \endlist \ifx \enit@series \relax \else \ifnu...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 11 undefined on input line 520.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 531--536
-
- []
-
-
-LaTeX Warning: Reference `eq:integrate phi' on page 12 undefined on input line 539.
-
-
-LaTeX Warning: Reference `eq: SGLD' on page 12 undefined on input line 547.
-
-
-LaTeX Warning: Citation `pavliotis2014stochastic' on page 12 undefined on input line 560.
-
-
-LaTeX Warning: Reference ` eq: SGLD' on page 12 undefined on input line 564.
-
-
-LaTeX Warning: Reference ` eq: SGLD' on page 12 undefined on input line 570.
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 12 undefined on input line 570.
-
-
-LaTeX Warning: Reference ` eq: SGLD' on page 12 undefined on input line 575.
-
-
-LaTeX Warning: Reference `eq:interacting_sde' on page 12 undefined on input line 576.
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweaklSy' on page 12 undefined on input line 589.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 588--590
+Underfull \hbox (badness 10000) in paragraph at lines 385--387
 
  []
 
+! Undefined control sequence.
+\enit@enditemize ...x \else \ifnum \enit@resuming 
+                                                  =\@ne \enit@setresumekeys ...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
-LaTeX Warning: Reference `sec: weakly interacting agents' on page 13 undefined on input line 615.
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.387 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.387 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+<argument> enit@resume@series@\enit@series 
+                                           
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.387 \end{itemize}
+                   
+I'm forgetting what you said and using zero instead.
+
+! Undefined control sequence.
+\enit@enditemize ...ist \fi \ifnum \enit@resuming 
+                                                  =\thr@@ \enit@setresumekey...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.387 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...xpandafter {\enit@savekeys 
+                                                  }\xdef \enit@afterlist {#2...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...it@toks }\ifnum \enit@type 
+                                                  =\z@ #3\def \enit@noexcs {...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Missing number, treated as zero.
+<to be read again> 
+                   =
+l.387 \end{itemize}
+                   
+A number should have been here; I inserted `0'.
+(If you can't figure out why I needed to see a number,
+look up `weird error' in the index to The TeXbook.)
+
+! Undefined control sequence.
+\enit@setresumekeys ...me@#1}{\csname c@\@listctr 
+                                                  \endcsname \the \csname c@...
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+\enit@setresumekeys ...e \the \csname c@\@listctr 
+                                                  \endcsname }\fi }
+l.387 \end{itemize}
+                   
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! You can't use `\relax' after \the.
+<recently read> \c@ 
+                    
+l.387 \end{itemize}
+                   
+I'm forgetting what you said and using zero instead.
 
 
-LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 13 undefined on input line 618.
+! LaTeX Error: \begin{document} ended by \end{itemize}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.387 \end{itemize}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Extra \endgroup.
+<recently read> \endgroup 
+                          
+l.387 \end{itemize}
+                   
+Things are pretty mixed up, but I think the worst is over.
 
 
-LaTeX Warning: Reference `eq: SGLD' on page 13 undefined on input line 618.
+LaTeX Warning: Reference `assumptions spiliopoulos' on page 10 undefined on input line 389.
 
 
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 634.
+LaTeX Warning: Reference `fig: MNIST spiliopoulos' on page 10 undefined on input line 389.
 
 
-LaTeX Warning: Reference `eq:integrate phi' on page 13 undefined on input line 635.
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 10 undefined on input line 389.
 
 
-LaTeX Warning: Reference `eq:hom_sde_lim' on page 13 undefined on input line 636.
-
-
-LaTeX Warning: Reference `eq:hom_sde_lim' on page 13 undefined on input line 638.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 642--648
-
- []
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 649.
-
-
-LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 13 undefined on input line 649.
-
-
-LaTeX Warning: Reference `eq:hom_sde_v2' on page 13 undefined on input line 650.
-
-
-LaTeX Warning: Reference `alg: mf hom sgld' on page 13 undefined on input line 657.
-
-
-LaTeX Warning: Reference `alg: mf hom sgld' on page 13 undefined on input line 661.
-
-
-LaTeX Warning: Reference `eq:hom_sde_lim' on page 13 undefined on input line 663.
-
-
-LaTeX Warning: Reference `eq:interacting_sde' on page 13 undefined on input line 663.
-
-
-LaTeX Warning: Reference `sec: neural net single layer' on page 14 undefined on input line 669.
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 14 undefined on input line 670.
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 14 undefined on input line 671.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 668--672
-
- []
-
-
-LaTeX Warning: Reference `eq:hom_mf_sde1' on page 14 undefined on input line 674.
-
-
-LaTeX Warning: Reference `eq:hom_mf_sde2' on page 14 undefined on input line 674.
-
-
-LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 14 undefined on input line 675.
-
-
-LaTeX Warning: Citation `weinan2005analysis' on page 14 undefined on input line 675.
-
-
-LaTeX Warning: Reference `alg: mf hom sgld' on page 14 undefined on input line 675.
-
-
-LaTeX Warning: Citation `muller1979location' on page 14 undefined on input line 710.
-
-
-LaTeX Warning: Citation `muller1979location' on page 14 undefined on input line 714.
-
-
-LaTeX Warning: Reference `fig: muller-brown 3d' on page 14 undefined on input line 714.
-
-
-Overfull \hbox (1.81937pt too wide) in paragraph at lines 744--744
+Overfull \hbox (1.81937pt too wide) in paragraph at lines 393--393
 []\OT1/cmr/m/n/9 (a)
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 744--744
-|\OT1/cmr/m/n/9 leg-
+Overfull \hbox (8.12874pt too wide) in paragraph at lines 393--393
+|$\OML/cmm/m/it/9 N \U/matha/m/n/9 ^^P
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 744--744
-\OT1/cmr/m/n/9 end[][]| 
+Overfull \hbox (5.98598pt too wide) in paragraph at lines 393--393
+\OT1/cmr/m/n/9 10[]$,
  []
 
 
-Overfull \hbox (2.33325pt too wide) in paragraph at lines 745--745
+Overfull \hbox (3.41655pt too wide) in paragraph at lines 393--393
+\OT1/cmr/m/n/9 10[]$
+ []
+
+
+Overfull \hbox (19.60327pt too wide) in paragraph at lines 393--393
+\OT1/cmr/m/n/9 epochs.[][]| 
+ []
+
+
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 394--394
 []\OT1/cmr/m/n/9 (b)
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 745--745
-|\OT1/cmr/m/n/9 leg-
+Overfull \hbox (8.12874pt too wide) in paragraph at lines 394--394
+|$\OML/cmm/m/it/9 N \U/matha/m/n/9 ^^P
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 745--745
-\OT1/cmr/m/n/9 end[][]| 
+Overfull \hbox (5.98598pt too wide) in paragraph at lines 394--394
+\OT1/cmr/m/n/9 10[]$,
  []
 
 
-Overfull \hbox (1.30548pt too wide) in paragraph at lines 746--746
+Overfull \hbox (3.41655pt too wide) in paragraph at lines 394--394
+\OT1/cmr/m/n/9 10[]$
+ []
+
+
+Overfull \hbox (19.60327pt too wide) in paragraph at lines 394--394
+\OT1/cmr/m/n/9 epochs.[][]| 
+ []
+
+
+Overfull \hbox (1.30548pt too wide) in paragraph at lines 395--395
 []\OT1/cmr/m/n/9 (c)
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 746--746
-|\OT1/cmr/m/n/9 leg-
+Overfull \hbox (8.12874pt too wide) in paragraph at lines 395--395
+|$\OML/cmm/m/it/9 N \U/matha/m/n/9 ^^P
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 746--746
-\OT1/cmr/m/n/9 end[][]| 
+Overfull \hbox (5.98598pt too wide) in paragraph at lines 395--395
+\OT1/cmr/m/n/9 10[]$,
  []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 753.
+Overfull \hbox (3.41655pt too wide) in paragraph at lines 395--395
+\OT1/cmr/m/n/9 10[]$
+ []
 
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 753.
+Overfull \hbox (19.60327pt too wide) in paragraph at lines 395--395
+\OT1/cmr/m/n/9 epochs.[][]| 
+ []
+
+
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 396--396
+[]\OT1/cmr/m/n/9 (d)
+ []
+
+
+Overfull \hbox (8.12874pt too wide) in paragraph at lines 396--396
+|$\OML/cmm/m/it/9 N \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (5.98598pt too wide) in paragraph at lines 396--396
+\OT1/cmr/m/n/9 10[]$,
+ []
+
+
+Overfull \hbox (3.41655pt too wide) in paragraph at lines 396--396
+\OT1/cmr/m/n/9 10[]$
+ []
+
+
+Overfull \hbox (19.60327pt too wide) in paragraph at lines 396--396
+\OT1/cmr/m/n/9 epochs.[][]| 
+ []
+
+
+LaTeX Warning: Reference `thm: spilopoulos lln' on page 10 undefined on input line 397.
+
+
+LaTeX Warning: Reference `thm: spilopoulos lln' on page 10 undefined on input line 397.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakl' on page 11 undefined on input line 407.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 407--409
+
+ []
+
+
+LaTeX Warning: Reference `alg: mf hom sgld' on page 11 undefined on input line 416.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 11 undefined on input line 438.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 449--454
+
+ []
+
+
+LaTeX Warning: Reference `eq:integrate phi' on page 11 undefined on input line 457.
+
+
+LaTeX Warning: Reference `eq: SGLD' on page 11 undefined on input line 465.
+
+
+LaTeX Warning: Citation `pavliotis2014stochastic' on page 12 undefined on input line 478.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 12 undefined on input line 482.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 12 undefined on input line 488.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 12 undefined on input line 488.
+
+
+LaTeX Warning: Reference ` eq: SGLD' on page 12 undefined on input line 493.
+
+
+LaTeX Warning: Reference `eq:interacting_sde' on page 12 undefined on input line 494.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweaklSy' on page 12 undefined on input line 507.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 506--508
+
+ []
+
+
+LaTeX Warning: Reference `sec: weakly interacting agents' on page 12 undefined on input line 533.
+
+
+LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 12 undefined on input line 536.
+
+
+LaTeX Warning: Reference `eq: SGLD' on page 12 undefined on input line 536.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 552.
+
+
+LaTeX Warning: Reference `eq:integrate phi' on page 13 undefined on input line 553.
+
+
+LaTeX Warning: Reference `eq:hom_sde_lim' on page 13 undefined on input line 554.
+
+
+LaTeX Warning: Reference `eq:hom_sde_lim' on page 13 undefined on input line 556.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 560--566
+
+ []
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 567.
+
+
+LaTeX Warning: Citation `Chaudhari2017DeepRP' on page 13 undefined on input line 567.
+
+
+LaTeX Warning: Reference `eq:hom_sde_v2' on page 13 undefined on input line 568.
+
+
+LaTeX Warning: Reference `alg: mf hom sgld' on page 13 undefined on input line 575.
+
+
+LaTeX Warning: Reference `alg: mf hom sgld' on page 13 undefined on input line 579.
+
+
+LaTeX Warning: Reference `eq:hom_sde_lim' on page 13 undefined on input line 581.
+
+
+LaTeX Warning: Reference `eq:interacting_sde' on page 13 undefined on input line 581.
+
+
+LaTeX Warning: Reference `sec: neural net single layer' on page 13 undefined on input line 587.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 588.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 589.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 586--590
+
+ []
+
+
+LaTeX Warning: Reference `eq:hom_mf_sde1' on page 13 undefined on input line 592.
+
+
+LaTeX Warning: Reference `eq:hom_mf_sde2' on page 13 undefined on input line 592.
+
+
+LaTeX Warning: Citation `kantas2019sharpflatshallowweakly' on page 13 undefined on input line 593.
+
+
+LaTeX Warning: Citation `weinan2005analysis' on page 13 undefined on input line 593.
+
+
+LaTeX Warning: Reference `alg: mf hom sgld' on page 13 undefined on input line 593.
+
+! Extra }, or forgotten $.
+l.625 ...\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t}}
+                                                  .\end{array}\right.\label{...
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on page 14 undefined on input line 642.
+
+
+LaTeX Warning: Reference `eq:firstupdaterule' on page 14 undefined on input line 642.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 15 undefined on input line 665.
+
+
+LaTeX Warning: Citation `sirignano2019meanfieldanalysislln' on page 15 undefined on input line 665.
+
+
+LaTeX Warning: Citation `odonoghue2012adaptiverestartacceleratedgradient' on page 15 undefined on input line 665.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 15 undefined on input line 670.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 678--679
+
+ []
+
+
+LaTeX Warning: Citation `Mei_2018' on page 15 undefined on input line 680.
+
+
+LaTeX Warning: Reference `fig: SGD histogram isotropic Gaussians' on page 15 undefined on input line 680.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 15 undefined on input line 680.
 
 
 ! LaTeX Error: Unicode character − (U+2212)
@@ -2437,316 +2667,408 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.764 tion error that universally scales as O(n−
-                                                  1). These properties are e...
+l.701 where $\sigma(t) = −
+                            2.5 for t \leq 0, σ(t) = 7.5$ for $t \geq 1.5$,...
 You may provide a definition with
 \DeclareUnicodeCharacter 
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 754--770
+! LaTeX Error: Unicode character σ (U+03C3)
+               not set up for use with LaTeX.
 
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.701 where $\sigma(t) = −2.5 for t \leq 0, σ
+                                                (t) = 7.5$ for $t \geq 1.5$,...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.702 interpolates from $(0, −
+                                2.5)$ to $(0.5, −4)$, and from $(0.5, −4...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.702 ...rpolates from $(0, −2.5)$ to $(0.5, −
+                                                  4)$, and from $(0.5, −4)...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+! LaTeX Error: Unicode character − (U+2212)
+               not set up for use with LaTeX.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.702 ...5)$ to $(0.5, −4)$, and from $(0.5, −
+                                                  4)$ to $(1.5, 7.5)$, see f...
+You may provide a definition with
+\DeclareUnicodeCharacter 
+
+
+LaTeX Warning: Reference `fig: non-monotone activation fn' on page 15 undefined on input line 702.
+
+
+Package svg Warning: You didn't enable `shell escape' (or `write18')
+(svg)                so it wasn't possible to launch the Inkscape export
+(svg)                for `images/non-monotone-activation.svg' on input line 706.
+
+
+! Package svg Error: File `non-monotone-activation_svg-tex.eps' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.706 ...idth]{images/non-monotone-activation.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/non-monotone-activation_svg-tex.eps'
+although `images/non-monotone-activation.svg' was found.
+
+
+! Package svg Error: File `non-monotone-activation_svg-tex.eps_tex' is missing.
+
+See the svg package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.706 ...idth]{images/non-monotone-activation.svg}
+                                                  
+Did you run the export with Inkscape? There's no file
+`./svg-inkscape/non-monotone-activation_svg-tex.eps_tex'
+although `images/non-monotone-activation.svg' was found.
+
+! Undefined control sequence.
+l.715 with $ \kappas
+                     = 0.4, 0.1$, the SGD converges to two different limits,...
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 15 undefined on input line 716.
+
+
+LaTeX Warning: Reference `fig: non-monotone simulation sgd vs pde' on page 15 undefined on input line 716.
+
+
+Underfull \hbox (badness 1102) in paragraph at lines 730--730
+[]\OT1/cmr/m/n/9 (b) |Plot com-par-ing the av-er-age dis-tance of the
  []
 
 
-LaTeX Warning: Citation `Mei_2018' on page 15 undefined on input line 771.
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on page 16 undefined on input line 750.
 
 
-LaTeX Warning: Reference `eq:psin' on page 15 undefined on input line 784.
+LaTeX Warning: Citation `Mei_2018' on page 16 undefined on input line 768.
 
 
-LaTeX Warning: Citation `Auffinger:2013kq' on page 15 undefined on input line 786.
+LaTeX Warning: Reference `fig: anisotropic gaussian case plots' on page 16 undefined on input line 768.
 
+Package xkeyval Info: `widtha' undefined in families `Gin' on input line 794.
 
-LaTeX Warning: Citation `Sagun:2014tg' on page 15 undefined on input line 786.
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on page 17 undefined on input line 805.
 
 
-LaTeX Warning: Citation `Auffinger:2012gh' on page 15 undefined on input line 786.
+LaTeX Warning: Citation `muller1979location' on page 18 undefined on input line 865.
 
 
-LaTeX Warning: Citation `Choromanska:2014ui' on page 15 undefined on input line 789.
+LaTeX Warning: Citation `muller1979location' on page 18 undefined on input line 869.
 
 
-LaTeX Warning: Reference `eq:psin' on page 15 undefined on input line 790.
+LaTeX Warning: Reference `fig: muller-brown 3d' on page 18 undefined on input line 869.
 
 
-LaTeX Warning: Reference `eq:90' on page 16 undefined on input line 808.
-
-
-LaTeX Warning: Reference `eq:otherloss' on page 16 undefined on input line 837.
-
-! Argument of \math@egroup has an extra }.
-<inserted text> 
-                \par 
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've run across a `}' that doesn't seem to match anything.
-For example, `\def\a#1{...}' and `\a}' would produce
-this error. If you simply proceed now, the `\par' that
-I've just inserted will cause me to report a runaway
-argument that might be the root of the problem. But if
-your `}' was spurious, just type `2' and it will go away.
-
-Runaway argument?
-! Paragraph ended before \math@egroup was complete.
-<to be read again> 
-                   \par 
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I suspect you've forgotten a `}', causing me to apply this
-control sequence to too much text. How can we recover?
-My plan is to forget the whole thing and hope for the best.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing } inserted.
-<inserted text> 
-                }
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've inserted something that you may have forgotten.
-(See the <inserted text> above.)
-With luck, this will get me unwedged. But if you
-really didn't forget anything, try typing `2' now; then
-my insertion and my current dilemma will both disappear.
-
-! Missing \cr inserted.
-<inserted text> 
-                \cr 
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I'm guessing that you meant to end an alignment here.
-
-! Missing { inserted.
-<inserted text> 
-                {
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've put in what seems to be necessary to fix
-the current column of the current alignment.
-Try to go on, since this might almost work.
-
-! Missing $ inserted.
-<inserted text> 
-                $
-l.843       \dot\mathbf
-                       {z}_i &= c_i \nabla f(\mathbf{z}_i) +
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Misplaced alignment tab character &.
-l.843       \dot\mathbf{z}_i &
-                              = c_i \nabla f(\mathbf{z}_i) +
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced alignment tab character &.
-l.846       \dot c_i &
-                      = f(\mathbf{z}_i) - \frac1n\sum_{j=1}^n c_j e^{-\alpha
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Misplaced \crcr.
-\endaligned ->\crcr 
-                    \egroup \restorecolumn@ \egroup 
-l.848     \end{aligned}
-                       
-I can't figure out why you would want to use a tab mark
-or \cr or \span just now. If something like a right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Extra }, or forgotten \endgroup.
-\endaligned ->\crcr \egroup 
-                            \restorecolumn@ \egroup 
-l.848     \end{aligned}
-                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-! Extra }, or forgotten \endgroup.
-\endaligned ...cr \egroup \restorecolumn@ \egroup 
-                                                  
-l.848     \end{aligned}
-                       
-I've deleted a group-closing symbol because it seems to be
-spurious, as in `$x}$'. But perhaps the } is legitimate and
-you forgot something else, as in `\hbox{$x}'. In such cases
-the way to recover is to insert both the forgotten and the
-deleted material, e.g., by typing `I$}'.
-
-
-LaTeX Warning: Reference `eq:psin' on page 16 undefined on input line 854.
-
-
-LaTeX Warning: Reference `eq:34RBFpspin' on page 16 undefined on input line 862.
-
-
-LaTeX Warning: Reference `eq:34RBFpspin' on page 16 undefined on input line 866.
-
-
-LaTeX Warning: Reference `sec:stochgrad' on page 16 undefined on input line 870.
-
-
-LaTeX Warning: Reference `eq:119' on page 16 undefined on input line 875.
-
-
-LaTeX Warning: Reference `eq:34RBFpspin' on page 16 undefined on input line 877.
-
-
-LaTeX Warning: Reference `eq:34RBFpspin' on page 16 undefined on input line 880.
-
-
-LaTeX Warning: Reference `eq:119' on page 16 undefined on input line 881.
-
-
-LaTeX Warning: Reference `fig:5DRBF' on page 16 undefined on input line 883.
-
-
-LaTeX Warning: Reference `eq: risk' on page 17 undefined on input line 908.
-
-
-LaTeX Warning: Reference `eq:lossempirical' on page 17 undefined on input line 911.
-
-
-LaTeX Warning: Reference `eq:lossempirical' on page 17 undefined on input line 913.
-
-
-LaTeX Warning: Reference `eq:psin' on page 17 undefined on input line 915.
-
-
-LaTeX Warning: Reference `eq:lossempirical' on page 17 undefined on input line 916.
-
-
-LaTeX Warning: Reference `eq:psin' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:119' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:slice' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:lossempirical' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:psin' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:psin' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:119' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:slice' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:lossempirical' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Reference `eq:psin' on page 17 undefined on input line 944.
-
-
-LaTeX Warning: Citation `Mei_2018' on page 17 undefined on input line 954.
-
-
-LaTeX Warning: Citation `Rotskoff_2022' on page 17 undefined on input line 954.
-
-
-Overfull \hbox (1.81937pt too wide) in paragraph at lines 972--972
+Overfull \hbox (1.81937pt too wide) in paragraph at lines 901--901
 []\OT1/cmr/m/n/9 (a)
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 972--972
-|\OT1/cmr/m/n/9 leg-
+Overfull \hbox (11.19707pt too wide) in paragraph at lines 901--901
+|\OT1/cmr/m/n/9 Plain
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 972--972
-\OT1/cmr/m/n/9 end[][]| 
+Overfull \hbox (9.46236pt too wide) in paragraph at lines 901--901
+\OT1/cmr/m/n/9 SGD[][]| 
  []
 
 
-Overfull \hbox (2.33325pt too wide) in paragraph at lines 973--973
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 902--902
 []\OT1/cmr/m/n/9 (b)
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 973--973
-|\OT1/cmr/m/n/9 leg-
+Overfull \hbox (7.7825pt too wide) in paragraph at lines 902--902
+|\OT1/cmr/m/n/9 Nes-
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 973--973
-\OT1/cmr/m/n/9 end[][]| 
+Overfull \hbox (10.57971pt too wide) in paragraph at lines 902--902
+\OT1/cmr/m/n/9 terov
  []
 
 
-Overfull \hbox (1.30548pt too wide) in paragraph at lines 974--974
+Overfull \hbox (1.81937pt too wide) in paragraph at lines 902--902
+\OT1/cmr/m/n/9 ac-
+ []
+
+
+Overfull \hbox (3.87837pt too wide) in paragraph at lines 902--902
+\OT1/cmr/m/n/9 cel-
+ []
+
+
+Overfull \hbox (0.81589pt too wide) in paragraph at lines 902--902
+\OT1/cmr/m/n/9 er-
+ []
+
+
+Overfull \hbox (7.47557pt too wide) in paragraph at lines 902--902
+\OT1/cmr/m/n/9 ated
+ []
+
+
+Overfull \hbox (4.3235pt too wide) in paragraph at lines 902--902
+\OT1/cmr/m/n/9 GD[][]| 
+ []
+
+
+Overfull \hbox (1.30548pt too wide) in paragraph at lines 903--903
 []\OT1/cmr/m/n/9 (c)
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 974--974
-|\OT1/cmr/m/n/9 leg-
+Overfull \hbox (4.51515pt too wide) in paragraph at lines 903--903
+|\OT1/cmr/m/n/9 MF
  []
 
 
-Overfull \hbox (4.39226pt too wide) in paragraph at lines 974--974
-\OT1/cmr/m/n/9 end[][]| 
+Overfull \hbox (9.2693pt too wide) in paragraph at lines 903--903
+\OT1/cmr/m/n/9 Hom
  []
+
+
+Overfull \hbox (15.24286pt too wide) in paragraph at lines 903--903
+\OT1/cmr/m/n/9 SGLD[][]| 
+ []
+
+
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 904--904
+[]\OT1/cmr/m/n/9 (d)
+ []
+
+
+Overfull \hbox (8.62764pt too wide) in paragraph at lines 904--904
+|\OT1/cmr/m/n/9 Full-
+ []
+
+
+Overfull \hbox (23.1699pt too wide) in paragraph at lines 904--904
+\OT1/cmr/m/n/9 gradient
+ []
+
+
+Overfull \hbox (13.38039pt too wide) in paragraph at lines 904--904
+\OT1/cmr/m/n/9 MaSS[][]| 
+ []
+
+
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on page 19 undefined on input line 916.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 932.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 932.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 19 undefined on input line 934.
+
+
+LaTeX Warning: Citation `Rotskoff_2022' on page 19 undefined on input line 934.
+
+
+LaTeX Warning: Citation `Mei_2018' on page 19 undefined on input line 934.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 934--935
+
+ []
+
+
+LaTeX Warning: Reference `eq:psin' on page 20 undefined on input line 945.
+
+
+LaTeX Warning: Citation `Rotskoff_2022' on page 20 undefined on input line 947.
+
+
+Overfull \hbox (1.81937pt too wide) in paragraph at lines 952--952
+[]\OT1/cmr/m/n/9 (a)
+ []
+
+
+Overfull \hbox (6.95822pt too wide) in paragraph at lines 952--952
+|\OT1/cmr/m/n/9 d=3[][]| 
+ []
+
+
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 953--953
+[]\OT1/cmr/m/n/9 (b)
+ []
+
+
+Overfull \hbox (6.95822pt too wide) in paragraph at lines 953--953
+|\OT1/cmr/m/n/9 d=4[][]| 
+ []
+
+
+Overfull \hbox (1.30548pt too wide) in paragraph at lines 954--954
+[]\OT1/cmr/m/n/9 (c)
+ []
+
+
+Overfull \hbox (6.95822pt too wide) in paragraph at lines 954--954
+|\OT1/cmr/m/n/9 d=5[][]| 
+ []
+
+
+LaTeX Warning: Citation `Rostkoff_2022' on page 20 undefined on input line 959.
+
+
+LaTeX Warning: Reference `eq:90' on page 20 undefined on input line 971.
+
+
+LaTeX Warning: Reference `eq: risk' on page 20 undefined on input line 995.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 995--998
+
+ []
+
+
+LaTeX Warning: Reference `eq:119' on page 20 undefined on input line 999.
+
+
+LaTeX Warning: Reference `eq: risk' on page 20 undefined on input line 1000.
+
+
+LaTeX Warning: Reference `eq:lossempirical' on page 20 undefined on input line 1000.
+
+
+LaTeX Warning: Reference `fig: Muller Brown contour plots' on page 20 undefined on input line 1021.
+
+
+Overfull \hbox (1.81937pt too wide) in paragraph at lines 1029--1029
+[]\OT1/cmr/m/n/9 (a)
+ []
+
+
+Overfull \hbox (4.5548pt too wide) in paragraph at lines 1029--1029
+|$\OML/cmm/m/it/9 d \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 1030--1030
+[]\OT1/cmr/m/n/9 (b)
+ []
+
+
+Overfull \hbox (4.5548pt too wide) in paragraph at lines 1030--1030
+|$\OML/cmm/m/it/9 d \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (1.30548pt too wide) in paragraph at lines 1031--1031
+[]\OT1/cmr/m/n/9 (c)
+ []
+
+
+Overfull \hbox (4.5548pt too wide) in paragraph at lines 1031--1031
+|$\OML/cmm/m/it/9 d \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (1.81937pt too wide) in paragraph at lines 1037--1037
+[]\OT1/cmr/m/n/9 (a)
+ []
+
+
+Overfull \hbox (4.5548pt too wide) in paragraph at lines 1037--1037
+|$\OML/cmm/m/it/9 d \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (17.49147pt too wide) in paragraph at lines 1037--1037
+\OT1/cmr/m/n/9 3$(Hom
+ []
+
+
+Overfull \hbox (4.51515pt too wide) in paragraph at lines 1037--1037
+\OT1/cmr/m/n/9 MF
+ []
+
+
+Overfull \hbox (18.84006pt too wide) in paragraph at lines 1037--1037
+\OT1/cmr/m/n/9 SGLD)[][]| 
+ []
+
+
+Overfull \hbox (2.33325pt too wide) in paragraph at lines 1038--1038
+[]\OT1/cmr/m/n/9 (b)
+ []
+
+
+Overfull \hbox (4.5548pt too wide) in paragraph at lines 1038--1038
+|$\OML/cmm/m/it/9 d \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (25.19975pt too wide) in paragraph at lines 1038--1038
+\OT1/cmr/m/n/9 4$(MaSS)[][]| 
+ []
+
+
+Overfull \hbox (1.30548pt too wide) in paragraph at lines 1039--1039
+[]\OT1/cmr/m/n/9 (c)
+ []
+
+
+Overfull \hbox (4.5548pt too wide) in paragraph at lines 1039--1039
+|$\OML/cmm/m/it/9 d \U/matha/m/n/9 ^^P
+ []
+
+
+Overfull \hbox (22.21922pt too wide) in paragraph at lines 1039--1039
+\OT1/cmr/m/n/9 5$(Mass)[][]| 
+ []
+
+
+LaTeX Warning: Citation `liu2019acceleratingsgdmomentumoverparameterized' on page 21 undefined on input line 1052.
 
 No file main-autopp.bbl.
 
@@ -2761,12 +3083,12 @@ LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 59719 strings out of 474117
- 1461264 string characters out of 5743708
- 2081937 words of memory out of 5000000
- 81159 multiletter control sequences out of 15000+600000
- 578226 words of font info for 105 fonts, out of 8000000 for 9000
+ 60093 strings out of 474117
+ 1476398 string characters out of 5743708
+ 2081936 words of memory out of 5000000
+ 81532 multiletter control sequences out of 15000+600000
+ 578832 words of font info for 107 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 103i,13n,134p,1716b,1137s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 103i,15n,134p,1716b,1137s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 No pages of output.
