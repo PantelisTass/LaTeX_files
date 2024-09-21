@@ -1,6 +1,26 @@
 \documentclass{article}
 \input{preamble}  % Include the preamble from an external file
+\makeatletter
+\newcommand{\global@insert}[2]% #1=box number, #2=vertical list
+{\bgroup
+  \setbox\@tempboxa=\box#1
+  \global\setbox#1=\vbox{\unvbox\@tempboxa #2}
+\egroup}
 
+\long\def\@footnotetext#1{\global@insert\footins{%
+ \reset@font\footnotesize
+ \interlinepenalty\interfootnotelinepenalty
+ \splittopskip\footnotesep
+ \splitmaxdepth \dp\strutbox \floatingpenalty \@MM
+ \hsize\columnwidth \@parboxrestore
+ \protected@edef\@currentlabel{%
+ \csname p@footnote\endcsname\@thefnmark
+ }%
+ \color@begingroup
+ \@makefntext{%
+ \rule\z@\footnotesep\ignorespaces#1\@finalstrut\strutbox}%
+ \color@endgroup}}%
+\makeatother
 %\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}\addtocounter{page}{-1}}
 \fancyhead{}
 \fancyhead[L]{\text{Advanced Probability}}
@@ -2864,7 +2884,7 @@ $ D\subseteq \R^{d}$ is called a \underline{domain} if it is open, non-empty and
 
 \begin{theorem}[Dirichlet problem]\label{thm: dirichlet problem}
 
-	let $ D$ be a bounded domain in $ \R^{d}$ such that every boundary point of $ D satisfies the  Poincar\'{e}$ cone condition, (see figure \ref{fig: poincare cone}). Let $ \phi$ be continuous on $ \partial D$ and let $ B$ be a Brownian motion, $ \tau_{\partial D} = \displaystyle\\displaystyle\inf_{\{t\geq 0 : B_{t}\in \partial D\}}$. Then the function 
+	let $ D$ be a bounded domain in $ \R^{d}$ such that every boundary point of $ D satisfies the  Poincar\'{e}$ cone condition, (see figure \ref{fig: poincare cone}). Let $ \phi$ be continuous on $ \partial D$ and let $ B$ be a Brownian motion, $ \tau_{\partial D} = \displaystyle\inf_{\{t\geq 0 : B_{t}\in \partial D\}}$. Then the function 
 	\[
 		u(x)  = \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}}) \right], \quad x\in \overline{D}
 	\]
