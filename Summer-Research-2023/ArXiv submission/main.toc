@@ -1,0 +1,21 @@
+\contentsline {section}{\numberline {1}Overview}{3}{}%
+\contentsline {subsection}{\numberline {1.1}Objectives}{3}{}%
+\contentsline {subsection}{\numberline {1.2}Funding}{3}{}%
+\contentsline {subsection}{\numberline {1.3}Outcomes}{3}{}%
+\contentsline {section}{\numberline {2}Mean Field Limits of Neural Networks}{5}{}%
+\contentsline {subsection}{\numberline {2.1}Background theory}{5}{}%
+\contentsline {subsection}{\numberline {2.2}MNIST data classification}{9}{}%
+\contentsline {section}{\numberline {3}Non-convex landscape}{12}{}%
+\contentsline {subsection}{\numberline {3.1}Approaches}{12}{}%
+\contentsline {subsubsection}{\numberline {3.1.1}Regularise potential directly by convolution}{13}{}%
+\contentsline {subsubsection}{\numberline {3.1.2}Regularise the potential implicitly weakly interacting agents}{13}{}%
+\contentsline {subsubsection}{\numberline {3.1.3}Homogenisation}{14}{}%
+\contentsline {subsubsection}{\numberline {3.1.4}Synthesis: combine both multi-scale analysis and weakly interacting gents for MF Hom SGLD}{15}{}%
+\contentsline {subsubsection}{\numberline {3.1.5}Nesterov SGD}{16}{}%
+\contentsline {subsubsection}{\numberline {3.1.6}MaSS algorithm}{16}{}%
+\contentsline {subsection}{\numberline {3.2}Applications}{18}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Centred Isotropic Gaussians}{18}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Anisotropic Gaussians}{21}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}MNIST data single digit classification}{23}{}%
+\contentsline {subsubsection}{\numberline {3.2.4}Muller Brown Potential}{24}{}%
+\contentsline {subsubsection}{\numberline {3.2.5}$ 3-$d spin model analysis}{26}{}%

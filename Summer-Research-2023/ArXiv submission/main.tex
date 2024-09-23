@@ -1,0 +1,1230 @@
+\pdfoutput=1
+\documentclass{article}
+%\input{preamble.tex}  % Include the preamble from an external file
+% preamble.tex
+\usepackage{titlesec}
+%\raggedbottom
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{graphicx}
+    \graphicspath{ {./images/} }
+\usepackage[left=2.5cm, right=2.5cm, top=3cm, bottom=3cm, twoside]{geometry}
+\usepackage{float}
+\usepackage[section]{placeins}
+\usepackage{subcaption}
+\usepackage{newpxtext}
+\usepackage[vvarbb]{newpxmath}
+\usepackage{xfrac}
+\usepackage[super]{nth}
+\newcommand{\ul}{\mathbf}
+\usepackage[dvipsnames,table,xcdraw]{xcolor}
+\usepackage{bm}
+	\newcommand*{\symbf}{\bm}
+\usepackage[mathcal]{eucal}
+\usepackage{tikz}
+    \usetikzlibrary{cd, positioning, arrows.meta, backgrounds, calc, 3d}
+    \tikzstyle{every picture}+=[remember picture]
+    %\tikzexternalize[prefix=tikz/]
+\usepackage{enumitem}
+\usepackage[many,breakable]{tcolorbox}
+\usepackage{wrapfig}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\definecolor{block-gray}{gray}{0.95}
+\newtcolorbox{examplesblock}[2][]{%
+    grow to right by=-0mm,
+    grow to left by=-0mm, 
+    opacityback=0,
+    frame hidden, boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{black},
+    title={#2\par},
+    colbacktitle={black},
+    coltitle={black},
+    fonttitle={\bfseries},
+    attach title to upper={},
+    #1,
+}
+
+\definecolor{}{gray}{0.95}
+\newtcolorbox{codeblock}[2][]{%
+    grow to right by=-0mm,
+    grow to left by=-0mm, 
+    opacityback=0,
+    frame hidden, boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{black},
+    title={#2\par},
+    colbacktitle={black},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+}
+
+\titleformat{\chapter}[display]   
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{-30pt}{40pt}
+
+\newtheoremstyle{mystyle}%                % Name
+  {1pt}%                                     % Space above
+  {}%                                     % Space below
+  {\normalfont}%                                     % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                            % Theorem head font
+  {.}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}%                                     % Theorem head spec (can be left empty, meaning `normal')
+
+  \theoremstyle{mystyle}
+\newtheorem*{remark}{Remark}
+
+\NewDocumentCommand{\newframedtheorem}{O{}momo}{%
+  \IfNoValueTF{#3}
+   {%
+    \IfNoValueTF{#5}
+     {\newtheorem{#2}{#4}}
+     {\newtheorem{#2}{#4}[#5]}%
+    }
+   {\newfratheorem{#2}[#3]{#4}}
+  \tcolorboxenvironment{#2}{#1}%
+}
+\newmdtheoremenv{theorem}{Theorem}[section]
+
+
+\newtheorem{corollary}{Corollary}[section]
+\newmdtheoremenv{boxcor}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[section]{Proposition}
+\newtheorem{definition}{Definition}[section] 
+%\newtheorem{theorem}{Theorem}[section] 
+
+\newmdtheoremenv{boxdef}{Definition}[section]
+\newmdtheoremenv{boxlemma}{Lemma}[section]
+\newmdtheoremenv{boxprop}{Proposition}[section]
+
+\newcommand{\here}[2]{\tikz[remember picture]{\node[inner sep=0](#2){#1}}}
+
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\F}{\mathcal{F}}
+
+\newcommand{\Real}{\operatorname{Re}}
+\newcommand{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\essup}{essup}
+\DeclareMathOperator{\scrC}{\mathcal{C}}
+\DeclareMathOperator{\scrM}{\mathcal{M}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\intr}{int}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\dist}{dist}
+
+
+\newcommand{\inmath}[2]{$#1\in#2$}
+\newcommand{\allin}[2]{for all $#1\in#2$}
+\newcommand{\isthere}{there exists }
+
+\newcommand{\vectsp}[1]{\mathbf{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\unitball}[1]{B_{#1}}
+\newcommand{\intunitball}[1]{D_{#1}}
+\newcommand{\unitsphere}[1]{S_{#1}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\bracket}[2]{\langle #1, #2\rangle}
+ % Method of Enrico Gregorio ("egreg")
+ % https://tex.stackexchange.com/a/22255/13492:
+ \newcommand\restrict[2]{% make the whole thing an ordinary symbol
+   \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+   #1% the function
+   \littletaller % pretend it's a little taller at normal size
+   \right|_{#2}%
+   }
+ \newcommand{\littletaller}{\mathchoice{\vphantom{\big|}}{}{}{}}
+
+ % Method of Heiko Oberdiek
+ % https://tex.stackexchange.com/a/67233/13492
+ \makeatletter
+ \newcommand*{\scaleddelims}[3]{%
+   \ensuremath{%
+     \mathpalette{\@scaleddelims{#1}{#2}}{#3}%
+   }%
+ }   
+ \newcommand*{\@scaleddelims}[4]{%
+   % #1: left delimiter
+   % #2: right delimiter
+   % #3: \displaystyle, \textstyle, ...
+   % #4: inner formula
+   \begingroup
+     #3%
+     \sbox0{$\m@th#3\vphantom{A}#4$}%
+     \setbox2\vbox{\hbox{$\m@th#3#1$}\kern\z@}%
+     \setbox4\vbox{\hbox{$\m@th#3#2$}\kern\z@}%
+     \setbox6\hbox{$#3\vcenter{}$}%
+     \ifx\downharpoonleft#1\relax  
+       \let\DelimLeft=L%
+     \else\ifx\upharpoonleft#1%
+       \let\DelimLeft=L%
+     \else\ifx\downharpoonright#1%
+       \let\DelimLeft=R%
+     \else\ifx\upharpoonright#1%
+       \let\DelimLeft=R%
+     \fi\fi\fi\fi
+     \ifx\downharpoonleft#2\relax
+       \let\DelimRight=L%
+     \else\ifx\upharpoonleft#2\relax
+       \let\DelimRight=L%
+     \else\ifx\downharpoonright#2\relax
+       \let\DelimRight=R%
+     \else\ifx\upharpoonright#2\relax
+       \let\DelimRight=R%
+     \fi\fi\fi\fi
+     \ifx\DelimLeft L%
+       \wd2=.6\wd2
+     \fi
+     \ifx\DelimRight L%
+       \wd4=.6\wd4
+     \fi
+     \ifx\DelimLeft R%
+       \sbox2{\kern-.4\wd2\box2}%
+     \fi
+     \ifx\DelimRight R%
+       \sbox4{\kern-.4\wd4\box4}%
+     \fi
+     \dimen0=\ht0 %
+     \advance\dimen0 by -\ht6 %
+     \dimen2=\dp0 %
+     \advance\dimen2 by \ht6 %
+     \ifdim\dimen2>\dimen0 %  
+       \dimen0=\dimen2 %
+     \else
+       \dimen0=\dimen0 %
+     \fi
+     \dimen2=\ht6 %
+     \advance\dimen2 by -\dimen0 %
+     \dimen0=2\dimen0 %
+     \def\DelimCorr{%  
+       \mskip.5\thinmuskip
+       \nonscript\mskip.5\thinmuskip
+     }%
+     \mathopen{%
+       \ifx\DelimLeft R\DelimCorr\fi
+       \raisebox{\dimen2}{\resizebox{!}{\dimen0}{\box2}}%
+       \ifx\DelimLeft L\DelimCorr\fi
+     }%
+     \begingroup
+       #3#4%
+     \endgroup
+     \mathclose{%
+       \ifx\DelimRight R\DelimCorr\fi
+       \raisebox{\dimen2}{\resizebox{!}{\dimen0}{\box4}}%
+       \ifx\DelimRight L\DelimCorr\fi
+     }%
+   \endgroup
+ }\makeatother
+ %
+
+ \newcommand{\restr}[2]{#1\scaleddelims{\kern-0.5\nulldelimiterspace\upharpoonright}{\vphantom{.}}{_{#2}}}
+\newcommand{\diff}{\ensuremath{\operatorname{d}\!}}
+
+
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+
+%\AtBeginDocument{\AtBeginShipoutNext{\AtBeginShipoutDiscard}\addtocounter{page}{-1}}
+\fancyhead[L]{\text{Imperial UROP 2023}}
+\fancyhead[R]{\text{Pantelis Tassopoulos}}
+
+\title{\Huge A mathematical analysis of machine learning algorithms. \\ 
+\huge Summer research supervised by Professor Greg Pavliotis}
+\author{\Large Pantelis Tassopoulos}
+\date{\Large Summer 2023}
+
+\begin{document}
+
+
+\maketitle
+\newpage
+
+\tableofcontents 
+\newpage 
+
+\section{Overview}
+
+\subsection{Objectives}
+
+\begin{itemize}
+	\item 	To examine the existing literature on recent developments in the context of theoretical machine learning that integrate tools from statistical physics and probability theory, i.e., the theory of interacting particle systems.
+	\item 	To analyse the approximation quality and trainability of neural networks using algorithms, such as Stochastic Gradient Descent (SGD), informed by such ideas on toy models and examples with real life examples such as the MNIST digit classification dataset.
+	\item 	To perform numerical experiments by training neural networks under various circumstances, thereby gaining practical insights. 
+	\item 	To try and extend results from the literature by attempting to provide theoretical guarantees for accuracy and robustness of machine learning algorithms other than SGD or new insights from numerical simulations. 
+
+\end{itemize}
+
+\subsection{Funding}
+
+I was awarded the Engineering and Physical Sciences Research Council (EPSRC) Vacation Bursary of £3024 to pursue this project. 
+
+\subsection{Outcomes}
+
+
+This Summer Project (UROP) gave me a better insight into cutting-edge research in theoretical machine learning and mathematical optimisation.\\ 
+
+I reviewed the requisite background material in mathematics from reference material, including textbooks and relevant papers. For instance, I read up on topics in probability, namely, martingale inequalities (Doob's and Hoeffman's inequalities in the book of Bremaud entitled 'Probability Theory and Stochastic Processes' \cite{bremaud2020probability}) that Mei et al. in their 2018 paper entitled 'A mean-field view of the landscape of two-layer neural networks' used in proofs of convergence of the SGD dynamics to the evolution of a Partial Differential Equation (PDE) as the hidden layer had an ever-increasing number of nodes, which enabled to perform novel theoretical analyses and provide theoretical guarantees of convergence.\\
+
+I did some additional reading to supplement my understanding of the 2019 papers by Spiliopoulos and Sirgiano entitled 'Mean Field Analysis of Neural Networks: A Law of Large Numbers' and its companion paper \cite{sirignano2019meanfieldanalysisclt}, \cite{sirignano2019meanfieldanalysislln} . I read part of the book entitled 'Markov Processes: Characterisation and Convergence' by Stewart N. Ethier Thomas G. Kurtz \cite{ethier2009markov}, specifically the chapter on weak convergence of probability measures with values on the Skorokhod space $\mathcal{D}_{E[0, \infty)}$, which was necessary for understating the author's arguments on propagation of chaos and analogous convergence arguments. \\
+
+Another crucial component of the project was the emphasis on numerical experiments. They allowed me to demonstrate the validity of theoretical findings and strengthen the case for the arguments presented. Numerical simulations involved training neural networks using existing algorithms from the literature and using insights gained to develop new algorithms. \\
+
+For instance, regarding the above papers by Spiliopoulos, to supplement my understanding and empirically demonstrate claims made in the above paper, I performed numerical simulations by training a family of single-layer neural networks that achieved single-digit classification on the MNIST data set (used for digit classification and is a well-known benchmark for testing models). Upon expanding their hidden layer and training them, I plotted histograms of the distribution parameters which, for sufficiently many hidden nodes, the distribution of node values seemed to stabilise around a fixed bimodal distribution, which is also what the authors reported (while they did not specify the exact nature of the neural network they trained). \\
+
+The project's theme shifted from analysing plain SGD towards understanding the wildly non-convex landscape of the underlying objective/loss function one typically encounters in machine learning applications.\\
+
+In this direction, I demonstrated, among other observations, which can be found on my GitHub page \cite{Tassopoulos_Imperial_Summer_Research_2023} using numerical simulations that Nesterov accelerated gradient descent escaped a 'bad minimum', where SGD got stuck in a loss function that was constructed in \cite{Mei_2018}. \\
+
+This motivated me to generalise further insights gained by examining the dynamics of SGD to momentum-based algorithms, including Nesterov's accelerated Gradient Descent. \\
+
+At that time, I read the 2017 paper by Chaudhari et al. entitled 'Deep Relaxation: partial differential equations for optimising deep neural networks' \cite{Chaudhari2017DeepRP}. They introduced various approaches centred around 'regularising' the loss function. I incorporated both momentum-based methods (including 'restarting' the momentum if the gradient in the change in position was in the direction of the gradient-maximal increase, as was introduced in the 2012 Candes et al. paper entitled 'Adaptive Restart for Accelerated Gradient Schemes' \cite{odonoghue2012adaptiverestartacceleratedgradient}) and regularising the potential (by leveraging the analytical properties of solutions to the Hamilton-Jacobi-Bellman equation) as suggested above to create an algorithm that attempted to escape bad minima.\\
+
+I also revisited the 2023 paper by Andrew Stuart et al. entitled 'Gradient Flows for Sampling: Mean-Field Models, Gaussian, Approximations and Affine Invariance'\cite{chen2023gradientflowssamplingmeanfield} initially suggested by my supervisor to produce another algorithm based on theoretical insights gained from the paper. \\
+
+Furthermore, I read the paper coauthored by my supervisor entitled 'The sharp, the flat and the shallow: Can weakly interacting agents learn to escape bad minima?' \cite{kantas2019sharpflatshallowweakly} I was also led to study the analysis of multiscale algorithms in the literature, e.g. in the Weinan et al. (2005) paper \cite{weinan2005multiscalesde} on the analysis of multiscale methods for SDEs. The authors devised an algorithm that escaped bad minima in a toy example they introduced in the paper. \\
+
+As suggested by my supervisor, I implemented the above algorithms by performing descent on a loss that was a Muller-Brown potential (the canonical example of a potential surface in theoretical chemistry). My instance had a narrow global minimum; SGD would perform poorly and tend to converge to two local minima, of which there were two in a relatively confined domain. For each algorithm mentioned above, I performed random initialisations, ran the algorithms for a fixed number of steps and recorded the final 'losses'. One notable observation is that the implementation of the algorithm in my supervisor’s paper performed noticeably better than the rest, including plain SGD.\\
+
+This research experience presented an excellent opportunity for me to go beyond the scope of material covered in class and explore developments in the literature in a structured and rigorous manner. \\
+
+Please note all the code referenced herein can be found on my personal GitHub page \cite{Tassopoulos_Imperial_Summer_Research_2023} . \\
+
+\newpage
+\section{Mean Field Limits of Neural Networks}\label{sec: mean field neural net}
+
+\subsection{Background theory}\label{sec: neural net single layer}
+
+The process of a neural network 'learning' from data requires solving a complex optimisation problem with millions of variables. This is done by stochastic gradient descent (SGD) algorithms. One can study the case of two-layer networks and derive a compact description of the SGD dynamics in terms of a limiting partial differential equation. This a major insight in \cite{Mei_2018}, where they authors also suggest with their findings that SGD dynamics do not become more complex when the network size increases.\\ 
+
+Now, more formally, one typically encounters, in the context of supervised learning the following: 
+\begin{itemize}
+	\item Observed data points $ (x_{i},y_{i})_{i\in \N}\subseteq \R^{d}\times \R$, where they are modelled as being independent and indentically distributed (iid).
+	\item The $ x\in \R^{d}$ are called \underline{feature vectors} and the $ y\in \R$ the \underline{labels}.
+	\item The neural network essentially is a function that depends on some hidden parameters and the feature vector. In the case of a two-layer neural network, the dependence is modelled by: 
+		\begin{equation}\label{eq: neural net def}
+			\begin{array}{cc}
+			\hat{y}:\R^{d}\times \R^{ND}\to \R   \\
+			(x;\mathbf{\theta})\mapsto \frac{1}{N}\displaystyle\sum^{N}_{i=1}\sigma_{*}(x;\mathbf{\theta}_{i})     
+	     \end{array}
+     \end{equation}
+		where $ N$ is the number of hidden units (neurons), $ \sigma_{*}:\R^{d}\times\R^{D}\to \R$ an activation function and $\mathbf{\theta} = (\mathbf{\theta})_{i\leq N}$, $\mathbf{\theta}_{i}\in \R^{D}$ are parameters, often $\mathbf{\theta}_{i} = (a_{i}, b_{i}, w_{i})$ for real $ a_{i}, b_{i}, w_{i}$ and $ \sigma_{*}(x;\mathbf{\theta}_{i})=a_{i}\sigma(\bracket{x}{w_{i}}+b_{i})$ for some function $ \sigma:\R\to \R$ (see figure \ref{fig: two layer neural net}).
+\end{itemize}
+
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale = 1.5, x=2cm, y=1.5cm, thick, every node/.style={scale=1}]
+
+% Input node (smaller size)
+\node[circle, draw, minimum size=0.7cm] (I) at (0, 0) {$\mathbf{x}$};
+
+% Hidden nodes with labels on both sides (left and right)
+\node[left=0cm of I] {};
+
+\node[circle, draw, minimum size=0.7cm] (H1) at (1, 1.2) {};
+\node[right=0cm of H1] {\scriptsize $\sigma_*(\mathbf{x};\mathbf{\theta}_1)$};  % Equation on the right with smaller size
+\node[left=0.2cm of H1] {$\mathbf{\theta}_1$};        % Label on the left
+
+\node[circle, draw, minimum size=0.7cm] (H2) at (1, 0.4) {};
+\node[right=0cm of H2] {\scriptsize $\sigma_*(\mathbf{x};\mathbf{\theta}_2)$};  % Equation on the right with smaller size
+\node[left=0.2cm of H2] {$\mathbf{\theta}_2$};        % Label on the left
+
+\node at (1, -0.4) {$\vdots$};             % Ellipsis between nodes
+
+\node[circle, draw, minimum size=0.7cm] (H3) at (1, -1.2) {};
+\node[right=0cm of H3] {\scriptsize $\sigma_*(\mathbf{x};\mathbf{\theta}_N)$};  % Equation on the right with smaller size
+\node[left=0.2cm of H3] {$\mathbf{\theta}_N$};        % Label on the left
+
+% Output node (smaller size)
+\node[circle, draw, minimum size=0.7cm] (O) at (2, 0) {$\hat{y}$};
+
+% Connections
+\draw[->] (I) -- (H1);
+\draw[->] (I) -- (H2);
+\draw[->] (I) -- (H3);
+
+\draw[->] (H1) -- (O);
+\draw[->] (H2) -- (O);
+\draw[->] (H3) -- (O);
+
+\end{tikzpicture}
+    \caption{ Illustration of a two layer neural network.}
+    \label{fig: two layer neural net}
+\end{figure}
+
+
+Naturally, one wants to chose parameters $\mathbf{\theta}$ so as to \underline{minimise} the risk function 
+\begin{equation}\label{eq: risk}
+	R_{N}(x;\mathbf{\theta}) =\mathbb{E}[\ell(y, \hat{y}(x;\mathbf{\theta}))]
+\end{equation}
+for a loss function $ \ell:\R\times \R \to \R$, typically and in our case the square loss $ \ell(y-\hat{y})  = (y-\hat{y})^{2}$. This is achieved in practice by stochastic gradient descent summarised below:
+
+
+\newpage
+\begin{codeblock}{Stochastic Gradient Descent (SGD)}\label{alg: SGD}
+\begin{algorithmic}
+\State Initialise the parameters $(\mathbf{\theta}_{i})_{i\leq \N} \sim \rho_{0}$, that is according to some initial distribution $ \rho_{0}$.
+\While{loss is greater than tolerance}
+\State Generate iid sample $ (x, y)\sim \PP$
+\For {$1 \leq i \leq N $} 
+\State $\mathbf{\theta}_{i}\gets\mathbf{\theta}_{i}+2s\cdot (y-\hat{y}(x;\mathbf{\theta}))\cdot \nabla_{\mathbf{\theta}_{i}}\sigma_{*}(x;\mathbf{\theta}_i)$ \Comment{square loss is used}
+\State Update learning rate $ s$
+\EndFor
+\EndWhile
+\end{algorithmic}
+
+\end{codeblock}
+
+Observe that we have the alternative characterisation of the loss
+\begin{equation}\label{eq: loss expanded}
+	R_{N}(\mathbf{\theta}) = R_{\#}+ \frac{2}{N}\displaystyle\sum^{N}_{i=1}V(\mathbf{\theta}_{i})+\frac{1}{N^{2}}\displaystyle\sum^{N}_{i,j=1}U(\mathbf{\theta}_{i},\mathbf{\theta}_{j}).
+\end{equation} 
+where $ V(x; \mathbf{\theta}) = -\mathbb{E}[y\cdot \sigma_(x: \mathbf{\theta})]$, $ U( \mathbf{\theta}_{1}, \mathbf{\theta}_{2}) =\mathbb{E}[\sigma_(x; \mathbf{\theta}_{1})\cdot \sigma_*(x; \mathbf{\theta}_{2})]$ and $ R_{\#}=\mathbb{E}[y^{2}]$ is the risk of the trivial predictor $ \hat{y} = 0$.\\ 
+
+Notice that the collection of weights $  \mathbf{\theta}\in \R^{ND}$ induces a probability measure on $ \R^{ND}$, namely its \textit{empirical measure}:
+
+\begin{equation}\label{eq: empirical measure}
+	\hat{\rho}^{(N)} = \frac{1}{N}\displaystyle\sum^{N}_{i=1}\delta_{ \mathbf{\theta}_{i}} 
+\end{equation}
+
+Consider the function on the space of probability measures on $ \R^{D}$, $  \mathcal{P}(\R^{D})$:
+\[
+\begin{array}{cc}
+    R: \mathcal{P}(\R^{D})\to \R \\ 
+    \rho \mapsto R_{\#}+ 2 \displaystyle\int V( \mathbf{\theta}) \rho( \diff \mathbf{\theta}) + \displaystyle \int\int U( \mathbf{\theta}_{1}, \mathbf{\theta}_{2}) \rho( \diff \mathbf{\theta}_{1}) \rho( \diff \mathbf{\theta}_{2})   
+\end{array}
+\]
+Observe we can thus express $ R_{N}(\mathbb{\theta}) = R(\hat{\rho}^{(N)})$. Now, performing the SGD algorithm \ref{alg: SGD} for $ k$ steps say (with step size $ s_k = \epsilon\cdot \xi(k \epsilon)$ for some $ \epsilon >0$ and $ \xi: \R_{\geqq 0}\to \R_{\geqq 0}$ sufficiently regular-see \ref{list: reg assumptions}), we obtain the parameters $  (\mathbf{\theta}^{k}_{i\leq N})$ and their respective empirical measures $ \hat{\rho}^{(N)}_k$. In \cite{Mei_2018}, Theorem \ref{thm: mean field nguyen} here, it is shown that for all $ t\geqq 0$, as $ N\to \infty$ and $ \epsilon \to 0$ in an appropriate way, the empirical measures $ \hat{\rho}^{(N)}_{t/\epsilon}$ converge in the weak sense to some probability measure $ \rho_t$ whose dynamics are governed by the following PDE, which is referred to as \emph{distributional dynamics} (DD) in \cite{Mei_2018}
+\begin{equation}
+	\begin{array}{ll}
+\partial_t \rho_t & =2\xi(t)\, \nabla_{ \mathbf{\theta}}\cdot \Big(\rho_t \nabla_{ \mathbf{\theta}}\Psi( \mathbf{\theta};\rho_t)\Big)\, ,\label{eq:GeneralPDE}\\
+\Psi( \mathbf{\theta};\rho) & \equiv V( \mathbf{ \theta})+\int U( \mathbf{\theta}, \mathbf{\theta}')\, \rho(\diff  \mathbf{\theta}') .
+\end{array}
+\end{equation}
+
+(Note that $\nabla_{ \mathbf{\theta}}\cdot \mathbf{v}( \mathbf{\theta})$ denotes the divergence of the vector field $ \mathbf{v}( \mathbf{\theta})$). This should  be interpreted as an evolution equation in $ \mathcal{P}(\R^D)$.\\
+
+There is rich mathematical literature on the PDE \ref{eq:GeneralPDE} which was
+motivated by the study of interacting particle systems in mathematical physics (see the references in \cite{Mei_2018}). The authors in \cite{Mei_2018} use this to observe that \ref{eq:GeneralPDE} can be viewed as a gradient flow for the cost function $R(\rho)$ in the space 
+$( \mathcal{P}(\R^D),W_2)$, of probability measures on $\R^D$
+endowed with the Wasserstein metric.\\
+
+\begin{examplesblock}{Aside:}\label{aside: wasserstein flow}
+Regarding Wasserstein flows, I looked through the paper by Y. Chen , et al. \cite{chen2023gradientflowssamplingmeanfield} on Gradient Flows for Sampling and noted down some key insights from their paperIn brief, they study the problem of sampling a probability distribution with an unknown normalization constant, which is a fundamental problem in computational science and engineering. They recast it as an optimisation problem on the space of probability measures, using gradient flows. 
+\begin{itemize}
+    
+	\item 	Given a gradient flow that one has constructed wrt a posterior distribution that one wants to sample from without having an explicit normalization, one can formulate a gradient flow and a system of particles with SDE of the MCKean Vlasov type with FK equation the gradient flow (i.e. the evolution equation of the density). 
+	\item 	By making the gradient flow ‘invariant’ under affine reparameterizations (through preconditioning or by suitable choice of metric or energy functional on $\mathcal{P}(\R^d))$, one hope to improve performance of algorithms in the case of highly anisotripic posteriors, if there is an affine transformation that reduces the anisotropic nature of said posterior.
+\end{itemize}
+\end{examplesblock}
+
+Recall that Wasserstein distance is defined as
+\begin{equation}\label{eq:Wasserstein_dual}
+W_2(\rho_1,\rho_2)  = \Big(\inf_{\gamma\in \mathcal{C}(\rho_1,\rho_2)}  \int \| \mathbf{\theta}_1- \mathbf{\theta}_2 \|_2^2 \gamma( \diff  \mathbf{\theta}_1, \diff \mathbf{\theta}_2) \,\Big)^{1/2}. 
+\end{equation}
+
+In order to establish that these PDEs indeed describe the limit of the SGD dynamics, we make the following assumptions.
+%
+\begin{itemize}\label{list: reg assumptions}
+%
+	\item[{\sf A1.}] $t\mapsto \xi(t)$ is bounded Lipschitz: $\|\xi\|_{\infty}, \|\xi\|_{\text{Lip}}\leq K_1$, with $\int_0^{\infty}\xi(t) \diff  t=\infty$.
+%
+\item[{\sf A2.}] The activation function $( \mathbf{x}, \mathbf{\theta})\mapsto \sigma_*( \mathbf{x}; \mathbf{ \theta})$ is bounded, with sub-Gaussian gradient: $\|\sigma_*\|_{\infty}\leq  K_2$, $\|\nabla_{ \mathbf{ \theta}}
+\sigma_*( \mathbf{X}; \mathbf{\theta})\|_{\psi_2}\leq K_2$. Labels are bounded $|y_k|\leq K_2$.
+%
+\item[{\sf A3.}] The gradients $\mathbf{\theta}\mapsto \nabla V( \mathbf{\theta})$, $(\mathbf{\theta}_1,\mathbf{\theta}_2)\mapsto \nabla_{\mathbf{\theta}_1}U(\mathbf{\theta}_1,\mathbf{\theta}_2)$  are bounded, Lipschitz continuous 
+(namely $\| \nabla_{\mathbf{\theta}}V(\mathbf{\theta}) \|_2$, $\|\nabla_{\mathbf{\theta}_1}U(\mathbf{\theta}_1,\mathbf{\theta}_2)\|_2\leq K_3$, $\|\nabla_{\mathbf{\theta}}V(\mathbf{\theta})-\nabla_{\mathbf{\theta}}V(\mathbf{\theta}')\|_2\leq K_3 \|\mathbf{\theta}-\mathbf{\theta}'\|_2$, $\|\nabla_{\mathbf{\theta}_1}U(\mathbf{\theta}_1,\mathbf{\theta}_2)-\nabla_{\mathbf{\theta}_1}U(\mathbf{\theta}'_1,\mathbf{\theta}_2')\|_2\leq K_3 \|(\mathbf{\theta}_1,\mathbf{\theta}_2)-
+(\mathbf{\theta}_1',\mathbf{\theta}_2')\|_2$).
+%
+\end{itemize}
+
+\begin{theorem}[PM. Nguyen et al. (2018)]\label{thm: mean field nguyen}
+Assume that conditions {\sf A1}, {\sf A2}, {\sf A3} hold.
+For $\rho_0\in\mathcal{P}(\R^D)$, consider SGD with initialization $(\mathbf{theta}^0_i)_{i\leq N}\sim_{iid}\rho_0$ and step size $s_k = \epsilon \xi(k \epsilon)$. For $t\geq 0$, let $\rho_t$ be the solution of PDE \ref{eq:GeneralPDE}.
+Then, for any fixed $t \geq 0$,  $\hat{\rho}^{(N)}_{\lfloor t / \epsilon \rfloor} \Rightarrow \rho_{t}$ almost surely along any sequence $(N,\epsilon = \epsilon_N)$ such that $N \to \infty$, $\epsilon_N \to 0$, $N/\log (N/\epsilon_N) \to\infty$ and $\epsilon_N \log(N / \epsilon_N)\to 0$.
+Further, there exists a constant $C$  (depending uniquely on the parameters $K_i$ of conditions {\sf A1}-{\sf A3}) such that,
+for any $f:\R^D\times \R\to\R$, with $\|f\|_{\infty}, \|f\|_{\text{Lip}}\leq 1$, $\epsilon\leq 1$,
+%
+\begin{align}\label{eq: big theorem nguyen}
+%
+&\sup_{k \in  [0, T/\epsilon] \cap \N}\Big|\frac{1}{N}\sum_{i=1}^N f(\mathbf{\theta}^{k}_i)- \int\!
+  f(\mathbf{\theta})  \rho_{k\epsilon}(\diff \mathbf{\theta}) \Big| \leq Ce^{CT}\,\text{Err}_{N,D}(z)\, ,\nonumber\\
+&\sup_{k \in  [0, T/\epsilon] \cap \N}\big|R_{N}(\mathbf{\theta}^{k})-R(\rho_{k\epsilon})\big| \leq Ce^{CT}\,\text{Err}_{N,D}(z)\, ,
+%
+\end{align} 
+%
+with probability $1- e^{-z^2}$ where $\text{Err}_{N,D}(z)$ is given by
+\begin{equation}
+	\sqrt{1/N\lor \epsilon}\cdot \left[ \sqrt{D + \log N/\epsilon}+z \right]
+\end{equation}
+
+\end{theorem}
+
+
+\begin{theorem}[Doob's martingale inequality]\label{thm: Doob}
+	Let $ (\F_{t})_{t\geq 0}$ be a filtration on the probability space $ (\Omega, \F, \PP)$ and $ (M_{t})_{t\geq 0}$ be a continuous martingale adapted to the filtration $ (\F_{t})_{t\geq 0}$. Let $ p\geq 1$ and $ T>0$. If $\mathbb{E}[|M_{T}|^{p}]<\infty$ and $ \lambda > 0$, then 
+	\begin{equation}
+		\PP\left(\displaystyle\sup_{t\in [0,T]}|M_{t}|\geq \lambda\right)\leq \frac{\mathbb{E}[|M_{T}|^{p}]}{\lambda^{p}}
+	\end{equation}
+	
+\end{theorem}
+
+\begin{boxlemma}[Hoeffding's Lemma]\label{lemma: Hoeffding}
+Let $ (M_{n})_{n\in\N}$ be a martingale adapted to the filtration $ (\F_{n})_{n\in\N}$ such that for some sequence $ c_{1}, c_{2},\cdots$ of real numbers 
+\begin{equation}
+	\PP(|M_{n}-M_{n-1}|\leq c_{n}) = 1 \quad \text{for all } n\in N.
+\end{equation}
+Then for all $ x\geq 0$ and all $ n\geq 1$,
+\begin{equation}
+    \PP(|M_{n}-M_{n-1}|\geq x)\leq 2 \exp \left( -\frac{1}{2}x^{2}\Big/\displaystyle\sum^{n}_{i=1}c_{i}^{2}  \right)
+\end{equation}
+
+
+\end{boxlemma}
+
+
+\begin{proof}{(Rough Sketch)}
+	The conditions {\sf A1} and {\sf A3} guarantee the existence and uniqueness of solutions to the PDE \ref{eq:GeneralPDE}, interpreted in the weak sense. The discrete SGD dynamics $ (\mathbf{\theta}_{i}^{k})_{i\leq N }$ approximate the continuous time dynamics. Then the proof becomes technical and the aim is to control error terms incurred when comparing the deviation of the discrete and continuous dynamics in probability.\\ 
+
+    Notice we can also re-express \ref{eq: big theorem nguyen} in terms of the empirical measure to deduce for all function $ f$ with $ \norm{f}_{\text{Lip}}\leq 1$, $ \pi \in \mathcal{C}(\hat{\rho}^{N}_{k}, \rho_{k\epsilon})$ and $ k\in [0,T/\epsilon]$
+
+\begin{equation}
+	\begin{array}{ll}
+	\Big|\displaystyle\int f(\theta)\hat{\rho}^{N}_{k}(\diff \theta)- \int\!
+	f(\mathbf{\theta})  \rho_{k\epsilon}(\diff \mathbf{\theta}) \Big| &\leq  \displaystyle\int |f(\theta)-f(\phi)|\pi(\diff \theta, \diff \phi)\\ 
+									  &\leq \displaystyle\int \norm{\theta-\phi}_{2}\pi(\diff \theta, \diff \phi)\leq W_{2}(\hat{\rho}^{N}_{k}, \rho_{k\epsilon}) 
+
+\end{array}
+\end{equation}
+using Cauchy-Schwarz and taking the infimum over such couplings. Hence we obtain the bound 
+\begin{equation}
+    \sup_{k \in  [0, T/\epsilon] \cap \N}\Big|\displaystyle\int f(\theta)\hat{\rho}^{N}_{k}(\diff \theta)- \int\!
+	f(\mathbf{\theta})  \rho_{k\epsilon}(\diff \mathbf{\theta}) \Big|\leq  \sup_{k \in  [0, T/\epsilon] \cap \N} W_{2}(\hat{\rho}^{N}_{k}, \rho_{k\epsilon}) 
+\end{equation}
+This estimate helps one get a sense of the terms that need to be controlled in the proof of the theorem.\\
+
+	Moreover, the sub-gaussianity and Lipscitz continuity feature prominently and the tools used to achieve bounds on the probabilities are mainly Doob's maximal inequality \ref{thm: Doob} and Hoefdding's lemma \ref{lemma: Hoeffding}. 
+\end{proof}
+
+The PDE formulation leads to several insights and simplifications. One can exploit symmetries in the data distribution $ \PP$ for instance. If $ \PP$ has rotational symmetry, then one can look for solutions to the PDE problem that share such rotational symmetry, thereby reducing the dimensionality of the problem which facilitates theoretical and numerical analysis. This is manifest in the case of two isotropic Gaussians considered later. Such symmetry cannot be achieved when considering the discrete dynamics since no set of poitns $ \mathbf{\theta}_{1}, \cdots, \mathbf{\theta}_{N}\in \R^{d}$ is invariant under rotations (excluding trivial cases).
+
+\newpage
+\subsection{MNIST data classification}\label{sec: MNIST classification}
+
+I studied the proofs for the propagation of chaos and the mean-field limit of the distribution of neural network weights in the 2019 paper of Spiliopoulos and Sirgiano entitled ‘Mean Field Analysis of Neural Networks: A Law of Large Numbers’ and its companion paper \cite{sirignano2019meanfieldanalysislln}, \cite{sirignano2019meanfieldanalysisclt}. Note there are many similarities in the framerowk between these papers and the work in \cite{Mei_2018}, though the gradient of the loss being Lipschitz is dropped. I did some background reading to supplement my understanding of the above papers of a book entitled ‘Markov Processes: Characterization and Convergence’ by Stewart N. Ethier, Thomas G. Kurtz \cite{ethier2009markov}, specifically the chapter on weak convergence of probability measures with values in Skorokhod spaces defined below.
+
+\begin{boxdef}[Skorokhod space]\label{def: skorokhod}
+	Let $  E = (\mathcal{M}, d)$ be a metric space and $ T>0$. Then, we define the \underline{Skorokhod space} 
+\begin{equation}
+	\mathcal{D}([0,T]; E) \coloneqq \{f:[0,T]\to E: f \text{ is cadlag}\}.
+\end{equation}
+
+\end{boxdef}
+
+This mean field convergence of the empirical measures induced by the weights of neural networks was also performed in papers \cite{sirignano2019meanfieldanalysisclt} and \cite{sirignano2019meanfieldanalysislln}. In a similar setup to \cite{Mei_2018}, the SGD algorithm produces obtains empirical measures expended in a piewewise constant manner to $\mu^{N}_{t} = \hat{\rho}^{N}_{\lfloor Nt \rfloor}$ for $ t\geq 0$, see figure \ref{fig: piecewise constant extension of function}. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/piecewise-constant.png}
+    \caption{Piecewise constant extension of scaled empirical measures $ \mu^{N}_{t}$.}
+    \label{fig: piecewise constant extension of function}
+\end{figure}
+
+Now, by construction, we have that the empirical measure process $ (\mu^{N}_{t})_{t\in [0,T]}$ is an element of the space of locally finite Borel measures on $ \R^{d}$, $ \mathcal{M}(\R)^{d}$. One can define the notion of \textit{vague convergence} of a family $ (\nu_{n})_{n\in \N} \stackrel{v}{\to} \nu\in \mathcal{M}(\R^{d})$ by 
+
+\begin{equation}\label{eq: vague conv}
+	\int_{\R^{d}}f \diff \nu_{n}\stackrel{n\to \infty}{\to} \int_{\R^{d}}f \diff \nu_{n} \quad  f\in \hat{\mathcal{C}}(\R^{d}).
+\end{equation}
+where $ \hat{\mathcal{C}}_(\R^{d})$ denotes the space of all bounded continuous non-negative functions with bounded support. Note that the family of maps $\{\pi_{f}:f\in \hat {\mathcal{C}}_{\R^{d}}\} $ induces the vague topology $ \mathcal{T}$: 
+
+\begin{boxlemma}[Vague topology on $  \mathcal{M}_{ \mathcal{S}}$]\label{lemma: vague topology}
+Let $  \mathcal{S}$ be a complete separable metric space, then there exists a topology $  \mathcal{T}$ on $  \mathcal{M}_{ \mathcal{ S}}$ such that
+\begin{itemize}
+\item $ \mathcal{T}$ induces the convergence $ \nu_{n}\stackrel{v}{\longrightarrow}\nu$ in \ref{eq: vague conv},
+\item $ \mathcal{M}_{ \mathcal{S}}$ is Polish under $  \mathcal{T}$,
+\item $  \mathcal{T}$ generates the Borel sigma algebra $\sigma(\{\pi_{f}:f\in \hat {\mathcal{C}}_{\R^{d}}\})$.
+\end{itemize}
+
+\end{boxlemma}
+
+Hence, we have that the scaled empirical measure $ (\mu^{N}_{t})_{t\in [0,T]})$ is a random element of $ \mathcal{D}_{ \mathcal{M}(\R)^{d}} \coloneqq \mathcal{D}([0,T]; ( \mathcal{M}(\R^{d}), d_\mathcal{T}))$, where $d_ \mathcal{T}$ is the induced metric from \ref{lemma: vague topology}. Note that $  \mathcal{D}_{ \mathcal{M}(\R)^{d}}$ space is a Polish space in its own space endowed with the \textit{Skorokhod topology} with well-understood criteria for compactness that feature prominently in the proof of the main theorem in \cite{sirignano2019meanfieldanalysislln}, and \cite{sirignano2019meanfieldanalysisclt}.\\
+
+The main result of the paper \cite{sirignano2019meanfieldanalysislln} concerns the convergence in distribution of $ \mu^{N}_{t}$ in the aforementioned Skorokhod space under certain the `reasonable` structural assumptions
+
+\begin{itemize}\label{assumptions spiliopoulos}
+	\item[{\sf S1.}] The activation function $\sigma\in C^{2}_{b}(\mathbb{R})$, i.e. $\sigma$ is twice continuously differentiable and bounded.
+\item[{\sf S2.}] The sequence of data samples $(x_k, y_k)$ is i.i.d. from a probability distributed $\pi(dx,dy)$ such that $\mathbb{E}\parallel x_{k}\parallel^{4}+\mathbb{E}|y_{k}|^{4}$ is bounded.
+\item[{\sf S3.}] The randomly initialized parameters $(c_0^i, w_0^i)$ are i.i.d. with a distribution $\bar \mu_0$ such that $\mathbb{E}[ \exp \big{(} q | c_0^i | \big{)} ] < C$ for some $0 < q < \infty$ and $\mathbb{E}[ \parallel w_0^i \parallel^4 ] < C$.
+
+\end{itemize}
+
+\begin{theorem}[Spiliopoulos LLN]\label{thm: spilopoulos lln}
+	For all $ T>0$, the scaled empirical measure $ \mu^{N}_{t}$ on $ [0,T]$ converges in distribution to a
+ limit measure $ \bar{\mu}_{t}$ with values in $  \mathcal{D}_{\mathcal{M}_{\R^{d}}} $ as $ N\to \infty$.
+\end{theorem}
+
+\begin{remark}
+    $ \mu_{t}$ has a characterisation as the unique deterministic weak solution to a PDE, interpreted in the weak sense. Also, since the limiting measure $ \mu_{t}$ is deterministic for all $ t\geq 0$, we have the stronger convergence in Probability, that is for all $ \delta >0$
+    \[
+    \displaystyle \lim_{N\to \infty}\PP(d_{  \mathcal{D}_{\mathcal{M}_{\R^{d}}} }(\mu^{N}, \bar{\mu})\geq \delta) = 0 
+    \]
+    
+\end{remark}
+
+
+Moreover, I read the companion paper of Spiliopoulos (2019) \cite{sirignano2019meanfieldanalysisclt} where the authors proved a CLT for a one-layer neural network. To this end, the authors in \cite{sirignano2019meanfieldanalysisclt} the fluctuation process 
+\begin{equation}
+	\eta^{N}_t = \sqrt{N}(\mu^{N}_{t}-\bar{\mu}_{t})
+\end{equation}
+The main result in \cite{sirignano2019meanfieldanalysisclt} is that asymptotically, as $ N\to \infty$, the fluctuations converge in distribution, in a way made precise below, to some measure-valued process $ \bar{\eta}$, where satisfies a stochastic partial differential equation. This result achieves to give a characterisation of the fluctuations of the finite empirical measure $ \mu^{N}$ around its mean-field limit $ \bar{\mu}$ for large $ N$ . It is noted that the $ \bar{\eta}$
+has a Gaussian distribution.
+
+\begin{theorem}[Spiliopoulos CLT]\label{thm: spiliopoulos CLT}
+	Under the 'reasonable' assumptions \ref{assumptions spiliopoulos}, $J \geq 3\left \lceil \frac{d}{2}\right\rceil+7$ and any $ 0<T<\infty$. The sequence
+	\begin{equation} 
+		((\eta^{N}_{t})_{t\in [0,T]})_{N\in \N}\stackrel{d}{\to} ((\bar{\eta}_{t})_{t\in [0,T]})_{N\in \N}
+	\end{equation}
+	in $\mathcal{D}([0,T];W^{-J,2}), \text{ as } \N\to \infty$ where $ W^{-J,2}$ is the space of all continuous linear functionals on the \textit{Sobolev space} $ W^{J,2}_{0}(\Theta)$, where $ \Theta\subseteq\R^{d}$ is a bounded domain independent of $ N$.
+\end{theorem}
+
+\begin{remark}
+	For a brief introduction into the Sobolev spaces mentioned above, refer to section $ 2$ to in \cite{sirignano2019meanfieldanalysisclt}.
+\end{remark}
+
+In \cite{sirignano2019meanfieldanalysislln}, the authors prove that the neural network has the  ``propagation of chaos" property under suitable structural assumptions mentioned therein.
+\begin{theorem} \label{TheoremChaos}
+Consider $T<\infty$ and let $t\in(0,T]$. Define the probability measure $\rho^N_t \in \mathcal{M} (\mathbb{R}^{(1+d)N})$ where
+\begin{eqnarray*}
+\rho^N_t(dx^1, \ldots, dx^N) = \mathbb{P}\left[ (c_{\lfloor N t \rfloor} ^1, w_{\lfloor N t \rfloor}^1) \in dx^1, \ldots, (c_{\lfloor N t \rfloor}^N, w_{\lfloor N t \rfloor}^N) \in dx^N \right].
+\end{eqnarray*}
+Then, the sequence of probability measures $\rho^N_\cdot$ is $\bar \mu_\cdot$-chaotic. That is, for $k\in\mathbb{N}$
+\begin{eqnarray}
+	\displaystyle\lim_{N \rightarrow \infty } \bracket{f_1(x^1) \times \cdots \times f_k(x^k)}{\rho_\cdot^N(dx^1, \ldots, dx^N)} = \prod_{i=1}^k \bracket{f_i}{\bar \mu_{\cdot}}, \phantom{....} \forall f_1, \ldots, f_k \in C^{2}_{b}(\mathbb{R}^{1+d}).
+\label{PropChaos}
+\end{eqnarray}
+
+\end{theorem}
+
+This means that as $N \rightarrow \infty$, the neural network converges (in probability) to a deterministic model. This is despite the fact that the neural network is randomly initialized and it is trained on a random sequence of data samples via stochastic gradient descent.
+The propagation of chaos result (\ref{PropChaos}) indicates that, as $N \rightarrow \infty$, the dynamics of the weights $(c^i_k, w^i_k)$ will become independent of the dynamics of the weights $(c^j_k, w^j_k)$ for any $i \neq j$. Note that the dynamics $(c^i_k, w^i_k)$ are still random due to the random initialization. However, the dynamics of the $i$-th set of weights will be uncorrelated with the dynamics of the $j$-th set of weights in the limit as $N\rightarrow\infty$.\\ 
+
+I thus implemented a single-digit classifier neural network with a single hidden layer satisfying the assumptions \ref{assumptions spiliopoulos},   using a sigmoid activation function, trained on the MNIST data set containing around $60,000$ images of hand-drawn digits. I tried to establish numerically whether one obtains convergence of the (asymptotically identical) distribution of any one of the parameters $ (c_{i})_{1\leq i\leq N}$, see figure \ref{fig: MNIST spiliopoulos}. The result seems to match that presented in \cite{sirignano2019meanfieldanalysislln}. 
+
+
+\begin{figure}[H]\centering
+\subfloat[$ N=10^{2}$, $ 10^2$ epochs.]{\label{a}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-100.png}}\hfill
+\subfloat[$ N=10^{3}$, $ 10^3$ epochs.]{\label{b}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-1000.png}}\par 
+\subfloat[$ N= 5\cdot 10^{3}$, $ 5\cdot 10^3$ epochs.]{\label{c}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-5000.png}}\hfill 
+\subfloat[$ N=10^{4}$, $ 10^4$ epochs.]{\label{d}\includegraphics[width=.5\linewidth]{images/MNIST-hist-N-10000.png}}
+\caption{Plots of histograms of parameters connecting hidden layer outputs to the final output for different values of $N$ and epochs in line with Theorem \ref{thm: spilopoulos lln}.}
+\label{fig: MNIST spiliopoulos}
+\end{figure}
+
+\section{Non-convex landscape}
+
+\subsection{Approaches}
+
+At this point in the project, the focus started to shift from the theoretical mean-field analysis of neural network algorithms towards studying possible approaches to alleviate the failure of SGD to reach a global minimum by potentially getting stuck in very sharp, yet non-global minima when the potential is wildly non-convex.\\ 
+
+In this direction, I read my supervisor's paper on shallow minima: ‘The sharp, the flat and the shallow: Can weakly interacting agents learn to escape bad minima?’, \cite{kantas2019sharpflatshallowweakly}. In the paper, the authors review several variants of SGD and illustrate that a system of interacting, rather than i.i.d., agents (essentially an interacting particle system) performing gradient descent can help to smooth out sharp minima and thus implicitly convexify
+the loss function.\\ 
+
+The setting is a modification of the Stochastic Gradient Langevin Dynamics (SGLD) framework:
+\begin{equation}\label{eq: SGLD}
+	\diff X_{t} = -\nabla \Phi(X_{t})\diff t + \sqrt{2}\beta \diff  B_{t}, \quad X_{0}\sim \eta_{0}
+\end{equation}
+where $ \Phi$ the loss function $ B_{t}$ is a standard Brownian motion and $ \eta_{0}$ is the initial distribution. Three approaches are discussed before a synthesis of the last two yields their proposed algorithm, see \ref{alg: mf hom sgld}.
+
+
+
+\subsubsection{Regularise potential directly by convolution}\label{sec:direct smoothing}
+
+To eliminate sharp local minima one could replace the gradient term
+in the basic gradient descent algorithm with a smoother version. In order to
+eliminate these local minima one could simulate the gradient descent
+dynamics of a ``smoothed'' version of the cost function instead
+\begin{equation}
+dX_{t}=-\nabla\Phi^{h}(X_{t})dt\label{eq:ode_h}
+\end{equation}
+where we denote 
+\begin{equation}
+\Phi^{h}\left(y\right)=(G_{h}\star\Phi)(y)=\int G_{h}(y-x)\Phi(x)dx,\label{eq:integrate phi}
+\end{equation}
+i.e. $\star$ denotes the convolution. A typical choice for the smoothing
+kernel $G_{h}$ is the Gaussian kernel with variance $h$ 
+\[
+G_{h}(z)=\frac{1}{\left(2\pi h\right)^{d/2}}\exp\left(-\frac{\left\Vert z\right\Vert ^{2}}{2h}\right).
+\]
+For technical conditions for the above modification of the gradient, see the references in \cite{kantas2019sharpflatshallowweakly}. Regardless
+of the choice of the smoothing kernel, $\Phi^{h}$ can be interpreted
+as an expectation 
+
+\[
+\Phi^{h}\left(x\right)=\int\Phi(x+y)\mu(dy),
+\]
+for a suitably chosen probability measure $\mu$. Furthermore, (under
+appropriate conditions) 
+\begin{equation}
+\nabla\Phi^{h}\left(x\right)=\int\nabla\Phi(x+y)\mu(dy).\label{eq:smooth_grad}
+\end{equation}
+
+Loosely speaking the effect of $\mu$ here is to smooth $\Phi$.
+It is natural to ask how one designs $\mu$ (or $G_{h}$)
+to get the desired effect of smoothing of $\Phi$. There a multiple complications with such an approach, a pressing one being that computing the integral in \ref{eq:integrate phi}
+for the type of loss functions that appear in machine learning applications
+is intractable. To help mitigate these issues, the authors look at approaches where a smoothing measure $\mu$ does not act directly on $\Phi$ and is constructed from the stochastic process itself.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\subsubsection{Regularise the potential implicitly weakly interacting agents}\label{sec: weakly interacting agents}
+
+An alternative approach is to use interacting SGLD, as opposed to
+i.i.d. copies of the Langevin dynamics~\ref{eq: SGLD}. In \cite{kantas2019sharpflatshallowweakly}, a system of interacting SGLD of the form 
+\begin{align}
+dX_{t}^{i} & =-\nabla\Phi(X_{t}^{i})dt-\big(\nabla D\star\eta_{t}^{N}\big)(X_{t}^{i})dt+\sqrt{2\beta^{-1}}dB_{t}^{i},\label{eq:interacting_sde}
+\end{align}
+where $i=1,\ldots,N,$ $\eta_{t}^{N}=\frac{1}{N}\sum_{i=1}^{N}\delta_{X_{t}^{i}}$,
+$X_{0}^{i}\sim\eta_{0}(\cdot)$. Compared to the i.i.d. SGLD \ref{eq: SGLD},
+the dynamics \ref{eq:interacting_sde} uses $D(x,y)$ as an interaction
+potential, taken to be the so-called Curie-Weiss interaction
+\begin{equation}
+D(x,y)=\frac{\lambda}{2}\|x-y\|^{2}\label{e:inter}
+\end{equation}
+so that each particle experiences a linear attractive (mean reverting)
+force to the empirical mean of all particles 
+\[
+\nabla D\star\eta_{t}^{N}(X_{t}^{i})=\lambda\left(X_{t}^{i}-\frac{1}{N}\sum_{j=1}^{N}X_{t}^{j}\right).
+\]
+The framework developed here can be conceived of as an abstraction of popular
+machine learning algorithms, with ample references made in \cite[p. 4]{kantas2019sharpflatshallowweakly}.\\
+
+Under appropriate assumptions
+on the loss function, and on the initial conditions the position of
+each agent converges, in the limit $N\rightarrow\infty$ to the solution
+of the McKean SDE 
+\begin{align*}
+d\bar{X}_{t} & =-\nabla\Phi(\bar{X}_{t})dt-\nabla D\star\eta_{t}(\bar{X}_{t})dt+\sqrt{2\beta^{-1}}dB_{t},\\
+\eta_{t} & =\mathcal{L}aw\left(\bar{X}_{t}\right).
+\end{align*}
+The density of the law of the process $\bar{X}_{t}$ is given by the
+McKean-Vlasov equation: 
+\begin{equation}
+\partial_{t}\eta=\nabla\cdot\left(\eta\nabla\left(\beta\log\eta+\Phi+D\star\eta\right)\right),\quad\eta(0,\cdot)=\eta_{0}(\cdot).\label{e:mc-vl}
+\end{equation}
+
+This approach uses $\Phi+D\star\tilde{\eta}$ instead of $\Phi$ and acts to regularise
+or smooth out the cost function. From an optimization point of view,
+substituting $-\nabla\Phi(x)-\nabla D\star\eta_{t}^{N}(x)$ and using
+a linear interaction for $\nabla D$ is equivalent to using an $\ell_{2}$-penalty
+in the objective function for the constraint: $X_{t}^{i}=\frac{1}{N}\sum_{j=1}^{N}X_{t}^{j}$,
+for each agent $i$. Therefore, for an appropriate choice of the interaction
+strength $\lambda$, the objective function is approximately convex.
+
+\subsubsection{Homogenisation}
+
+In the previous section \ref{sec: weakly interacting agents} the empirical measure $\eta_{t}^{N}$ was used
+to smooth the potential based on empirical properties of interacting
+agents. Now, the approach that
+was developed in \cite{Chaudhari2017DeepRP} can be used to convert \ref{eq: SGLD}
+into the following gradient descent algorithm: 
+\begin{equation}
+d\tilde{X}_{t}=-\nabla\Phi^{\beta,\gamma}(\tilde{X}_{t})dt,\quad\Phi^{\beta,\gamma}\left(x\right)=\int\Phi(x-y)\rho_{\infty}^{x}(dy),\label{eq:hom_sde_lim}
+\end{equation}
+is briefly discussed, where $\rho_{\infty}^{x}$ is the invariant measure of $Y_{t}$ that
+appears in the limit when $\epsilon\rightarrow0$ for the following
+fast/slow SDE system \begin{subequations}\label{eq:hom_sde_v2} 
+\begin{align}
+dX_{t} & =-\nabla\Phi(X_{t}-Y_{t})dt\label{eq:hom_sde_v2_1}\\
+dY_{t} & =-\frac{1}{\epsilon}\left(\frac{1}{\gamma}Y_{t}-\nabla\Phi(X_{t}-Y_{t})\right)dt+\sqrt{\frac{2\beta^{-1}}{\epsilon}}dB_{t}\label{eq:hom_sde_v2_2}
+\end{align}
+\end{subequations}The parameter $\epsilon$ measures scale separation.
+The limit $\epsilon\rightarrow0$ can be justified using multiscale
+analysis. Note that this is a gradient
+scheme for the modified loss function $\Phi(x-\frac{y}{\epsilon})+\frac{1}{2\gamma}\left\Vert \frac{y}{\epsilon}\right\Vert ^{2}$.\\ 
+
+It is noted in \cite{kantas2019sharpflatshallowweakly} that $\gamma$ acts as a regularization parameter, precisely like the inverse of the interaction strength $\lambda$
+in the previous section. We emphasize the similarities between~\ref{eq:integrate phi}
+and \ref{eq:hom_sde_lim}. It is important to note that the smoothed loss function in \ref{eq:hom_sde_lim}
+can also be calculated via convolution with a Gaussian kernel: 
+\begin{equation}
+\Phi^{\beta,\gamma}(x)=\frac{1}{\beta}\log\Big(G_{\beta^{-1}\gamma}\star\exp(-\beta\Phi)\Big).\label{e:phi-cole-hopf}
+\end{equation}
+This is the Cole-Hopf formula for the solution of the viscous Hamilton-Jacobi
+equation with the loss function $\Phi$ as the initial condition,
+posed on the time interval $[0,\gamma]$. The larger $\gamma$ is,
+the more regularized the effective potential (or relative entropy)
+$\Phi^{\beta,\gamma}(x)$ is. \\ 
+
+Importantly for the authors in \cite{kantas2019sharpflatshallowweakly}, in~\cite{Chaudhari2017DeepRP} there is an equivalent formulation
+to~\ref{eq:hom_sde_v2}: \begin{subequations}\label{eq:hom_sde}
+\begin{align}
+dX_{t} & =-\frac{1}{\gamma}(X_{t}-Y_{t})dt\label{eq:hom_sde1}\\
+dY_{t} & =-\frac{1}{\epsilon}\left(\nabla\Phi(Y_{t})-\frac{1}{\gamma}(X_{t}-Y_{t})\right)dt+\sqrt{\frac{2\beta^{-1}}{\epsilon}}dB_{t}.\label{eq:hom_sde2}
+\end{align}
+\end{subequations} Here the regularized cost appears as $\Phi(\frac{y}{\epsilon})+\frac{1}{2\gamma}\left\Vert x-\frac{y}{\epsilon}\right\Vert ^{2}$.
+This form is more convenient for the numerical implementation and
+is the one that will be used in Algorithm \ref{alg: mf hom sgld}.
+
+
+\subsubsection{Synthesis: combine both multi-scale analysis and weakly interacting gents for MF Hom SGLD}
+In brief this algorithm, \ref{alg: mf hom sgld} corresponds to a discretization of the dynamics of gradient descent against a potential with an $ \ell_{2}$ penalty and a regularized version of the original potential $\Phi$, using the method introduced by Chaudhari et al. (2018). More precisely, combining~\ref{eq:hom_sde_lim} with \ref{eq:interacting_sde}
+one obtains: 
+\begin{align}
+dX_{t}^{i} & =-\frac{1}{\gamma}(X_{t}^{i}-Y_{t}^{i})dt-\lambda\left(X_{t}^{i}-\frac{1}{N}\sum_{j=1}^{N}X_{t}^{j}\right)dt\label{eq:hom_mf_sde1}\\
+dY_{t}^{i} & =-\frac{1}{\epsilon}\left(\nabla\Phi(Y_{t}^{i})-\frac{1}{\gamma}(X_{t}^{i}-Y_{t}^{i})\right)dt+\sqrt{\frac{2\beta^{-1}}{\epsilon}}dW_{t}^{i}\label{eq:hom_mf_sde2}
+\end{align}
+This scheme was tested numerically in the context of learning for the single layer neural network (see Section \ref{sec: neural net single layer}) with a sufficiently small value of $\epsilon$,
+to approximate better the homogenized limit, as per \cite{kantas2019sharpflatshallowweakly}. The theoretical justification of this algorithm requires the study of the joint limits $\epsilon\rightarrow0$
+and $N\rightarrow+\infty$ (see \cite[p. 6]{kantas2019sharpflatshallowweakly} for details and references). \\ 
+
+
+To discretise \ref{eq:hom_mf_sde1}-\ref{eq:hom_mf_sde2} effectively
+for small $\epsilon$ I followed \cite{kantas2019sharpflatshallowweakly} and used the heterogeneous multiscale method \cite{weinan2005multiscalesde} in Algorithm \ref{alg: mf hom sgld}:
+
+\begin{examplesblock}{MF Hom SGLD}\label{alg: mf hom sgld}
+\begin{algorithmic}
+	\Require $\mathsf{X}_{0}^{i}\sim\eta_{0}, \lambda \sim 1 \Delta >0$ \Comment{ $ \Delta$ is a step size}
+\For{$n\geq 1, i=1,\ldots,N$}
+\State Set $\mathsf{Y}_{n,0}^{i}=\mathsf{Y}_{n-1,m'+M-1}^{i}$;
+\For{$m=1,\ldots,M$}  
+\State \[\begin{array}{ll}
+	\mathsf{Y}_{n,m}^{i} &=\mathsf{Y}_{n,m-1}^{i}-\frac{\delta}{\epsilon}\left(\nabla\Phi(\mathsf{Y}_{n,m-1}^{i})-\frac{1}{\gamma}(\mathsf{X}_{n-1}^{i}-\mathsf{Y}_{n,m-1}^{i})\right)\\&+\sqrt{\frac{2\beta^{-1}\delta}{\epsilon}}Z_{n,m}^{i};\:Z_{n,m}^{i}\sim N(0,I).
+\end{array}\]
+\EndFor
+\State Compute average $\mathcal{Y}_{n}^{i}=\frac{1}{(m'+M-1)}\displaystyle\sum_{m=m'}^{m'+M-1}\mathsf{Y}_{n,m-1}^{i}$
+\State Update
+ \State  
+\begin{align*}
+\mathsf{X}_{n}^{i} & =\mathsf{X}_{n-1}^{i}-\frac{1}{\gamma}(\mathsf{X}_{n-1}^{i}-\mathcal{Y}_{n}^{i})\Delta-\lambda\left(\mathsf{X}_{n-1}^{i}-\frac{1}{N}\displaystyle\sum_{j=1}^{N}\mathsf{X}_{n-1}^{i}\right)\Delta
+\end{align*}
+\EndFor 
+\end{algorithmic}
+\end{examplesblock}
+
+\subsubsection{Nesterov SGD}
+
+It is well-known that in the deterministic setting, the Nesterov gradient descent achieves acceleration over plain gradient descent. However, in the stochastic setting, this is not as clear \cite{liu2019acceleratingsgdmomentumoverparameterized} . I thus implemented a stochastic version of Nesterov's gradient descent algorithm below (where $ \tilde{\nabla}$ denotes the stochastic gradient, that is the sample mean of a batch's worth of iid samples of data).
+
+\begin{examplesblock}{Nesterov SGD}\label{alg: nesterov sgd}
+\begin{algorithmic}
+\Require $ m\in \N $, $ \gamma\in (0,1)$ and $ \eta_{1}>0$
+\State Initialise the parameters $(\mathbf{\theta}_{i})_{i\leq \N} \sim \rho_{0}$, that is according to some initial distribution $ \rho_{0}$.
+\While{loss is greater than tolerance}
+\State Compute stochastic gradient $\tilde{\nabla} $ using a mini-batch of some predetermined size $ m$.
+\State  \begin{eqnarray}\left.\begin{array}{lll}
+\mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
+\mathbf{u}_{t+1} &\leftarrow& (1+\gamma)\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t}.\end{array}\right.\label{eq:nesterovupdaterule}
+\end{eqnarray}
+\EndWhile
+
+\end{algorithmic}
+
+\end{examplesblock}
+
+I also came across the paper \cite{ odonoghue2012adaptiverestartacceleratedgradient}, which provided a scheme for the dynamic selection of the parameter $ \gamma$ in \ref{alg: nesterov sgd}, called gradient restarting. They prove in the case of convex potentials, acceleration over plain Nesterov is achieved, and I implemented the following algorithm to test its performance in the non-convex case. 
+
+\begin{examplesblock}{Gradient restarted Nesterov SGD}\label{alg: gradient restarted nesterov}
+\begin{algorithmic}
+\Require $ m\in \N $, $ \eta_{1}>0$ and $ \alpha = 1$
+\State $ \gamma = \frac{\alpha-1}{\alpha+2}<1$
+\State Initialise the parameters $(\mathbf{\theta}_{i})_{i\leq \N} \sim \rho_{0}$, that is according to some initial distribution $ \rho_{0}$.
+\While{loss is greater than tolerance}
+\State Compute stochastic gradient $\tilde{\nabla}f(u_{t}) $ using a mini-batch of some predetermined size $ m$.
+\State  \begin{eqnarray}\left.\begin{array}{lll}
+\mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
+\mathbf{u}_{t+1} &\leftarrow& (1+\gamma)\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t}.\end{array}\right.
+\end{eqnarray}
+\If{ $\tilde{\nabla}f(\mathbf{u}_{t})^{T}\cdot (\mathbf{w}_{t+1}-\mathbf{w}_{t})>0  $} \Comment{Adaptive restart}
+\State $ \alpha \leftarrow 1$
+\EndIf 
+\State $\alpha \leftarrow \alpha +1$
+\EndWhile
+
+\end{algorithmic}
+
+\end{examplesblock}
+
+\subsubsection{MaSS algorithm}
+
+ I also came across a paper entitled ‘Accelerating SGD with momentum for over-parameterised learning’ by Liu and Belkin, where the authors claim that Nesterov SGD with any parameter selection does not in general provide acceleration over ordinary SGD’ (as opposed to the acceleration provided by the deterministic Nesterov GD over plain GD). There the authors come up with a modified algorithm which they call ‘Momentum-added stochastic solver (MaSS)’ and prove that for a strongly convex loss, in a certain batch regime (batch size $ <m_{1}^{*}$), i.e. the `linear` regime MaSS out-performs both Nesterov and plain SGD. They observe that the larger the batch size, the closer the MaSS algorithm becomes to deterministic Nesterov gradient descent  They also demonstrate numerically that MaSS also outperforms Nesterov and plain SGD on deep neural networks, which are non-convex. When testing examples, we use relatively small batch sizes to observe this acceleration.
+
+ \begin{eqnarray}\left.\begin{array}{lll}
+\mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
+\mathbf{u}_{t+1} &\leftarrow& (1+\gamma)\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t} + \underline{\color{blue}  \eta_2 \tilde{\nabla}f(\mathbf{u}_t)}.\end{array}\right.\label{eq:firstupdaterule}
+\end{eqnarray}
+
+Here, $\tilde{\nabla}$ represents the stochastic gradient. The step size $\eta_1$, the  momentum parameter $\gamma \in (0,1)$ and the compensation parameter $\eta_2$ are independent of $t$. Following the authors in \cite{liu2019acceleratingsgdmomentumoverparameterized}, I implemented the algorithm using an equivalent form for the update rule \ref{eq:firstupdaterule}(introducing an additional variable $\mathbf{v}$):
+
+\begin{examplesblock}{MaSS accelerated SGD}\label{alg: MaSS sgd}
+\begin{algorithmic}
+\Require $ m\in \N $, $ \eta_{1}, \eta_{2}>0$ and $ \alpha = 1$
+\State $ \gamma = \frac{\alpha-1}{\alpha+2}<1$
+\State Initialise the parameters $(\mathbf{\theta}_{i})_{i\leq \N} \sim \rho_{0}$, that is according to some initial distribution $ \rho_{0}$.
+\While{loss is greater than tolerance}
+\State Compute stochastic gradient $\tilde{\nabla}f(u_{t}) $ using a mini-batch of some predetermined size $ m$.
+\State  \begin{eqnarray}\left.\begin{array}{lll}
+\mathbf{w}_{t+1} &\leftarrow& \mathbf{u}_t - \eta_1 \tilde{\nabla}f(\mathbf{u}_t), \\
+\mathbf{u}_{t+1} &\leftarrow& (1+\gamma)\mathbf{w}_{t+1} - \gamma \mathbf{w}_{t} + \underline{ \eta_2 \tilde{\nabla}f(\mathbf{u}_t)}.\end{array}\right.
+\end{eqnarray}
+\If{ $\tilde{\nabla}f(\mathbf{u}_{t})^{T}\cdot (\mathbf{w}_{t+1}-\mathbf{w}_{t})>0  $} \Comment{Adaptive restart}
+\State $ \alpha \leftarrow 1$
+\EndIf 
+\State $\alpha \leftarrow \alpha +1$
+\EndWhile
+
+\end{algorithmic}
+
+\end{examplesblock}
+  
+I used a variety of batch sizes, from $m=1 $ to the classification problems in \cite{Mei_2018} and for the MNIST single-digit classification neural networks from \cite{sirignano2019meanfieldanalysislln}, to $ m=10^{2}$ for the $ 3-$sphere spin function and for the Muller Brown potential, classical variants of the algorithms are used, that is replacing the stochastic with the full gradient, corresponding to $ m \to \infty$. We also use the gradient-adaptive restarting to reset $ \gamma$ roughly when the change in weights points in the direction of the gradient, whose benefits were expanded upon in \cite{ odonoghue2012adaptiverestartacceleratedgradient}. 
+
+\newpage
+\subsection{Applications}
+
+\subsubsection{Centred Isotropic Gaussians}
+
+The authors in \cite{Mei_2018} were interested in numerically testing their PDE framework on the classification problem of Gaussians with the same mean. That is, assume the joint law $ \PP$ of $(\mathbf{x}, y) $ to be:
+\begin{equation}
+\begin{array}{cc}
+& \text{with probability }  1/2: y = +1, \mathbf{x}\sim N(0, (1+\Delta)^{2}\cdot\Id_{d})\\
+& \text{with probability } 1/2: y = -1, \mathbf{x}\sim N(0, (1-\Delta)^{2}\cdot\Id_{d})
+\end{array}
+\end{equation}
+
+For the activation function set $ \sigma( \mathbf{x}; \mathbf{\theta}) = \sigma(\bracket{w}{ \mathbf{x}})$ where $ \sigma$ is a simple piecewise linear activation function.\\
+
+To try and reproduce the findings in \cite{Mei_2018},I implemented the SGD and the asymptotic PDE for the isotropic Gaussian case (SGD for isotropic gaussians with $10^7$ iterations) with $(w_i^0 )_{i\leq\N} \sim_{iid} \rho_0$, where $\rho_0$ is spherically symmetric. More specifically, I ran a monte carlo simulation of the discrete SGD dynamics and recorded the distance of the particles (hidden parameters $ \mathbf{\theta}$) after a set amount of iterations and aggregated them, producing figure \ref{fig: SGD histogram isotropic Gaussians}. It compares nicely with the corresponding simulation in the paper  by Nguyen et al. \cite{Mei_2018}. 
+
+\begin{figure}[H]
+\centering
+  \includegraphics[width=0.6\linewidth]{ images/Nguyen2018-SGD-1.png}
+  \caption{fig: SGD histogram for isotropic Gaussians\\ with $ 10^{7}$ iterations.}
+  \label{fig: SGD histogram isotropic Gaussians}
+\end{figure}
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/Nguyen2018-SGD-algos-risk-iso-gauss.png}
+    \caption{Plot of losses by various variants of SGD for the centred isotropic Gaussian.}
+    \label{fig: SGD iso gauss losses}
+\end{figure}
+
+I made some observations regarding the loss profiles in figure \ref{fig: SGD iso gauss losses}. Plain SGD perhaps coming as no surprise, performs the worst. Nesterov achieves acceleration over plain SGD, though not exponentially, and the decline in loss is rather slow. The MaSS algorithm slightly outperforms the Nesterov accelerated SGD, in line with theoretical predictions made in \cite{liu2019acceleratingsgdmomentumoverparameterized}, where the stochastic gradient seems to not be saturated.\\
+
+In the meantime, upon suggestion of my supervisor, I studied the possible non-uniqueness of stationary states for the mean field PDE that is derived in the paper by Mei et al.’ and its connection to the fact that SGD does not always converge to a near global optimum. There they introduce a non-monotone activation function
+\begin{equation}
+	\sigma_*( \mathbf{x}; \mathbf{\theta})= \sigma(\bracket{w}{x}), 
+\end{equation}
+where $\sigma(t) = -2.5$ for $t \leq 0, \sigma(t) = 7.5$ for $t \geq 1.5$, and $\sigma(t)$ linearly
+interpolates from $(0, -2.5)$ to $(0.5, -4)$, and from $(0.5, -4)$ to $(1.5, 7.5)$, see figure \ref{fig: non-monotone activation fn}.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/non-monotone-activation.png}
+    \caption{Non-monotone activation function $\sigma$.}
+    \label{fig: non-monotone activation fn}
+\end{figure}
+
+\noindent Depending on the initialization,
+\begin{equation}\label{eq: initialisation non-mon}
+(w^{0}_{i})_{i\leq N}\sim_{iid} N(0, \kappa^{2}/d\Id_{d})
+\end{equation}
+with $ \kappa = 0.4, 0.1$, the SGD converges to two different limits, one with a small risk,
+and the second with high risk (respectively). I reproduced this phenomenon in with a close match to the data presented in \cite{Mei_2018}, see figure \ref{fig: non-monotone simulation sgd vs pde}.\\
+
+I implemented a single layer neural network with a non-monotone activcation function (see figure \ref{fig: non-monotone activation fn}) and trained in on jointly Bernoulli and isotropic Gaussian data constructed in the 2018 paper by Mei et al. entitled 'A mean field view of the landscape of two-layer neural networks' using stochastic gradient descent. I studied limiting properties of the evolution of the network parameters, treated as interacting particles and made comparisons in monitoring losses incurred by the discretised SGD algorithm and the distributional dynamics introduced in the paper. I also studied the loss profiles incurred by running various algorithms from plain SGD, to second order algorithms like stochastic MaSS with gradient restart and an interacting particle system-based approach using the MF Hom SGLD algorithm.\\ 
+
+Again, similarly to the isotropic Gaussian case with a monotone activation function, the PDE dynamisc were simulated as in the paper by Nguyen et al., see \cite[p. 99]{Mei_2018} and the SGD seemed to match the distributional dynamics at least qualitatively. It is noteworthy to mention that in plot \ref{fig: avg distance pde sgd non-monotone} there is almost perfect agreement, beautifully showcasing the theory and validating the empirical results in \cite{Mei_2018}.
+
+    \begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/NGuyen2018-pde-sgd-risk-iso-gauss-non-mon.png}
+  \caption{Plot comparing PDE vs SGD risk for the\\  non-monotone activation $ \sigma$.}
+  \label{fig: pde vs sgd non-monotone}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/NGuyen2018-pde-sgd-iso-gauss-non-mon.png}
+  \caption{ Plot comparing the average distance of the weights $ \norm{w}_{2}$ in the PDE vs SGD simulations for the non-monotone activation.}
+  \label{fig: avg distance pde sgd non-monotone}
+\end{subfigure}
+\caption{ Separating two isotropic Gaussians, with a non-monotone activation function $ \sigma$. Here $N = 80, d = 32, \Delta = 0.5$. Continuous lines are prediction
+obtained with the Distributional Dynamics simplified to reflect the spherical symmetry of the problem.
+}
+\label{fig:  non-monotone simulation sgd vs pde}
+\end{figure}
+
+The non-monotone activation function in the neural network introduced some non-global minima the specific initialisation was around a non-global minimum, that is taking $ \kappa = 0.4$ in equation \ref{eq: initialisation non-mon}. This was observed in the loss profiles in figure \ref{fig: sgd risk iso gauss non-monotone}, where the plain SGD and MF Homm SGLD-driven trajectories seemed to get stuck, whereas Nesterov SGD and MaSS seem to avoid such this ‘bad minima’. Note that the MaSS algorithm does not achieve acceleration over stochastic Nesterov. This could be because of the high dimensionality of the problem and the non-convexity of the landscape, in addition to the batch size being around $ 10^2$, maybe being close to the saturation regime (see \cite{liu2019acceleratingsgdmomentumoverparameterized} for details), though this does not appear to be the case in the other classification loss profiles (see \ref{fig: risk anisotropic} and \ref{fig: SGD iso gauss losses}). The  MF-HomSGLD algorithm seems to take longer to converge, maybe the hyper-parameters of the algorithm are not optimally tuned, though it has inherently a higher computational complexity. This instance is the only in which it performs poorly, and may just be an artefact of poor parameter selection. 
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.6\linewidth]{images/Nguyen2018-SGD-algos-risk-iso-gauss-non-mon.png}
+    \caption{Risk for variants of SGD for Isotropic Gaussian with non-monotone activation.}
+    \label{fig: sgd risk iso gauss non-monotone}
+\end{figure}
+
+
+\subsubsection{Anisotropic Gaussians}
+Having extensively studied the isotropic Gaussian cse, I also decided to implement code for SGD and PDE simulations of risk for the non-isotropic Gaussian case of failure of SGD given two initializations motivated by the theory developed in \cite{Mei_2018}, following mostly the setup in \cite[p. 98--99]{Mei_2018}. More precisely, the data is now 
+\begin{equation}
+\begin{array}{cc}
+& \text{with probability }  1/2: y = +1, \mathbf{x}\sim N(0, \Sigma_+)\\
+& \text{with probability }  1/2: y = -1, \mathbf{x}\sim N(0, \Sigma_-)
+\end{array}
+\end{equation}
+where 
+\begin{equation}
+\begin{array}{cc}
+	\Sigma_+ &= \text{Diag}(\underbrace{(1+\Delta)^{2}, \cdots, (1+\Delta)^{2}}_{s_0}, \underbrace{1,\cdots, 1}_{d-s_0})\\ 
+ \Sigma_- &= \text{Diag}(\underbrace{(1-\Delta)^{2}, \cdots, (1-\Delta)^{2}}_{s_0}, \underbrace{1,\cdots, 1}_{d-s_0})
+\end{array}
+\end{equation}
+and as in the previous case, we choose $\sigma_*(\mathbf{x};\mathbf{\theta}_{i})=a_{i}\sigma_{\text{ReLU}}(\bracket{\mathbf{x}}{w_{i}}+b_{i})$  where $ \sigma_{\text{ReLU}}(x) = \max\{x,0\}$.\\ 
+
+The SGD runs fail to match the PDE profiles exactly, though qualitatively, they are similar (figure \ref{fig: anisotropic gaussian case plots}). As for the loss profiles in figure \ref{fig: sgd risk anisotropic gauss}, the second order methods MaSS and gradient restarted Nesterov achieve acceleration over plain SGD and Nesterov with $ \gamma = 0.9$. The latter two have very similar behaviour. The above suggests Nesterov with optimal $ \gamma$ could beat plain SGD.
+
+\vspace{3cm}
+\begin{figure}[H]
+ \begin{subfigure}{0.5\textwidth}
+   \centering
+   \includegraphics[width=\linewidth]{images/NGuyen2018-pde-sgd-gauss-anisotropic.png}
+   \caption{Mean value of $ a$ for PDE and SGD in the anisotropic Gaussian case.}
+   \label{fig: val a anisotropic}
+ \end{subfigure}%
+ \begin{subfigure}{0.5\textwidth}
+   \centering
+   \includegraphics[width=\linewidth]{images/NGuyen2018-pde-sgd-risk-gauss-anisotropic.png}
+   \caption{PDE vs SGD risk for Anisotropic Gaussian}
+   \label{fig: risk anisotropic}
+ \end{subfigure}
+ \caption{ PDE versus SGD risk for Anisotropic Gaussian}
+ \label{fig: anisotropic gaussian case plots}
+ \end{figure} 
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.55\linewidth]{images/Nguyen2018-SGD-algos-risk-aniso-gauss.png}
+    \caption{Risk for variants of SGD for Anisotropic Gaussian.}
+    \label{fig: sgd risk anisotropic gauss}
+\end{figure}
+ 
+\newpage
+\subsubsection{MNIST data single digit classification}\label{sec: single digit classification}
+
+I implemented a single-digit classification algorithm on the MNIST dataset and implemented various algorithms. For more details regarding the implementation, see the end of section \ref{sec: MNIST classification}.	Nesterov acceleration beat plain SGD, but was beaten by MF-HomSGLD and MaSS, the former plateaued the earliest achieving the steepest descent however, achieving a substantially smaller loss in the same amount of time. Again, we are in the low saturation regimes in this simulation too, which is consistent with the theoretical predictions in \cite{liu2019acceleratingsgdmomentumoverparameterized} regarding the acceleration of MaSS over plain SGD and Nesterov. Note finally that MH Homm SGLD is computationally more complex than the rest, but ca be terminated sooned due to the quick plateau, thereby saving computational time.
+
+
+\vspace{3cm}
+
+\begin{figure}[H]
+   \centering
+   \includegraphics[width=0.7\linewidth]{images/Spiliopoulos2019-SGD-algos-single-digit-classification.png}
+   \caption{MNIST single-digit classification losses.}
+   \label{fig: MNIST losses}
+ \end{figure}
+
+
+\newpage
+\subsubsection{Muller Brown Potential}
+
+Having developed some theory regarding modifications to the vanilla SGD for non-convex landscapes, we applied it to the canonical example, at least from chemistry \cite{muller1979location} of the Muller-Brown potential 
+\begin{equation}
+	V(x,y) = \displaystyle\sum^{4}_{i=i}A_{i}\cdot \exp[a_{i}\cdot(x-x_{0})^{2}+b_{i}\cdot(x-x_{0})+c_{i}\cdot(y-y_{0})+d_{i}\cdot (y-y_{0})^{2}] 
+\end{equation}
+where $A_{i}, a_{i}, b_{i}, c_{i}, d_{i}, i\leq 4$ are as in the paper \cite{muller1979location}. This potential has multiple local minima in close proximity, making it difficult for SGD to converge to the global minimum, see \ref{fig: muller-brown 3d}.
+
+    \begin{figure}[H]
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/MullerB-potential-plot-3d.png}
+  \caption{3d plot of the Muller-Brown potential}
+  \label{fig: muller-brown 3d}
+\end{subfigure}%
+\begin{subfigure}{0.5\textwidth}
+  \centering
+  \includegraphics[width=\linewidth]{images/MullerB-contour-with-grad-field.png}
+  \caption{Contour plot of Muller-Brown potential.}
+  \label{fig:  muller-brown contour}
+\end{subfigure}
+\caption{Contour plot of the Muller-Brown potential}
+\label{fig:  muller-brown plots}
+\end{figure}
+
+I have implemented deterministic second-order methods, namely, Nesterov and MaSS accelerated gradient descent as well as sstochastic algorithms such as plain SGD and MF Homm SGLD. I have made some observations below.\\
+
+Nesterov seems to perform slightly better than the MaSS algorithm, with similar characteristics to the SGD-driven trajectories and convergence to local minima appears to be faster than the rest of the algorithms. The drawback is that it still gets stuck in non-global minima. Full Gradient MaSS seems to behave as expected, that is behaves like the full-gradient Nesterov algorithm. It is not really clear whether any acceleration with respect to plain SGD is observed, which might be due to the highly non-convex nature of the potential.SGD  Seems to perform slightly better than the MaSS algorithm, with similar characteristics to the Nesterov-driven trajectories. Since it essentially performs descent in the heat-regularised Muller-Brown potential by solving numerically the SDE \ref{eq: SGLD}. A drawback is that it still gets stuck in non-global minima. MF-HomSGLD seems to avoid the `bad` minima in the Muller-Brown potential, as evidenced by the plots in figure \ref{fig: muller brown trajectories} with great efficacy and substantially outperforms all other methods. However it suffers from higher algorithmic complexity, dealing with multi-scale SDE system simulations, essentially performing a gradient flow of a regularised potential, where regularisation is done at the level of the Gibbs measure.
+
+\begin{figure}[H]\centering
+\subfloat[Plain SGD]{\label{a}\includegraphics[width=.5\linewidth]{images/MullerBrown-SGD.png}}\hfill
+\subfloat[Nesterov accelerated GD]{\label{b}\includegraphics[width=.5\linewidth]{images/MullerBrown-NesterovSGD.png}}\par 
+\subfloat[MF Hom SGLD]{\label{c}\includegraphics[width=.5\linewidth]{images/MullerBrown-HomSGLD.png}}\hfill 
+\subfloat[Full-gradient MaSS]{\label{d}\includegraphics[width=.5\linewidth]{images/MullerBrown-MaSS.png}}
+\caption{Muller Brown potential trajectories.}
+\label{fig: muller brown trajectories}
+\end{figure}
+
+
+\newpage
+\subsubsection{$ 3-$d spin model analysis}
+
+At the same time that I was investigating the non-uniqueness of stationary states in the distributional dynamics in the \cite{Mei_2018} paper, I began to read the paper by Van Eijnden et al. \cite{Rotskoff_2022} and studied the proofs of asymptotic convergence to a gradient flow in the mean field limit and how this is preferable due to the convexification of the loss (as a functional of measures), similar to that observed in \cite{Mei_2018}. The framework the authors develop is similar to the aforementioned paper and I focused more on applying the algorithms thus explored to the task of accurately representing high dimensional functions, such as the energy function of the continuous 3-spin model on the sphere.\\
+
+More precisely, by the spherical 3-spin model, we mean the function
+$f: S^{d-1}(\sqrt{d}) \to \mathbb{R}$, given by
+\begin{equation}
+  \label{eq:psin}
+  f(\mathbf{x}) = \frac1d \sum_{p,q,r=1}^d a_{p,q,r} x_p x_q x_r,  \qquad \mathbf{x}
+  \in S^{d-1}(\sqrt{d}) \subset \mathbb{R}^d
+\end{equation}
+where the coefficients $\{a_{p,q,r}\}_{p,q,r=1}^d$ are independent
+Gaussian random variables with mean zero and variance one. The
+function~\eqref{eq:psin} is known to have a number of critical points
+that grows exponentially with the dimensionality
+$d$~\cite{Rotskoff_2022}. We train networks to learn $f$ with a
+particular (random) realization of $a_{p,q,r}$ and study the accuracy of that
+representation.
+
+ \begin{figure}[H]\centering
+\subfloat[d=3]{\label{a}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_3.png}}
+\subfloat[d=4]{\label{b}\includegraphics[width=.33\linewidth]{images/3d_spin_sphere_plot_d_4.png}}
+\subfloat[d=5]{\label{c}\vspace{-3pt}\includegraphics[width=.35\linewidth]{images/3d_spin_sphere_plot_d_5.png}}
+\caption{Spherical $ 3-$ spin function plots.}
+\label{fig: spherical 3-spin function plot}
+\end{figure}
+
+We first consider the case when $D = S^{d-1}(\sqrt{d})$ and following \cite{Rotskoff_2022}, I used the Gaussian kernel
+%
+\begin{equation}
+  \label{eq:90}
+  \varphi(\mathbf{x},\mathbf{z}) = e^{-\tfrac12 \alpha |\mathbf{x}-\mathbf{z}|^2}
+\end{equation}
+%
+for some fixed $\alpha >0$. In this case, the parameters
+are elements of the domain of the function (here the $d$-dimensional
+sphere). 
+Note that, since $|\mathbf{x}|=|\mathbf{z}| = \sqrt{d}$, up to an
+irrelevant constant that can be absorbed in the weights $c$, we can
+also write~\eqref{eq:90} as
+%
+\begin{equation}
+  \label{eq:90red}
+  \varphi(\mathbf{x},\mathbf{z}) = e^{-\alpha \mathbf{x}\cdot \mathbf{z}}
+\end{equation}
+%
+This setting allow us to simplify the problem. Using
+%
+\begin{equation}
+  \label{eq:119}
+  f^{(n)}(\mathbf{x}) = \frac1n \sum_{i=1}^n c_i \varphi(\mathbf{x},\mathbf{z}_i)
+  = \frac1n \sum_{i=1}^n c_i e^{-\alpha \mathbf{x}\cdot \mathbf{z}_i},
+\end{equation}
+
+ To test the accuracy of the
+representation, we used the following Monte Carlo estimate of the loss
+function
+%
+ \begin{equation}
+   \label{eq:lossempirical}
+   \mathcal{L}_P[f^{(n)}_t] = \frac{1}{2P} \sum_{p=1}^P \left|f(\mathbf{x}_p) - f^{(n)}_t(\mathbf{x}_p)\right|^2.
+ \end{equation}
+
+ which is in close analogy to the risk \ref{eq: risk}
+ This empirical loss function was computed with a batch of $10^6$
+ points $\mathbf{x}_p$ uniformly distributed on the sphere.\\
+
+I tested the representation~\eqref{eq:119} in $d=3,4,5$ using $n=256$, and setting $\alpha = 5/d= 1$. The training was done
+by running performing stochastic gradient descent on the loss of the form \ref{eq: risk}, which was numerically implemented by running a Monte Carlo simulation over $ 10^2$ points chosen uniformly on the sphere $ S^{d-1}(\sqrt{d})$, that is performing gradient descent at each step on a loss of the form \ref{eq:lossempirical} with
+time step $\Delta t = 10^{-6}$ for $10^5$ steps. The plots
+showing a contour plot of the original function $f$
+as well as any representation $f^{(n)}$ are done so through a slice of the
+sphere defined as
+%
+\begin{equation}
+  \label{eq:slice}
+  \mathbf{x}(\theta) =\left\lbrace
+  \begin{array}{@{}l@{}}
+       \sqrt{d} \left(\sin(\theta)\cos(\phi),
+    \sin(\theta)\sin(\phi),
+    \cos(\theta)\right), \quad d = 3\\
+\sqrt{d} \left(\sin(\theta)\cos(\phi),
+    \sin(\theta)\sin(\phi),
+    \cos(\theta),0\right), \quad d = 4\\
+      \sqrt{d} \left(\sin(\theta)\cos(\phi),
+    \sin(\theta)\sin(\phi),
+    \cos(\theta),0,0\right), \quad d = 5.
+  \end{array}\right. 
+\end{equation}%
+with $\theta\in[0,\pi]$ and $\phi\in [0,2\pi)$. The level sets of both functions are generally in good agreement, see the figure \ref{fig: Muller Brown contour plots}. Also shown on
+this figure is the projection on the slice of the position of the
+particles on the sphere. In this result, the parameters $c_i$ take
+values that are initially uniformly distributed by about
+$-40 d^2 = -10^3$ and $40 d^2 = 10^3$. Observe however, that increasing the dimensionality of the problem worsens the approximations. Below are some observations I made.\\ 
+
+Mass outperforms all the other algorithms in smaller dimensions $ d=3, 4$. This is in line with the fact that the stochastic gradient is not yet fully saturated, which places the algorithm in the regime where MaSS achieves acceleration over plain SGD and stochastic Nesterov. However, as the dimensionality of the problem increases, the algorithms seem to converge in terms of performance, except plain SGD, with substantially worse performance. Nesterov has mixed behaviour in these simulations. The plots in figure \ref{fig: 3-d spin losses} suggest that optimal selection for $ \gamma$ leads to better performance than plain SGD, but in dimensions $ d=3, 4$ the MaSS algorithm has better performance except for the dimension $ d=5$, where second order methods seems to converges relatively early and outperform plain SGD. MF-Hom SGLD matches the performance of plain MaSS, achieving the second best loss profile for $ d=3$. However it suffers from higher algorithmic complexity, and seems to be volatile, with fluctuations of size two or so orders of magnitudes, though it displays a downward trend. Plain SGD consistently performs the worst as expected, still achieving exponential convergence though like the rest of the algorithms. \\
+
+
+\begin{figure}[H]
+
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[$ d=3$]{\label{a}\includegraphics[width=\linewidth]{images/3d-spin-model-neural-net-loss-d=3.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[$ d=4$]{\label{b}\includegraphics[width=\linewidth]{images/3d-spin-model-neural-net-loss-d=4.png}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[$ d=5$]{\label{c}\includegraphics[width=0.55\linewidth]{images/3d-spin-model-neural-net-loss-d=5.png}}
+\caption{Plots of the logarithm of the loses of variants of SGD for the $ 3-$sphere spin function.}
+\label{fig: 3-d spin losses}
+\end{figure}
+
+
+\begin{figure}[H]
+
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[$ d=3$ (Hom MF SGLD)]{\label{a}\includegraphics[width=\linewidth]{images/3d-spin-model-neural-net-plot-d=3.png}}
+\end{minipage}%
+\begin{minipage}{.5\linewidth}
+\centering
+\subfloat[$ d=4$ (MaSS)]{\label{b}\includegraphics[width=\linewidth]{images/3d-spin-model-neural-net-plot-d=4.png}}
+\end{minipage}\par\medskip
+\centering
+\subfloat[$ d=5$ (Mass)]{\label{c}\includegraphics[width=.55\linewidth]{images/3d-spin-model-neural-net-plot-d=5.png}}
+\caption{Muller Brown potential comparison to neural network (using algorithm incurring the smallest final) output contour plots.}
+\label{fig: Muller Brown contour plots}
+\end{figure}
+
+\newpage
+
+
+\bibliographystyle{plain}
+\bibliography{references}
+
+\end{document}

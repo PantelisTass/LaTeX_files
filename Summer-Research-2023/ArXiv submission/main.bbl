@@ -1,0 +1,66 @@
+\begin{thebibliography}{10}
+
+\bibitem{bremaud2020probability}
+P.~Br{\'e}maud.
+\newblock {\em Probability Theory and Stochastic Processes}.
+\newblock Universitext. Springer International Publishing, 2020.
+
+\bibitem{Chaudhari2017DeepRP}
+Pratik Chaudhari, Adam~M. Oberman, S.~Osher, Stefano Soatto, and Guillaume Carlier.
+\newblock Deep relaxation: partial differential equations for optimizing deep neural networks.
+\newblock {\em Research in the Mathematical Sciences}, 5, 2017.
+
+\bibitem{chen2023gradientflowssamplingmeanfield}
+Yifan Chen, Daniel~Zhengyu Huang, Jiaoyang Huang, Sebastian Reich, and Andrew~M. Stuart.
+\newblock Gradient flows for sampling: Mean-field models, gaussian approximations and affine invariance, 2023.
+
+\bibitem{weinan2005multiscalesde}
+Weinan E, Di~Liu, and Eric Vanden-Eijnden.
+\newblock Analysis of multiscale methods for stochastic differential equations.
+\newblock {\em Communications on Pure and Applied Mathematics}, 58(11):1544--1585, November 2005.
+
+\bibitem{ethier2009markov}
+S.N. Ethier and T.G. Kurtz.
+\newblock {\em Markov Processes: Characterization and Convergence}.
+\newblock Wiley Series in Probability and Statistics. Wiley, 2009.
+
+\bibitem{kantas2019sharpflatshallowweakly}
+Nikolas Kantas, Panos Parpas, and Grigorios~A. Pavliotis.
+\newblock The sharp, the flat and the shallow: Can weakly interacting agents learn to escape bad minima?, 2019.
+
+\bibitem{liu2019acceleratingsgdmomentumoverparameterized}
+Chaoyue Liu and Mikhail Belkin.
+\newblock Accelerating sgd with momentum for over-parameterized learning, 2019.
+
+\bibitem{Mei_2018}
+Song Mei, Andrea Montanari, and Phan-Minh Nguyen.
+\newblock A mean field view of the landscape of two-layer neural networks.
+\newblock {\em Proceedings of the National Academy of Sciences}, 115(33), July 2018.
+
+\bibitem{muller1979location}
+Klaus M{\"u}ller and Leo~D Brown.
+\newblock Location of saddle points and minimum energy paths by a constrained simplex optimization procedure.
+\newblock {\em Theoretica chimica acta}, 53:75--93, 1979.
+
+\bibitem{odonoghue2012adaptiverestartacceleratedgradient}
+Brendan O'Donoghue and Emmanuel Candes.
+\newblock Adaptive restart for accelerated gradient schemes, 2012.
+
+\bibitem{Rotskoff_2022}
+Grant Rotskoff and Eric Vanden‐Eijnden.
+\newblock Trainability and accuracy of artificial neural networks: An interacting particle system approach.
+\newblock {\em Communications on Pure and Applied Mathematics}, 75(9):1889–1935, July 2022.
+
+\bibitem{sirignano2019meanfieldanalysisclt}
+Justin Sirignano and Konstantinos Spiliopoulos.
+\newblock Mean field analysis of neural networks: A central limit theorem, 2019.
+
+\bibitem{sirignano2019meanfieldanalysislln}
+Justin Sirignano and Konstantinos Spiliopoulos.
+\newblock Mean field analysis of neural networks: A law of large numbers, 2019.
+
+\bibitem{Tassopoulos_Imperial_Summer_Research_2023}
+Pantelis Tassopoulos.
+\newblock {Imperial Summer Research 2023 Code Repository}, August.
+
+\end{thebibliography}

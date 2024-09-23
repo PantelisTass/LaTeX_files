@@ -1,0 +1,238 @@
+% preamble.tex
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{mathtools}
+\usepackage{mathabx}
+\usepackage{adjustbox}
+\usepackage{graphicx}% Required for inserting images
+\usepackage{tikz-cd} 
+\usepackage{tikz}
+\usepackage{comment}
+\usetikzlibrary{calc, graphs, positioning, backgrounds, decorations.pathmorphing}
+\usepackage{forest}
+\usepackage{pgfplots, pgfplotstable}
+\usepackage{indentfirst}
+\pgfplotsset{compat=1.17}
+\usepackage[a4paper,width=150mm,top=25mm,bottom=25mm]{geometry}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{ifthen}
+\usepackage{float}
+\usepackage{subcaption}
+\usepackage{xkeyval} % Load xkeyval first
+\usepackage[colorlinks=true,linkcolor=blue]{hyperref} % Load hyperref with simplified options
+\usepackage[dvipsnames]{xcolor}
+\usepackage{tcolorbox}
+\usepackage{wrapfig}
+\usepackage[framemethod=tikz]{mdframed}
+\usepackage{atbegshi}% http://ctan.org/pkg/atbegshi
+
+
+\definecolor{block-gray}{gray}{0.95}
+\newtcolorbox{examplesblock}[2][]{%
+    grow to right by=-0mm,
+    grow to left by=-0mm, 
+    opacityback=0,
+    frame hidden, boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{black},
+    title={#2\par},
+    colbacktitle={black},
+    coltitle={black},
+    fonttitle={\bfseries},
+    attach title to upper={},
+    #1,
+}
+
+\definecolor{}{gray}{0.95}
+\newtcolorbox{codeblock}[2][]{%
+    grow to right by=-0mm,
+    grow to left by=-0mm, 
+    opacityback=0,
+    frame hidden, boxrule=0pt,
+    boxsep=0pt,
+    breakable,
+    enhanced jigsaw,
+    borderline west={2pt}{0pt}{black},
+    title={#2\par},
+    colbacktitle={black},
+    coltitle={black},
+    fonttitle={\large\bfseries},
+    attach title to upper={},
+}
+
+\titleformat{\chapter}[display]   
+{\normalfont\huge\bfseries}{\chaptertitlename\ \thechapter}{20pt}{\Huge}   
+\titlespacing*{\chapter}{0pt}{-30pt}{40pt}
+
+\newtheoremstyle{mystyle}%                % Name
+  {1pt}%                                     % Space above
+  {}%                                     % Space below
+  {\normalfont}%                                     % Body font
+  {}%                                     % Indent amount
+  {\bfseries}%                            % Theorem head font
+  {.}%                                    % Punctuation after theorem head
+  { }%                                    % Space after theorem head, ' ', or \newline
+  {\thmname{#1}\thmnumber{ #2}\thmnote{ (#3)}}%                                     % Theorem head spec (can be left empty, meaning `normal')
+
+  \theoremstyle{mystyle}
+\newtheorem*{remark}{Remark}
+
+\NewDocumentCommand{\newframedtheorem}{O{}momo}{%
+  \IfNoValueTF{#3}
+   {%
+    \IfNoValueTF{#5}
+     {\newtheorem{#2}{#4}}
+     {\newtheorem{#2}{#4}[#5]}%
+    }
+   {\newfratheorem{#2}[#3]{#4}}
+  \tcolorboxenvironment{#2}{#1}%
+}
+\newmdtheoremenv{theorem}{Theorem}[section]
+
+
+\newtheorem{corollary}{Corollary}[section]
+\newmdtheoremenv{boxcor}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{prop}[section]{Proposition}
+\newtheorem{definition}{Definition}[section] 
+%\newtheorem{theorem}{Theorem}[section] 
+
+\newmdtheoremenv{boxdef}{Definition}[section]
+\newmdtheoremenv{boxlemma}{Lemma}[section]
+\newmdtheoremenv{boxprop}{Proposition}[section]
+
+\newcommand{\here}[2]{\tikz[remember picture]{\node[inner sep=0](#2){#1}}}
+
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\newcommand{\PP}{\ensuremath{\mathbb{P}}}
+\newcommand{\F}{\mathcal{F}}
+
+\newcommand{\Real}{\operatorname{Re}}
+\newcommand{\Img}{\operatorname{Im}}
+
+\DeclareMathOperator{\spn}{span}
+\DeclareMathOperator{\Id}{Id}
+\DeclareMathOperator{\essup}{essup}
+\DeclareMathOperator{\scrC}{\mathcal{C}}
+\DeclareMathOperator{\scrM}{\mathcal{M}}
+\DeclareMathOperator{\supp}{supp}
+\DeclareMathOperator{\intr}{int}
+\DeclareMathOperator{\conv}{conv}
+\DeclareMathOperator{\diam}{diam}
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\dist}{dist}
+
+
+\newcommand{\inmath}[2]{$#1\in#2$}
+\newcommand{\allin}[2]{for all $#1\in#2$}
+\newcommand{\isthere}{there exists }
+
+\newcommand{\vectsp}[1]{\mathbf{#1}}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\newcommand{\unitball}[1]{B_{#1}}
+\newcommand{\intunitball}[1]{D_{#1}}
+\newcommand{\unitsphere}[1]{S_{#1}}
+
+\newcommand{\bigslant}[2]{{\raisebox{.2em}{$#1$}\left/\raisebox{-.2em}{$#2$}\right.}}
+\newcommand{\bracket}[2]{\langle #1, #2\rangle}
+ % Method of Enrico Gregorio ("egreg")
+ % https://tex.stackexchange.com/a/22255/13492:
+ \newcommand\restrict[2]{% make the whole thing an ordinary symbol
+   \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+   #1% the function
+   \littletaller % pretend it's a little taller at normal size
+   \right|_{#2}%
+   }
+ \newcommand{\littletaller}{\mathchoice{\vphantom{\big|}}{}{}{}}
+
+ % Method of Heiko Oberdiek
+ % https://tex.stackexchange.com/a/67233/13492
+ \makeatletter
+ \newcommand*{\scaleddelims}[3]{%
+   \ensuremath{%
+     \mathpalette{\@scaleddelims{#1}{#2}}{#3}%
+   }%
+ }   
+ \newcommand*{\@scaleddelims}[4]{%
+   % #1: left delimiter
+   % #2: right delimiter
+   % #3: \displaystyle, \textstyle, ...
+   % #4: inner formula
+   \begingroup
+     #3%
+     \sbox0{$\m@th#3\vphantom{A}#4$}%
+     \setbox2\vbox{\hbox{$\m@th#3#1$}\kern\z@}%
+     \setbox4\vbox{\hbox{$\m@th#3#2$}\kern\z@}%
+     \setbox6\hbox{$#3\vcenter{}$}%
+     \ifx\downharpoonleft#1\relax  
+       \let\DelimLeft=L%
+     \else\ifx\upharpoonleft#1%
+       \let\DelimLeft=L%
+     \else\ifx\downharpoonright#1%
+       \let\DelimLeft=R%
+     \else\ifx\upharpoonright#1%
+       \let\DelimLeft=R%
+     \fi\fi\fi\fi
+     \ifx\downharpoonleft#2\relax
+       \let\DelimRight=L%
+     \else\ifx\upharpoonleft#2\relax
+       \let\DelimRight=L%
+     \else\ifx\downharpoonright#2\relax
+       \let\DelimRight=R%
+     \else\ifx\upharpoonright#2\relax
+       \let\DelimRight=R%
+     \fi\fi\fi\fi
+     \ifx\DelimLeft L%
+       \wd2=.6\wd2
+     \fi
+     \ifx\DelimRight L%
+       \wd4=.6\wd4
+     \fi
+     \ifx\DelimLeft R%
+       \sbox2{\kern-.4\wd2\box2}%
+     \fi
+     \ifx\DelimRight R%
+       \sbox4{\kern-.4\wd4\box4}%
+     \fi
+     \dimen0=\ht0 %
+     \advance\dimen0 by -\ht6 %
+     \dimen2=\dp0 %
+     \advance\dimen2 by \ht6 %
+     \ifdim\dimen2>\dimen0 %  
+       \dimen0=\dimen2 %
+     \else
+       \dimen0=\dimen0 %
+     \fi
+     \dimen2=\ht6 %
+     \advance\dimen2 by -\dimen0 %
+     \dimen0=2\dimen0 %
+     \def\DelimCorr{%  
+       \mskip.5\thinmuskip
+       \nonscript\mskip.5\thinmuskip
+     }%
+     \mathopen{%
+       \ifx\DelimLeft R\DelimCorr\fi
+       \raisebox{\dimen2}{\resizebox{!}{\dimen0}{\box2}}%
+       \ifx\DelimLeft L\DelimCorr\fi
+     }%
+     \begingroup
+       #3#4%
+     \endgroup
+     \mathclose{%
+       \ifx\DelimRight R\DelimCorr\fi
+       \raisebox{\dimen2}{\resizebox{!}{\dimen0}{\box4}}%
+       \ifx\DelimRight L\DelimCorr\fi
+     }%
+   \endgroup
+ }\makeatother
+ %
+
+ \newcommand{\restr}[2]{#1\scaleddelims{\kern-0.5\nulldelimiterspace\upharpoonright}{\vphantom{.}}{_{#2}}}
+\newcommand{\diff}{\ensuremath{\operatorname{d}\!}}
+
