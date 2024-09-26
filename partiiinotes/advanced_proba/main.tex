@@ -1493,7 +1493,7 @@ exist and are finite.
 	\[
 		\tilde{X}_{t} = \lim_{n\to \infty}X_{t_{n}} 
 	\]
-	a.s. Observe that $ (X_{t_{n}})$ is a backwards martingale with respect to the filtration $ (\F_{t_{n}})_{n\in \N}$. SO $ (X_{t_{n}})$ converges a.s. and in $ \mathcal{L}^{1} $. In other words, $ X_{t } = in $ $\mathcal{L}^{1} $. So $ X_{t} = \mathbb{E}\left[ \tilde{X}_{t}|\F_{t}\right]$ a.s.
+	a.s. Observe that $ (X_{t_{n}})$ is a backwards martingale with respect to the filtration $ (\F_{t_{n}})_{n\in \N}$. So $ (X_{t_{n}})$ converges a.s. and in $ \mathcal{L}^{1} $. In other words, $ X_{t } = in $ $\mathcal{L}^{1} $. So $ X_{t} = \mathbb{E}\left[ \tilde{X}_{t}|\F_{t}\right]$ a.s.
 
 \item We now prove that $ \tilde{X}$ is a martingale. Let $ s<t$, we need to show that $ \mathbb{E}\left[ \tilde{X}_{t}|\tilde{\F}_{s} \right] = 'tilde{X}_{s}$ a.s.\\ 
 
@@ -1603,7 +1603,7 @@ Let $ X$ be a cadlag UI martingale, then for all $ S\leq T$ stopping times
 \]
 Thus, 
 \[
-	\PP \left( \max_{0\leq k \leq 2^n}|X_{k\cdot 2^{-n}}-X_{(K+1)\cdot 2^{-n}}| \geq 2^{-n\alpha} \right)\stackrel{\text{union bound}}{\leq} c\cdot 2^{n\alpha p n\epsilon}, \quad (\alpha \in (0, \frac{\epsilon}{p}).   
+	\PP \left( \max_{0\leq k \leq 2^n}|X_{k\cdot 2^{-n}}-X_{(K+1)\cdot 2^{-n}}| \geq 2^{-n\alpha} \right)\stackrel{\text{union bound}}{\leq} c\cdot 2^{n\alpha p n\epsilon}, \quad \alpha \in (0, \frac{\epsilon}{p}).   
 \]
 By Borel-Cantelli, 
 \[
@@ -2168,7 +2168,7 @@ There exists a Brownian motion on some probability space.
 \begin{proof}{(L\'{e}vy and Kolmogorov)}
 
     \begin{enumerate}
-	    \item We shall proceed to construct a BM on $ [0,1]$ in $ d = 1$. Let $ \mathcal{D}_{0} = \{0,1\}$, $ \mathcal{D}_{n} = \{k\cdot 2^{-n}: 0\leq k \leq 2^n\}$ for $ n\in \N$ and $ \mathcal{D} = \displaystyle\bigcup_{n\geq 0} \mathcal{D_{n}}$.\\ 
+    \item We shall proceed to construct a BM on $ [0,1]$ in $ d = 1$. Let $ \mathcal{D}_{0} = \{0,1\}$, $ \mathcal{D}_{n} = \{k\cdot 2^{-n}: 0\leq k \leq 2^n\}$ for $ n\in \N$ and $ \mathcal{D} = \displaystyle\bigcup_{n\geq 0} \mathcal{D}_{n}$.\\ 
 
 		    We will now construct $ (B_{d}, d'in \mathcal{D})$ inductively. First for $ \mathcal{D}0$. Let $ (Z_{d}, d\in \mathcal{D})$ be an iid sequence $ \sim \mathcal{N}(0,1)$ on some probability space $ (\Omega, \F, \PP)$. Set $ b_{0} = 0$, $ B_{1} = Z_{1}$ (clearly satisfies properties in \ref{def: Brownian motion}). Suppose now we have constructed $ (B_{d}, d\in \mathcal{D}_{n-1})$ satisfying properties $ 2 \& 3$. We need to construct $ (B_{d}, d\in \mathcal{D}_{n})$.\\ 
 
