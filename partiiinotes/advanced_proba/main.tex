@@ -1287,7 +1287,7 @@ Again, we say $ X^{T}_{t} = X_{T\land t}$, $ X_{T}(\omega) = X_{T(\omega)}(\omeg
 \begin{proof}
     $ 1), 2)$ are clear (check!) and $ 4)$ is immediate from $ 3)$, since $ X_{T\land t}$ if $ \F_{T\land t}-$measurable and $\F_{T\land t} \subseteq \F_{t}$.\\ 
 
-\underline{proof of $ 3)$:} \underline{Claim:} a random variable $ Z$is $ \F_{T\land t}-$measurable if and only if $ Z\cdot \mathbf{1}(T\leq t)$ is $ \F_{t}-$measurable for all $ t\geq 0$. Indeed, \\ 
+\underline{proof of $ 3)$:} \underline{Claim:} a random variable $ Z$ is $ \F_{T\land t}-$measurable if and only if $ Z\cdot \mathbf{1}(T\leq t)$ is $ \F_{t}-$measurable for all $ t\geq 0$. Indeed, \\ 
 
 \underline{$ \impliedby$):} is true by definition. \\ 
 
@@ -1578,7 +1578,7 @@ Let $ X$ be a cadlag UI martingale, then for all $ S\leq T$ stopping times
 
 
 \begin{proof}
-	Let $ T_{n} = 2^{-n}\rceil 2^nT\rceil$ and $ S_{n} = 2^{-n}\lceil 2^n S\rceil$. Both are stopping times and $ T_{n}'downarrow T$, $S_{n}\downarrow S $ as $ n\to \infty$. \underline{need to show:} for $ A'in \F_{S}$, then $ \mathbb{E}\left[ X_{T}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{S}\cdot \mathbf{1}(A) \right]$. Indeed, $ X_{T_{n}}\to X_{T}$ and $ X_{S_{n}}\to X_{S}$ a.s. as $ n\to \infty$ ($ X$ is right continuous).\\ 
+	Let $ T_{n} = 2^{-n}\rceil 2^nT\rceil$ and $ S_{n} = 2^{-n}\lceil 2^n S\rceil$. Both are stopping times and $ T_{n}\downarrow T$, $S_{n}\downarrow S $ as $ n\to \infty$. \underline{need to show:} for $ A\in \F_{S}$, then $ \mathbb{E}\left[ X_{T}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{S}\cdot \mathbf{1}(A) \right]$. Indeed, $ X_{T_{n}}\to X_{T}$ and $ X_{S_{n}}\to X_{S}$ a.s. as $ n\to \infty$ ($ X$ is right continuous).\\ 
 
 	Now, by the discrete optional stopping theorem applied to the martingale $ (X_{k\cdot 2^{-n}})_{k\in \N}$ with respect to the filtration $ (\F_{K\cdot 2^{-n}})_{k\in \N}$, $ X_{T_{n}}= \mathbb{E}\left[ X_{\infty}|\F_{T_{n}} \right]$, so $ X_{T_{n}}$ is UI  (since $ T_{n}$ take values in $ 2^{-n}\cdot \N$). Thus, $ X_{T_{n}}\to X_{T}$ in $ \mathcal{L}^{1} $, and the same holds for $ X_{S_{n}}\to X_{S}$ using the exact same argument. By the discrete optional stopping theorem, we have that $ \mathbb{E}\left[ X_{T_{n}}|\F_{S_{n}} \right] = X_{S_{n}}$ a.s. Now for $ A\in \F_{S}$, we have that $ A\in \F_{S_{n}}$ for all $ n\in \N$ since $ S_{n}\geq S$. So $ \mathbb{E}\left[ X_{T_{n}}\cdot \mathbf{1}(A) \right] = \mathbb{E}\left[ X_{S_{n}}\cdot \mathbf{1}(A) \right]$.
 \end{proof}
@@ -2884,7 +2884,7 @@ $ D\subseteq \R^{d}$ is called a \underline{domain} if it is open, non-empty and
 
 \begin{theorem}[Dirichlet problem]\label{thm: dirichlet problem}
 
-	let $ D$ be a bounded domain in $ \R^{d}$ such that every boundary point of $ D satisfies the  Poincar\'{e}$ cone condition, (see figure \ref{fig: poincare cone}). Let $ \phi$ be continuous on $ \partial D$ and let $ B$ be a Brownian motion, $ \tau_{\partial D} = \displaystyle\inf_{\{t\geq 0 : B_{t}\in \partial D\}}$. Then the function 
+	let $ D$ be a bounded domain in $ \R^{d}$ such that every boundary point of $D$ satisfies the Poincar\'{e} cone condition, (see figure \ref{fig: poincare cone}). Let $\phi$ be continuous on $ \partial D$ and let $ B$ be a Brownian motion, $ \tau_{\partial D} = \displaystyle\inf_{\{t\geq 0 : B_{t}\in \partial D\}}$. Then the function 
 	\[
 		u(x)  = \mathbb{E}_{x}\left[ \phi(B_{\tau_{\partial D}}) \right], \quad x\in \overline{D}
 	\]
@@ -3072,7 +3072,7 @@ Thus, using the continuity of $ \PP$, there exists some $ M\in \N$ such that
 Additionally, observe that for the truncated series $ \sum_{n=1}^{N} F_{n}$ corresponds to the piecewise linear extension of the dyadic approximations to $ W$ in Theorem \ref{thm: wiener BM}. Now, for $ |\lambda|$ bounded, $ M$ possibly even larger,  by the independence of the Gaussians $ (Z_{d}, d\in \mathcal{D})$ it is not hard to approximate $ \lambda t$ on $ [0,1]$ by the truncated series up to stage $ M-1$ and then use the independence of the $ F_{n}$ and the above to obtain with a positive probability that the tail is also uniformly close and the approximation at stage $ M-1$, hence proving there is a uniform positive lower bound, thus proving $ (***)$. \\ 
 \end{examplesblock}
 
-In the final step, essentially we will iterate the bound $ (***)$ on nested balls surrounding the origin to get expo natal decay in the corresponding version of $ (***)$. More precisely, 
+In the final step, essentially we will iterate the bound $ (***)$ on nested balls surrounding the origin to get exponential decay in the corresponding version of $ (***)$. More precisely, 
 
 \begin{examplesblock}{Exponential decay step}\label{aside: poincare cone decay bound}
 Let $ k\in \N$. We want to bound 
@@ -3326,7 +3326,7 @@ We leave the following as an exercise: let $ E = \R_{+}$ ,$ \theta >0$, $ \mu = 
 \[
 N_{t} =\displaystyle\sum^{\infty}_{n=1} \mathbf{1}(T_{n}\leq t). 
 \]
-Then, $ (N_{t}, t\geq 0) =\stackrel{d}{=} (M([0,t]), t\geq 0)$.
+Then, $ (N_{t}, t\geq 0) \stackrel{d}{=} (M([0,t]), t\geq 0)$.
 
 \begin{theorem}\label{thm: integral wrt poisson random integral}
 Let $ M$ be a Poisson random measure with intensity $ \mu$. Let $ f\in \mathcal{L}^{1}(\mu) $ and define $ M(f) = \displaystyle\int f(y) M(\diff y)  $. Then $ M(f)\in \mathcal{L}^{1}(\mu) $ and 
@@ -3344,13 +3344,13 @@ Fix $ f:E\to \R_{+}$ measurable. Then for all $ u>0$,
     The first part follows from a standard approximation by simple functions argument and Dominated Convergence. Let $ (E_{n})_{n\in \N}\subseteq  \mathcal{E}^{*}$ be such that $ \mu(E_{n})<\infty$. Have 
     \[
     \begin{array}{ll}
-        \mathbb{E}\left[ e^{-yM(f\cdot \mathbf{1}(E_{n})} \right] &=\displaystyle\sum^{\infty}_{k=0} \mathbb{E}\left[  e^{-uM(f\cdot \mathbf{1}(E_{n})}| M(E_{n})=k \right]\\
-         &\cdot e^{-\mu(E_{n})}\frac{(\mu(E_{n}))^{k}}{k!} .
+        \mathbb{E}\left[ e^{-yM(f\cdot \mathbf{1}(E_{n}))} \right] &=\displaystyle\sum^{\infty}_{k=0} \mathbb{E}\left[  e^{-uM(f\cdot \mathbf{1}(E_{n}))}| M(E_{n})=k \right]\\
+         &\cdot e^{-\mu(E_{n})}\frac{\mu(E_{n})^{k}}{k!} .
     \end{array}
     \]
-    Now, given $ M(E_{n}) = k$, $ M =\displaystyle\sum^{k}_{i=1}\delta_{X_{i}} $ with $ (X_{1}, \cdots, X_{k})$ independent 
-    \[ \sim M|_{E_{n}} =\displaystyle\sum^{\infty}_{k=0} \left( \displaystyle\int_{E_{n}} e^{-uf(x)} \frac{\mu( \diff  x)}{\mu(E_{n}})    \right). \]
+    Now, given $ M(E_{n}) = k$, $ M =\displaystyle\sum^{k}_{i=1}\delta_{X_{i}} $ with $ (X_{1}, \cdots, X_{k})$ independent and each $ \sim \mu|_{E_{n}}$, hence 
+    \[\mathbb{E}\left[ e^{-yM(f\cdot \mathbf{1}(E_{n}))} \right] =\displaystyle\sum^{\infty}_{k=0} \left( \displaystyle\int_{E_{n}} e^{-uf(x)} \frac{\mu( \diff  x)}{\mu(E_{n})}    \right)^k \cdot e^{-\mu(E_{n})}\frac{\mu(E_{n})^{k}}{k!}  \]
 \end{proof}
-Since $ M(f\cdot \mathbf{1}(E_{n}))$ are independent and conclude with monotone convergence.
+\noindent by independence and conclude with monotone convergence.
 
 \end{document}
